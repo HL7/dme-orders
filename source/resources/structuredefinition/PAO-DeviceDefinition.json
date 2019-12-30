@@ -1,0 +1,33 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAO-DeviceDefinition",
+	"meta": {
+		"versionId": "4",
+		"lastUpdated": "2019-12-25T00:06:32.000-05:00"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">DeviceDefinition for post acute orders</div>"
+	},
+	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-DeviceDefinition",
+	"version": "0.0.1",
+	"name": "PAODeviceDefinition",
+	"title": "DeviceDefinition profile for post acute orders",
+	"status": "active",
+	"publisher": "HL7",
+	"description": "The Post Acute Orders Device Definition Profile is used to constrain the DeviceDefinition resource to support the ordering of DME equipment to a supplier or intermediary.",
+	"fhirVersion": "4.0.0",
+	"kind": "resource",
+	"abstract": false,
+	"type": "DeviceDefinition",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/DeviceDefinition",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "DeviceDefinition",
+				"path": "DeviceDefinition"
+			}
+		]
+	}
+}

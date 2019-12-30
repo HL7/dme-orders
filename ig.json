@@ -1,0 +1,156 @@
+{
+	"tool": "jekyll",
+	"source": "implementationguide/Post-Acute-Orders3.xml",
+	"npm-name": "hl7.fhir.us.dme-orders",
+	"license": "CC0-1.0",
+	"paths": {
+		"qa": "generated_output/qa",
+		"temp": "generated_output/temp",
+		"output": "output",
+		"txCache": "generated_output/txCache",
+		"specification": "http://hl7.org/fhir/R4/",
+		"pages": [
+			"framework",
+			"source/pages"
+		],
+		"resources": [
+			"source/resources"
+		]
+	},
+	"pages": [
+		"pages"
+	],
+	"version": "4.0.1",
+	"extension-domains": [
+		"https://trifolia-on-fhir.lantanagroup.com"
+	],
+	"allowed-domains": [
+		"https://trifolia-on-fhir.lantanagroup.com"
+	],
+	"sct-edition": "http://snomed.info/sct/731000124108",
+	"extraTemplates": [
+		"mappings"
+	],
+	"canonicalBase": "http://hl7.org/fhir/us/DME-Orders",
+	"defaults": {
+		"Location": {
+			"template-base": "ex.html"
+		},
+		"ProcedureRequest": {
+			"template-base": "ex.html"
+		},
+		"Organization": {
+			"template-base": "ex.html"
+		},
+		"MedicationStatement": {
+			"template-base": "ex.html"
+		},
+		"SearchParameter": {
+			"template-base": "base.html"
+		},
+		"StructureDefinition": {
+			"template-mappings": "sd-mappings.html",
+			"template-base": "sd.html",
+			"template-defns": "sd-definitions.html",
+			"mappings": "StructureDefinition-{{[id]}}-mappings.html"
+		},
+		"Immunization": {
+			"template-base": "ex.html"
+		},
+		"Patient": {
+			"template-base": "ex.html"
+		},
+		"StructureMap": {
+			"content": false,
+			"script": false,
+			"template-base": "ex.html",
+			"profiles": false
+		},
+		"ConceptMap": {
+			"template-base": "base.html"
+		},
+		"Practitioner": {
+			"template-base": "ex.html"
+		},
+		"OperationDefinition": {
+			"template-base": "base.html"
+		},
+		"CodeSystem": {
+			"template-base": "base.html"
+		},
+		"Communication": {
+			"template-base": "ex.html"
+		},
+		"Any": {
+			"template-format": "format.html",
+			"template-base": "base.html"
+		},
+		"PractitionerRole": {
+			"template-base": "ex.html"
+		},
+		"ValueSet": {
+			"template-base": "base.html"
+		},
+		"CapabilityStatement": {
+			"template-base": "base.html"
+		},
+		"Observation": {
+			"template-base": "ex.html"
+		}
+	},
+	"resources": {
+		"StructureDefinition/PAO-Bundle": {
+			"base": "StructureDefinition-PAO-Bundle.html",
+			"defns": "StructureDefinition-PAO-Bundle-definitions.html"
+		},
+		"Media/eRXworkflowV30forIG": {
+			"base": "Media-eRXworkflowV30forIG.html",
+			"defns": "Media-eRXworkflowV30forIG-definitions.html"
+		},
+		"Media/eRXworkflowV30withIntermediaryforIG": {
+			"base": "Media-eRXworkflowV30withIntermediaryforIG.html",
+			"defns": "Media-eRXworkflowV30withIntermediaryforIG-definitions.html"
+		},
+		"StructureDefinition/PAO-Subscription": {
+			"base": "StructureDefinition-PAO-Subscription.html",
+			"defns": "StructureDefinition-PAO-Subscription-definitions.html"
+		},
+		"StructureDefinition/PAO-MessageDefinition": {
+			"base": "StructureDefinition-PAO-MessageDefinition.html",
+			"defns": "StructureDefinition-PAO-MessageDefinition-definitions.html"
+		},
+		"StructureDefinition/PAO-Provenance": {
+			"base": "StructureDefinition-PAO-Provenance.html",
+			"defns": "StructureDefinition-PAO-Provenance-definitions.html"
+		},
+		"StructureDefinition/PAO-ServiceRequest": {
+			"base": "StructureDefinition-PAO-ServiceRequest.html",
+			"defns": "StructureDefinition-PAO-ServiceRequest-definitions.html"
+		},
+		"StructureDefinition/PAO-DeviceRequest": {
+			"base": "StructureDefinition-PAO-DeviceRequest.html",
+			"defns": "StructureDefinition-PAO-DeviceRequest-definitions.html"
+		},
+		"StructureDefinition/PAO-messageheader": {
+			"base": "StructureDefinition-PAO-messageheader.html",
+			"defns": "StructureDefinition-PAO-messageheader-definitions.html"
+		},
+		"StructureDefinition/PAO-DeviceDefinition": {
+			"base": "StructureDefinition-PAO-DeviceDefinition.html",
+			"defns": "StructureDefinition-PAO-DeviceDefinition-definitions.html"
+		},
+		"StructureDefinition/PAO-Task": {
+			"base": "StructureDefinition-PAO-Task.html",
+			"defns": "StructureDefinition-PAO-Task-definitions.html"
+		}
+	},
+	"fixed-business-version": "0.0.1",
+	"dependencyList": [
+		{
+			"location": "http://hl7.org/fhir/us/core",
+			"name": "USCoreR4",
+			"version": "current",
+			"package": "hl7.fhir.us.core"
+		}
+	]
+}
