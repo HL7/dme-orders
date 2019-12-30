@@ -1,0 +1,57 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAO-Subscription",
+	"meta": {
+		"versionId": "5",
+		"lastUpdated": "2019-12-11T07:14:44.000-05:00"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Subscription Pofile for Post Acute Orders</div>"
+	},
+	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-Subscription",
+	"version": "0.0.1",
+	"name": "PAOSubscription",
+	"title": "Post Acute Orders Subscription Profile",
+	"status": "active",
+	"publisher": "HL7",
+	"fhirVersion": "4.0.0",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Subscription",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Subscription",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Subscription",
+				"path": "Subscription"
+			},
+			{
+				"id": "Subscription.status",
+				"path": "Subscription.status",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.criteria",
+				"path": "Subscription.criteria",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel",
+				"path": "Subscription.channel",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel.type",
+				"path": "Subscription.channel.type",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel.endpoint",
+				"path": "Subscription.channel.endpoint",
+				"mustSupport": true
+			}
+		]
+	}
+}
