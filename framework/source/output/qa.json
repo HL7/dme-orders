@@ -1,0 +1,12 @@
+{
+  "url": "http://hl7.org/fhir/us/dme-orders/implementationguide/Post-Acute-Orders3",
+  "name": "PostAcuteOrders3",
+  "package-id": "hl7.fhir.us.dme-orders",
+  "ig-ver": "0.0.1",
+  "date": "Tue, 31 Dec, 2019 08:26:22 -0500",
+  "errs": 0,
+  "warnings": 0,
+  "hints": 0,
+  "version": "4.0.1",
+  "tool": "4.2.0 (3)"
+}

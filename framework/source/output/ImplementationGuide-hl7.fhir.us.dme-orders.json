@@ -1,0 +1,245 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.us.dme-orders",
+  "meta": {
+    "versionId": "53",
+    "lastUpdated": "2019-12-31T08:25:20.000-05:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PostAcuteOrders3</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/dme-orders/implementationguide/ImplementationGuide/hl7.fhir.us.dme-orders</pre><div><h1>General</h1>\n<p>This is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.</p>\n<ul>\n<li>The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.</li>\n<li>This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.</li>\n</ul>\n<p>This implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.</p>\n<h1>Feedback</h1>\n<p>Comments and suggestions are welcome on our Zulip stream...</p>\n<p>or send a note to rdieterle@enablecare.us</p>\n<h1>Change log</h1>\n<p><strong>0.0.2 (This version):</strong> Update to test build on build.fhir.org\n<strong>0.0.1:</strong> Initial version published to the continuous build</p>\n<h1>Known issues and to-dos</h1>\n<ul>\n<li>Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest</li>\n<li>Working with other members of the team to create appropriate examples</li>\n</ul>\n</div></div>"
+  },
+  "url": "http://hl7.org/fhir/us/dme-orders/implementationguide/ImplementationGuide/hl7.fhir.us.dme-orders",
+  "version": "0.0.1",
+  "name": "PostAcuteOrders3",
+  "title": "Post Acute FHIR Based Orders V3",
+  "status": "draft",
+  "date": "2019-12-31T08:26:22-05:00",
+  "publisher": "HL7",
+  "description": "# General\n\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier. \n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements. \n# Feedback\nComments and suggestions are welcome on our Zulip stream...\n\nor send a note to rdieterle@enablecare.us\n\n# Change log\n\n**0.0.2 (This version):** Update to test build on build.fhir.org\n**0.0.1:** Initial version published to the continuous build \n\n# Known issues and to-dos\n\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples \n",
+  "packageId": "hl7.fhir.us.dme-orders",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.0"
+  ],
+  "dependsOn": [
+    {
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+      "packageId": "hl7.fhir.us.core",
+      "version": "current"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PAO-Bundle.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PAO-Bundle",
+          "display": "PAOBundle"
+        },
+        "name": "PAOBundle",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PAO-Task.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PAO-Task",
+          "display": "PAOTask"
+        },
+        "name": "PAOTask",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PAO-Subscription.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PAO-Subscription",
+          "display": "PAOSubscription"
+        },
+        "name": "PAOSubscription",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PAO-messageheader.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PAO-messageheader",
+          "display": "PAOMessageHeader"
+        },
+        "name": "PAOMessageHeader",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PAO-MessageDefinition.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PAO-MessageDefinition",
+          "display": "PAOMessageDefinition"
+        },
+        "name": "PAOMessageDefinition",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PAO-Provenance.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PAO-Provenance",
+          "display": "PAOProvenance"
+        },
+        "name": "PAOProvenance",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PAO-ServiceRequest.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PAO-ServiceRequest",
+          "display": "P:AOServiceRequest"
+        },
+        "name": "PAOServiceRequest",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PAO-DeviceRequest.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PAO-DeviceRequest",
+          "display": "PAODeviceRequest"
+        },
+        "name": "PAODeviceRequest",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PAO-DeviceDefinition.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PAO-DeviceDefinition",
+          "display": "PAODeviceDefinition"
+        },
+        "name": "PAODeviceDefinition",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.md",
+      "title": "Table of Contents",
+      "generation": "generated",
+      "page": [
+        {
+          "nameUrl": "Post_Acute_Order_Home.html",
+          "title": "Post Acute Order Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Background.html",
+          "title": "Background",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Technical_Background.html",
+          "title": "Technical Background",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "FHIR_Artifacts.html",
+          "title": "FHIR Artifacts",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Workflow.html",
+          "title": "Workflow",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "MustSupport__and_Missing_Data.html",
+          "title": "MustSupport  and Missing Data",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Message_Bundles.html",
+          "title": "Message Bundles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Submission.html",
+          "title": "Submission",
+          "generation": "markdown"
+        }
+      ]
+    }
+  }
+}

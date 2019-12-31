@@ -1,0 +1,30 @@
+﻿PostAcuteOrders3 : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 0
+IG Publisher Version: v1.0.36-SNAPSHOT
+Generated Tue Dec 31 08:27:34 EST 2019. FHIR version 4.0.1 for hl7.fhir.us.dme-orders#0.0.1 (canonical = http://hl7.org/fhir/us/dme-orders/implementationguide)
+
+ Build Errors : 0 / 0
+ C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\implementationguide\Post-Acute-Orders3 : 0 / 0
+ C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-Bundle : 0 / 0
+ C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-DeviceDefinition : 0 / 0
+ C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-DeviceRequest : 0 / 0
+ C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-MessageDefinition : 0 / 0
+ C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-Provenance : 0 / 0
+ C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-ServiceRequest : 0 / 0
+ C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-Subscription : 0 / 0
+ C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-Task : 0 / 0
+ C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-messageheader : 0 / 0
+</table>
+== n/a ==
+== C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\implementationguide\post-acute-orders3.xml ==
+== C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-Bundle.json ==
+== C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-DeviceDefinition.json ==
+== C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-DeviceRequest.json ==
+== C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-MessageDefinition.json ==
+== C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-Provenance.json ==
+== C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-ServiceRequest.json ==
+== C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-Subscription.json ==
+== C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-Task.json ==
+== C:\Windows\Temp\tmp-8812gfwRXV6eG1jt\source\resources\structuredefinition\PAO-messageheader.json ==

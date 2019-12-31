@@ -1,0 +1,1 @@
+The Post Acute Orders Device Definition Profile is used to constrain the DeviceDefinition resource to support the ordering of DME equipment to a supplier or intermediary.

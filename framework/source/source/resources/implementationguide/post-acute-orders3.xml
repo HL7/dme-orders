@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide
+    xmlns="http://hl7.org/fhir">
+    <id value="Post-Acute-Orders3"/>
+    <meta>
+        <versionId value="53"/>
+        <lastUpdated value="2019-12-31T08:25:20.000-05:00"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/dme-orders/implementationguide/Post-Acute-Orders3"/>
+    <version value="0.0.1"/>
+    <name value="PostAcuteOrders3"/>
+    <title value="Post Acute FHIR Based Orders V3"/>
+    <status value="draft"/>
+    <publisher value="HL7"/>
+    <description value="# General&#xA;&#xA;This is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier. &#xA;* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.&#xA;* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.&#xA;&#xA;This implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements. &#xA;# Feedback&#xA;Comments and suggestions are welcome on our Zulip stream...&#xA;&#xA;or send a note to rdieterle@enablecare.us&#xA;&#xA;# Change log&#xA;&#xA;**0.0.2 (This version):** Update to test build on build.fhir.org&#xA;**0.0.1:** Initial version published to the continuous build &#xA;&#xA;# Known issues and to-dos&#xA;&#xA;* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest&#xA;* Working with other members of the team to create appropriate examples &#xA;"/>
+    <packageId value="hl7.fhir.us.dme-orders"/>
+    <fhirVersion value="4.0.0"/>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+        <packageId value="hl7.fhir.us.core"/>
+        <version value="current"/>
+    </dependsOn>
+    <definition>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAO-Bundle"/>
+                <display value="PAOBundle"/>
+            </reference>
+            <name value="PAOBundle"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAO-Task"/>
+                <display value="PAOTask"/>
+            </reference>
+            <name value="PAOTask"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAO-Subscription"/>
+                <display value="PAOSubscription"/>
+            </reference>
+            <name value="PAOSubscription"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAO-messageheader"/>
+                <display value="PAOMessageHeader"/>
+            </reference>
+            <name value="PAOMessageHeader"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAO-MessageDefinition"/>
+                <display value="PAOMessageDefinition"/>
+            </reference>
+            <name value="PAOMessageDefinition"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAO-Provenance"/>
+                <display value="PAOProvenance"/>
+            </reference>
+            <name value="PAOProvenance"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAO-ServiceRequest"/>
+                <display value="P:AOServiceRequest"/>
+            </reference>
+            <name value="PAOServiceRequest"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAO-DeviceRequest"/>
+                <display value="PAODeviceRequest"/>
+            </reference>
+            <name value="PAODeviceRequest"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAO-DeviceDefinition"/>
+                <display value="PAODeviceDefinition"/>
+            </reference>
+            <name value="PAODeviceDefinition"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <page>
+            <nameUrl value="toc.md"/>
+            <title value="Table of Contents"/>
+            <generation value="generated"/>
+            <page>
+                <nameUrl value="Post_Acute_Order_Home.html"/>
+                <title value="Post Acute Order Home"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="Background.html"/>
+                <title value="Background"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="Technical_Background.html"/>
+                <title value="Technical Background"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FHIR_Artifacts.html"/>
+                <title value="FHIR Artifacts"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="Workflow.html"/>
+                <title value="Workflow"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="MustSupport__and_Missing_Data.html"/>
+                <title value="MustSupport  and Missing Data"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="Message_Bundles.html"/>
+                <title value="Message Bundles"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="Submission.html"/>
+                <title value="Submission"/>
+                <generation value="markdown"/>
+            </page>
+        </page>
+    </definition>
+</ImplementationGuide>
