@@ -1,1 +1,0 @@
-The Post Acute Orders Bundle Profile is used to constrain the bundle resource for the initial submission of an order to the supplier or intermediary.
