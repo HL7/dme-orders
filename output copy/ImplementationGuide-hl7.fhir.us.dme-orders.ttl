@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "hl7.fhir.us.dme-orders"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "6" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-31T15:12:56.000-05:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PostAcuteOrders4</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders</pre><div><h1>General</h1>\n<p>This is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.</p>\n<ul>\n<li>The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.</li>\n<li>This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.</li>\n</ul>\n<p>This implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.</p>\n<h1>Feedback</h1>\n<p>Comments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us</p>\n<h1>Change log</h1>\n<p><strong>0.0.2 (This version):</strong> Update to test build on build.fhir.org\n<strong>0.0.1:</strong> Initial version published to the continuous build</p>\n<h1>Known issues and to-dos</h1>\n<ul>\n<li>Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest</li>\n<li>Working with other members of the team to create appropriate examples</li>\n</ul>\n</div></div>"
+  ];
+  fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders"];
+  fhir:ImplementationGuide.version [ fhir:value "0.0.1"];
+  fhir:ImplementationGuide.name [ fhir:value "PostAcuteOrders4"];
+  fhir:ImplementationGuide.title [ fhir:value "Post Acute FHIR based orders"];
+  fhir:ImplementationGuide.status [ fhir:value "draft"];
+  fhir:ImplementationGuide.date [ fhir:value "2019-12-31T15:25:37-05:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.publisher [ fhir:value "HL7"];
+  fhir:ImplementationGuide.description [ fhir:value "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n**0.0.2 (This version):** Update to test build on build.fhir.org \n**0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples"];
+  fhir:ImplementationGuide.packageId [ fhir:value "hl7.fhir.us.dme-orders"];
+  fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "4.0.0";
+     fhir:index 0
+  ];
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core";
+       fhir:link <http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.us.core" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "current" ]
+  ];
+  fhir:ImplementationGuide.definition [
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-messageheader.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messageheader>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-messageheader" ];
+         fhir:Reference.display [ fhir:value "PAOmessageheader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOmessageheader" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ];
+     fhir:ImplementationGuide.definition.page [
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.md" ];
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "Table of Contents" ];
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ];
+       fhir:ImplementationGuide.definition.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "Background.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Background" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messageheader> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders.ttl> .
+
+# -------------------------------------------------------------------------------------
+
