@@ -2,20 +2,20 @@
   "resourceType" : "ImplementationGuide",
   "id" : "post-acute-orders4",
   "meta" : {
-    "versionId" : "12",
-    "lastUpdated" : "2020-01-01T09:30:28.000-05:00"
+    "versionId" : "17",
+    "lastUpdated" : "2020-01-01T10:14:19.000-05:00"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Windows\\Temp\\tmp-88123YZwO4kPiO04\\source\\resources"
+    "valueString" : "C:\\Windows\\Temp\\tmp-8812OuIG040nCZmj\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Windows\\Temp\\tmp-88123YZwO4kPiO04\\framework"
+    "valueString" : "C:\\Windows\\Temp\\tmp-8812OuIG040nCZmj\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Windows\\Temp\\tmp-88123YZwO4kPiO04\\source\\pages"
+    "valueString" : "C:\\Windows\\Temp\\tmp-8812OuIG040nCZmj\\source\\pages"
   }],
   "url" : "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-orders4",
   "version" : "0.0.1",
@@ -41,6 +41,14 @@
         "display" : "PAOmessageheader"
       },
       "name" : "PAOmessageheader",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/PAO-messagedefinition4",
+        "display" : "PAOmessagedefinition4"
+      },
+      "name" : "PAOmessagedefinition4",
       "exampleBoolean" : false
     }],
     "page" : {

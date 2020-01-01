@@ -4,6 +4,12 @@
   "fhirVersion": "4.0.0",
   "extensions": [],
   "profiles": {
+    "MessageDefinition": [
+      {
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messagedefinition4",
+        "title": "PAO MessageDefinition Profile"
+      }
+    ],
     "MessageHeader": [
       {
         "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messageheader",

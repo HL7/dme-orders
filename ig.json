@@ -107,6 +107,10 @@
 			"base": "Media-eRXworkflowV3forIG.html",
 			"defns": "Media-eRXworkflowV3forIG-definitions.html"
 		},
+		"StructureDefinition/PAO-messagedefinition4": {
+			"base": "StructureDefinition-PAO-messagedefinition4.html",
+			"defns": "StructureDefinition-PAO-messagedefinition4-definitions.html"
+		},
 		"StructureDefinition/PAO-messageheader": {
 			"base": "StructureDefinition-PAO-messageheader.html",
 			"defns": "StructureDefinition-PAO-messageheader-definitions.html"
