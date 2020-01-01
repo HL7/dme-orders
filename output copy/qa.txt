@@ -1,0 +1,16 @@
+﻿PostAcuteOrders4 : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 0
+IG Publisher Version: v1.0.37-SNAPSHOT
+Generated Wed Jan 01 09:15:30 EST 2020. FHIR version 4.0.1 for hl7.fhir.us.dme-orders#0.0.1 (canonical = http://hl7.org/fhir/us/dme-orders)
+
+ Build Errors : 0 / 0
+ C:\Windows\Temp\tmp-8812QDs4mORWMdLf\source\resources\implementationguide\post-acute-orders4 : 0 / 0
+ C:\Windows\Temp\tmp-8812QDs4mORWMdLf\source\resources\structuredefinition\PAO-MessageDefinition : 0 / 0
+ C:\Windows\Temp\tmp-8812QDs4mORWMdLf\source\resources\structuredefinition\PAO-messageheader : 0 / 0
+</table>
+== n/a ==
+== C:\Windows\Temp\tmp-8812QDs4mORWMdLf\source\resources\implementationguide\post-acute-orders4.xml ==
+== C:\Windows\Temp\tmp-8812QDs4mORWMdLf\source\resources\structuredefinition\PAO-MessageDefinition.json ==
+== C:\Windows\Temp\tmp-8812QDs4mORWMdLf\source\resources\structuredefinition\PAO-messageheader.json ==
