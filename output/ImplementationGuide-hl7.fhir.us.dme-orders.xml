@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.us.dme-orders"/>
+  <meta>
+    <versionId value="12"/>
+    <lastUpdated value="2020-01-01T09:30:28.000-05:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>PostAcuteOrders4</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders</pre><div><h1>General</h1>
+<p>This is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.</p>
+<ul>
+<li>The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.</li>
+<li>This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.</li>
+</ul>
+<p>This implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.</p>
+<h1>Feedback</h1>
+<p>Comments and suggestions are welcome on our Zulip stream...
+or send a note to rdieterle@enablecare.us</p>
+<h1>Change log</h1>
+<p><strong>0.0.2 (This version):</strong> Update to test build on build.fhir.org
+<strong>0.0.1:</strong> Initial version published to the continuous build</p>
+<h1>Known issues and to-dos</h1>
+<ul>
+<li>Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest</li>
+<li>Working with other members of the team to create appropriate examples</li>
+</ul>
+</div></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders"/>
+  <version value="0.0.1"/>
+  <name value="PostAcuteOrders4"/>
+  <title value="Post Acute FHIR based orders"/>
+  <status value="draft"/>
+  <date value="2020-01-01T09:31:07-05:00"/>
+  <publisher value="HL7"/>
+  <description value="# General&#xA;This is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.&#xA;* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.&#xA;* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.&#xA;&#xA;This implementation guide is the result of work sponsored by CMS&#39;s Center for Program Integrity, whose goal is to advance the ability for provider&#39;s to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.&#xA;&#xA;# Feedback&#xA;Comments and suggestions are welcome on our Zulip stream...&#xA;or send a note to rdieterle@enablecare.us&#xA;&#xA;# Change log&#xA;**0.0.2 (This version):** Update to test build on build.fhir.org &#xA;**0.0.1:** Initial version published to the continuous build&#xA;&#xA;# Known issues and to-dos&#xA;* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest&#xA;* Working with other members of the team to create appropriate examples"/>
+  <packageId value="hl7.fhir.us.dme-orders"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.0"/>
+  <dependsOn>
+    <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+    <packageId value="hl7.fhir.us.core"/>
+    <version value="current"/>
+  </dependsOn>
+  <definition>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-PAO-messageheader.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PAO-messageheader"/>
+        <display value="PAOmessageheader"/>
+      </reference>
+      <name value="PAOmessageheader"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <nameUrl value="toc.md"/>
+      <title value="Table of Contents"/>
+      <generation value="generated"/>
+      <page>
+        <nameUrl value="Post_Acute_Orders_Home.html"/>
+        <title value="Post Acute Orders Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="Background.html"/>
+        <title value="Background"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="Workflow.html"/>
+        <title value="Workflow"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="Technical_Background.html"/>
+        <title value="Technical Background"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="FHIR_Artifacts.html"/>
+        <title value="FHIR Artifacts"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="MustSupport_and_Missing_Data.html"/>
+        <title value="MustSupport and Missing Data"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="Submission.html"/>
+        <title value="Submission"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="Message_Bundles.html"/>
+        <title value="Message Bundles"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+  </definition>
+</ImplementationGuide>
