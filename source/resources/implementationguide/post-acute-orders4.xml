@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="post-acute-orders4"/>
     <meta>
-        <versionId value="17"/>
-        <lastUpdated value="2020-01-01T10:14:19.000-05:00"/>
+        <versionId value="18"/>
+        <lastUpdated value="2020-01-01T10:52:19.000-05:00"/>
     </meta>
     <url value="http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-orders4"/>
     <version value="0.0.1"/>
@@ -35,6 +35,14 @@
                 <display value="PAOmessagedefinition4"/>
             </reference>
             <name value="PAOmessagedefinition4"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAO-bundle4"/>
+                <display value="PAObundle4"/>
+            </reference>
+            <name value="PAObundle4"/>
             <exampleBoolean value="false"/>
         </resource>
         <page>

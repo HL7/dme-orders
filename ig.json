@@ -111,6 +111,10 @@
 			"base": "StructureDefinition-PAO-messagedefinition4.html",
 			"defns": "StructureDefinition-PAO-messagedefinition4-definitions.html"
 		},
+		"StructureDefinition/PAO-bundle4": {
+			"base": "StructureDefinition-PAO-bundle4.html",
+			"defns": "StructureDefinition-PAO-bundle4-definitions.html"
+		},
 		"StructureDefinition/PAO-messageheader": {
 			"base": "StructureDefinition-PAO-messageheader.html",
 			"defns": "StructureDefinition-PAO-messageheader-definitions.html"

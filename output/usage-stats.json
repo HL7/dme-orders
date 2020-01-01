@@ -4,6 +4,12 @@
   "fhirVersion": "4.0.0",
   "extensions": [],
   "profiles": {
+    "Bundle": [
+      {
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-bundle4",
+        "title": "PAO Bundle Profile"
+      }
+    ],
     "MessageDefinition": [
       {
         "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messagedefinition4",
@@ -38,6 +44,9 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"

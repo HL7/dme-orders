@@ -27,6 +27,10 @@ active: profiles
 </thead>
 <tbody>
 <tr>
+<td><a href="StructureDefinition-PAO-bundle4.html">PAObundle4</a></td>
+<td>{% capture profile-intro %}{% include PAO-bundle4-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
+</tr>
+<tr>
 <td><a href="StructureDefinition-PAO-messagedefinition4.html">PAOmessagedefinition4</a></td>
 <td>{% capture profile-intro %}{% include PAO-messagedefinition4-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
 </tr>

@@ -3,8 +3,8 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.dme-orders"/>
   <meta>
-    <versionId value="17"/>
-    <lastUpdated value="2020-01-01T10:14:19.000-05:00"/>
+    <versionId value="18"/>
+    <lastUpdated value="2020-01-01T10:52:19.000-05:00"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>PostAcuteOrders4</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders</pre><div><h1>General</h1>
@@ -32,7 +32,7 @@ or send a note to rdieterle@enablecare.us</p>
   <name value="PostAcuteOrders4"/>
   <title value="Post Acute FHIR based orders"/>
   <status value="draft"/>
-  <date value="2020-01-01T10:17:58-05:00"/>
+  <date value="2020-01-01T10:57:39-05:00"/>
   <publisher value="HL7"/>
   <description value="# General&#xA;This is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.&#xA;* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.&#xA;* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.&#xA;&#xA;This implementation guide is the result of work sponsored by CMS&#39;s Center for Program Integrity, whose goal is to advance the ability for provider&#39;s to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.&#xA;&#xA;# Feedback&#xA;Comments and suggestions are welcome on our Zulip stream...&#xA;or send a note to rdieterle@enablecare.us&#xA;&#xA;# Change log&#xA;**0.0.2 (This version):** Update to test build on build.fhir.org &#xA;**0.0.1:** Initial version published to the continuous build&#xA;&#xA;# Known issues and to-dos&#xA;* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest&#xA;* Working with other members of the team to create appropriate examples"/>
   <packageId value="hl7.fhir.us.dme-orders"/>
@@ -70,6 +70,20 @@ or send a note to rdieterle@enablecare.us</p>
         <display value="PAOmessagedefinition4"/>
       </reference>
       <name value="PAOmessagedefinition4"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-PAO-bundle4.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PAO-bundle4"/>
+        <display value="PAObundle4"/>
+      </reference>
+      <name value="PAObundle4"/>
       <exampleBoolean value="false"/>
     </resource>
     <page>
