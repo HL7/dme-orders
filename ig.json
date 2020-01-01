@@ -115,9 +115,33 @@
 			"base": "StructureDefinition-PAO-bundle4.html",
 			"defns": "StructureDefinition-PAO-bundle4-definitions.html"
 		},
+		"StructureDefinition/PAO-task4": {
+			"base": "StructureDefinition-PAO-task4.html",
+			"defns": "StructureDefinition-PAO-task4-definitions.html"
+		},
+		"StructureDefinition/PAO-subscription4": {
+			"base": "StructureDefinition-PAO-subscription4.html",
+			"defns": "StructureDefinition-PAO-subscription4-definitions.html"
+		},
+		"StructureDefinition/PAO-servicerequest4": {
+			"base": "StructureDefinition-PAO-servicerequest4.html",
+			"defns": "StructureDefinition-PAO-servicerequest4-definitions.html"
+		},
 		"StructureDefinition/PAO-messageheader": {
 			"base": "StructureDefinition-PAO-messageheader.html",
 			"defns": "StructureDefinition-PAO-messageheader-definitions.html"
+		},
+		"StructureDefinition/PAO-devicerequest4": {
+			"base": "StructureDefinition-PAO-devicerequest4.html",
+			"defns": "StructureDefinition-PAO-devicerequest4-definitions.html"
+		},
+		"StructureDefinition/PAO-devicedefinition4": {
+			"base": "StructureDefinition-PAO-devicedefinition4.html",
+			"defns": "StructureDefinition-PAO-devicedefinition4-definitions.html"
+		},
+		"StructureDefinition/PAO-provenance4": {
+			"base": "StructureDefinition-PAO-provenance4.html",
+			"defns": "StructureDefinition-PAO-provenance4-definitions.html"
 		}
 	},
 	"fixed-business-version": "0.0.1",

@@ -9,21 +9,21 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "hl7.fhir.us.dme-orders"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "18" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-01-01T10:52:19.000-05:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "25" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-01-01T12:22:21.000-05:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PostAcuteOrders4</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders</pre><div><h1>General</h1>\n<p>This is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.</p>\n<ul>\n<li>The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.</li>\n<li>This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.</li>\n</ul>\n<p>This implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.</p>\n<h1>Feedback</h1>\n<p>Comments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us</p>\n<h1>Change log</h1>\n<p><strong>0.0.2 (This version):</strong> Update to test build on build.fhir.org\n<strong>0.0.1:</strong> Initial version published to the continuous build</p>\n<h1>Known issues and to-dos</h1>\n<ul>\n<li>Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest</li>\n<li>Working with other members of the team to create appropriate examples</li>\n</ul>\n</div></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PostAcuteOrders4</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders</pre><div><h1>General</h1>\n<p>This is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.</p>\n<ul>\n<li>The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.</li>\n<li>This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.</li>\n</ul>\n<p>This implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.</p>\n<h1>Feedback</h1>\n<p>Comments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us</p>\n<h1>Change log</h1>\n<p><strong>0.0.3 (This version):</strong> Working build on build.fhir.org\n<strong>0.0.2:</strong> Update to test build on build.fhir.org\n<strong>0.0.1:</strong> Initial version published to the continuous build</p>\n<h1>Known issues and to-dos</h1>\n<ul>\n<li>Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest</li>\n<li>Working with other members of the team to create appropriate examples</li>\n</ul>\n</div></div>"
   ];
   fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders"];
   fhir:ImplementationGuide.version [ fhir:value "0.0.1"];
   fhir:ImplementationGuide.name [ fhir:value "PostAcuteOrders4"];
   fhir:ImplementationGuide.title [ fhir:value "Post Acute FHIR based orders"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-01-01T10:57:39-05:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-01-01T12:23:12-05:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7"];
-  fhir:ImplementationGuide.description [ fhir:value "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n**0.0.2 (This version):** Update to test build on build.fhir.org \n**0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples"];
+  fhir:ImplementationGuide.description [ fhir:value "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n**0.0.3 (This version):** Working build on build.fhir.org\n**0.0.2:** Update to test build on build.fhir.org \n**0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples"];
   fhir:ImplementationGuide.packageId [ fhir:value "hl7.fhir.us.dme-orders"];
   fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
   fhir:ImplementationGuide.fhirVersion [
@@ -94,6 +94,114 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAObundle4" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-task4.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-task4>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-task4" ];
+         fhir:Reference.display [ fhir:value "PAOtask4" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOtask4" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-subscription4.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-subscription4" ];
+         fhir:Reference.display [ fhir:value "PAOsubscription4" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOsubscription4" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-servicerequest4.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-servicerequest4" ];
+         fhir:Reference.display [ fhir:value "PAOservicerequest4" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOservicerequest4" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-devicerequest4.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-devicerequest4" ];
+         fhir:Reference.display [ fhir:value "PAOdevicerequest4" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOdevicerequest4" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-devicedefinition4.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicedefinition4>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-devicedefinition4" ];
+         fhir:Reference.display [ fhir:value "PAOdevicedefinition4" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOdevicedefinition4" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-provenance4.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-provenance4" ];
+         fhir:Reference.display [ fhir:value "PAOprovenance4" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOprovenance4" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.md" ];
@@ -148,6 +256,18 @@
 <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messagedefinition4> a fhir:us .
 
 <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-bundle4> a fhir:us .
+
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-task4> a fhir:us .
+
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4> a fhir:us .
+
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4> a fhir:us .
+
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4> a fhir:us .
+
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicedefinition4> a fhir:us .
+
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4> a fhir:us .
 
 # - ontology header ------------------------------------------------------------
 

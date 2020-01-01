@@ -27,7 +27,8 @@ Comments and suggestions are welcome on our Zulip stream...
 or send a note to rdieterle@enablecare.us
 
 # Change log
-**0.0.2 (This version):** Update to test build on build.fhir.org 
+**0.0.3 (This version):** Working build on build.fhir.org
+**0.0.2:** Update to test build on build.fhir.org 
 **0.0.1:** Initial version published to the continuous build
 
 # Known issues and to-dos

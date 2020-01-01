@@ -3,16 +3,28 @@
 
 err = 0, warn = 0, info = 0
 IG Publisher Version: v1.0.37-SNAPSHOT
-Generated Wed Jan 01 10:58:35 EST 2020. FHIR version 4.0.1 for hl7.fhir.us.dme-orders#0.0.1 (canonical = http://hl7.org/fhir/us/dme-orders)
+Generated Wed Jan 01 12:24:22 EST 2020. FHIR version 4.0.1 for hl7.fhir.us.dme-orders#0.0.1 (canonical = http://hl7.org/fhir/us/dme-orders)
 
  Build Errors : 0 / 0
- C:\Windows\Temp\tmp-8812tymEp7Bytwmt\source\resources\implementationguide\post-acute-orders4 : 0 / 0
- C:\Windows\Temp\tmp-8812tymEp7Bytwmt\source\resources\structuredefinition\PAO-bundle4 : 0 / 0
- C:\Windows\Temp\tmp-8812tymEp7Bytwmt\source\resources\structuredefinition\PAO-messagedefinition4 : 0 / 0
- C:\Windows\Temp\tmp-8812tymEp7Bytwmt\source\resources\structuredefinition\PAO-messageheader : 0 / 0
+ C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\implementationguide\post-acute-orders4 : 0 / 0
+ C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-bundle4 : 0 / 0
+ C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-devicedefinition4 : 0 / 0
+ C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-devicerequest4 : 0 / 0
+ C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-messagedefinition4 : 0 / 0
+ C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-messageheader : 0 / 0
+ C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-provenance4 : 0 / 0
+ C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-servicerequest4 : 0 / 0
+ C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-subscription4 : 0 / 0
+ C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-task4 : 0 / 0
 </table>
 == n/a ==
-== C:\Windows\Temp\tmp-8812tymEp7Bytwmt\source\resources\implementationguide\post-acute-orders4.xml ==
-== C:\Windows\Temp\tmp-8812tymEp7Bytwmt\source\resources\structuredefinition\PAO-bundle4.json ==
-== C:\Windows\Temp\tmp-8812tymEp7Bytwmt\source\resources\structuredefinition\PAO-messagedefinition4.json ==
-== C:\Windows\Temp\tmp-8812tymEp7Bytwmt\source\resources\structuredefinition\PAO-messageheader.json ==
+== C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\implementationguide\post-acute-orders4.xml ==
+== C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-bundle4.json ==
+== C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-devicedefinition4.json ==
+== C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-devicerequest4.json ==
+== C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-messagedefinition4.json ==
+== C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-messageheader.json ==
+== C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-provenance4.json ==
+== C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-servicerequest4.json ==
+== C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-subscription4.json ==
+== C:\Windows\Temp\tmp-8812nu51nVhQ66Bf\source\resources\structuredefinition\PAO-task4.json ==

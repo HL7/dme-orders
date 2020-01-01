@@ -13,6 +13,8 @@
     <sch:title>f:MessageDefinition</sch:title>
     <sch:rule context="f:MessageDefinition">
       <sch:assert test="count(f:url) &gt;= 1">url: minimum cardinality of 'url' is 1</sch:assert>
+      <sch:assert test="count(f:category) &gt;= 1">category: minimum cardinality of 'category' is 1</sch:assert>
+      <sch:assert test="count(f:focus) &gt;= 1">focus: minimum cardinality of 'focus' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

@@ -90,13 +90,13 @@ Restrictions","",0,1,"","","","markdown {[]} {[]}
 "MessageDefinition.parent","","","",0,*,"","","Y","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ActivityDefinition], CanonicalType[http://hl7.org/fhir/StructureDefinition/PlanDefinition]]}
 ","Protocol/workflow this is part of","Identifies a protocol or workflow that this MessageDefinition represents a step in.","It should be possible to use MessageDefinition to describe a message to be used by certain steps in a particular protocol as part of a PlanDefinition or ActivityDefinition.","","","","","","","","",,,,,"",,,,"MessageDefinition.parent",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"MessageDefinition.event[x]","","","",1,1,"","","Y","Coding {[]} {[]}
+"MessageDefinition.event[x]","","","",1,1,"Y","","Y","Coding {[]} {[]}
 uri {[]} {[]}","Event code  or link to the EventDefinition","Event code or link to the EventDefinition.","","","","","","","","","",,"example","One of the message events defined as part of this version of FHIR.","http://hl7.org/fhir/ValueSet/message-events","",,,,"MessageDefinition.event[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"MessageDefinition.category","","","",0,1,"","","Y","code {[]} {[]}
+"MessageDefinition.category","","","",1,1,"Y","","Y","code {[]} {[]}
 ","consequence | currency | notification","The impact of the content of the message.","","","","","","","","","",,"required","The impact of the content of a message.","http://hl7.org/fhir/ValueSet/message-significance-category|4.0.1","",,,,"MessageDefinition.category",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"MessageDefinition.focus","","","",0,*,"","","Y","BackboneElement {[]} {[]}
+"MessageDefinition.focus","","","",1,*,"Y","","Y","BackboneElement {[]} {[]}
 ","Resource(s) that are the subject of the event","Identifies the resource (or resources) that are being addressed by the event.  For example, the Encounter for an admit message or two Account records for a merge.","","","","","","","","","",,,,,"",,,,"MessageDefinition.focus",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 md-1:Max must be postive int or * {max='*' or (max.toInteger() > 0)}"
 "MessageDefinition.focus.id","","","",0,1,"","","","string {[]} {[]}
@@ -111,10 +111,10 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"MessageDefinition.focus.code","","","",1,1,"","","Y","code {[]} {[]}
+"MessageDefinition.focus.code","","","",1,1,"Y","","Y","code {[]} {[]}
 ","Type of resource","The kind of resource that must be the focus for this message.","Multiple focuses addressing different resources may occasionally occur.  E.g. to link or unlink a resource from a particular account or encounter, etc.","","","","","","","","",,"required","One of the resource types defined as part of this version of FHIR.","http://hl7.org/fhir/ValueSet/resource-types|4.0.1","",,,,"MessageDefinition.focus.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"MessageDefinition.focus.profile","","","",0,1,"","","","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/StructureDefinition]]}
+"MessageDefinition.focus.profile","","","",0,1,"Y","","","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/StructureDefinition]]}
 ","Profile that must be adhered to by focus","A profile that reflects constraints for the focal resource (and potentially for related resources).","This should be present for most message definitions.  However, if the message focus is only a single resource and there is no need to include referenced resources or otherwise enforce the presence of particular elements, it can be omitted.","This profile allows setting boundaries for what content must appear within the message bundle vs. outside based on the declared aggregation constraints on referenced resources on this and related profiles.","","","","","","","",,,,,"",,,,"MessageDefinition.focus.profile",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "MessageDefinition.focus.min","","","",1,1,"","","Y","unsignedInt {[]} {[]}

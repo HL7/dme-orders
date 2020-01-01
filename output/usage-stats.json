@@ -10,6 +10,18 @@
         "title": "PAO Bundle Profile"
       }
     ],
+    "DeviceDefinition": [
+      {
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicedefinition4",
+        "title": "PAO DeviceDefinition Profile"
+      }
+    ],
+    "DeviceRequest": [
+      {
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4",
+        "title": "PAO DeviceRequest Profile"
+      }
+    ],
     "MessageDefinition": [
       {
         "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messagedefinition4",
@@ -20,6 +32,30 @@
       {
         "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messageheader",
         "title": "PAO MessageHeader Profile"
+      }
+    ],
+    "Provenance": [
+      {
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4",
+        "title": "PAO Provenance Profile"
+      }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4",
+        "title": "PAO ServiceRequest Profile"
+      }
+    ],
+    "Subscription": [
+      {
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4",
+        "title": "PAO Subscription Profile"
+      }
+    ],
+    "Task": [
+      {
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-task4",
+        "title": "PAO Task Profile"
       }
     ]
   },
