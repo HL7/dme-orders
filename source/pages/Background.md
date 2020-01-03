@@ -4,7 +4,7 @@ layout: default
 active: Background
 ---
 
-[Previous Page](Post_Acute_Orders_Home.html)
+[Previous Page](Post-Acute_Orders_Home.html)
 
 # Current environment
 Patients that move from one payer to another frequently experience interruptions or delays to existing care for chronic and acute conditions related to the inability of the new payer to obtain information about the ongoing treatment, understand its progress and verify the clinical need for such treatments. This frequently requires the patient or providers to change therapies, tolerate delays in care, see additional providers or schedule additional visits, and fill out or resubmit additional documentation showing that the care is medically necessary and appropriate. The process creates a significant burden on providers, add unnecessary costs, and introduces risk to the patient.

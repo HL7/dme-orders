@@ -1,6 +1,6 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.4",
   "fhirVersion": "[4.0.0]",
-  "date": "20200101122255",
+  "date": "20200102181633",
   "name": "hl7.fhir.us.dme-orders"
 }

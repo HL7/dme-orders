@@ -27,11 +27,14 @@ Comments and suggestions are welcome on our Zulip stream...
 or send a note to rdieterle@enablecare.us
 
 # Change log
-**0.0.3 (This version):** Working build on build.fhir.org
-**0.0.2:** Update to test build on build.fhir.org 
-**0.0.1:** Initial version published to the continuous build
+* **0.0.4 (This version):** Cleanup versions, add known issues, and correct title 
+* **0.0.3:** Working build on build.fhir.org
+* **0.0.2:** Update to test build on build.fhir.org 
+* **0.0.1:** Initial version published to the continuous build
 
 # Known issues and to-dos
 * Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest
 * Working with other members of the team to create appropriate examples
+* Need to add full examples of message bundles
+* Working on specific terminologies and value sets for post-acute orders
 

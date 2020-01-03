@@ -144,7 +144,7 @@
 			"defns": "StructureDefinition-PAO-provenance4-definitions.html"
 		}
 	},
-	"fixed-business-version": "0.0.1",
+	"fixed-business-version": "0.0.4",
 	"dependencyList": [
 		{
 			"location": "http://hl7.org/fhir/us/core",

@@ -2,28 +2,28 @@
   "resourceType" : "ImplementationGuide",
   "id" : "post-acute-orders4",
   "meta" : {
-    "versionId" : "25",
-    "lastUpdated" : "2020-01-01T12:22:21.000-05:00"
+    "versionId" : "28",
+    "lastUpdated" : "2020-01-02T18:16:21.000-05:00"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Windows\\Temp\\tmp-8812nu51nVhQ66Bf\\source\\resources"
+    "valueString" : "C:\\Windows\\Temp\\tmp-8812QA5yk8rpYII3\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Windows\\Temp\\tmp-8812nu51nVhQ66Bf\\framework"
+    "valueString" : "C:\\Windows\\Temp\\tmp-8812QA5yk8rpYII3\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Windows\\Temp\\tmp-8812nu51nVhQ66Bf\\source\\pages"
+    "valueString" : "C:\\Windows\\Temp\\tmp-8812QA5yk8rpYII3\\source\\pages"
   }],
   "url" : "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-orders4",
-  "version" : "0.0.1",
+  "version" : "0.0.4",
   "name" : "PostAcuteOrders4",
-  "title" : "Post Acute FHIR based orders",
+  "title" : "Post-Acute FHIR Based Orders",
   "status" : "draft",
   "publisher" : "HL7",
-  "description" : "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n**0.0.3 (This version):** Working build on build.fhir.org\n**0.0.2:** Update to test build on build.fhir.org \n**0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples",
+  "description" : "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.4 (This version):** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples\n* Need to add full examples of message bundles\n* Working on specific terminologies and value sets for post-acute orders",
   "packageId" : "hl7.fhir.us.dme-orders",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.0",
@@ -112,8 +112,8 @@
       "title" : "Table of Contents",
       "generation" : "generated",
       "page" : [{
-        "nameUrl" : "Post_Acute_Orders_Home.html",
-        "title" : "Post Acute Orders Home",
+        "nameUrl" : "Post-Acute_Orders_Home.html",
+        "title" : "Post-Acute Orders Home",
         "generation" : "markdown"
       },
       {

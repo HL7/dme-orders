@@ -22,7 +22,7 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicedefinition4"/>
-  <version value="0.0.1"/>
+  <version value="0.0.4"/>
   <name value="PAOdevicedefinition4"/>
   <title value="PAO DeviceDefinition Profile"/>
   <status value="active"/>
