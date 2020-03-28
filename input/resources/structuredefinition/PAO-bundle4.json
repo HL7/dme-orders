@@ -1,0 +1,91 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAO-bundle4",
+	"meta": {
+		"versionId": "7",
+		"lastUpdated": "2020-03-26T05:00:20.331+00:00",
+		"source": "#kJ7cDoVemCdSKIWo"
+	},
+	"extension": [],
+	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-bundle4",
+	"version": "0.0.1",
+	"name": "PAObundle4",
+	"title": "PAO Bundle Profile",
+	"status": "active",
+	"date": "2020-01-01",
+	"publisher": "HL7",
+	"description": "Post Acute Orders Bundle Profile Description",
+	"purpose": "Post Acute Orders Bundle Profile Purpose",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Bundle",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Bundle",
+				"path": "Bundle"
+			},
+			{
+				"id": "Bundle.identifier",
+				"path": "Bundle.identifier",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Bundle.identifier.value",
+				"path": "Bundle.identifier.value",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Bundle.identifier.value.id",
+				"path": "Bundle.identifier.value.id",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Bundle.type",
+				"path": "Bundle.type",
+				"fixedCode": "message",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/ValueSet/bundle-type"
+				}
+			},
+			{
+				"id": "Bundle.timestamp",
+				"path": "Bundle.timestamp",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Bundle.entry",
+				"path": "Bundle.entry",
+				"min": 1,
+				"max": "*",
+				"mustSupport": true
+			},
+			{
+				"id": "Bundle.entry.resource",
+				"path": "Bundle.entry.resource",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Resource",
+						"profile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messageheader"
+						]
+					}
+				],
+				"mustSupport": true
+			}
+		]
+	}
+}

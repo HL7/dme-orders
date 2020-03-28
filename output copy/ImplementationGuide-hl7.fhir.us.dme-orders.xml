@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.us.dme-orders"/>
+  <meta>
+    <versionId value="16"/>
+    <lastUpdated value="2020-03-26T16:40:31.836+00:00"/>
+    <source value="#04OBbxAc0jBPQgX5"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>PostAcuteOrders4</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders</pre><div><h1>General</h1>
+<p>This is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.</p>
+<ul>
+<li>The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.</li>
+<li>This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.</li>
+</ul>
+<p>This implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.</p>
+<h1>Feedback</h1>
+<p>Comments and suggestions are welcome on our Zulip stream...
+or send a note to rdieterle@enablecare.us</p>
+<h1>Change log</h1>
+<ul>
+<li><strong>0.0.7 (This version):</strong> further updates that now include Code System, Value Set, US Core profile references in some PAO profiles</li>
+<li><strong>0.0.6:</strong> Further changes to address publisher errors (not pushed to build)</li>
+<li><strong>0.0.5:</strong> Update for tooling changes (not pushed to build)</li>
+<li><strong>0.0.4:</strong> Cleanup versions, add known issues, and correct title</li>
+<li><strong>0.0.3:</strong> Working build on build.fhir.org</li>
+<li><strong>0.0.2:</strong> Update to test build on build.fhir.org</li>
+<li><strong>0.0.1:</strong> Initial version published to the continuous build</li>
+</ul>
+<h1>Known issues and to-dos</h1>
+<ul>
+<li>Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest</li>
+<li>Working with other members of the team to create appropriate examples</li>
+<li>Need to add full examples of message bundles</li>
+<li>Working on specific terminologies and value sets for post-acute orders</li>
+</ul>
+</div></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders"/>
+  <version value="0.0.7"/>
+  <name value="PostAcuteOrders4"/>
+  <title value="Post-Acute FHIR Based Orders"/>
+  <status value="draft"/>
+  <date value="2020-03-26T16:57:59+00:00"/>
+  <publisher value="HL7"/>
+  <contact>
+    <name value="HL7 International - Orders and Observations"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/orders"/>
+    </telecom>
+  </contact>
+  <description value="# General&#xA;This is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.&#xA;* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.&#xA;* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.&#xA;&#xA;This implementation guide is the result of work sponsored by CMS&#39;s Center for Program Integrity, whose goal is to advance the ability for provider&#39;s to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.&#xA;&#xA;# Feedback&#xA;Comments and suggestions are welcome on our Zulip stream...&#xA;or send a note to rdieterle@enablecare.us&#xA;&#xA;# Change log&#xA;* **0.0.7 (This version):** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles&#xA;* **0.0.6:** Further changes to address publisher errors (not pushed to build)&#xA;* **0.0.5:** Update for tooling changes (not pushed to build)&#xA;* **0.0.4:** Cleanup versions, add known issues, and correct title &#xA;* **0.0.3:** Working build on build.fhir.org&#xA;* **0.0.2:** Update to test build on build.fhir.org &#xA;* **0.0.1:** Initial version published to the continuous build&#xA;&#xA;# Known issues and to-dos&#xA;* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest&#xA;* Working with other members of the team to create appropriate examples&#xA;* Need to add full examples of message bundles&#xA;* Working on specific terminologies and value sets for post-acute orders"/>
+  <packageId value="hl7.fhir.us.dme-orders"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn>
+    <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+    <packageId value="hl7.fhir.us.core"/>
+    <version value="current"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2020+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="CI Build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-PAO-messageheader.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PAO-messageheader"/>
+        <display value="PAOmessageheader"/>
+      </reference>
+      <name value="PAOmessageheader"/>
+      <description value="Post Acute Orders MessageHeader Profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-PAO-messagedefinition4.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PAO-messagedefinition4"/>
+        <display value="PAOmessagedefinition4"/>
+      </reference>
+      <name value="PAOmessagedefinition4"/>
+      <description value="Post Acute Orders MessageDefinition Profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-PAO-bundle4.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PAO-bundle4"/>
+        <display value="PAObundle4"/>
+      </reference>
+      <name value="PAObundle4"/>
+      <description value="Post Acute Orders Bundle Profile Description"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-PAO-task4.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PAO-task4"/>
+        <display value="PAOtask4"/>
+      </reference>
+      <name value="PAOtask4"/>
+      <description value="Post Acute Orders Task Profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-PAO-subscription4.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PAO-subscription4"/>
+        <display value="PAOsubscription4"/>
+      </reference>
+      <name value="PAOsubscription4"/>
+      <description value="Post Acute Orders Subscription Profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-PAO-servicerequest4.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PAO-servicerequest4"/>
+        <display value="PAOservicerequest4"/>
+      </reference>
+      <name value="PAOservicerequest4"/>
+      <description value="Post Acute Orders ServiceRequest Profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-PAO-devicerequest4.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PAO-devicerequest4"/>
+        <display value="PAOdevicerequest4"/>
+      </reference>
+      <name value="PAOdevicerequest4"/>
+      <description value="Post Acute Orders DeviceRequest Profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-PAO-provenance4.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PAO-provenance4"/>
+        <display value="PAOprovenance4"/>
+      </reference>
+      <name value="PAOprovenance4"/>
+      <description value="Post Acute Orders Provenance Profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-PAO-Message-Event.html"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/PAO-Message-Event"/>
+        <display value="PAO Message Event Code System"/>
+      </reference>
+      <name value="PAO Message Event Code System"/>
+      <description value="This is the code system for the value set for the event element in the Message Header"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-PAO-Message-Event.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/PAO-Message-Event"/>
+        <display value="PAO Message Event Value Set"/>
+      </reference>
+      <name value="PAO Message Event Value Set"/>
+      <description value="This is a value set for the PAO Message Event "/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-PAO-medicationrequest.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PAO-medicationrequest"/>
+        <display value="PAOmedcationrequest"/>
+      </reference>
+      <name value="PAOmedcationrequest"/>
+      <description value="This is text for a description of the PAO MedicationRequest"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <nameUrl value="index.html"/>
+      <title value="IG Home Page"/>
+      <generation value="markdown"/>
+      <page>
+        <nameUrl value="Post-AcuteOrdersHome.html"/>
+        <title value="Post-Acute Orders Home"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="Background.html"/>
+          <title value="Background"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Workflow.html"/>
+          <title value="Workflow"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="TechnicalBackground.html"/>
+          <title value="Technical Background"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="FHIRArtifacts.html"/>
+          <title value="FHIR Artifacts"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Submission.html"/>
+          <title value="Submission"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="MessageBundles.html"/>
+          <title value="Message Bundles"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="TestPage.html"/>
+          <title value="Test Page"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

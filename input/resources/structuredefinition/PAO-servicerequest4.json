@@ -1,0 +1,151 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAO-servicerequest4",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2020-02-11T23:02:33.305+00:00",
+		"source": "#IYODSp8KfihJGUZZ"
+	},
+	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4",
+	"version": "0.0.1",
+	"name": "PAOservicerequest4",
+	"title": "PAO ServiceRequest Profile",
+	"status": "active",
+	"date": "2020-01-01",
+	"publisher": "HL7",
+	"description": "Post Acute Orders ServiceRequest Profile",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "ServiceRequest",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "ServiceRequest",
+				"path": "ServiceRequest"
+			},
+			{
+				"id": "ServiceRequest.identifier",
+				"path": "ServiceRequest.identifier",
+				"min": 1,
+				"max": "*",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.replaces",
+				"path": "ServiceRequest.replaces",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.status",
+				"path": "ServiceRequest.status",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.intent",
+				"path": "ServiceRequest.intent",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.category",
+				"path": "ServiceRequest.category",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.priority",
+				"path": "ServiceRequest.priority",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.code",
+				"path": "ServiceRequest.code",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.orderDetail",
+				"path": "ServiceRequest.orderDetail",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.subject",
+				"path": "ServiceRequest.subject",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.encounter",
+				"path": "ServiceRequest.encounter",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.occurrence[x]",
+				"path": "ServiceRequest.occurrence[x]",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.asNeeded[x]",
+				"path": "ServiceRequest.asNeeded[x]",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.authoredOn",
+				"path": "ServiceRequest.authoredOn",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.requester",
+				"path": "ServiceRequest.requester",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.reasonCode",
+				"path": "ServiceRequest.reasonCode",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.reasonReference",
+				"path": "ServiceRequest.reasonReference",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.insurance",
+				"path": "ServiceRequest.insurance",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.supportingInfo",
+				"path": "ServiceRequest.supportingInfo",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.bodySite",
+				"path": "ServiceRequest.bodySite",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.note",
+				"path": "ServiceRequest.note",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.patientInstruction",
+				"path": "ServiceRequest.patientInstruction",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.relevantHistory",
+				"path": "ServiceRequest.relevantHistory",
+				"min": 1,
+				"max": "*",
+				"mustSupport": true
+			}
+		]
+	}
+}

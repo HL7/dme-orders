@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="9fc8b225-6ad0-49b2-8cfb-c8716c4a5fb1"/>
+  <meta>
+    <lastUpdated value="2020-03-26T16:57:59.400+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event"/>
+    <resource>
+      <ValueSet>
+        <id value="PAO-Message-Event"/>
+        <meta>
+          <versionId value="10"/>
+          <lastUpdated value="2020-03-26T08:12:28.816+00:00"/>
+          <source value="#RHM5gBSv7SjqgR8t"/>
+        </meta>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 4 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event version 0.0.7</p>
+            <p>All codes from system 
+              <a href="CodeSystem-PAO-Message-Event.html">
+                <code>http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-dme-orders-CodeSystem-PAO-Message-Event-InitialOrder"> </a>
+                  <a href="CodeSystem-PAO-Message-Event.html#PAO-Message-Event-InitialOrder">InitialOrder</a>
+                </td>
+                <td>Initial Order</td>
+                <td>Initial order for Post Acute services</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-dme-orders-CodeSystem-PAO-Message-Event-OrderUpdate"> </a>
+                  <a href="CodeSystem-PAO-Message-Event.html#PAO-Message-Event-OrderUpdate">OrderUpdate</a>
+                </td>
+                <td>Order Update</td>
+                <td>Update to an order (may be declined)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-dme-orders-CodeSystem-PAO-Message-Event-OrderCancel"> </a>
+                  <a href="CodeSystem-PAO-Message-Event.html#PAO-Message-Event-OrderCancel">OrderCancel</a>
+                </td>
+                <td>Order Cancel</td>
+                <td>Cancel an order (may be declined if done)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-dme-orders-CodeSystem-PAO-Message-Event-OrderStatus"> </a>
+                  <a href="CodeSystem-PAO-Message-Event.html#PAO-Message-Event-OrderStatus">OrderStatus</a>
+                </td>
+                <td>Order Status</td>
+                <td>Request for the status of the order</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event"/>
+        <version value="0.0.7"/>
+        <name value="PAOMessageEvent"/>
+        <title value="PAO Message Event Value Set"/>
+        <status value="draft"/>
+        <date value="2020-03-26T16:57:59+00:00"/>
+        <publisher value="HL7"/>
+        <contact>
+          <name value="HL7 International - Orders and Observations"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/orders"/>
+          </telecom>
+        </contact>
+        <description value="This is a value set for the PAO Message Event "/>
+        <expansion>
+          <identifier value="urn:uuid:1f463f95-efd2-4f1e-b120-53a4803ad814"/>
+          <timestamp value="2020-03-26T16:58:10+00:00"/>
+          <total value="4"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event|0.0.7"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event"/>
+            <code value="InitialOrder"/>
+            <display value="Initial Order"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event"/>
+            <code value="OrderUpdate"/>
+            <display value="Order Update"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event"/>
+            <code value="OrderCancel"/>
+            <display value="Order Cancel"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event"/>
+            <code value="OrderStatus"/>
+            <display value="Order Status"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

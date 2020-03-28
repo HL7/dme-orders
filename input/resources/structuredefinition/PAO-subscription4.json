@@ -1,0 +1,66 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAO-subscription4",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2020-02-11T23:02:33.028+00:00",
+		"source": "#ZLac1dAiXbgCKrD8"
+	},
+	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4",
+	"version": "0.0.1",
+	"name": "PAOsubscription4",
+	"title": "PAO Subscription Profile",
+	"status": "active",
+	"date": "2020-01-01",
+	"publisher": "HL7",
+	"description": "Post Acute Orders Subscription Profile",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Subscription",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Subscription",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Subscription",
+				"path": "Subscription"
+			},
+			{
+				"id": "Subscription.status",
+				"path": "Subscription.status",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.criteria",
+				"path": "Subscription.criteria",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel",
+				"path": "Subscription.channel",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel.type",
+				"path": "Subscription.channel.type",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel.endpoint",
+				"path": "Subscription.channel.endpoint",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel.payload",
+				"path": "Subscription.channel.payload",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel.header",
+				"path": "Subscription.channel.header",
+				"mustSupport": true
+			}
+		]
+	}
+}

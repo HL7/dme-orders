@@ -1,0 +1,74 @@
+I"å
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#current-environment" id="markdown-toc-current-environment">Current environment</a></li>
+</ul>
+
+</div>
+<p><a href="Post-AcuteOrdersHome.html">Previous Page - Post-Acute Orders Home</a></p>
+
+<h1 id="current-environment">Current environment</h1>
+<p>Patients that move from one payer to another frequently experience interruptions or delays to existing care for chronic and acute conditions related to the inability of the new payer to obtain information about the ongoing treatment, understand its progress and verify the clinical need for such treatments. This frequently requires the patient or providers to change therapies, tolerate delays in care, see additional providers or schedule additional visits, and fill out or resubmit additional documentation showing that the care is medically necessary and appropriate. The process creates a significant burden on providers, add unnecessary costs, and introduces risk to the patient.</p>
+
+<p>There is currently no commonly accepted method of defining and exchanging post acute orders between ordering providers and the suppliers of the ordered services or devices.  This guide defines a framework for ordering any type of post acute services and provides for the inclusion of appropriate documentation to support the medical necessity of the orders to facilitate documentation for the purpose of refining the order and supporting appropriate billing .</p>
+<ol>
+  <li>Speeds the ordering process and delivers need care sooner</li>
+  <li>Provides for electronic exchange to automate acceptance or rejection of the order</li>
+  <li>Support exchange of required documentation</li>
+  <li>Support exchange of information related to order review/approval (e.g. Prior Authorization, Appropriate Use, Order and documentation review)</li>
+</ol>
+
+<p>The goal is to provide for electronic ordering of DME and Home Health Services with the electronic exchange of supporting documentation.</p>
+
+<p><strong>In Scope</strong></p>
+<ol>
+  <li>DME that does not have special resource needs</li>
+  <li>HH that does not have special resource needs (e.g. medication administration)</li>
+  <li>Task , Subscription for workflow</li>
+  <li>Extension to describe PA, AU, MR</li>
+  <li>Guidance on Authentication and Authorization</li>
+  <li>Create status value set</li>
+  <li>Orderable items
+a.	Home health - items covered by care plan with above exception
+b.	DME - any valid HCPCS with above exception</li>
+</ol>
+
+<p><strong>Out-of-Scope</strong></p>
+<ol>
+  <li>Responses from the patient</li>
+  <li>Patient directed care</li>
+  <li>Non-DME / Home Health</li>
+  <li>Cost considerations</li>
+  <li>Partial fulfillment - status only detail is out of band for now</li>
+  <li>Additional Documentation request (in scope using CDex)</li>
+  <li>Digital Signature (may be out of scope for V1)</li>
+  <li>Order detail for specific services (part of DRLS) such as those involving medications</li>
+</ol>
+
+<p><strong>Business Requirements</strong>
+The goal of this implementation guide is to provide a framework in which ordering providers can exchange orders and documentation with preforming providers and suppliers to:</p>
+<ol>
+  <li>Communicating clinical orders electronically for DME and Home Healt</li>
+  <li>Communicating documentation to perfect the order and/or establish medical necessity</li>
+  <li>Handling updates, cancels and rejection of the order with/by the performing provider / supplier</li>
+</ol>
+
+<p><strong>Clinical Requirements</strong>
+Clinical requirements to support this implementation guide include the following:</p>
+<ol>
+  <li>determining the appropriate ordered service and/or device</li>
+  <li>completing documentation to support the medical necessity of the ordered service or device</li>
+  <li>performing any required actions by the ordering provider to authorize (prior authorization), determine appropriateness (appropriate use), establish completeness of the documentation (documentation review) and communicating it to the performing provider/supplier</li>
+  <li>Identifying the performing provider / supplier or intermediary to receive the order and supporting documentation</li>
+</ol>
+
+<p><strong>Testing Requirements</strong>
+This IG has been constructed in a manner that allows testing and validation - specifically:</p>
+<ol>
+  <li>adherence to profiles defined in this guide, and</li>
+  <li>testing of conformance to the underlying FHIR standards for the associated release (e.g. FHIR R4).</li>
+</ol>
+
+<p><a href="Workflow.html">Next Page - Workflow</a></p>
+
+:ET
