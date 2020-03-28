@@ -1,30 +1,54 @@
 ﻿PostAcuteOrders4 : Validation Results
 =========================================
 
-err = 0, warn = 0, info = 0
-IG Publisher Version: v1.0.37-SNAPSHOT
-Generated Thu Jan 02 18:17:59 EST 2020. FHIR version 4.0.1 for hl7.fhir.us.dme-orders#0.0.4 (canonical = http://hl7.org/fhir/us/dme-orders)
+err = 2, warn = 20, info = 0
+IG Publisher Version: v1.0.73-SNAPSHOT
+Generated Thu Mar 26 16:58:23 GMT 2020. FHIR version 4.0.1 for hl7.fhir.us.dme-orders#0.0.7 (canonical = http://hl7.org/fhir/us/dme-orders)
 
- Build Errors : 0 / 0
- C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\implementationguide\post-acute-orders4 : 0 / 0
- C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-bundle4 : 0 / 0
- C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-devicedefinition4 : 0 / 0
- C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-devicerequest4 : 0 / 0
- C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-messagedefinition4 : 0 / 0
- C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-messageheader : 0 / 0
- C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-provenance4 : 0 / 0
- C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-servicerequest4 : 0 / 0
- C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-subscription4 : 0 / 0
- C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-task4 : 0 / 0
+ Build Errors : 9 / 0
+ /tmp/tmp-1Ba2j43YCmMPj/input/post-acute-orders4 : 0 / 1
+ /tmp/tmp-1Ba2j43YCmMPj/input/resources/codesystem/PAO-Message-Event : 0 / 0
+ /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-bundle4 : 0 / 1
+ /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-devicerequest4 : 0 / 1
+ /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-medicationrequest : 0 / 1
+ /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-messagedefinition4 : 0 / 1
+ /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-messageheader : 0 / 1
+ /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-provenance4 : 1 / 1
+ /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-servicerequest4 : 0 / 1
+ /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-subscription4 : 0 / 1
+ /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-task4 : 0 / 1
+ /tmp/tmp-1Ba2j43YCmMPj/input/resources/valueset/PAO-Message-Event : 0 / 0
 </table>
 == n/a ==
-== C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\implementationguide\post-acute-orders4.xml ==
-== C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-bundle4.json ==
-== C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-devicedefinition4.json ==
-== C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-devicerequest4.json ==
-== C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-messagedefinition4.json ==
-== C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-messageheader.json ==
-== C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-provenance4.json ==
-== C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-servicerequest4.json ==
-== C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-subscription4.json ==
-== C:\Windows\Temp\tmp-8812QA5yk8rpYII3\source\resources\structuredefinition\PAO-task4.json ==
+ERROR: /tmp/tmp-1Ba2j43YCmMPj/output/StructureDefinition-PAO-bundle4.html#/html/body/div/div/div/div/div/p/a at Line 637, column 41: The link 'StructureDefinition-PAO-bundle4.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1Ba2j43YCmMPj/output/StructureDefinition-PAO-devicerequest4.html#/html/body/div/div/div/div/div/p/a at Line 559, column 41: The link 'StructureDefinition-PAO-devicerequest4.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1Ba2j43YCmMPj/output/StructureDefinition-PAO-medicationrequest.html#/html/body/div/div/div/div/div/p/a at Line 613, column 41: The link 'StructureDefinition-PAO-medicationrequest.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1Ba2j43YCmMPj/output/StructureDefinition-PAO-messagedefinition4.html#/html/body/div/div/div/div/div/p/a at Line 559, column 41: The link 'StructureDefinition-PAO-messagedefinition4.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1Ba2j43YCmMPj/output/StructureDefinition-PAO-messageheader.html#/html/body/div/div/div/div/div/p/a at Line 555, column 41: The link 'StructureDefinition-PAO-messageheader.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1Ba2j43YCmMPj/output/StructureDefinition-PAO-provenance4.html#/html/body/div/div/div/div/div/p/a at Line 553, column 41: The link 'StructureDefinition-PAO-provenance4.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1Ba2j43YCmMPj/output/StructureDefinition-PAO-servicerequest4.html#/html/body/div/div/div/div/div/p/a at Line 577, column 41: The link 'StructureDefinition-PAO-servicerequest4.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1Ba2j43YCmMPj/output/StructureDefinition-PAO-subscription4.html#/html/body/div/div/div/div/div/p/a at Line 443, column 41: The link 'StructureDefinition-PAO-subscription4.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1Ba2j43YCmMPj/output/StructureDefinition-PAO-task4.html#/html/body/div/div/div/div/div/p/a at Line 1007, column 41: The link 'StructureDefinition-PAO-task4.sch' for "Schematron" cannot be resolved
+== /tmp/tmp-1Ba2j43YCmMPj/input/post-acute-orders4.json ==
+WARNING: ImplementationGuide/hl7.fhir.us.dme-orders: ImplementationGuide.definition.resource[9].description: value should not start or finish with whitespace
+== /tmp/tmp-1Ba2j43YCmMPj/input/resources/codesystem/PAO-Message-Event.json ==
+== /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-bundle4.json ==
+WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-bundle4: The Implementation Guide contains no examples for this profile
+== /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-devicerequest4.json ==
+WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4: The Implementation Guide contains no examples for this profile
+== /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-medicationrequest.json ==
+WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medicationrequest: The Implementation Guide contains no examples for this profile
+== /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-messagedefinition4.json ==
+WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messagedefinition4: The Implementation Guide contains no examples for this profile
+== /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-messageheader.json ==
+WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messageheader: The Implementation Guide contains no examples for this profile
+== /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-provenance4.json ==
+ERROR: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4: The element Provenance.signature is out of order (and maybe others after it)
+WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4: The Implementation Guide contains no examples for this profile
+== /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-servicerequest4.json ==
+WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4: The Implementation Guide contains no examples for this profile
+== /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-subscription4.json ==
+WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4: The Implementation Guide contains no examples for this profile
+== /tmp/tmp-1Ba2j43YCmMPj/input/resources/structuredefinition/PAO-task4.json ==
+WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-task4: The Implementation Guide contains no examples for this profile
+== /tmp/tmp-1Ba2j43YCmMPj/input/resources/valueset/PAO-Message-Event.json ==
