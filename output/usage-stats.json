@@ -36,8 +36,8 @@
     ],
     "Provenance": [
       {
-        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4",
-        "title": "PAO Provenance Profile"
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4a",
+        "title": "PAO Provenance Profile 4a"
       }
     ],
     "ServiceRequest": [

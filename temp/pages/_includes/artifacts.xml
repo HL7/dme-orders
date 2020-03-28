@@ -77,17 +77,17 @@
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-PAO-provenance4.html"
-                     title="StructureDefinition/PAO-provenance4">PAOprovenance4</a>
-               </td>
-               <td>Post Acute Orders Provenance Profile</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
                   <a href="StructureDefinition-PAO-medicationrequest.html"
                      title="StructureDefinition/PAO-medicationrequest">PAOmedcationrequest</a>
                </td>
                <td>This is text for a description of the PAO MedicationRequest</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-PAO-provenance4a.html"
+                     title="StructureDefinition/PAO-provenance4a">PAOprovenance4a</a>
+               </td>
+               <td>This is the description for the provenance 4a profile</td>
             </tr>
          </tbody>
       </table>

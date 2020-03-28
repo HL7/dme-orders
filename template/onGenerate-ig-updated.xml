@@ -2,9 +2,9 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
    <id value="hl7.fhir.us.dme-orders"/>
    <meta>
-      <versionId value="16"/>
-      <lastUpdated value="2020-03-26T16:40:31.836+00:00"/>
-      <source value="#04OBbxAc0jBPQgX5"/>
+      <versionId value="18"/>
+      <lastUpdated value="2020-03-28T16:33:39.506+00:00"/>
+      <source value="#HBatjUpS2jfxOotb"/>
    </meta>
    <text>
       <status value="generated"/>
@@ -55,7 +55,7 @@ or send a note to rdieterle@enablecare.us</p>
    <name value="PostAcuteOrders4"/>
    <title value="Post-Acute FHIR Based Orders"/>
    <status value="draft"/>
-   <date value="2020-03-26T16:57:59+00:00"/>
+   <date value="2020-03-28T16:34:12+00:00"/>
    <publisher value="HL7"/>
    <contact>
       <name value="HL7 International - Orders and Observations"/>
@@ -214,22 +214,6 @@ or send a note to rdieterle@enablecare.us</p>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-PAO-provenance4.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/PAO-provenance4"/>
-            <display value="PAOprovenance4"/>
-         </reference>
-         <name value="PAOprovenance4"/>
-         <description value="Post Acute Orders Provenance Profile"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="_str_profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="CodeSystem"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -273,6 +257,22 @@ or send a note to rdieterle@enablecare.us</p>
          </reference>
          <name value="PAOmedcationrequest"/>
          <description value="This is text for a description of the PAO MedicationRequest"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-PAO-provenance4a.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/PAO-provenance4a"/>
+            <display value="PAOprovenance4a"/>
+         </reference>
+         <name value="PAOprovenance4a"/>
+         <description value="This is the description for the provenance 4a profile"/>
          <exampleBoolean value="false"/>
          <groupingId value="_str_profile"/>
       </resource>
@@ -365,13 +365,13 @@ or send a note to rdieterle@enablecare.us</p>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-PAO-provenance4.html"/>
-               <title value="PAOprovenance4"/>
+               <nameUrl value="StructureDefinition-PAO-medicationrequest.html"/>
+               <title value="PAOmedcationrequest"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-PAO-medicationrequest.html"/>
-               <title value="PAOmedcationrequest"/>
+               <nameUrl value="StructureDefinition-PAO-provenance4a.html"/>
+               <title value="PAOprovenance4a"/>
                <generation value="generated"/>
             </page>
             <page>

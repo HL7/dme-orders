@@ -9,9 +9,9 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "hl7.fhir.us.dme-orders"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "16" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-26T16:40:31.836+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#04OBbxAc0jBPQgX5" ]
+     fhir:Meta.versionId [ fhir:value "18" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-28T16:33:39.506+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#HBatjUpS2jfxOotb" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
@@ -22,7 +22,7 @@
   fhir:ImplementationGuide.name [ fhir:value "PostAcuteOrders4"];
   fhir:ImplementationGuide.title [ fhir:value "Post-Acute FHIR Based Orders"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-03-26T16:57:59+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-03-28T16:34:12+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -381,25 +381,6 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-provenance4.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-provenance4" ];
-         fhir:Reference.display [ fhir:value "PAOprovenance4" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOprovenance4" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Post Acute Orders Provenance Profile" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 8;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "CodeSystem" ]
        ], [
          fhir:index 1;
@@ -415,7 +396,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is the code system for the value set for the event element in the Message Header" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -434,7 +415,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is a value set for the PAO Message Event " ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 10;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -451,6 +432,25 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOmedcationrequest" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is text for a description of the PAO MedicationRequest" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-provenance4a.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4a>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-provenance4a" ];
+         fhir:Reference.display [ fhir:value "PAOprovenance4a" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOprovenance4a" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is the description for the provenance 4a profile" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
@@ -565,13 +565,13 @@
 
 <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4> a fhir:us .
 
-<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4> a fhir:us .
-
 <http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event> a fhir:us .
 
 <http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event> a fhir:us .
 
 <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medicationrequest> a fhir:us .
+
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4a> a fhir:us .
 
 # - ontology header ------------------------------------------------------------
 

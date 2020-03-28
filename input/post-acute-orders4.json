@@ -2,9 +2,9 @@
 	"resourceType": "ImplementationGuide",
 	"id": "post-acute-orders4",
 	"meta": {
-		"versionId": "16",
-		"lastUpdated": "2020-03-26T16:40:31.836+00:00",
-		"source": "#04OBbxAc0jBPQgX5"
+		"versionId": "18",
+		"lastUpdated": "2020-03-28T16:33:39.506+00:00",
+		"source": "#HBatjUpS2jfxOotb"
 	},
 	"contained": [],
 	"url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-orders4",
@@ -105,15 +105,6 @@
 			},
 			{
 				"reference": {
-					"reference": "StructureDefinition/PAO-provenance4",
-					"display": "PAOprovenance4"
-				},
-				"name": "PAOprovenance4",
-				"exampleBoolean": false,
-				"description": "Post Acute Orders Provenance Profile"
-			},
-			{
-				"reference": {
 					"reference": "CodeSystem/PAO-Message-Event",
 					"display": "PAO Message Event Code System"
 				},
@@ -138,6 +129,15 @@
 				"name": "PAOmedcationrequest",
 				"exampleBoolean": false,
 				"description": "This is text for a description of the PAO MedicationRequest"
+			},
+			{
+				"reference": {
+					"reference": "StructureDefinition/PAO-provenance4a",
+					"display": "PAOprovenance4a"
+				},
+				"name": "PAOprovenance4a",
+				"exampleBoolean": false,
+				"description": "This is the description for the provenance 4a profile"
 			}
 		],
 		"page": {

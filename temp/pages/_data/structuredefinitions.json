@@ -104,23 +104,8 @@
     "publisher": "HL7",
     "description": "Post Acute Orders DeviceRequest Profile"
   },
-  "PAO-provenance4": {
-    "index": 7,
-    "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4",
-    "name": "PAOprovenance4",
-    "path": "StructureDefinition-PAO-provenance4.html",
-    "kind": "resource",
-    "type": "Provenance",
-    "base": "http://hl7.org/fhir/StructureDefinition/Provenance",
-    "basename": "Provenance",
-    "basepath": "http://hl7.org/fhir/R4/provenance.html",
-    "status": "active",
-    "date": "Wed Jan 01 00:00:00 GMT 2020",
-    "publisher": "HL7",
-    "description": "Post Acute Orders Provenance Profile"
-  },
   "PAO-medicationrequest": {
-    "index": 8,
+    "index": 7,
     "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medicationrequest",
     "name": "PAOmedcationrequest",
     "path": "StructureDefinition-PAO-medicationrequest.html",
@@ -130,7 +115,7 @@
     "basename": "MedicationRequest",
     "basepath": "http://hl7.org/fhir/R4/medicationrequest.html",
     "status": "active",
-    "date": "Thu Mar 26 16:57:59 GMT 2020",
+    "date": "Sat Mar 28 16:34:12 GMT 2020",
     "publisher": "HL7",
     "description": "This is text for a description of the PAO MedicationRequest",
     "contexts": [
@@ -138,5 +123,20 @@
         "type": "Profile on base resource"
       }
     ]
+  },
+  "PAO-provenance4a": {
+    "index": 8,
+    "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4a",
+    "name": "PAOprovenance4a",
+    "path": "StructureDefinition-PAO-provenance4a.html",
+    "kind": "resource",
+    "type": "Provenance",
+    "base": "http://hl7.org/fhir/StructureDefinition/Provenance",
+    "basename": "Provenance",
+    "basepath": "http://hl7.org/fhir/R4/provenance.html",
+    "status": "active",
+    "date": "Sat Mar 28 00:00:00 GMT 2020",
+    "publisher": "HL7",
+    "description": "This is the description for the provenance 4a profile"
   }
 }

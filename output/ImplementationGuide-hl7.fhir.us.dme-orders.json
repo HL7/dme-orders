@@ -2,9 +2,9 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.us.dme-orders",
   "meta": {
-    "versionId": "16",
-    "lastUpdated": "2020-03-26T16:40:31.836+00:00",
-    "source": "#04OBbxAc0jBPQgX5"
+    "versionId": "18",
+    "lastUpdated": "2020-03-28T16:33:39.506+00:00",
+    "source": "#HBatjUpS2jfxOotb"
   },
   "text": {
     "status": "generated",
@@ -15,7 +15,7 @@
   "name": "PostAcuteOrders4",
   "title": "Post-Acute FHIR Based Orders",
   "status": "draft",
-  "date": "2020-03-26T16:57:59+00:00",
+  "date": "2020-03-28T16:34:12+00:00",
   "publisher": "HL7",
   "contact": [
     {
@@ -390,25 +390,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-PAO-provenance4.html"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/PAO-provenance4",
-          "display": "PAOprovenance4"
-        },
-        "name": "PAOprovenance4",
-        "description": "Post Acute Orders Provenance Profile",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "CodeSystem"
           },
           {
@@ -460,6 +441,25 @@
         },
         "name": "PAOmedcationrequest",
         "description": "This is text for a description of the PAO MedicationRequest",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PAO-provenance4a.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PAO-provenance4a",
+          "display": "PAOprovenance4a"
+        },
+        "name": "PAOprovenance4a",
+        "description": "This is the description for the provenance 4a profile",
         "exampleBoolean": false
       }
     ],
