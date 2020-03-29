@@ -62,8 +62,8 @@
       ]
     },
     {
-      "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-relevant-review-extension",
-      "title": "PAO Relevant Review Extension",
+      "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-relevant-reviews",
+      "title": "PAO Relevant Reviews",
       "types": [
         "base64Binary",
         "boolean",
@@ -115,6 +115,7 @@
         "UsageContext",
         "Dosage",
         "Meta",
+        "string",
         "Reference",
         "CodeableConcept"
       ]

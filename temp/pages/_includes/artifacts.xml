@@ -111,17 +111,17 @@
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-PAO-relevant-review-extension.html"
-                     title="StructureDefinition/PAO-relevant-review-extension">PAOrelevantreviewextension</a>
-               </td>
-               <td>This is an extension for each of the order types to define any related/relevant reviews (such as a prior authorization)</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
                   <a href="StructureDefinition-PAO-Order-Detail-Extension.html"
                      title="StructureDefinition/PAO-Order-Detail-Extension">PAOorderdetailextension</a>
                </td>
                <td>Order Detail</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-PAO-relevant-reviews.html"
+                     title="StructureDefinition/PAO-relevant-reviews">PAOrelevantreviews</a>
+               </td>
+               <td>PAO relevant review extension</td>
             </tr>
          </tbody>
       </table>

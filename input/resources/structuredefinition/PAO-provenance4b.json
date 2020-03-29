@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAO-provenance4b",
 	"meta": {
-		"versionId": "8",
-		"lastUpdated": "2020-03-28T23:28:13.720+00:00",
-		"source": "#A2mHnCWEgbPlEG1m"
+		"versionId": "9",
+		"lastUpdated": "2020-03-29T14:59:57.766+00:00",
+		"source": "#ssBxAPMCbaZt7QlR"
 	},
 	"text": {
 		"status": "additional",
@@ -39,7 +39,7 @@
 						"targetProfile": [
 							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4",
 							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4",
-							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medicationrequest"
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request"
 						]
 					}
 				]

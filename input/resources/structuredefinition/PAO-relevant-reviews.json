@@ -1,0 +1,71 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAO-relevant-reviews",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-03-29T15:08:05.117+00:00",
+		"source": "#L9VvOKuKJiw7hKjv"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Resource text for PAO relevant review extension</div>"
+	},
+	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-relevant-reviews",
+	"version": "0.0.1",
+	"name": "PAOrelevantreviews",
+	"title": "PAO Relevant Reviews",
+	"status": "active",
+	"date": "2020-03-29",
+	"publisher": "HL7",
+	"description": "PAO relevant review extension",
+	"fhirVersion": "4.0.1",
+	"kind": "complex-type",
+	"abstract": false,
+	"context": [
+		{
+			"type": "extension",
+			"expression": "used to define relevant reviews for an order (e.g. prior authorizations)"
+		}
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension",
+				"path": "Extension"
+			},
+			{
+				"id": "Extension.extension.extension.value[x]",
+				"path": "Extension.extension.extension.value[x]",
+				"type": [
+					{
+						"code": "string"
+					}
+				]
+			},
+			{
+				"id": "Extension.extension.value[x]",
+				"path": "Extension.extension.value[x]",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Extension.value[x]",
+				"path": "Extension.value[x]",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			}
+		]
+	}
+}
