@@ -22,7 +22,7 @@
   fhir:CodeSystem.name [ fhir:value "PAOMessageEvent"];
   fhir:CodeSystem.title [ fhir:value "PAO Message Event Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];
-  fhir:CodeSystem.date [ fhir:value "2020-03-29T15:09:03+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2020-03-29T15:47:28+00:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "HL7"];
   fhir:CodeSystem.contact [
      fhir:index 0;
