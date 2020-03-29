@@ -2,7 +2,124 @@
   "package": "hl7.fhir.us.dme-orders",
   "version": "0.0.7",
   "fhirVersion": "4.0.1",
-  "extensions": [],
+  "extensions": [
+    {
+      "url": "http://fhir.org/fhir/us/dme-orders/StructureDefinition/PAO-Order-Detail-Extension",
+      "title": "PAO Order Detail Extension",
+      "types": [
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta",
+        "Quantity",
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-relevant-review-extension",
+      "title": "PAO Relevant Review Extension",
+      "types": [
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta",
+        "Reference",
+        "CodeableConcept"
+      ]
+    }
+  ],
   "profiles": {
     "Bundle": [
       {
@@ -18,8 +135,8 @@
     ],
     "MedicationRequest": [
       {
-        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medicationrequest",
-        "title": "PAOmedcationrequest"
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request",
+        "title": "PAO MedicationRequest"
       }
     ],
     "MessageDefinition": [
@@ -36,8 +153,8 @@
     ],
     "Provenance": [
       {
-        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4a",
-        "title": "PAO Provenance Profile 4a"
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b",
+        "title": "PAO Provenance Profile 4b"
       }
     ],
     "ServiceRequest": [
@@ -56,6 +173,12 @@
       {
         "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-task4",
         "title": "PAO Task Profile"
+      }
+    ],
+    "Medication": [
+      {
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefintion/PAO-Medication",
+        "title": "PAO Medication"
       }
     ]
   },

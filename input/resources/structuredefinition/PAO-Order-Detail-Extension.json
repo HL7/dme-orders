@@ -1,0 +1,59 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAO-Order-Detail-Extension",
+	"meta": {
+		"versionId": "5",
+		"lastUpdated": "2020-03-28T23:27:53.889+00:00",
+		"source": "#mjRJz4KXLHj3znrg"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text</div></div>"
+	},
+	"url": "http://fhir.org/fhir/us/dme-orders/StructureDefinition/PAO-Order-Detail-Extension",
+	"version": "0.0.1",
+	"name": "PAOorderdetailextension",
+	"title": "PAO Order Detail Extension",
+	"status": "active",
+	"date": "2020-03-28",
+	"publisher": "HL7",
+	"description": "Order Detail",
+	"fhirVersion": "4.0.1",
+	"kind": "complex-type",
+	"abstract": false,
+	"context": [
+		{
+			"type": "fhirpath",
+			"expression": "extension for order detail for the service request"
+		}
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension",
+				"path": "Extension"
+			},
+			{
+				"id": "Extension.extension.value[x]",
+				"path": "Extension.extension.value[x]",
+				"type": [
+					{
+						"code": "Quantity"
+					}
+				]
+			},
+			{
+				"id": "Extension.value[x]",
+				"path": "Extension.value[x]",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			}
+		]
+	}
+}

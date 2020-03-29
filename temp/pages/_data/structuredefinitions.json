@@ -85,7 +85,7 @@
     "basename": "ServiceRequest",
     "basepath": "http://hl7.org/fhir/R4/servicerequest.html",
     "status": "active",
-    "date": "Wed Jan 01 00:00:00 GMT 2020",
+    "date": "Sat Mar 28 00:00:00 GMT 2020",
     "publisher": "HL7",
     "description": "Post Acute Orders ServiceRequest Profile"
   },
@@ -104,39 +104,89 @@
     "publisher": "HL7",
     "description": "Post Acute Orders DeviceRequest Profile"
   },
-  "PAO-medicationrequest": {
+  "PAO-provenance4b": {
     "index": 7,
-    "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medicationrequest",
-    "name": "PAOmedcationrequest",
-    "path": "StructureDefinition-PAO-medicationrequest.html",
-    "kind": "resource",
-    "type": "MedicationRequest",
-    "base": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-    "basename": "MedicationRequest",
-    "basepath": "http://hl7.org/fhir/R4/medicationrequest.html",
-    "status": "active",
-    "date": "Sat Mar 28 16:34:12 GMT 2020",
-    "publisher": "HL7",
-    "description": "This is text for a description of the PAO MedicationRequest",
-    "contexts": [
-      {
-        "type": "Profile on base resource"
-      }
-    ]
-  },
-  "PAO-provenance4a": {
-    "index": 8,
-    "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4a",
-    "name": "PAOprovenance4a",
-    "path": "StructureDefinition-PAO-provenance4a.html",
+    "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b",
+    "name": "PAOprovenance4b",
+    "path": "StructureDefinition-PAO-provenance4b.html",
     "kind": "resource",
     "type": "Provenance",
-    "base": "http://hl7.org/fhir/StructureDefinition/Provenance",
-    "basename": "Provenance",
-    "basepath": "http://hl7.org/fhir/R4/provenance.html",
+    "base": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance",
+    "basename": "USCoreProvenance",
+    "basepath": "https://build.fhir.org/ig/HL7/US-Core-R4//StructureDefinition-us-core-provenance.html",
     "status": "active",
     "date": "Sat Mar 28 00:00:00 GMT 2020",
     "publisher": "HL7",
-    "description": "This is the description for the provenance 4a profile"
+    "description": "Provenance Profile"
+  },
+  "PAO-relevant-review-extension": {
+    "index": 8,
+    "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-relevant-review-extension",
+    "name": "PAOrelevantreviewextension",
+    "path": "StructureDefinition-PAO-relevant-review-extension.html",
+    "kind": "complex-type",
+    "type": "Extension",
+    "base": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "basename": "Extension",
+    "basepath": "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "status": "active",
+    "date": "Sat Mar 28 00:00:00 GMT 2020",
+    "publisher": "HL7",
+    "description": "This is an extension for each of the order types to define any related/relevant reviews (such as a prior authorization)",
+    "contexts": [
+      {
+        "type": "relevant reviews for this order (such as prior authorization)"
+      }
+    ]
+  },
+  "PAO-Order-Detail-Extension": {
+    "index": 9,
+    "url": "http://fhir.org/fhir/us/dme-orders/StructureDefinition/PAO-Order-Detail-Extension",
+    "name": "PAOorderdetailextension",
+    "path": "StructureDefinition-PAO-Order-Detail-Extension.html",
+    "kind": "complex-type",
+    "type": "Extension",
+    "base": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "basename": "Extension",
+    "basepath": "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "status": "active",
+    "date": "Sat Mar 28 00:00:00 GMT 2020",
+    "publisher": "HL7",
+    "description": "Order Detail",
+    "contexts": [
+      {
+        "type": "extension for order detail for the service request"
+      }
+    ]
+  },
+  "PAO-medication-request": {
+    "index": 10,
+    "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request",
+    "name": "PAOmedicationrequest",
+    "path": "StructureDefinition-PAO-medication-request.html",
+    "kind": "resource",
+    "type": "MedicationRequest",
+    "base": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest",
+    "basename": "USCoreMedicationRequestProfile",
+    "basepath": "https://build.fhir.org/ig/HL7/US-Core-R4//StructureDefinition-us-core-medicationrequest.html",
+    "status": "active",
+    "date": "Sat Mar 28 00:00:00 GMT 2020",
+    "publisher": "HL7",
+    "description": "PAO MedicationRequest profile based on us-core"
+  },
+  "PAO-Medication": {
+    "index": 11,
+    "url": "http://hl7.org/fhir/us/dme-orders/StructureDefintion/PAO-Medication",
+    "name": "PAOMedication",
+    "path": "StructureDefinition-PAO-Medication.html",
+    "kind": "resource",
+    "type": "Medication",
+    "base": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication",
+    "basename": "USCoreMedicationProfile",
+    "basepath": "https://build.fhir.org/ig/HL7/US-Core-R4//StructureDefinition-us-core-medication.html",
+    "status": "active",
+    "date": "Sat Mar 28 00:00:00 GMT 2020",
+    "publisher": "HL7",
+    "description": "PAO Medication profile from us-core"
   }
 }

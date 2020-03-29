@@ -8,10 +8,13 @@
          <a href="#1">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#2">Terminology: Value Sets</a>
+         <a href="#2">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#3">Terminology: Code Systems</a>
+         <a href="#3">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#4">Terminology: Code Systems</a>
       </li>
    </ul>
 </div>
@@ -77,22 +80,53 @@
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-PAO-medicationrequest.html"
-                     title="StructureDefinition/PAO-medicationrequest">PAOmedcationrequest</a>
+                  <a href="StructureDefinition-PAO-provenance4b.html"
+                     title="StructureDefinition/PAO-provenance4b">PAOprovenance4b</a>
                </td>
-               <td>This is text for a description of the PAO MedicationRequest</td>
+               <td>Provenance Profile</td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-PAO-provenance4a.html"
-                     title="StructureDefinition/PAO-provenance4a">PAOprovenance4a</a>
+                  <a href="StructureDefinition-PAO-medication-request.html"
+                     title="StructureDefinition/PAO-medication-request">PAOmedicationrequest</a>
                </td>
-               <td>This is the description for the provenance 4a profile</td>
+               <td>PAO MedicationRequest profile based on us-core</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-PAO-Medication.html"
+                     title="StructureDefinition/PAO-Medication">PAOMedication</a>
+               </td>
+               <td>PAO Medication profile from us-core</td>
             </tr>
          </tbody>
       </table>
    </p>
    <a name="2"> </a>
+   <h3>Structures: Extension Definitions </h3>
+   <p>These define constraints on FHIR data types that need to be complied with by conformant implementations</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-PAO-relevant-review-extension.html"
+                     title="StructureDefinition/PAO-relevant-review-extension">PAOrelevantreviewextension</a>
+               </td>
+               <td>This is an extension for each of the order types to define any related/relevant reviews (such as a prior authorization)</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-PAO-Order-Detail-Extension.html"
+                     title="StructureDefinition/PAO-Order-Detail-Extension">PAOorderdetailextension</a>
+               </td>
+               <td>Order Detail</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="3"> </a>
    <h3>Terminology: Value Sets </h3>
    <p>These define sets of codes used by systems conforming with this implementation guide</p>
    <p>
@@ -109,7 +143,7 @@
          </tbody>
       </table>
    </p>
-   <a name="3"> </a>
+   <a name="4"> </a>
    <h3>Terminology: Code Systems </h3>
    <p>These define new code systems used by systems conforming with this implementation guide</p>
    <p>
@@ -121,7 +155,7 @@
                   <a href="CodeSystem-PAO-Message-Event.html"
                      title="CodeSystem/PAO-Message-Event">PAO Message Event Code System</a>
                </td>
-               <td>This is the code system for the value set for the event element in the Message Header</td>
+               <td>This is the value set for the event element in the Message Header</td>
             </tr>
          </tbody>
       </table>

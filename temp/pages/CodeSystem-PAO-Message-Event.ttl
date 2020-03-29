@@ -9,20 +9,20 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PAO-Message-Event"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "7" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-26T09:21:50.110+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#lP5urEHMAjzww7b4" ]
+     fhir:Meta.versionId [ fhir:value "9" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-28T23:30:46.843+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#Td2hrW4zsEPLtLNL" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PAO Message Event Code System</h2><div><p>This is the code system for the value set for the event element in the Message Header</p>\n</div><p>This code system http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">InitialOrder<a name=\"PAO-Message-Event-InitialOrder\"> </a></td><td>Initial Order</td><td>Initial order for Post Acute services</td></tr><tr><td style=\"white-space:nowrap\">OrderUpdate<a name=\"PAO-Message-Event-OrderUpdate\"> </a></td><td>Order Update</td><td>Update to an order (may be declined)</td></tr><tr><td style=\"white-space:nowrap\">OrderCancel<a name=\"PAO-Message-Event-OrderCancel\"> </a></td><td>Order Cancel</td><td>Cancel an order (may be declined if done)</td></tr><tr><td style=\"white-space:nowrap\">OrderStatus<a name=\"PAO-Message-Event-OrderStatus\"> </a></td><td>Order Status</td><td>Request for the status of the order</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PAO Message Event Code System</h2><div><p>This is the value set for the event element in the Message Header</p>\n</div><p>This code system http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">InitialOrder<a name=\"PAO-Message-Event-InitialOrder\"> </a></td><td>Initial Order</td><td>Initial order for Post Acute services</td></tr><tr><td style=\"white-space:nowrap\">OrderUpdate<a name=\"PAO-Message-Event-OrderUpdate\"> </a></td><td>Order Update</td><td>Update to an order (may be declined)</td></tr><tr><td style=\"white-space:nowrap\">OrderCancel<a name=\"PAO-Message-Event-OrderCancel\"> </a></td><td>Order Cancel</td><td>Cancel an order (may be declined if done)</td></tr><tr><td style=\"white-space:nowrap\">OrderStatus<a name=\"PAO-Message-Event-OrderStatus\"> </a></td><td>Order Status</td><td>Request for the status of the order</td></tr></table></div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event"];
   fhir:CodeSystem.version [ fhir:value "0.0.7"];
   fhir:CodeSystem.name [ fhir:value "PAOMessageEvent"];
   fhir:CodeSystem.title [ fhir:value "PAO Message Event Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];
-  fhir:CodeSystem.date [ fhir:value "2020-03-28T16:34:12+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2020-03-28T23:35:20+00:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "HL7"];
   fhir:CodeSystem.contact [
      fhir:index 0;
@@ -33,7 +33,7 @@
        fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/orders" ]
      ]
   ];
-  fhir:CodeSystem.description [ fhir:value "This is the code system for the value set for the event element in the Message Header"];
+  fhir:CodeSystem.description [ fhir:value "This is the value set for the event element in the Message Header"];
   fhir:CodeSystem.purpose [ fhir:value "MessageHeader event element values"];
   fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.count [ fhir:value "5"^^xsd:nonNegativeInteger];

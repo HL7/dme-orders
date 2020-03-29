@@ -9,20 +9,20 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "hl7.fhir.us.dme-orders"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "18" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-28T16:33:39.506+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#HBatjUpS2jfxOotb" ]
+     fhir:Meta.versionId [ fhir:value "39" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-28T23:32:07.767+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#LaLu87R9mazjtVnc" ]
   ];
   fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PostAcuteOrders4</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders</pre><div><h1>General</h1>\n<p>This is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.</p>\n<ul>\n<li>The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.</li>\n<li>This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.</li>\n</ul>\n<p>This implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.</p>\n<h1>Feedback</h1>\n<p>Comments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us</p>\n<h1>Change log</h1>\n<ul>\n<li><strong>0.0.7 (This version):</strong> further updates that now include Code System, Value Set, US Core profile references in some PAO profiles</li>\n<li><strong>0.0.6:</strong> Further changes to address publisher errors (not pushed to build)</li>\n<li><strong>0.0.5:</strong> Update for tooling changes (not pushed to build)</li>\n<li><strong>0.0.4:</strong> Cleanup versions, add known issues, and correct title</li>\n<li><strong>0.0.3:</strong> Working build on build.fhir.org</li>\n<li><strong>0.0.2:</strong> Update to test build on build.fhir.org</li>\n<li><strong>0.0.1:</strong> Initial version published to the continuous build</li>\n</ul>\n<h1>Known issues and to-dos</h1>\n<ul>\n<li>Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest</li>\n<li>Working with other members of the team to create appropriate examples</li>\n<li>Need to add full examples of message bundles</li>\n<li>Working on specific terminologies and value sets for post-acute orders</li>\n</ul>\n</div></div>"
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text</div></div>"
   ];
   fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders"];
   fhir:ImplementationGuide.version [ fhir:value "0.0.7"];
   fhir:ImplementationGuide.name [ fhir:value "PostAcuteOrders4"];
   fhir:ImplementationGuide.title [ fhir:value "Post-Acute FHIR Based Orders"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-03-28T16:34:12+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-03-28T23:35:20+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -33,7 +33,7 @@
        fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/orders" ]
      ]
   ];
-  fhir:ImplementationGuide.description [ fhir:value "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.7 (This version):** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples\n* Need to add full examples of message bundles\n* Working on specific terminologies and value sets for post-acute orders"];
+  fhir:ImplementationGuide.description [ fhir:value "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.7b:** will update alpha with each subsequent test on 3-28-2020\n* **0.0.7 (This version):** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples\n* Need to add full examples of message bundles\n* Working on specific terminologies and value sets for post-acute orders"];
   fhir:ImplementationGuide.packageId [ fhir:value "hl7.fhir.us.dme-orders"];
   fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
   fhir:ImplementationGuide.fhirVersion [
@@ -393,7 +393,7 @@
          fhir:Reference.display [ fhir:value "PAO Message Event Code System" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAO Message Event Code System" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is the code system for the value set for the event element in the Message Header" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is the value set for the event element in the Message Header" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 8;
@@ -423,18 +423,56 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-medicationrequest.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-provenance4b.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medicationrequest>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-medicationrequest" ];
-         fhir:Reference.display [ fhir:value "PAOmedcationrequest" ]
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-provenance4b" ];
+         fhir:Reference.display [ fhir:value "PAOprovenance4b" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOmedcationrequest" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is text for a description of the PAO MedicationRequest" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOprovenance4b" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Provenance Profile" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-relevant-review-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-relevant-review-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-relevant-review-extension" ];
+         fhir:Reference.display [ fhir:value "PAOrelevantreviewextension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOrelevantreviewextension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is an extension for each of the order types to define any related/relevant reviews (such as a prior authorization)" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-Order-Detail-Extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-Order-Detail-Extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-Order-Detail-Extension" ];
+         fhir:Reference.display [ fhir:value "PAOorderdetailextension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOorderdetailextension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Order Detail" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -442,15 +480,34 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-provenance4a.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-medication-request.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4a>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-provenance4a" ];
-         fhir:Reference.display [ fhir:value "PAOprovenance4a" ]
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-medication-request" ];
+         fhir:Reference.display [ fhir:value "PAOmedicationrequest" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOprovenance4a" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is the description for the provenance 4a profile" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOmedicationrequest" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "PAO MedicationRequest profile based on us-core" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-Medication.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-Medication>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-Medication" ];
+         fhir:Reference.display [ fhir:value "PAOMedication" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOMedication" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "PAO Medication profile from us-core" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
@@ -569,9 +626,15 @@
 
 <http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event> a fhir:us .
 
-<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medicationrequest> a fhir:us .
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b> a fhir:us .
 
-<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4a> a fhir:us .
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-relevant-review-extension> a fhir:us .
+
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-Order-Detail-Extension> a fhir:us .
+
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request> a fhir:us .
+
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-Medication> a fhir:us .
 
 # - ontology header ------------------------------------------------------------
 

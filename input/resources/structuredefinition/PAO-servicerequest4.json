@@ -2,16 +2,20 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAO-servicerequest4",
 	"meta": {
-		"versionId": "1",
-		"lastUpdated": "2020-02-11T23:02:33.305+00:00",
-		"source": "#IYODSp8KfihJGUZZ"
+		"versionId": "7",
+		"lastUpdated": "2020-03-28T23:29:53.755+00:00",
+		"source": "#wgtNjEEm10jxj9xu"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text</div></div>"
 	},
 	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"name": "PAOservicerequest4",
 	"title": "PAO ServiceRequest Profile",
 	"status": "active",
-	"date": "2020-01-01",
+	"date": "2020-03-28",
 	"publisher": "HL7",
 	"description": "Post Acute Orders ServiceRequest Profile",
 	"fhirVersion": "4.0.1",
@@ -25,6 +29,11 @@
 			{
 				"id": "ServiceRequest",
 				"path": "ServiceRequest"
+			},
+			{
+				"id": "ServiceRequest.extension",
+				"path": "ServiceRequest.extension",
+				"mustSupport": true
 			},
 			{
 				"id": "ServiceRequest.identifier",
