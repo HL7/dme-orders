@@ -3,19 +3,19 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="PAO-devicerequest4"/>
   <meta>
-    <versionId value="3"/>
-    <lastUpdated value="2020-03-28T23:25:53.878+00:00"/>
-    <source value="#daXAMA95KMXD8N3z"/>
+    <versionId value="4"/>
+    <lastUpdated value="2020-03-30T13:54:21.538+00:00"/>
+    <source value="#DbsFGCgRe3zLSDRc"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">This is resource text</div></div>
   </text>
   <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4"/>
-  <version value="0.0.7"/>
+  <version value="0.0.9"/>
   <name value="PAOdevicerequest4"/>
   <title value="PAO DeviceRequest Profile"/>
   <status value="active"/>
-  <date value="2020-01-01T00:00:00+00:00"/>
+  <date value="2020-03-29T00:00:00+00:00"/>
   <publisher value="HL7"/>
   <contact>
     <name value="HL7 International - Orders and Observations"/>
@@ -24,7 +24,7 @@
       <value value="http://www.hl7.org/Special/committees/orders"/>
     </telecom>
   </contact>
-  <description value="Post Acute Orders DeviceRequest Profile"/>
+  <description value="Post Acute Orders DeviceRequest Profile&#xA;&#xA;Use to order DME and assoicated supplies"/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="workflow"/>
@@ -567,7 +567,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -577,6 +577,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
@@ -1017,6 +1018,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <binding>
@@ -1075,6 +1077,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <mapping>
@@ -1107,10 +1110,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1306,10 +1306,9 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1459,6 +1458,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
@@ -1538,7 +1538,7 @@
     </element>
     <element id="DeviceRequest.insurance">
       <path value="DeviceRequest.insurance"/>
-      <short value="Associated insurance coverage"/>
+      <short value="include reference to PA response when available"/>
       <definition value="Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service."/>
       <min value="0"/>
       <max value="*"/>
@@ -1549,8 +1549,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Coverage"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClaimResponse"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1672,7 +1671,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Provenance"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1713,6 +1712,14 @@
       <path value="DeviceRequest.basedOn"/>
       <mustSupport value="true"/>
     </element>
+    <element id="DeviceRequest.priorRequest">
+      <path value="DeviceRequest.priorRequest"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="DeviceRequest.status">
       <path value="DeviceRequest.status"/>
       <mustSupport value="true"/>
@@ -1733,8 +1740,20 @@
       <path value="DeviceRequest.parameter"/>
       <mustSupport value="true"/>
     </element>
+    <element id="DeviceRequest.parameter.code">
+      <path value="DeviceRequest.parameter.code"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DeviceRequest.parameter.value[x]">
+      <path value="DeviceRequest.parameter.value[x]"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="DeviceRequest.subject">
       <path value="DeviceRequest.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="DeviceRequest.encounter">
@@ -1755,6 +1774,16 @@
       <path value="DeviceRequest.requester"/>
       <min value="1"/>
       <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DeviceRequest.reasonCode">
+      <path value="DeviceRequest.reasonCode"/>
       <mustSupport value="true"/>
     </element>
     <element id="DeviceRequest.reasonReference">
@@ -1763,6 +1792,11 @@
     </element>
     <element id="DeviceRequest.insurance">
       <path value="DeviceRequest.insurance"/>
+      <short value="include reference to PA response when available"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="DeviceRequest.supportingInfo">
@@ -1777,6 +1811,10 @@
       <path value="DeviceRequest.relevantHistory"/>
       <min value="1"/>
       <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b"/>
+      </type>
       <mustSupport value="true"/>
     </element>
   </differential>

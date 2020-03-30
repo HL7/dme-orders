@@ -11,7 +11,7 @@
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">Resource Text</div>
   </text>
   <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"/>
-  <version value="0.0.7"/>
+  <version value="0.0.9"/>
   <name value="PAOcoverage"/>
   <title value="PAO Coverage"/>
   <status value="active"/>

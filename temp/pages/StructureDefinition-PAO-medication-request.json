@@ -2,16 +2,16 @@
   "resourceType": "StructureDefinition",
   "id": "PAO-medication-request",
   "meta": {
-    "versionId": "3",
-    "lastUpdated": "2020-03-28T23:26:29.020+00:00",
-    "source": "#1o844hoB4Im73GME"
+    "versionId": "5",
+    "lastUpdated": "2020-03-30T13:33:40.607+00:00",
+    "source": "#a2L8seUUzEvvfVm0"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text</div></div>"
   },
   "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "name": "PAOmedicationrequest",
   "title": "PAO MedicationRequest",
   "status": "active",
@@ -727,6 +727,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -1124,6 +1125,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1735,7 +1737,7 @@
       {
         "id": "MedicationRequest.insurance",
         "path": "MedicationRequest.insurance",
-        "short": "Associated insurance coverage",
+        "short": "include reference toPA response when available",
         "definition": "Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service.",
         "min": 0,
         "max": "*",
@@ -1748,8 +1750,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Coverage",
-              "http://hl7.org/fhir/StructureDefinition/ClaimResponse"
+              "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"
             ]
           }
         ],
@@ -1763,6 +1764,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -2862,6 +2864,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -3486,7 +3489,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
             ]
           }
         ],
@@ -3819,7 +3822,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
+              "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request"
             ]
           }
         ],
@@ -3833,6 +3836,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -3951,6 +3955,72 @@
         "id": "MedicationRequest.identifier",
         "path": "MedicationRequest.identifier",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.category",
+        "path": "MedicationRequest.category",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.subject",
+        "path": "MedicationRequest.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.supportingInformation",
+        "path": "MedicationRequest.supportingInformation",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.insurance",
+        "path": "MedicationRequest.insurance",
+        "short": "include reference toPA response when available",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest",
+        "path": "MedicationRequest.dispenseRequest",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.performer",
+        "path": "MedicationRequest.dispenseRequest.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.priorPrescription",
+        "path": "MedicationRequest.priorPrescription",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request"
+            ]
+          }
+        ],
         "mustSupport": true
       }
     ]

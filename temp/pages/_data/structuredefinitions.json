@@ -100,9 +100,9 @@
     "basename": "DeviceRequest",
     "basepath": "http://hl7.org/fhir/R4/devicerequest.html",
     "status": "active",
-    "date": "Wed Jan 01 00:00:00 GMT 2020",
+    "date": "Sun Mar 29 00:00:00 GMT 2020",
     "publisher": "HL7",
-    "description": "Post Acute Orders DeviceRequest Profile"
+    "description": "Post Acute Orders DeviceRequest Profile\n\nUse to order DME and assoicated supplies"
   },
   "PAO-provenance4b": {
     "index": 7,

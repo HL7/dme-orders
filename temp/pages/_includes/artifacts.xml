@@ -88,7 +88,9 @@ For this version of the guide, it is used primarily to order Home Health Service
                   <a href="StructureDefinition-PAO-devicerequest4.html"
                      title="StructureDefinition/PAO-devicerequest4">PAOdevicerequest4</a>
                </td>
-               <td>Post Acute Orders DeviceRequest Profile</td>
+               <td>Post Acute Orders DeviceRequest Profile
+
+Use to order DME and assoicated supplies</td>
             </tr>
             <tr>
                <td style="column-width:30%">

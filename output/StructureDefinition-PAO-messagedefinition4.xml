@@ -11,7 +11,7 @@
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This resource has narrative now</div>
   </text>
   <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messagedefinition4"/>
-  <version value="0.0.7"/>
+  <version value="0.0.9"/>
   <name value="PAOmessagedefinition4"/>
   <title value="PAO MessageDefinition Profile"/>
   <status value="active"/>

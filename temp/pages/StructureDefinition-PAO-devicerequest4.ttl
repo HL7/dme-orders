@@ -9,20 +9,20 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PAO-devicerequest4"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "3" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-28T23:25:53.878+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#daXAMA95KMXD8N3z" ]
+     fhir:Meta.versionId [ fhir:value "4" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-30T13:54:21.538+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#DbsFGCgRe3zLSDRc" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text</div></div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4"];
-  fhir:StructureDefinition.version [ fhir:value "0.0.7"];
+  fhir:StructureDefinition.version [ fhir:value "0.0.9"];
   fhir:StructureDefinition.name [ fhir:value "PAOdevicerequest4"];
   fhir:StructureDefinition.title [ fhir:value "PAO DeviceRequest Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-01-01T00:00:00+00:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-03-29T00:00:00+00:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -33,7 +33,7 @@
        fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/orders" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "Post Acute Orders DeviceRequest Profile"];
+  fhir:StructureDefinition.description [ fhir:value "Post Acute Orders DeviceRequest Profile\n\nUse to order DME and assoicated supplies"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;
@@ -732,9 +732,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -749,6 +749,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -1302,6 +1303,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
@@ -1369,6 +1371,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -1405,21 +1408,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Group";
-           fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Group>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Location";
-           fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Location>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Device";
-           fhir:index 3;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1649,21 +1640,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Device";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
-           fhir:index 3;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1869,6 +1856,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
@@ -1975,7 +1963,7 @@
        fhir:index 34;
        fhir:Element.id [ fhir:value "DeviceRequest.insurance" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.insurance" ];
-       fhir:ElementDefinition.short [ fhir:value "Associated insurance coverage" ];
+       fhir:ElementDefinition.short [ fhir:value "include reference to PA response when available" ];
        fhir:ElementDefinition.definition [ fhir:value "Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
@@ -1988,13 +1976,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Coverage";
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Coverage>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/ClaimResponse";
-           fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/ClaimResponse>
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -2143,9 +2127,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Provenance";
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Provenance>
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -2197,84 +2181,158 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 3;
+       fhir:Element.id [ fhir:value "DeviceRequest.priorRequest" ];
+       fhir:ElementDefinition.path [ fhir:value "DeviceRequest.priorRequest" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4>
+         ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
        fhir:Element.id [ fhir:value "DeviceRequest.status" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.status" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 4;
+       fhir:index 5;
        fhir:Element.id [ fhir:value "DeviceRequest.intent" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.intent" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 5;
+       fhir:index 6;
        fhir:Element.id [ fhir:value "DeviceRequest.priority" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.priority" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 6;
+       fhir:index 7;
        fhir:Element.id [ fhir:value "DeviceRequest.code[x]" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.code[x]" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.id [ fhir:value "DeviceRequest.parameter" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.parameter" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 8;
-       fhir:Element.id [ fhir:value "DeviceRequest.subject" ];
-       fhir:ElementDefinition.path [ fhir:value "DeviceRequest.subject" ];
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "DeviceRequest.parameter.code" ];
+       fhir:ElementDefinition.path [ fhir:value "DeviceRequest.parameter.code" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "DeviceRequest.parameter.value[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "DeviceRequest.parameter.value[x]" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "DeviceRequest.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "DeviceRequest.subject" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
+         ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
        fhir:Element.id [ fhir:value "DeviceRequest.encounter" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.encounter" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 10;
+       fhir:index 13;
        fhir:Element.id [ fhir:value "DeviceRequest.occurrence[x]" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.occurrence[x]" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 11;
+       fhir:index 14;
        fhir:Element.id [ fhir:value "DeviceRequest.authoredOn" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.authoredOn" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 12;
+       fhir:index 15;
        fhir:Element.id [ fhir:value "DeviceRequest.requester" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.requester" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
+           fhir:index 2;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
+         ]
+       ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 13;
+       fhir:index 16;
+       fhir:Element.id [ fhir:value "DeviceRequest.reasonCode" ];
+       fhir:ElementDefinition.path [ fhir:value "DeviceRequest.reasonCode" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 17;
        fhir:Element.id [ fhir:value "DeviceRequest.reasonReference" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.reasonReference" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 14;
+       fhir:index 18;
        fhir:Element.id [ fhir:value "DeviceRequest.insurance" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.insurance" ];
+       fhir:ElementDefinition.short [ fhir:value "include reference to PA response when available" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage>
+         ]
+       ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 15;
+       fhir:index 19;
        fhir:Element.id [ fhir:value "DeviceRequest.supportingInfo" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.supportingInfo" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 16;
+       fhir:index 20;
        fhir:Element.id [ fhir:value "DeviceRequest.note" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.note" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 17;
+       fhir:index 21;
        fhir:Element.id [ fhir:value "DeviceRequest.relevantHistory" ];
        fhir:ElementDefinition.path [ fhir:value "DeviceRequest.relevantHistory" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b>
+         ]
+       ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ]
   ] .

@@ -3,15 +3,15 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="PAO-medication-request"/>
   <meta>
-    <versionId value="3"/>
-    <lastUpdated value="2020-03-28T23:26:29.020+00:00"/>
-    <source value="#1o844hoB4Im73GME"/>
+    <versionId value="5"/>
+    <lastUpdated value="2020-03-30T13:33:40.607+00:00"/>
+    <source value="#a2L8seUUzEvvfVm0"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">This is resource text</div></div>
   </text>
   <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request"/>
-  <version value="0.0.7"/>
+  <version value="0.0.9"/>
   <name value="PAOmedicationrequest"/>
   <title value="PAO MedicationRequest"/>
   <status value="active"/>
@@ -613,6 +613,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <binding>
@@ -945,6 +946,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <mapping>
@@ -1450,7 +1452,7 @@
     </element>
     <element id="MedicationRequest.insurance">
       <path value="MedicationRequest.insurance"/>
-      <short value="Associated insurance coverage"/>
+      <short value="include reference toPA response when available"/>
       <definition value="Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service."/>
       <min value="0"/>
       <max value="*"/>
@@ -1461,8 +1463,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Coverage"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClaimResponse"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1472,6 +1473,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <mapping>
@@ -2361,6 +2363,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <mapping>
@@ -2864,7 +2867,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -3133,7 +3136,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -3143,6 +3146,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <mapping>
@@ -3235,6 +3239,49 @@
     <element id="MedicationRequest.identifier">
       <path value="MedicationRequest.identifier"/>
       <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.category">
+      <path value="MedicationRequest.category"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.subject">
+      <path value="MedicationRequest.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+      </type>
+    </element>
+    <element id="MedicationRequest.supportingInformation">
+      <path value="MedicationRequest.supportingInformation"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.insurance">
+      <path value="MedicationRequest.insurance"/>
+      <short value="include reference toPA response when available"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.dispenseRequest">
+      <path value="MedicationRequest.dispenseRequest"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.dispenseRequest.performer">
+      <path value="MedicationRequest.dispenseRequest.performer"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+      </type>
+    </element>
+    <element id="MedicationRequest.priorPrescription">
+      <path value="MedicationRequest.priorPrescription"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request"/>
+      </type>
       <mustSupport value="true"/>
     </element>
   </differential>

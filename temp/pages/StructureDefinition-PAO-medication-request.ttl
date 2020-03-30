@@ -9,16 +9,16 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PAO-medication-request"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "3" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-28T23:26:29.020+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#1o844hoB4Im73GME" ]
+     fhir:Meta.versionId [ fhir:value "5" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-30T13:33:40.607+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#a2L8seUUzEvvfVm0" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text</div></div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request"];
-  fhir:StructureDefinition.version [ fhir:value "0.0.7"];
+  fhir:StructureDefinition.version [ fhir:value "0.0.9"];
   fhir:StructureDefinition.name [ fhir:value "PAOmedicationrequest"];
   fhir:StructureDefinition.title [ fhir:value "PAO MedicationRequest"];
   fhir:StructureDefinition.status [ fhir:value "active"];
@@ -786,6 +786,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
@@ -1212,6 +1213,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -1886,7 +1888,7 @@
        fhir:index 33;
        fhir:Element.id [ fhir:value "MedicationRequest.insurance" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.insurance" ];
-       fhir:ElementDefinition.short [ fhir:value "Associated insurance coverage" ];
+       fhir:ElementDefinition.short [ fhir:value "include reference toPA response when available" ];
        fhir:ElementDefinition.definition [ fhir:value "Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
@@ -1899,13 +1901,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Coverage";
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Coverage>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/ClaimResponse";
-           fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/ClaimResponse>
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1920,6 +1918,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -3053,6 +3052,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -3704,9 +3704,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -4055,9 +4055,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/MedicationRequest";
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/MedicationRequest>
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -4072,6 +4072,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -4197,6 +4198,76 @@
        fhir:Element.id [ fhir:value "MedicationRequest.identifier" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.identifier" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "MedicationRequest.category" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationRequest.category" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "MedicationRequest.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationRequest.subject" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
+         ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "MedicationRequest.supportingInformation" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationRequest.supportingInformation" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "MedicationRequest.insurance" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationRequest.insurance" ];
+       fhir:ElementDefinition.short [ fhir:value "include reference toPA response when available" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage>
+         ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "MedicationRequest.dispenseRequest" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationRequest.dispenseRequest" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "MedicationRequest.dispenseRequest.performer" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationRequest.dispenseRequest.performer" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
+         ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "MedicationRequest.priorPrescription" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationRequest.priorPrescription" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request>
+         ]
+       ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ]
   ] .

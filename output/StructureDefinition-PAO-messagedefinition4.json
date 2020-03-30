@@ -11,7 +11,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This resource has narrative now</div>"
   },
   "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messagedefinition4",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "name": "PAOmessagedefinition4",
   "title": "PAO MessageDefinition Profile",
   "status": "active",

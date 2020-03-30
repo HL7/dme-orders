@@ -12,7 +12,8 @@ Comments and suggestions are welcome on our Zulip stream...
 or send a note to rdieterle@enablecare.us
 
 # Change log
-* **0.0.8c (this version):** will update alpha with each subsequent test on 3-29-2020
+* **0.0.9 (this version):** QA version for May ballot -- only updates are for additional/modified text 
+* **0.0.8:** fixed all outstanding errors (except for error on MessageDefinition)
 * **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles
 * **0.0.6:** Further changes to address publisher errors (not pushed to build)
 * **0.0.5:** Update for tooling changes (not pushed to build)
@@ -22,10 +23,9 @@ or send a note to rdieterle@enablecare.us
 * **0.0.1:** Initial version published to the continuous build
 
 # Known issues and to-dos
-* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest
-* Working with other members of the team to create appropriate examples
-* Need to add full examples of message bundles
-* Working on specific terminologies and value sets for post-acute orders
+* complex extensions defined but not added to ServiceRequest and DeviceRequest
+* Will add examples during ballot reconilliation
+* Will add specific terminologies and value sets for post-acute orders during ballot reconcilliation
 
 
 

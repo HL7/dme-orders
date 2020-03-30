@@ -2,20 +2,20 @@
   "resourceType": "StructureDefinition",
   "id": "PAO-devicerequest4",
   "meta": {
-    "versionId": "3",
-    "lastUpdated": "2020-03-28T23:25:53.878+00:00",
-    "source": "#daXAMA95KMXD8N3z"
+    "versionId": "4",
+    "lastUpdated": "2020-03-30T13:54:21.538+00:00",
+    "source": "#DbsFGCgRe3zLSDRc"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text</div></div>"
   },
   "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "name": "PAOdevicerequest4",
   "title": "PAO DeviceRequest Profile",
   "status": "active",
-  "date": "2020-01-01T00:00:00+00:00",
+  "date": "2020-03-29T00:00:00+00:00",
   "publisher": "HL7",
   "contact": [
     {
@@ -28,7 +28,7 @@
       ]
     }
   ],
-  "description": "Post Acute Orders DeviceRequest Profile",
+  "description": "Post Acute Orders DeviceRequest Profile\n\nUse to order DME and assoicated supplies",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -678,7 +678,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Resource"
+              "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4"
             ]
           }
         ],
@@ -692,6 +692,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1223,6 +1224,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -1291,6 +1293,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1328,10 +1331,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/Group",
-              "http://hl7.org/fhir/StructureDefinition/Location",
-              "http://hl7.org/fhir/StructureDefinition/Device"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
             ]
           }
         ],
@@ -1559,10 +1559,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device",
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
             ]
           }
         ],
@@ -1742,6 +1741,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -1836,7 +1836,7 @@
       {
         "id": "DeviceRequest.insurance",
         "path": "DeviceRequest.insurance",
-        "short": "Associated insurance coverage",
+        "short": "include reference to PA response when available",
         "definition": "Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service.",
         "min": 0,
         "max": "*",
@@ -1849,8 +1849,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Coverage",
-              "http://hl7.org/fhir/StructureDefinition/ClaimResponse"
+              "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"
             ]
           }
         ],
@@ -1997,7 +1996,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Provenance"
+              "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b"
             ]
           }
         ],
@@ -2050,6 +2049,19 @@
         "mustSupport": true
       },
       {
+        "id": "DeviceRequest.priorRequest",
+        "path": "DeviceRequest.priorRequest",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "DeviceRequest.status",
         "path": "DeviceRequest.status",
         "mustSupport": true
@@ -2075,8 +2087,26 @@
         "mustSupport": true
       },
       {
+        "id": "DeviceRequest.parameter.code",
+        "path": "DeviceRequest.parameter.code",
+        "mustSupport": true
+      },
+      {
+        "id": "DeviceRequest.parameter.value[x]",
+        "path": "DeviceRequest.parameter.value[x]",
+        "mustSupport": true
+      },
+      {
         "id": "DeviceRequest.subject",
         "path": "DeviceRequest.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -2101,6 +2131,21 @@
         "path": "DeviceRequest.requester",
         "min": 1,
         "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DeviceRequest.reasonCode",
+        "path": "DeviceRequest.reasonCode",
         "mustSupport": true
       },
       {
@@ -2111,6 +2156,15 @@
       {
         "id": "DeviceRequest.insurance",
         "path": "DeviceRequest.insurance",
+        "short": "include reference to PA response when available",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -2128,6 +2182,14 @@
         "path": "DeviceRequest.relevantHistory",
         "min": 1,
         "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b"
+            ]
+          }
+        ],
         "mustSupport": true
       }
     ]

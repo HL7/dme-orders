@@ -3,15 +3,15 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="PAO-servicerequest4"/>
   <meta>
-    <versionId value="11"/>
-    <lastUpdated value="2020-03-30T00:23:54.188+00:00"/>
-    <source value="#kefvK44gclAX8M7h"/>
+    <versionId value="13"/>
+    <lastUpdated value="2020-03-30T12:39:44.760+00:00"/>
+    <source value="#0HpTgoE98Mzdwmvj"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">This is resource text</div></div>
   </text>
   <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4"/>
-  <version value="0.0.7"/>
+  <version value="0.0.9"/>
   <name value="PAOservicerequest4"/>
   <title value="PAO ServiceRequest Profile"/>
   <status value="active"/>
@@ -1045,10 +1045,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1100,7 +1097,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1295,12 +1292,9 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1400,14 +1394,10 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1458,6 +1448,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
@@ -1490,7 +1481,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1611,7 +1602,7 @@
     </element>
     <element id="ServiceRequest.insurance">
       <path value="ServiceRequest.insurance"/>
-      <short value="Associated insurance coverage"/>
+      <short value="will want to add reference to PA claim response when available"/>
       <definition value="Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service."/>
       <min value="0"/>
       <max value="*"/>
@@ -1622,8 +1613,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Coverage"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClaimResponse"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1865,7 +1855,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Provenance"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1946,10 +1936,18 @@
     </element>
     <element id="ServiceRequest.subject">
       <path value="ServiceRequest.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="ServiceRequest.encounter">
       <path value="ServiceRequest.encounter"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="ServiceRequest.occurrence[x]">
@@ -1970,7 +1968,34 @@
       <path value="ServiceRequest.requester"/>
       <min value="1"/>
       <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+      </type>
       <mustSupport value="true"/>
+    </element>
+    <element id="ServiceRequest.performer">
+      <path value="ServiceRequest.performer"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"/>
+      </type>
+    </element>
+    <element id="ServiceRequest.locationCode">
+      <path value="ServiceRequest.locationCode"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="ServiceRequest.locationReference">
+      <path value="ServiceRequest.locationReference"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
+      </type>
     </element>
     <element id="ServiceRequest.reasonCode">
       <path value="ServiceRequest.reasonCode"/>
@@ -1982,6 +2007,11 @@
     </element>
     <element id="ServiceRequest.insurance">
       <path value="ServiceRequest.insurance"/>
+      <short value="will want to add reference to PA claim response when available"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="ServiceRequest.supportingInfo">
@@ -2004,6 +2034,10 @@
       <path value="ServiceRequest.relevantHistory"/>
       <min value="1"/>
       <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b"/>
+      </type>
       <mustSupport value="true"/>
     </element>
   </differential>

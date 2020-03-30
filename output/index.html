@@ -58,7 +58,7 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Post-Acute FHIR Based Orders</span><br/>0.0.7 - CI Build</p>
+          <p><span style="font-size:12pt;font-weight:bold">Post-Acute FHIR Based Orders</span><br/>0.0.9 - CI Build</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -111,7 +111,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Post-Acute FHIR Based Orders - Local Development build (v0.0.7). See the <a href="http://hl7.org/fhir/us/dme-orders/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Post-Acute FHIR Based Orders - Local Development build (v0.0.9). See the <a href="http://hl7.org/fhir/us/dme-orders/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>IG Home Page</h2>
   
   
@@ -146,7 +146,8 @@ or send a note to rdieterle@enablecare.us</p>
 
 <h1 id="change-log">Change log</h1>
 <ul>
-  <li><strong>0.0.8c (this version):</strong> will update alpha with each subsequent test on 3-29-2020</li>
+  <li><strong>0.0.9 (this version):</strong> QA version for May ballot – only updates are for additional/modified text</li>
+  <li><strong>0.0.8:</strong> fixed all outstanding errors (except for error on MessageDefinition)</li>
   <li><strong>0.0.7:</strong> further updates that now include Code System, Value Set, US Core profile references in some PAO profiles</li>
   <li><strong>0.0.6:</strong> Further changes to address publisher errors (not pushed to build)</li>
   <li><strong>0.0.5:</strong> Update for tooling changes (not pushed to build)</li>
@@ -158,10 +159,9 @@ or send a note to rdieterle@enablecare.us</p>
 
 <h1 id="known-issues-and-to-dos">Known issues and to-dos</h1>
 <ul>
-  <li>Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest</li>
-  <li>Working with other members of the team to create appropriate examples</li>
-  <li>Need to add full examples of message bundles</li>
-  <li>Working on specific terminologies and value sets for post-acute orders</li>
+  <li>complex extensions defined but not added to ServiceRequest and DeviceRequest</li>
+  <li>Will add examples during ballot reconilliation</li>
+  <li>Will add specific terminologies and value sets for post-acute orders during ballot reconcilliation</li>
 </ul>
 
 <h3 id="authors">Authors</h3>
@@ -195,7 +195,7 @@ or send a note to rdieterle@enablecare.us</p>
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/orders">HL7</a>.  Package hl7.fhir.us.dme-orders#0.0.7 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2020 00:25+0000">2020-03-30</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/orders">HL7</a>.  Package hl7.fhir.us.dme-orders#0.0.9 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2020 13:59+0000">2020-03-30</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

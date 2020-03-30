@@ -11,7 +11,7 @@
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This is resource text</div>
   </text>
   <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-task4"/>
-  <version value="0.0.7"/>
+  <version value="0.0.9"/>
   <name value="PAOtask4"/>
   <title value="PAO Task Profile"/>
   <status value="active"/>

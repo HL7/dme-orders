@@ -4,7 +4,7 @@
   "igId": "hl7.fhir.us.dme-orders",
   "igName": "PostAcuteOrders4",
   "packageId": "hl7.fhir.us.dme-orders",
-  "igVer": "0.0.7",
+  "igVer": "0.0.9",
   "errorCount": 1,
   "version": "4.0.1",
   "revision": "a53ec6ee1b",
@@ -14,14 +14,14 @@
   "toolingVersionFull": "4.2.0 (3)",
   "totalFiles": 16,
   "processedFiles": 42,
-  "genDate": "Mon, Mar 30, 2020 00:25+0000",
+  "genDate": "Mon, Mar 30, 2020 13:59+0000",
   "genDay": "30/03/2020",
   "ig": {
     "id": "hl7.fhir.us.dme-orders",
     "name": "PostAcuteOrders4",
     "title": "Post-Acute FHIR Based Orders",
     "url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders",
-    "version": "0.0.7",
+    "version": "0.0.9",
     "status": "draft",
     "experimental": false,
     "publisher": "HL7",
@@ -34,9 +34,9 @@
         ]
       }
     ],
-    "date": "2020-03-30T00:25:11+00:00",
-    "description": "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS\u0027s Center for Program Integrity, whose goal is to advance the ability for provider\u0027s to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.8c (this version):** will update alpha with each subsequent test on 3-29-2020\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples\n* Need to add full examples of message bundles\n* Working on specific terminologies and value sets for post-acute orders",
+    "date": "2020-03-30T13:59:33+00:00",
+    "description": "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS\u0027s Center for Program Integrity, whose goal is to advance the ability for provider\u0027s to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.9 (this version):** QA version for May ballot -- only updates are for additional/modified text \n* **0.0.8:** fixed all outstanding errors (except for error on MessageDefinition)\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* complex extensions defined but not added to ServiceRequest and DeviceRequest\n* Will add examples during ballot reconilliation\n* Will add specific terminologies and value sets for post-acute orders during ballot reconcilliation",
     "fhirVersion": "4.0.1"
   },
-  "u7e2f47718bc345c4b6adad07365ed80a": "http://hl7.org/fhir/us/core"
+  "u59deb252e0a14c5fb6e6e40136bfec1a": "http://hl7.org/fhir/us/core"
 }

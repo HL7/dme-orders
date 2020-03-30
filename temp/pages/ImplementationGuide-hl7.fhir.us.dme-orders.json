@@ -2,20 +2,20 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.us.dme-orders",
   "meta": {
-    "versionId": "49",
-    "lastUpdated": "2020-03-30T00:24:47.002+00:00",
-    "source": "#TQd4d0LbXQEyGCtS"
+    "versionId": "50",
+    "lastUpdated": "2020-03-30T13:58:56.297+00:00",
+    "source": "#rYcn6NHUZofqeVqO"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text</div></div>"
   },
   "url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "name": "PostAcuteOrders4",
   "title": "Post-Acute FHIR Based Orders",
   "status": "draft",
-  "date": "2020-03-30T00:25:11+00:00",
+  "date": "2020-03-30T13:59:33+00:00",
   "publisher": "HL7",
   "contact": [
     {
@@ -28,7 +28,7 @@
       ]
     }
   ],
-  "description": "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.8c (this version):** will update alpha with each subsequent test on 3-29-2020\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples\n* Need to add full examples of message bundles\n* Working on specific terminologies and value sets for post-acute orders",
+  "description": "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.9 (this version):** QA version for May ballot -- only updates are for additional/modified text \n* **0.0.8:** fixed all outstanding errors (except for error on MessageDefinition)\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* complex extensions defined but not added to ServiceRequest and DeviceRequest\n* Will add examples during ballot reconilliation\n* Will add specific terminologies and value sets for post-acute orders during ballot reconcilliation",
   "packageId": "hl7.fhir.us.dme-orders",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -383,7 +383,7 @@
           "display": "PAOdevicerequest4"
         },
         "name": "PAOdevicerequest4",
-        "description": "Post Acute Orders DeviceRequest Profile",
+        "description": "Post Acute Orders DeviceRequest Profile\n\nUse to order DME and assoicated supplies",
         "exampleBoolean": false
       },
       {

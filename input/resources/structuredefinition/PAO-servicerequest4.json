@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAO-servicerequest4",
 	"meta": {
-		"versionId": "11",
-		"lastUpdated": "2020-03-30T00:23:54.188+00:00",
-		"source": "#kefvK44gclAX8M7h"
+		"versionId": "13",
+		"lastUpdated": "2020-03-30T12:39:44.760+00:00",
+		"source": "#0HpTgoE98Mzdwmvj"
 	},
 	"text": {
 		"status": "additional",
@@ -95,11 +95,27 @@
 			{
 				"id": "ServiceRequest.subject",
 				"path": "ServiceRequest.subject",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+						]
+					}
+				],
 				"mustSupport": true
 			},
 			{
 				"id": "ServiceRequest.encounter",
 				"path": "ServiceRequest.encounter",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+						]
+					}
+				],
 				"mustSupport": true
 			},
 			{
@@ -124,7 +140,49 @@
 				"path": "ServiceRequest.requester",
 				"min": 1,
 				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				],
 				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.performer",
+				"path": "ServiceRequest.performer",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+						]
+					}
+				]
+			},
+			{
+				"id": "ServiceRequest.locationCode",
+				"path": "ServiceRequest.locationCode",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.locationReference",
+				"path": "ServiceRequest.locationReference",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+						]
+					}
+				]
 			},
 			{
 				"id": "ServiceRequest.reasonCode",
@@ -139,6 +197,15 @@
 			{
 				"id": "ServiceRequest.insurance",
 				"path": "ServiceRequest.insurance",
+				"short": "will want to add reference to PA claim response when available",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"
+						]
+					}
+				],
 				"mustSupport": true
 			},
 			{
@@ -166,6 +233,14 @@
 				"path": "ServiceRequest.relevantHistory",
 				"min": 1,
 				"max": "*",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b"
+						]
+					}
+				],
 				"mustSupport": true
 			}
 		]

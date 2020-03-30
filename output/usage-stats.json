@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.us.dme-orders",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "fhirVersion": "4.0.1",
   "extensions": [
     {
