@@ -9,9 +9,9 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "hl7.fhir.us.dme-orders"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "44" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-29T15:46:51.679+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#7qqYH3mweESnwVUX" ]
+     fhir:Meta.versionId [ fhir:value "49" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-30T00:24:47.002+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#TQd4d0LbXQEyGCtS" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
@@ -22,7 +22,7 @@
   fhir:ImplementationGuide.name [ fhir:value "PostAcuteOrders4"];
   fhir:ImplementationGuide.title [ fhir:value "Post-Acute FHIR Based Orders"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-03-29T15:47:28+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-03-30T00:25:11+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -33,7 +33,7 @@
        fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/orders" ]
      ]
   ];
-  fhir:ImplementationGuide.description [ fhir:value "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.8b (this version):** will update alpha with each subsequent test on 3-29-2020\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples\n* Need to add full examples of message bundles\n* Working on specific terminologies and value sets for post-acute orders"];
+  fhir:ImplementationGuide.description [ fhir:value "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.8c (this version):** will update alpha with each subsequent test on 3-29-2020\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples\n* Need to add full examples of message bundles\n* Working on specific terminologies and value sets for post-acute orders"];
   fhir:ImplementationGuide.packageId [ fhir:value "hl7.fhir.us.dme-orders"];
   fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
   fhir:ImplementationGuide.fhirVersion [
@@ -260,7 +260,7 @@
          fhir:Reference.display [ fhir:value "PAOmessageheader" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOmessageheader" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Post Acute Orders MessageHeader Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Post Acute Orders MessageHeader Profile\n\nThis profiles is use to order, update, cancel and query the status of an order\n\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 1;
@@ -298,7 +298,7 @@
          fhir:Reference.display [ fhir:value "PAObundle4" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAObundle4" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Post Acute Orders Bundle Profile Description" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This bundle includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 3;
@@ -336,7 +336,7 @@
          fhir:Reference.display [ fhir:value "PAOsubscription4" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOsubscription4" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Post Acute Orders Subscription Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Post Acute Orders Subscription Profile\n\nThe subscription resource should accompany the initial message bundle to provide a mechanism of informing the ordering provider when there is a change in the order as indicated by a change in the Task resorurce.\n\nThe subscriber has the option of receiving a notifiction when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 5;
@@ -355,7 +355,7 @@
          fhir:Reference.display [ fhir:value "PAOservicerequest4" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOservicerequest4" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Post Acute Orders ServiceRequest Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Post Acute Orders ServiceRequest Profile\n\nThis resource is used to \"order\" non-DME (device) and non-medications.  \n\nFor this version of the guide, it is used primarily to order Home Health Services" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 6;
@@ -509,6 +509,25 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOrelevantreviews" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "PAO relevant review extension" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PAO-coverage.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PAO-coverage" ];
+         fhir:Reference.display [ fhir:value "PAOcoverage" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PAOcoverage" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "PAO Coverage profiles" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
@@ -635,6 +654,8 @@
 <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-Medication> a fhir:us .
 
 <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-relevant-reviews> a fhir:us .
+
+<http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage> a fhir:us .
 
 # - ontology header ------------------------------------------------------------
 

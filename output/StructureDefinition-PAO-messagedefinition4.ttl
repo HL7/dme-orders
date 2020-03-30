@@ -9,9 +9,9 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PAO-messagedefinition4"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "4" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-28T18:46:58.044+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#fi9971bjKCRJj47k" ]
+     fhir:Meta.versionId [ fhir:value "10" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-29T21:16:00.663+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#t3AhkTBqsBLmOOPW" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
@@ -22,7 +22,7 @@
   fhir:StructureDefinition.name [ fhir:value "PAOmessagedefinition4"];
   fhir:StructureDefinition.title [ fhir:value "PAO MessageDefinition Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-01-01T00:00:00+00:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-03-29T00:00:00+00:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -897,6 +897,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -939,6 +940,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -1292,6 +1294,7 @@
        fhir:ElementDefinition.path [ fhir:value "MessageDefinition.event[x]" ];
        fhir:ElementDefinition.short [ fhir:value "Event code  or link to the EventDefinition" ];
        fhir:ElementDefinition.definition [ fhir:value "Event code or link to the EventDefinition." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Same value as in messageheader event(x)" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
@@ -1322,20 +1325,10 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "MessageEvent" ]
-         ], [
-           fhir:index 1;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding" ];
-           fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "One of the message events defined as part of this version of FHIR." ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/message-events";
-           fhir:link <http://hl7.org/fhir/ValueSet/message-events>
+           fhir:value "http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event";
+           fhir:link <http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event>
          ]
        ]
      ], [
@@ -1355,6 +1348,7 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "code" ]
        ];
+       fhir:ElementDefinition.fixedCode [ fhir:value "consequence" ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
          fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
@@ -1371,16 +1365,10 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "MessageSignificanceCategory" ]
-         ];
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "The impact of the content of a message." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/message-significance-category|4.0.1";
-           fhir:link <http://hl7.org/fhir/ValueSet/message-significance-category|4.0.1>
+           fhir:value "http://hl7.org/fhir/ValueSet/message-significance-category";
+           fhir:link <http://hl7.org/fhir/ValueSet/message-significance-category>
          ]
        ]
      ], [
@@ -1592,6 +1580,7 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "code" ]
        ];
+       fhir:ElementDefinition.fixedCode [ fhir:value "Task" ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
          fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
@@ -1608,20 +1597,10 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "ResourceType" ]
-         ], [
-           fhir:index 1;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding" ];
-           fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
-         ];
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "One of the resource types defined as part of this version of FHIR." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/resource-types|4.0.1";
-           fhir:link <http://hl7.org/fhir/ValueSet/resource-types|4.0.1>
+           fhir:value "http://hl7.org/fhir/ValueSet/resource-types";
+           fhir:link <http://hl7.org/fhir/ValueSet/resource-types>
          ]
        ]
      ], [
@@ -1736,7 +1715,7 @@
        fhir:ElementDefinition.short [ fhir:value "always | on-error | never | on-success" ];
        fhir:ElementDefinition.definition [ fhir:value "Declare at a message definition level whether a response is required or only upon error or success, or never." ];
        fhir:ElementDefinition.comment [ fhir:value "This enables the capability currently available through MSH-16 (Application Level acknowledgement) in HL7 Version 2 to declare at a message instance level whether a response is required or only upon error or success, or never." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "MessageDefinition.responseRequired" ];
@@ -1747,6 +1726,7 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "code" ]
        ];
+       fhir:ElementDefinition.fixedCode [ fhir:value "always" ];
        fhir:ElementDefinition.example [
          fhir:index 0;
          fhir:ElementDefinition.example.label [ fhir:value "General" ];
@@ -1764,19 +1744,14 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "messageheader-response-request" ]
-         ];
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "HL7-defined table of codes which identify conditions under which acknowledgments are required to be returned in response to a message." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/messageheader-response-request|4.0.1";
-           fhir:link <http://hl7.org/fhir/ValueSet/messageheader-response-request|4.0.1>
+           fhir:value "http://hl7.org/fhir/ValueSet/messageheader-response-request";
+           fhir:link <http://hl7.org/fhir/ValueSet/messageheader-response-request>
          ]
        ];
        fhir:ElementDefinition.mapping [
@@ -2103,33 +2078,85 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 6;
-       fhir:Element.id [ fhir:value "MessageDefinition.event[x]" ];
-       fhir:ElementDefinition.path [ fhir:value "MessageDefinition.event[x]" ];
+       fhir:Element.id [ fhir:value "MessageDefinition.date" ];
+       fhir:ElementDefinition.path [ fhir:value "MessageDefinition.date" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 7;
+       fhir:Element.id [ fhir:value "MessageDefinition.publisher" ];
+       fhir:ElementDefinition.path [ fhir:value "MessageDefinition.publisher" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "MessageDefinition.description" ];
+       fhir:ElementDefinition.path [ fhir:value "MessageDefinition.description" ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "MessageDefinition.event[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "MessageDefinition.event[x]" ];
+       fhir:ElementDefinition.requirements [ fhir:value "Same value as in messageheader event(x)" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event";
+           fhir:link <http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event>
+         ]
+       ]
+     ], [
+       fhir:index 10;
        fhir:Element.id [ fhir:value "MessageDefinition.category" ];
        fhir:ElementDefinition.path [ fhir:value "MessageDefinition.category" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+       fhir:ElementDefinition.fixedCode [ fhir:value "consequence" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/message-significance-category";
+           fhir:link <http://hl7.org/fhir/ValueSet/message-significance-category>
+         ]
+       ]
      ], [
-       fhir:index 8;
+       fhir:index 11;
        fhir:Element.id [ fhir:value "MessageDefinition.focus" ];
        fhir:ElementDefinition.path [ fhir:value "MessageDefinition.focus" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 12;
        fhir:Element.id [ fhir:value "MessageDefinition.focus.code" ];
        fhir:ElementDefinition.path [ fhir:value "MessageDefinition.focus.code" ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+       fhir:ElementDefinition.fixedCode [ fhir:value "Task" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/resource-types";
+           fhir:link <http://hl7.org/fhir/ValueSet/resource-types>
+         ]
+       ]
      ], [
-       fhir:index 10;
+       fhir:index 13;
        fhir:Element.id [ fhir:value "MessageDefinition.focus.profile" ];
        fhir:ElementDefinition.path [ fhir:value "MessageDefinition.focus.profile" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value "MessageDefinition.responseRequired" ];
+       fhir:ElementDefinition.path [ fhir:value "MessageDefinition.responseRequired" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.fixedCode [ fhir:value "always" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/messageheader-response-request";
+           fhir:link <http://hl7.org/fhir/ValueSet/messageheader-response-request>
+         ]
+       ]
      ]
   ] .
 

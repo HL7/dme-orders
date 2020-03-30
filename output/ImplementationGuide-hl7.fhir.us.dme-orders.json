@@ -2,9 +2,9 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.us.dme-orders",
   "meta": {
-    "versionId": "44",
-    "lastUpdated": "2020-03-29T15:46:51.679+00:00",
-    "source": "#7qqYH3mweESnwVUX"
+    "versionId": "49",
+    "lastUpdated": "2020-03-30T00:24:47.002+00:00",
+    "source": "#TQd4d0LbXQEyGCtS"
   },
   "text": {
     "status": "additional",
@@ -15,7 +15,7 @@
   "name": "PostAcuteOrders4",
   "title": "Post-Acute FHIR Based Orders",
   "status": "draft",
-  "date": "2020-03-29T15:47:28+00:00",
+  "date": "2020-03-30T00:25:11+00:00",
   "publisher": "HL7",
   "contact": [
     {
@@ -28,7 +28,7 @@
       ]
     }
   ],
-  "description": "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.8b (this version):** will update alpha with each subsequent test on 3-29-2020\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples\n* Need to add full examples of message bundles\n* Working on specific terminologies and value sets for post-acute orders",
+  "description": "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.8c (this version):** will update alpha with each subsequent test on 3-29-2020\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Still working on complex extensions that will be part of a backbone element in the ServiceRequest and DeviceRequest\n* Working with other members of the team to create appropriate examples\n* Need to add full examples of message bundles\n* Working on specific terminologies and value sets for post-acute orders",
   "packageId": "hl7.fhir.us.dme-orders",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -269,7 +269,7 @@
           "display": "PAOmessageheader"
         },
         "name": "PAOmessageheader",
-        "description": "Post Acute Orders MessageHeader Profile",
+        "description": "Post Acute Orders MessageHeader Profile\n\nThis profiles is use to order, update, cancel and query the status of an order\n\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only.",
         "exampleBoolean": false
       },
       {
@@ -307,7 +307,7 @@
           "display": "PAObundle4"
         },
         "name": "PAObundle4",
-        "description": "Post Acute Orders Bundle Profile Description",
+        "description": "This bundle includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation",
         "exampleBoolean": false
       },
       {
@@ -345,7 +345,7 @@
           "display": "PAOsubscription4"
         },
         "name": "PAOsubscription4",
-        "description": "Post Acute Orders Subscription Profile",
+        "description": "Post Acute Orders Subscription Profile\n\nThe subscription resource should accompany the initial message bundle to provide a mechanism of informing the ordering provider when there is a change in the order as indicated by a change in the Task resorurce.\n\nThe subscriber has the option of receiving a notifiction when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)",
         "exampleBoolean": false
       },
       {
@@ -364,7 +364,7 @@
           "display": "PAOservicerequest4"
         },
         "name": "PAOservicerequest4",
-        "description": "Post Acute Orders ServiceRequest Profile",
+        "description": "Post Acute Orders ServiceRequest Profile\n\nThis resource is used to \"order\" non-DME (device) and non-medications.  \n\nFor this version of the guide, it is used primarily to order Home Health Services",
         "exampleBoolean": false
       },
       {
@@ -517,6 +517,25 @@
         },
         "name": "PAOrelevantreviews",
         "description": "PAO relevant review extension",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PAO-coverage.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PAO-coverage",
+          "display": "PAOcoverage"
+        },
+        "name": "PAOcoverage",
+        "description": "PAO Coverage profiles",
         "exampleBoolean": false
       }
     ],

@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAO-messagedefinition4",
 	"meta": {
-		"versionId": "4",
-		"lastUpdated": "2020-03-28T18:46:58.044+00:00",
-		"source": "#fi9971bjKCRJj47k"
+		"versionId": "10",
+		"lastUpdated": "2020-03-29T21:16:00.663+00:00",
+		"source": "#t3AhkTBqsBLmOOPW"
 	},
 	"text": {
 		"status": "additional",
@@ -12,11 +12,11 @@
 	},
 	"extension": [],
 	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messagedefinition4",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"name": "PAOmessagedefinition4",
 	"title": "PAO MessageDefinition Profile",
 	"status": "active",
-	"date": "2020-01-01",
+	"date": "2020-03-29",
 	"publisher": "HL7",
 	"description": "Post Acute Orders MessageDefinition Profile",
 	"purpose": "Post Acute Orders MessageDefinition Profile Purpose",
@@ -60,16 +60,40 @@
 				"mustSupport": true
 			},
 			{
+				"id": "MessageDefinition.date",
+				"path": "MessageDefinition.date",
+				"mustSupport": true
+			},
+			{
+				"id": "MessageDefinition.publisher",
+				"path": "MessageDefinition.publisher",
+				"mustSupport": true
+			},
+			{
+				"id": "MessageDefinition.description",
+				"path": "MessageDefinition.description"
+			},
+			{
 				"id": "MessageDefinition.event[x]",
 				"path": "MessageDefinition.event[x]",
-				"mustSupport": true
+				"requirements": "Same value as in messageheader event(x)",
+				"mustSupport": true,
+				"binding": {
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event"
+				}
 			},
 			{
 				"id": "MessageDefinition.category",
 				"path": "MessageDefinition.category",
 				"min": 1,
 				"max": "1",
-				"mustSupport": true
+				"fixedCode": "consequence",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/ValueSet/message-significance-category"
+				}
 			},
 			{
 				"id": "MessageDefinition.focus",
@@ -79,9 +103,25 @@
 				"mustSupport": true
 			},
 			{
+				"id": "MessageDefinition.responseRequired",
+				"path": "MessageDefinition.responseRequired",
+				"min": 1,
+				"fixedCode": "always",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/ValueSet/messageheader-response-request"
+				}
+			},
+			{
 				"id": "MessageDefinition.focus.code",
 				"path": "MessageDefinition.focus.code",
-				"mustSupport": true
+				"fixedCode": "Task",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/ValueSet/resource-types"
+				}
 			},
 			{
 				"id": "MessageDefinition.focus.profile",

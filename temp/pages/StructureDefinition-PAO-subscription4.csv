@@ -41,7 +41,7 @@ This element is labeled as a modifier because the status contains codes that mar
 "Subscription.end","","","",0,1,"","","Y","instant {[]} {[]}
 ","When to automatically delete the subscription","The time for the server to turn the subscription off.","The server is permitted to deviate from this time but should observe it.","","","","","","","","",,,,,"",,,,"Subscription.end",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.done[x]"
-"Subscription.reason","","","",1,1,"","","Y","string {[]} {[]}
+"Subscription.reason","","","",1,1,"Y","","Y","string {[]} {[]}
 ","Description of why this subscription was created","A description of why this subscription is defined.","","","","","","","","","",,,,,"",,,,"Subscription.reason",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.why[x]"
 "Subscription.criteria","","","",1,1,"Y","","Y","string {[]} {[]}

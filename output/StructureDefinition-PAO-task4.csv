@@ -38,7 +38,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Task.instantiatesUri","","","",0,1,"","","Y","uri {[]} {[]}
 ","Formal definition of task","The URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.","","Enables a formal definition of how he task is to be performed (e.g. using BPMN, BPEL, XPDL or other formal notation to be associated with a task), enabling automation.","","","","","","","",,,,,"",,,,"Task.instantiatesUri",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.instantiatesUrl",".outboundRelationship[typeCode=DEFN].target"
-"Task.basedOn","","","",1,*,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
+"Task.basedOn","","","",1,*,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4], CanonicalType[http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4], CanonicalType[http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request]]}
 ","Request fulfilled by this task","BasedOn refers to a higher-level authorization that triggered the creation of the task.  It references a ""request"" resource such as a ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is distinct from the ""request"" resource the task is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a task is created to fulfill a procedureRequest ( = FocusOn ) to collect a specimen from a patient.","","","","","","","","","",,,,,"",,,,"Task.basedOn",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.basedOn, Event.basedOn",".outboundRelationship[typeCode=FLFS].target[moodCode=INT]"
 "Task.groupIdentifier","","","",0,1,"","","Y","Identifier {[]} {[]}
@@ -64,20 +64,20 @@ In most cases, Tasks will have an intent of ""order"".","","","","","","","","",
 "Task.priority","","","",0,1,"Y","","","code {[]} {[]}
 ","routine | urgent | asap | stat","Indicates how quickly the Task should be addressed with respect to other requests.","","Used to identify the service level expected while performing a task.","","If missing, this task should be performed with normal priority","","","","","",,"required","The task's priority.","http://hl7.org/fhir/ValueSet/request-priority|4.0.1","",,,,"Task.priority",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.priority",".priorityCode","FiveWs.grade"
-"Task.code","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
+"Task.code","","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","Task Type","A name or code (or both) briefly describing what the task involves.","The title (eg ""My Tasks"", ""Outstanding Tasks for Patient X"") should go into the code.","","","","","","","","",,"example","Codes to identify what the task involves.  These will typically be specific to a particular workflow.","http://hl7.org/fhir/ValueSet/task-code","",,,,"Task.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.code, Event.code",".code","FiveWs.what[x]"
 "Task.description","","","",0,1,"Y","","Y","string {[]} {[]}
 ","Human-readable explanation of task","A free-text description of what is to be performed.","","","","","","","","","",,,,,"",,,,"Task.description",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".text"
-"Task.focus","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
+"Task.focus","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4], CanonicalType[http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4], CanonicalType[http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request]]}
 ","What task is acting on","The request being actioned or the resource being manipulated by this task.","If multiple resources need to be manipulated, use sub-tasks.  (This ensures that status can be tracked independently for each referenced resource.).","Used to identify the thing to be done.","","","","","","","",,,,,"",,,,"Task.focus",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".outboundRelationship[typeCode=SUBJ].target","FiveWs.what[x]"
 "Task.for","","Patient
-","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
+","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient]]}
 ","Beneficiary of the Task","The entity who benefits from the performance of the service specified in the task (e.g., the patient).","","Used to track tasks outstanding for a beneficiary.  Do not use to track the task owner or creator (see owner and creator respectively).  This can also affect access control.","","","","","","","",,,,,"",,,,"Task.for",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.subject, Event.subject",".participation[typeCode=RCT].role","FiveWs.subject[x]","FiveWs.subject"
-"Task.encounter","","","",0,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
+"Task.encounter","","","",0,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter]]}
 ","Healthcare event during which this task originated","The healthcare event  (e.g. a patient and healthcare provider interaction) during which this task was created.","","For some tasks it may be important to know the link between the encounter the task originated within.","","","","","","","",,,,,"",,,,"Task.encounter",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.context, Event.context",".inboundRelationship[typeCode=COMP].source[classCode=PCPR, moodCode=EVN]","FiveWs.context"
 "Task.executionPeriod","","","",0,1,"","","Y","Period {[]} {[]}
@@ -93,17 +93,17 @@ In most cases, Tasks will have an intent of ""order"".","","","","","","","","",
 ","Task Last Modified Date","The date and time of last modification to this task.","","Used along with history to track task activity and time in a particular task state.  This enables monitoring and management.","","","","","","","",,,,,"",,,,"Task.lastModified",0,1,"inv-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".inboundRelationship[typeCode=SUBJ, ].source[classCode=CACT, moodCode=EVN].effectiveTime"
-"Task.requester","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson]]}
+"Task.requester","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner], CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole], CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization]]}
 ","Who is asking for task to be done","The creator of the task.","","Identifies who created this task.  May be used by access control mechanisms (e.g., to ensure that only the creator can cancel a task).","","","","","","","",,,,,"",,,,"Task.requester",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.requester",".participation[typeCode=AUT].role","FiveWs.author"
 "Task.performerType","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","Requested performer","The kind of participant that should perform the task.","","Use to distinguish tasks on different activity queues.","","","","","","","",,"preferred","The type(s) of task performers allowed.","http://hl7.org/fhir/ValueSet/performer-role","",,,,"Task.performerType",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.performer.role, Request.performerType",".participation[typeCode=PRF].role.code","FiveWs.actor"
 "Task.owner","","Performer
-Executer","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/CareTeam], CanonicalType[http://hl7.org/fhir/StructureDefinition/HealthcareService], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson]]}
+Executer","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner], CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole], CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization]]}
 ","Responsible individual","Individual organization or Device currently responsible for task execution.","Tasks may be created with an owner not yet identified.","Identifies who is expected to perform this task.","","","","","","","",,,,,"",,,,"Task.owner",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.performer.actor, Request.performer",".participation[typeCode=PRF].role","FiveWs.actor"
-"Task.location","","","",0,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location]]}
+"Task.location","","","",0,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-location]]}
 ","Where task occurs","Principal physical location where the this task is performed.","","Ties the event to where the records are likely kept and provides context around the event occurrence (e.g. if it occurred inside or outside a dedicated healthcare setting).","","","","","","","",,,,,"",,,,"Task.location",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.reasonCode, Event.reasonCode",".participation[typeCode=LOC].role","FiveWs.where[x]"
 "Task.reasonCode","","","",0,1,"","","","CodeableConcept {[]} {[]}
@@ -112,14 +112,14 @@ Executer","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/S
 "Task.reasonReference","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
 ","Why task is needed","A resource reference indicating why this task needs to be performed.","Tasks might be justified based on an Observation, a Condition, a past or planned procedure, etc.   This should only be included if there is no focus or if it differs from the reason indicated on the focus.    Use the CodeableConcept text element in `Task.reasonCode` if the data is free (uncoded) text.","","","","","","","","",,,,,"",,,,"Task.reasonReference",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.reasonReference, Event.reasonReference",".outboundRelationship[typeCode=RSON].target","FiveWs.why[x]"
-"Task.insurance","","","",0,*,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Coverage], CanonicalType[http://hl7.org/fhir/StructureDefinition/ClaimResponse]]}
+"Task.insurance","","","",0,*,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage]]}
 ","Associated insurance coverage","Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the Task.","","","","","","","","","",,,,,"",,,,"Task.insurance",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.insurance",".outboundRelationship[typeCode=COVBY].target","IN1/IN2"
 "Task.note","","","",0,*,"","","","Annotation {[]} {[]}
 ","Comments made about the task","Free-text information captured about the task as it progresses.","","","","","","","","","",,,,,"",,,,"Task.note",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.note, Event.note",".inboundRelationship[typeCode=SUBJ, ].source[classCode=OBS, moodCode=EVN, code=""annotation""].value(string)"
 "Task.relevantHistory","","Status History
-","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Provenance]]}
+","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance]]}
 ","Key events in history of the Task","Links to Provenance records for past versions of this Task that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the task.","This element does not point to the Provenance associated with the *current* version of the resource - as it would be created after this version existed.  The Provenance for the current version can be retrieved with a _revinclude.","","","","","","","","",,,,,"",,,,"Task.relevantHistory",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.relevantHistory",".inboundRelationship(typeCode=SUBJ].source[classCode=CACT, moodCode=EVN]"
 "Task.restriction","","","",0,1,"","","","BackboneElement {[]} {[]}
@@ -143,7 +143,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Task.restriction.period","","","",0,1,"","","","Period {[]} {[]}
 ","When fulfillment sought","Over what time-period is fulfillment sought.","Note that period.high is the due date representing the time by which the task should be completed.","E.g. order that authorizes 1 year's services.  Fulfillment is sought for next 3 months.","","","","","","","",,,,,"",,,,"Task.restriction.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".effectiveTime(IVL<TS>)"
-"Task.restriction.recipient","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Group], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"Task.restriction.recipient","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner], CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole], CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization]]}
 ","For whom is fulfillment sought?","For requests that are targeted to more than on potential recipient/target, for whom is fulfillment sought?","","","","","","","","","",,,,,"",,,,"Task.restriction.recipient",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".participation[typeCode=SBJ].role"
 "Task.input","","Supporting Information

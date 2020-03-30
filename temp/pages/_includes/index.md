@@ -12,7 +12,7 @@ Comments and suggestions are welcome on our Zulip stream...
 or send a note to rdieterle@enablecare.us
 
 # Change log
-* **0.0.8b (this version):** will update alpha with each subsequent test on 3-29-2020
+* **0.0.8c (this version):** will update alpha with each subsequent test on 3-29-2020
 * **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles
 * **0.0.6:** Further changes to address publisher errors (not pushed to build)
 * **0.0.5:** Update for tooling changes (not pushed to build)

@@ -128,6 +128,12 @@
         "title": "PAO Bundle Profile"
       }
     ],
+    "Coverage": [
+      {
+        "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage",
+        "title": "PAO Coverage"
+      }
+    ],
     "DeviceRequest": [
       {
         "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4",

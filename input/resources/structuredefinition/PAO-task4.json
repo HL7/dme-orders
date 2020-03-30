@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAO-task4",
 	"meta": {
-		"versionId": "4",
-		"lastUpdated": "2020-03-28T18:49:29.733+00:00",
-		"source": "#7gahwWwQLEefzlpn"
+		"versionId": "6",
+		"lastUpdated": "2020-03-29T22:13:29.107+00:00",
+		"source": "#EkKQDHND8o8XJZmz"
 	},
 	"text": {
 		"status": "additional",
@@ -12,11 +12,11 @@
 	},
 	"extension": [],
 	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-task4",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"name": "PAOtask4",
 	"title": "PAO Task Profile",
 	"status": "active",
-	"date": "2020-01-01",
+	"date": "2020-03-29",
 	"publisher": "HL7",
 	"description": "Post Acute Orders Task Profile",
 	"purpose": "Post Acute Orders Task Profile Purpose",
@@ -44,6 +44,16 @@
 				"path": "Task.basedOn",
 				"min": 1,
 				"max": "*",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4",
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4",
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request"
+						]
+					}
+				],
 				"mustSupport": true
 			},
 			{
@@ -67,8 +77,29 @@
 				"mustSupport": true
 			},
 			{
+				"id": "Task.code",
+				"path": "Task.code",
+				"mustSupport": true
+			},
+			{
 				"id": "Task.description",
 				"path": "Task.description",
+				"mustSupport": true
+			},
+			{
+				"id": "Task.focus",
+				"path": "Task.focus",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4",
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4",
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request"
+						]
+					}
+				],
 				"mustSupport": true
 			},
 			{
@@ -76,11 +107,27 @@
 				"path": "Task.for",
 				"min": 1,
 				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+						]
+					}
+				],
 				"mustSupport": true
 			},
 			{
 				"id": "Task.encounter",
 				"path": "Task.encounter",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+						]
+					}
+				],
 				"mustSupport": true
 			},
 			{
@@ -98,17 +145,83 @@
 				"path": "Task.requester",
 				"min": 1,
 				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				],
 				"mustSupport": true
+			},
+			{
+				"id": "Task.owner",
+				"path": "Task.owner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
 			},
 			{
 				"id": "Task.location",
 				"path": "Task.location",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+						]
+					}
+				],
 				"mustSupport": true
 			},
 			{
 				"id": "Task.insurance",
 				"path": "Task.insurance",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"
+						]
+					}
+				],
 				"mustSupport": true
+			},
+			{
+				"id": "Task.relevantHistory",
+				"path": "Task.relevantHistory",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+						]
+					}
+				]
+			},
+			{
+				"id": "Task.restriction.recipient",
+				"path": "Task.restriction.recipient",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
 			}
 		]
 	}

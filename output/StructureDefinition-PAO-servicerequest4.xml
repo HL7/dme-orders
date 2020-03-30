@@ -3,9 +3,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="PAO-servicerequest4"/>
   <meta>
-    <versionId value="7"/>
-    <lastUpdated value="2020-03-28T23:29:53.755+00:00"/>
-    <source value="#wgtNjEEm10jxj9xu"/>
+    <versionId value="11"/>
+    <lastUpdated value="2020-03-30T00:23:54.188+00:00"/>
+    <source value="#kefvK44gclAX8M7h"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">This is resource text</div></div>
@@ -24,7 +24,7 @@
       <value value="http://www.hl7.org/Special/committees/orders"/>
     </telecom>
   </contact>
-  <description value="Post Acute Orders ServiceRequest Profile"/>
+  <description value="Post Acute Orders ServiceRequest Profile&#xA;&#xA;This resource is used to &quot;order&quot; non-DME (device) and non-medications.  &#xA;&#xA;For this version of the guide, it is used primarily to order Home Health Services"/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="workflow"/>
@@ -347,7 +347,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
-      <mustSupport value="true"/>
+      <mustSupport value="false"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
     </element>
@@ -575,7 +575,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -713,6 +713,7 @@
       <type>
         <code value="code"/>
       </type>
+      <fixedCode value="order"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -1897,7 +1898,7 @@
     </element>
     <element id="ServiceRequest.extension">
       <path value="ServiceRequest.extension"/>
-      <mustSupport value="true"/>
+      <mustSupport value="false"/>
     </element>
     <element id="ServiceRequest.identifier">
       <path value="ServiceRequest.identifier"/>
@@ -1905,8 +1906,15 @@
       <max value="*"/>
       <mustSupport value="true"/>
     </element>
+    <element id="ServiceRequest.basedOn">
+      <path value="ServiceRequest.basedOn"/>
+    </element>
     <element id="ServiceRequest.replaces">
       <path value="ServiceRequest.replaces"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="ServiceRequest.status">
@@ -1915,6 +1923,7 @@
     </element>
     <element id="ServiceRequest.intent">
       <path value="ServiceRequest.intent"/>
+      <fixedCode value="order"/>
       <mustSupport value="true"/>
     </element>
     <element id="ServiceRequest.category">

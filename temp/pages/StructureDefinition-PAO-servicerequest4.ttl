@@ -9,9 +9,9 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PAO-servicerequest4"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "7" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-28T23:29:53.755+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#wgtNjEEm10jxj9xu" ]
+     fhir:Meta.versionId [ fhir:value "11" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-30T00:23:54.188+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#kefvK44gclAX8M7h" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
@@ -33,7 +33,7 @@
        fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/orders" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "Post Acute Orders ServiceRequest Profile"];
+  fhir:StructureDefinition.description [ fhir:value "Post Acute Orders ServiceRequest Profile\n\nThis resource is used to \"order\" non-DME (device) and non-medications.  \n\nFor this version of the guide, it is used primarily to order Home Health Services"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;
@@ -461,7 +461,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
          ]
        ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -762,9 +762,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/ServiceRequest";
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/ServiceRequest>
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -934,6 +934,7 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "code" ]
        ];
+       fhir:ElementDefinition.fixedCode [ fhir:value "order" ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
          fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
@@ -2485,7 +2486,7 @@
        fhir:index 1;
        fhir:Element.id [ fhir:value "ServiceRequest.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.extension" ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 2;
        fhir:Element.id [ fhir:value "ServiceRequest.identifier" ];
@@ -2495,112 +2496,126 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 3;
-       fhir:Element.id [ fhir:value "ServiceRequest.replaces" ];
-       fhir:ElementDefinition.path [ fhir:value "ServiceRequest.replaces" ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+       fhir:Element.id [ fhir:value "ServiceRequest.basedOn" ];
+       fhir:ElementDefinition.path [ fhir:value "ServiceRequest.basedOn" ]
      ], [
        fhir:index 4;
+       fhir:Element.id [ fhir:value "ServiceRequest.replaces" ];
+       fhir:ElementDefinition.path [ fhir:value "ServiceRequest.replaces" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4>
+         ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
        fhir:Element.id [ fhir:value "ServiceRequest.status" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.status" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 5;
+       fhir:index 6;
        fhir:Element.id [ fhir:value "ServiceRequest.intent" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.intent" ];
+       fhir:ElementDefinition.fixedCode [ fhir:value "order" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 6;
+       fhir:index 7;
        fhir:Element.id [ fhir:value "ServiceRequest.category" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.category" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.id [ fhir:value "ServiceRequest.priority" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.priority" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 8;
+       fhir:index 9;
        fhir:Element.id [ fhir:value "ServiceRequest.code" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.code" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 10;
        fhir:Element.id [ fhir:value "ServiceRequest.orderDetail" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.orderDetail" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 10;
+       fhir:index 11;
        fhir:Element.id [ fhir:value "ServiceRequest.subject" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.subject" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 11;
+       fhir:index 12;
        fhir:Element.id [ fhir:value "ServiceRequest.encounter" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.encounter" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 12;
+       fhir:index 13;
        fhir:Element.id [ fhir:value "ServiceRequest.occurrence[x]" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.occurrence[x]" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 13;
+       fhir:index 14;
        fhir:Element.id [ fhir:value "ServiceRequest.asNeeded[x]" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.asNeeded[x]" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 14;
+       fhir:index 15;
        fhir:Element.id [ fhir:value "ServiceRequest.authoredOn" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.authoredOn" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 15;
+       fhir:index 16;
        fhir:Element.id [ fhir:value "ServiceRequest.requester" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.requester" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 16;
+       fhir:index 17;
        fhir:Element.id [ fhir:value "ServiceRequest.reasonCode" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.reasonCode" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 17;
+       fhir:index 18;
        fhir:Element.id [ fhir:value "ServiceRequest.reasonReference" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.reasonReference" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 18;
+       fhir:index 19;
        fhir:Element.id [ fhir:value "ServiceRequest.insurance" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.insurance" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 19;
+       fhir:index 20;
        fhir:Element.id [ fhir:value "ServiceRequest.supportingInfo" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.supportingInfo" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 20;
+       fhir:index 21;
        fhir:Element.id [ fhir:value "ServiceRequest.bodySite" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.bodySite" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 21;
+       fhir:index 22;
        fhir:Element.id [ fhir:value "ServiceRequest.note" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.note" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 22;
+       fhir:index 23;
        fhir:Element.id [ fhir:value "ServiceRequest.patientInstruction" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.patientInstruction" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 23;
+       fhir:index 24;
        fhir:Element.id [ fhir:value "ServiceRequest.relevantHistory" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.relevantHistory" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];

@@ -9,9 +9,9 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PAO-task4"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "4" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-28T18:49:29.733+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#7gahwWwQLEefzlpn" ]
+     fhir:Meta.versionId [ fhir:value "6" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-29T22:13:29.107+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#EkKQDHND8o8XJZmz" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
@@ -22,7 +22,7 @@
   fhir:StructureDefinition.name [ fhir:value "PAOtask4"];
   fhir:StructureDefinition.title [ fhir:value "PAO Task Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-01-01T00:00:00+00:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-03-29T00:00:00+00:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -661,9 +661,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request";
+           fhir:index 2;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1080,6 +1088,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
@@ -1153,7 +1162,7 @@
        fhir:ElementDefinition.definition [ fhir:value "The request being actioned or the resource being manipulated by this task." ];
        fhir:ElementDefinition.comment [ fhir:value "If multiple resources need to be manipulated, use sub-tasks.  (This ensures that status can be tracked independently for each referenced resource.)." ];
        fhir:ElementDefinition.requirements [ fhir:value "Used to identify the thing to be done." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Task.focus" ];
@@ -1164,9 +1173,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request";
+           fhir:index 2;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1181,6 +1198,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -1214,9 +1232,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1269,9 +1287,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Encounter";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Encounter>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1464,29 +1482,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Device";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
-           fhir:index 3;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
-           fhir:index 4;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson";
-           fhir:index 5;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/RelatedPerson>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1601,37 +1607,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/CareTeam";
-           fhir:index 3;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/CareTeam>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/HealthcareService";
-           fhir:index 4;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/HealthcareService>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
-           fhir:index 5;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Device";
-           fhir:index 6;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson";
-           fhir:index 7;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/RelatedPerson>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1679,9 +1665,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Location";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Location>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-location>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1837,13 +1823,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Coverage";
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Coverage>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/ClaimResponse";
-           fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/ClaimResponse>
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1936,9 +1918,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Provenance";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Provenance>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -2241,29 +2223,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson";
-           fhir:index 3;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/RelatedPerson>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Group";
-           fhir:index 4;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Group>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
-           fhir:index 5;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -3152,6 +3122,23 @@
        fhir:ElementDefinition.path [ fhir:value "Task.basedOn" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request";
+           fhir:index 2;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request>
+         ]
+       ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 3;
@@ -3175,48 +3162,184 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 7;
+       fhir:Element.id [ fhir:value "Task.code" ];
+       fhir:ElementDefinition.path [ fhir:value "Task.code" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
        fhir:Element.id [ fhir:value "Task.description" ];
        fhir:ElementDefinition.path [ fhir:value "Task.description" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 8;
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "Task.focus" ];
+       fhir:ElementDefinition.path [ fhir:value "Task.focus" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request";
+           fhir:index 2;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request>
+         ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
        fhir:Element.id [ fhir:value "Task.for" ];
        fhir:ElementDefinition.path [ fhir:value "Task.for" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
+         ]
+       ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 11;
        fhir:Element.id [ fhir:value "Task.encounter" ];
        fhir:ElementDefinition.path [ fhir:value "Task.encounter" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter>
+         ]
+       ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 10;
+       fhir:index 12;
        fhir:Element.id [ fhir:value "Task.authoredOn" ];
        fhir:ElementDefinition.path [ fhir:value "Task.authoredOn" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 11;
+       fhir:index 13;
        fhir:Element.id [ fhir:value "Task.lastModified" ];
        fhir:ElementDefinition.path [ fhir:value "Task.lastModified" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 12;
+       fhir:index 14;
        fhir:Element.id [ fhir:value "Task.requester" ];
        fhir:ElementDefinition.path [ fhir:value "Task.requester" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
+           fhir:index 2;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
+         ]
+       ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 13;
+       fhir:index 15;
+       fhir:Element.id [ fhir:value "Task.owner" ];
+       fhir:ElementDefinition.path [ fhir:value "Task.owner" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
+           fhir:index 2;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
+         ]
+       ]
+     ], [
+       fhir:index 16;
        fhir:Element.id [ fhir:value "Task.location" ];
        fhir:ElementDefinition.path [ fhir:value "Task.location" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-location>
+         ]
+       ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 14;
+       fhir:index 17;
        fhir:Element.id [ fhir:value "Task.insurance" ];
        fhir:ElementDefinition.path [ fhir:value "Task.insurance" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage>
+         ]
+       ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 18;
+       fhir:Element.id [ fhir:value "Task.relevantHistory" ];
+       fhir:ElementDefinition.path [ fhir:value "Task.relevantHistory" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance>
+         ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:Element.id [ fhir:value "Task.restriction.recipient" ];
+       fhir:ElementDefinition.path [ fhir:value "Task.restriction.recipient" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
+           fhir:index 2;
+           fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
+         ]
+       ]
      ]
   ] .
 

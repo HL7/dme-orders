@@ -1,0 +1,75 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAO-coverage",
+	"meta": {
+		"versionId": "4",
+		"lastUpdated": "2020-03-29T21:39:06.701+00:00",
+		"source": "#i12oY9IOmD95gyfv"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Resource Text</div>"
+	},
+	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage",
+	"version": "0.0.1",
+	"name": "PAOcoverage",
+	"title": "PAO Coverage",
+	"status": "active",
+	"experimental": true,
+	"date": "2020-03-29",
+	"publisher": "HL7",
+	"description": "PAO Coverage profiles",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Coverage",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Coverage",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Coverage",
+				"path": "Coverage"
+			},
+			{
+				"id": "Coverage.identifier",
+				"path": "Coverage.identifier",
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.status",
+				"path": "Coverage.status",
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.subscriberId",
+				"path": "Coverage.subscriberId",
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.beneficiary",
+				"path": "Coverage.beneficiary",
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.payor",
+				"path": "Coverage.payor",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.class",
+				"path": "Coverage.class",
+				"requirements": "If Coverage is used, class should define the Payer's plan under which the patient is insured. ",
+				"mustSupport": true
+			}
+		]
+	}
+}

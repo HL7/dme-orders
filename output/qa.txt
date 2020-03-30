@@ -1,65 +1,70 @@
 ﻿PostAcuteOrders4 : Validation Results
 =========================================
 
-err = 0, warn = 26, info = 0
+err = 2, warn = 28, info = 0
 IG Publisher Version: v1.0.75-SNAPSHOT
-Generated Sun Mar 29 15:47:54 GMT 2020. FHIR version 4.0.1 for hl7.fhir.us.dme-orders#0.0.7 (canonical = http://hl7.org/fhir/us/dme-orders)
+Generated Mon Mar 30 00:25:39 GMT 2020. FHIR version 4.0.1 for hl7.fhir.us.dme-orders#0.0.7 (canonical = http://hl7.org/fhir/us/dme-orders)
 
- Build Errors : 12 / 0
- /tmp/tmp-1uUoRdkPzSQhj/input/post-acute-orders4 : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/codesystem/PAO-Message-Event : 0 / 0
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-Medication : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-Order-Detail-Extension : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-bundle4 : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-devicerequest4 : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-medication-request : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-messagedefinition4 : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-messageheader : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-provenance4b : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-relevant-reviews : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-servicerequest4 : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-subscription4 : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-task4 : 0 / 1
- /tmp/tmp-1uUoRdkPzSQhj/input/resources/valueset/PAO-Message-Event : 0 / 0
+ Build Errors : 13 / 0
+ /tmp/tmp-1imVoAfEp6jON/input/post-acute-orders4 : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/codesystem/PAO-Message-Event : 0 / 0
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-Medication : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-Order-Detail-Extension : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-bundle4 : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-coverage : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-devicerequest4 : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-medication-request : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-messagedefinition4 : 1 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-messageheader : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-provenance4b : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-relevant-reviews : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-servicerequest4 : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-subscription4 : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-task4 : 0 / 1
+ /tmp/tmp-1imVoAfEp6jON/input/resources/valueset/PAO-Message-Event : 0 / 0
 </table>
 == n/a ==
-ERROR: /tmp/tmp-1uUoRdkPzSQhj/output/StructureDefinition-PAO-Medication.html#/html/body/div/div/div/div/div/p/a at Line 463, column 41: The link 'StructureDefinition-PAO-Medication.sch' for "Schematron" cannot be resolved
-ERROR: /tmp/tmp-1uUoRdkPzSQhj/output/StructureDefinition-PAO-Order-Detail-Extension.html#/html/body/div/div/div/div/div/p/a at Line 486, column 43: The link 'StructureDefinition-PAO-Order-Detail-Extension.sch' for "Schematron" cannot be resolved
-ERROR: /tmp/tmp-1uUoRdkPzSQhj/output/StructureDefinition-PAO-bundle4.html#/html/body/div/div/div/div/div/p/a at Line 637, column 41: The link 'StructureDefinition-PAO-bundle4.sch' for "Schematron" cannot be resolved
-ERROR: /tmp/tmp-1uUoRdkPzSQhj/output/StructureDefinition-PAO-devicerequest4.html#/html/body/div/div/div/div/div/p/a at Line 559, column 41: The link 'StructureDefinition-PAO-devicerequest4.sch' for "Schematron" cannot be resolved
-ERROR: /tmp/tmp-1uUoRdkPzSQhj/output/StructureDefinition-PAO-medication-request.html#/html/body/div/div/div/div/div/p/a at Line 733, column 41: The link 'StructureDefinition-PAO-medication-request.sch' for "Schematron" cannot be resolved
-ERROR: /tmp/tmp-1uUoRdkPzSQhj/output/StructureDefinition-PAO-messagedefinition4.html#/html/body/div/div/div/div/div/p/a at Line 559, column 41: The link 'StructureDefinition-PAO-messagedefinition4.sch' for "Schematron" cannot be resolved
-ERROR: /tmp/tmp-1uUoRdkPzSQhj/output/StructureDefinition-PAO-messageheader.html#/html/body/div/div/div/div/div/p/a at Line 555, column 41: The link 'StructureDefinition-PAO-messageheader.sch' for "Schematron" cannot be resolved
-ERROR: /tmp/tmp-1uUoRdkPzSQhj/output/StructureDefinition-PAO-provenance4b.html#/html/body/div/div/div/div/div/p/a at Line 603, column 41: The link 'StructureDefinition-PAO-provenance4b.sch' for "Schematron" cannot be resolved
-ERROR: /tmp/tmp-1uUoRdkPzSQhj/output/StructureDefinition-PAO-relevant-reviews.html#/html/body/div/div/div/div/div/p/a at Line 512, column 43: The link 'StructureDefinition-PAO-relevant-reviews.sch' for "Schematron" cannot be resolved
-ERROR: /tmp/tmp-1uUoRdkPzSQhj/output/StructureDefinition-PAO-servicerequest4.html#/html/body/div/div/div/div/div/p/a at Line 579, column 41: The link 'StructureDefinition-PAO-servicerequest4.sch' for "Schematron" cannot be resolved
-ERROR: /tmp/tmp-1uUoRdkPzSQhj/output/StructureDefinition-PAO-subscription4.html#/html/body/div/div/div/div/div/p/a at Line 453, column 41: The link 'StructureDefinition-PAO-subscription4.sch' for "Schematron" cannot be resolved
-ERROR: /tmp/tmp-1uUoRdkPzSQhj/output/StructureDefinition-PAO-task4.html#/html/body/div/div/div/div/div/p/a at Line 1007, column 41: The link 'StructureDefinition-PAO-task4.sch' for "Schematron" cannot be resolved
-== /tmp/tmp-1uUoRdkPzSQhj/input/post-acute-orders4.json ==
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-Medication.html#/html/body/div/div/div/div/div/p/a at Line 463, column 41: The link 'StructureDefinition-PAO-Medication.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-Order-Detail-Extension.html#/html/body/div/div/div/div/div/p/a at Line 486, column 43: The link 'StructureDefinition-PAO-Order-Detail-Extension.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-bundle4.html#/html/body/div/div/div/div/div/p/a at Line 627, column 41: The link 'StructureDefinition-PAO-bundle4.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-coverage.html#/html/body/div/div/div/div/div/p/a at Line 551, column 41: The link 'StructureDefinition-PAO-coverage.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-devicerequest4.html#/html/body/div/div/div/div/div/p/a at Line 559, column 41: The link 'StructureDefinition-PAO-devicerequest4.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-medication-request.html#/html/body/div/div/div/div/div/p/a at Line 733, column 41: The link 'StructureDefinition-PAO-medication-request.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-messagedefinition4.html#/html/body/div/div/div/div/div/p/a at Line 567, column 41: The link 'StructureDefinition-PAO-messagedefinition4.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-messageheader.html#/html/body/div/div/div/div/div/p/a at Line 575, column 41: The link 'StructureDefinition-PAO-messageheader.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-provenance4b.html#/html/body/div/div/div/div/div/p/a at Line 603, column 41: The link 'StructureDefinition-PAO-provenance4b.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-relevant-reviews.html#/html/body/div/div/div/div/div/p/a at Line 512, column 43: The link 'StructureDefinition-PAO-relevant-reviews.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-servicerequest4.html#/html/body/div/div/div/div/div/p/a at Line 599, column 41: The link 'StructureDefinition-PAO-servicerequest4.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-subscription4.html#/html/body/div/div/div/div/div/p/a at Line 459, column 41: The link 'StructureDefinition-PAO-subscription4.sch' for "Schematron" cannot be resolved
+ERROR: /tmp/tmp-1imVoAfEp6jON/output/StructureDefinition-PAO-task4.html#/html/body/div/div/div/div/div/p/a at Line 1047, column 41: The link 'StructureDefinition-PAO-task4.sch' for "Schematron" cannot be resolved
+== /tmp/tmp-1imVoAfEp6jON/input/post-acute-orders4.json ==
 WARNING: ImplementationGuide/hl7.fhir.us.dme-orders: ImplementationGuide.definition.resource[8].description: value should not start or finish with whitespace
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/codesystem/PAO-Message-Event.json ==
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-Medication.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/codesystem/PAO-Message-Event.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-Medication.json ==
 WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefintion/PAO-Medication: The Implementation Guide contains no examples for this profile
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-Order-Detail-Extension.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-Order-Detail-Extension.json ==
 WARNING: http://fhir.org/fhir/us/dme-orders/StructureDefinition/PAO-Order-Detail-Extension: The Implementation Guide contains no examples for this extension
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-bundle4.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-bundle4.json ==
 WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-bundle4: The Implementation Guide contains no examples for this profile
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-devicerequest4.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-coverage.json ==
+WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage: The Implementation Guide contains no examples for this profile
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-devicerequest4.json ==
 WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4: The Implementation Guide contains no examples for this profile
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-medication-request.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-medication-request.json ==
 WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request: The Implementation Guide contains no examples for this profile
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-messagedefinition4.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-messagedefinition4.json ==
+ERROR: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messagedefinition4: The element MessageDefinition.responseRequired is out of order (and maybe others after it)
 WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messagedefinition4: The Implementation Guide contains no examples for this profile
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-messageheader.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-messageheader.json ==
 WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messageheader: The Implementation Guide contains no examples for this profile
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-provenance4b.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-provenance4b.json ==
 WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b: The Implementation Guide contains no examples for this profile
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-relevant-reviews.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-relevant-reviews.json ==
 WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-relevant-reviews: The Implementation Guide contains no examples for this extension
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-servicerequest4.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-servicerequest4.json ==
 WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4: The Implementation Guide contains no examples for this profile
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-subscription4.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-subscription4.json ==
 WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4: The Implementation Guide contains no examples for this profile
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/structuredefinition/PAO-task4.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/structuredefinition/PAO-task4.json ==
 WARNING: http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-task4: The Implementation Guide contains no examples for this profile
-== /tmp/tmp-1uUoRdkPzSQhj/input/resources/valueset/PAO-Message-Event.json ==
+== /tmp/tmp-1imVoAfEp6jON/input/resources/valueset/PAO-Message-Event.json ==

@@ -9,13 +9,13 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PAO-messageheader"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "10" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-28T23:27:35.593+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#g0bGdWXR1bLEAi3V" ]
+     fhir:Meta.versionId [ fhir:value "14" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-29T19:12:59.656+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#zWvyYvKfZVceqWbh" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text</div></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div><div style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text  -- not generated (does not appear)</div></div></div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messageheader"];
   fhir:StructureDefinition.version [ fhir:value "0.0.7"];
@@ -33,7 +33,8 @@
        fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/orders" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "Post Acute Orders MessageHeader Profile"];
+  fhir:StructureDefinition.description [ fhir:value "Post Acute Orders MessageHeader Profile\n\nThis profiles is use to order, update, cancel and query the status of an order\n\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only."];
+  fhir:StructureDefinition.purpose [ fhir:value "This is narrative in the purpose section"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;
@@ -564,8 +565,8 @@
        fhir:ElementDefinition.short [ fhir:value "Message destination application(s)" ];
        fhir:ElementDefinition.definition [ fhir:value "The destination application which the message is intended for." ];
        fhir:ElementDefinition.comment [ fhir:value "There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Indicates where message is to be sent for routing purposes.  Allows verification of \"am I the intended recipient\"." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.requirements [ fhir:value "if performer, same organization in both\nif intermediary, organization is the intermediary" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "MessageHeader.destination" ];
@@ -1516,8 +1517,8 @@
        fhir:ElementDefinition.short [ fhir:value "Final responsibility for event" ];
        fhir:ElementDefinition.definition [ fhir:value "The person or organization that accepts overall responsibility for the contents of the message. The implication is that the message event happened under the policies of the responsible party." ];
        fhir:ElementDefinition.comment [ fhir:value "Usually only for the request but can be used in a response." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Need to know for audit/traceback requirements and possibly for authorization." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.requirements [ fhir:value "If destination is performer, use same organization as receiver; \nif not, complete only if indicating performer to an intermediary" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "MessageHeader.responsible" ];
@@ -1656,6 +1657,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -1845,6 +1847,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -1887,6 +1890,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
@@ -1962,10 +1966,10 @@
        fhir:index 39;
        fhir:Element.id [ fhir:value "MessageHeader.focus" ];
        fhir:ElementDefinition.path [ fhir:value "MessageHeader.focus" ];
-       fhir:ElementDefinition.short [ fhir:value "The actual content of the message" ];
+       fhir:ElementDefinition.short [ fhir:value "shall include at least reference to PAOTask, one of PAOdevicerequest, PAOservicerequest, PAOmedicationrequest, and should inlcude reference to PAOsubscription" ];
        fhir:ElementDefinition.definition [ fhir:value "The actual data of the message - a reference to the root/focus class of the event." ];
        fhir:ElementDefinition.comment [ fhir:value "The data is defined where the transaction type is defined. The transaction data is always included in the bundle that is the full message.  Only the root resource is specified.  The resources it references should be contained in the bundle but are not also listed here.  Multiple repetitions are allowed to cater for merges and other situations with multiple focal targets." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Every message event is about actual data, a single resource, that is identified in the definition of the event, and perhaps some or all linked resources." ];
+       fhir:ElementDefinition.requirements [ fhir:value "SHALL include at least\n	1) a reference to PAOtask, \n	2) a reference to one of the following: PAOdevicerequest, PAOservicerequest, PAOmedicationrequest\nSOULD include \n	1) a reference to PAOsubscription" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
@@ -1988,6 +1992,14 @@
            fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4";
            fhir:index 2;
            fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request";
+           fhir:index 3;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4";
+           fhir:index 4;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -2077,6 +2089,8 @@
        fhir:index 2;
        fhir:Element.id [ fhir:value "MessageHeader.destination" ];
        fhir:ElementDefinition.path [ fhir:value "MessageHeader.destination" ];
+       fhir:ElementDefinition.requirements [ fhir:value "if performer, same organization in both\nif intermediary, organization is the intermediary" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 3;
@@ -2165,7 +2179,8 @@
        fhir:index 9;
        fhir:Element.id [ fhir:value "MessageHeader.responsible" ];
        fhir:ElementDefinition.path [ fhir:value "MessageHeader.responsible" ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.requirements [ fhir:value "If destination is performer, use same organization as receiver; \nif not, complete only if indicating performer to an intermediary" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.type [
          fhir:index 0;
@@ -2187,8 +2202,25 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 10;
+       fhir:Element.id [ fhir:value "MessageHeader.response" ];
+       fhir:ElementDefinition.path [ fhir:value "MessageHeader.response" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "MessageHeader.response.identifier" ];
+       fhir:ElementDefinition.path [ fhir:value "MessageHeader.response.identifier" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "MessageHeader.response.code" ];
+       fhir:ElementDefinition.path [ fhir:value "MessageHeader.response.code" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
        fhir:Element.id [ fhir:value "MessageHeader.focus" ];
        fhir:ElementDefinition.path [ fhir:value "MessageHeader.focus" ];
+       fhir:ElementDefinition.short [ fhir:value "shall include at least reference to PAOTask, one of PAOdevicerequest, PAOservicerequest, PAOmedicationrequest, and should inlcude reference to PAOsubscription" ];
+       fhir:ElementDefinition.requirements [ fhir:value "SHALL include at least\n	1) a reference to PAOtask, \n	2) a reference to one of the following: PAOdevicerequest, PAOservicerequest, PAOmedicationrequest\nSOULD include \n	1) a reference to PAOsubscription" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.type [
@@ -2206,6 +2238,14 @@
            fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4";
            fhir:index 2;
            fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request";
+           fhir:index 3;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request>
+         ], [
+           fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4";
+           fhir:index 4;
+           fhir:link <http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4>
          ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]

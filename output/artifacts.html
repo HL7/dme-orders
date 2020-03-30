@@ -150,7 +150,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   <a href="StructureDefinition-PAO-messageheader.html"
                      title="StructureDefinition/PAO-messageheader">PAOmessageheader</a>
                </td>
-               <td>Post Acute Orders MessageHeader Profile</td>
+               <td>Post Acute Orders MessageHeader Profile
+
+This profiles is use to order, update, cancel and query the status of an order
+
+It requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only.</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -164,7 +168,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   <a href="StructureDefinition-PAO-bundle4.html"
                      title="StructureDefinition/PAO-bundle4">PAObundle4</a>
                </td>
-               <td>Post Acute Orders Bundle Profile Description</td>
+               <td>This bundle includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -178,14 +182,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   <a href="StructureDefinition-PAO-subscription4.html"
                      title="StructureDefinition/PAO-subscription4">PAOsubscription4</a>
                </td>
-               <td>Post Acute Orders Subscription Profile</td>
+               <td>Post Acute Orders Subscription Profile
+
+The subscription resource should accompany the initial message bundle to provide a mechanism of informing the ordering provider when there is a change in the order as indicated by a change in the Task resorurce.
+
+The subscriber has the option of receiving a notifiction when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)</td>
             </tr>
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-PAO-servicerequest4.html"
                      title="StructureDefinition/PAO-servicerequest4">PAOservicerequest4</a>
                </td>
-               <td>Post Acute Orders ServiceRequest Profile</td>
+               <td>Post Acute Orders ServiceRequest Profile
+
+This resource is used to "order" non-DME (device) and non-medications.  
+
+For this version of the guide, it is used primarily to order Home Health Services</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -214,6 +226,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                      title="StructureDefinition/PAO-Medication">PAOMedication</a>
                </td>
                <td>PAO Medication profile from us-core</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-PAO-coverage.html"
+                     title="StructureDefinition/PAO-coverage">PAOcoverage</a>
+               </td>
+               <td>PAO Coverage profiles</td>
             </tr>
          </tbody>
       </table>
@@ -289,7 +308,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/orders">HL7</a>.  Package hl7.fhir.us.dme-orders#0.0.7 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 15:47+0000">2020-03-29</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/orders">HL7</a>.  Package hl7.fhir.us.dme-orders#0.0.7 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2020 00:25+0000">2020-03-30</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

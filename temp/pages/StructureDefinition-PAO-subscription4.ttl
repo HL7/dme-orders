@@ -9,9 +9,9 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PAO-subscription4"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "4" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-28T23:29:16.289+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#BtDmRlYTfSBMQuXr" ]
+     fhir:Meta.versionId [ fhir:value "6" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-29T23:21:35.965+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#XfwKf2yWkFWxT0NL" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
@@ -22,7 +22,7 @@
   fhir:StructureDefinition.name [ fhir:value "PAOsubscription4"];
   fhir:StructureDefinition.title [ fhir:value "PAO Subscription Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-01-01T00:00:00+00:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-03-29T00:00:00+00:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -33,7 +33,7 @@
        fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/orders" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "Post Acute Orders Subscription Profile"];
+  fhir:StructureDefinition.description [ fhir:value "Post Acute Orders Subscription Profile\n\nThe subscription resource should accompany the initial message bundle to provide a mechanism of informing the ordering provider when there is a change in the order as indicated by a change in the Task resorurce.\n\nThe subscriber has the option of receiving a notifiction when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)"];
   fhir:StructureDefinition.purpose [ fhir:value "Post Acute Orders Subscription Profile Notes"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
@@ -655,6 +655,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -1081,31 +1082,36 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 2;
+       fhir:Element.id [ fhir:value "Subscription.reason" ];
+       fhir:ElementDefinition.path [ fhir:value "Subscription.reason" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
        fhir:Element.id [ fhir:value "Subscription.criteria" ];
        fhir:ElementDefinition.path [ fhir:value "Subscription.criteria" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 3;
+       fhir:index 4;
        fhir:Element.id [ fhir:value "Subscription.channel" ];
        fhir:ElementDefinition.path [ fhir:value "Subscription.channel" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 4;
+       fhir:index 5;
        fhir:Element.id [ fhir:value "Subscription.channel.type" ];
        fhir:ElementDefinition.path [ fhir:value "Subscription.channel.type" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 5;
+       fhir:index 6;
        fhir:Element.id [ fhir:value "Subscription.channel.endpoint" ];
        fhir:ElementDefinition.path [ fhir:value "Subscription.channel.endpoint" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 6;
+       fhir:index 7;
        fhir:Element.id [ fhir:value "Subscription.channel.payload" ];
        fhir:ElementDefinition.path [ fhir:value "Subscription.channel.payload" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.id [ fhir:value "Subscription.channel.header" ];
        fhir:ElementDefinition.path [ fhir:value "Subscription.channel.header" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]

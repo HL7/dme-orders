@@ -3,9 +3,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="PAO-messagedefinition4"/>
   <meta>
-    <versionId value="4"/>
-    <lastUpdated value="2020-03-28T18:46:58.044+00:00"/>
-    <source value="#fi9971bjKCRJj47k"/>
+    <versionId value="10"/>
+    <lastUpdated value="2020-03-29T21:16:00.663+00:00"/>
+    <source value="#t3AhkTBqsBLmOOPW"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This resource has narrative now</div>
@@ -15,7 +15,7 @@
   <name value="PAOmessagedefinition4"/>
   <title value="PAO MessageDefinition Profile"/>
   <status value="active"/>
-  <date value="2020-01-01T00:00:00+00:00"/>
+  <date value="2020-03-29T00:00:00+00:00"/>
   <publisher value="HL7"/>
   <contact>
     <name value="HL7 International - Orders and Observations"/>
@@ -695,6 +695,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
@@ -730,6 +731,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
@@ -1005,6 +1007,7 @@
       <path value="MessageDefinition.event[x]"/>
       <short value="Event code  or link to the EventDefinition"/>
       <definition value="Event code or link to the EventDefinition."/>
+      <requirements value="Same value as in messageheader event(x)"/>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -1030,15 +1033,8 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="MessageEvent"/>
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true"/>
-        </extension>
-        <strength value="example"/>
-        <description value="One of the message events defined as part of this version of FHIR."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/message-events"/>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event"/>
       </binding>
     </element>
     <element id="MessageDefinition.category">
@@ -1055,6 +1051,7 @@
       <type>
         <code value="code"/>
       </type>
+      <fixedCode value="consequence"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -1067,12 +1064,8 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="MessageSignificanceCategory"/>
-        </extension>
         <strength value="required"/>
-        <description value="The impact of the content of a message."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/message-significance-category|4.0.1"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/message-significance-category"/>
       </binding>
     </element>
     <element id="MessageDefinition.focus">
@@ -1232,6 +1225,7 @@
       <type>
         <code value="code"/>
       </type>
+      <fixedCode value="Task"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -1244,15 +1238,8 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ResourceType"/>
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true"/>
-        </extension>
         <strength value="required"/>
-        <description value="One of the resource types defined as part of this version of FHIR."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types|4.0.1"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types"/>
       </binding>
     </element>
     <element id="MessageDefinition.focus.profile">
@@ -1340,7 +1327,7 @@
       <short value="always | on-error | never | on-success"/>
       <definition value="Declare at a message definition level whether a response is required or only upon error or success, or never."/>
       <comment value="This enables the capability currently available through MSH-16 (Application Level acknowledgement) in HL7 Version 2 to declare at a message instance level whether a response is required or only upon error or success, or never."/>
-      <min value="0"/>
+      <min value="1"/>
       <max value="1"/>
       <base>
         <path value="MessageDefinition.responseRequired"/>
@@ -1350,6 +1337,7 @@
       <type>
         <code value="code"/>
       </type>
+      <fixedCode value="always"/>
       <example>
         <label value="General"/>
         <valueCode value="always"/>
@@ -1362,15 +1350,12 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="messageheader-response-request"/>
-        </extension>
         <strength value="required"/>
-        <description value="HL7-defined table of codes which identify conditions under which acknowledgments are required to be returned in response to a message."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/messageheader-response-request|4.0.1"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/messageheader-response-request"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -1615,15 +1600,36 @@
       <path value="MessageDefinition.status"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MessageDefinition.date">
+      <path value="MessageDefinition.date"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MessageDefinition.publisher">
+      <path value="MessageDefinition.publisher"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MessageDefinition.description">
+      <path value="MessageDefinition.description"/>
+    </element>
     <element id="MessageDefinition.event[x]">
       <path value="MessageDefinition.event[x]"/>
+      <requirements value="Same value as in messageheader event(x)"/>
       <mustSupport value="true"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event"/>
+      </binding>
     </element>
     <element id="MessageDefinition.category">
       <path value="MessageDefinition.category"/>
       <min value="1"/>
       <max value="1"/>
+      <fixedCode value="consequence"/>
       <mustSupport value="true"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/message-significance-category"/>
+      </binding>
     </element>
     <element id="MessageDefinition.focus">
       <path value="MessageDefinition.focus"/>
@@ -1633,11 +1639,26 @@
     </element>
     <element id="MessageDefinition.focus.code">
       <path value="MessageDefinition.focus.code"/>
+      <fixedCode value="Task"/>
       <mustSupport value="true"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types"/>
+      </binding>
     </element>
     <element id="MessageDefinition.focus.profile">
       <path value="MessageDefinition.focus.profile"/>
       <mustSupport value="true"/>
+    </element>
+    <element id="MessageDefinition.responseRequired">
+      <path value="MessageDefinition.responseRequired"/>
+      <min value="1"/>
+      <fixedCode value="always"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/messageheader-response-request"/>
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

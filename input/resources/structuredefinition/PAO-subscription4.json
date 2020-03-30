@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAO-subscription4",
 	"meta": {
-		"versionId": "4",
-		"lastUpdated": "2020-03-28T23:29:16.289+00:00",
-		"source": "#BtDmRlYTfSBMQuXr"
+		"versionId": "6",
+		"lastUpdated": "2020-03-29T23:21:35.965+00:00",
+		"source": "#XfwKf2yWkFWxT0NL"
 	},
 	"text": {
 		"status": "additional",
@@ -12,13 +12,13 @@
 	},
 	"extension": [],
 	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"name": "PAOsubscription4",
 	"title": "PAO Subscription Profile",
 	"status": "active",
-	"date": "2020-01-01",
+	"date": "2020-03-29",
 	"publisher": "HL7",
-	"description": "Post Acute Orders Subscription Profile",
+	"description": "Post Acute Orders Subscription Profile\n\nThe subscription resource should accompany the initial message bundle to provide a mechanism of informing the ordering provider when there is a change in the order as indicated by a change in the Task resorurce.\n\nThe subscriber has the option of receiving a notifiction when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)",
 	"purpose": "Post Acute Orders Subscription Profile Notes",
 	"fhirVersion": "4.0.1",
 	"kind": "resource",
@@ -35,6 +35,11 @@
 			{
 				"id": "Subscription.status",
 				"path": "Subscription.status",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.reason",
+				"path": "Subscription.reason",
 				"mustSupport": true
 			},
 			{

@@ -12,7 +12,7 @@
     "status": "active",
     "date": "Sun Mar 22 00:00:00 GMT 2020",
     "publisher": "HL7",
-    "description": "Post Acute Orders MessageHeader Profile"
+    "description": "Post Acute Orders MessageHeader Profile\n\nThis profiles is use to order, update, cancel and query the status of an order\n\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only."
   },
   "PAO-messagedefinition4": {
     "index": 1,
@@ -25,7 +25,7 @@
     "basename": "MessageDefinition",
     "basepath": "http://hl7.org/fhir/R4/messagedefinition.html",
     "status": "active",
-    "date": "Wed Jan 01 00:00:00 GMT 2020",
+    "date": "Sun Mar 29 00:00:00 GMT 2020",
     "publisher": "HL7",
     "description": "Post Acute Orders MessageDefinition Profile"
   },
@@ -42,7 +42,7 @@
     "status": "active",
     "date": "Wed Jan 01 00:00:00 GMT 2020",
     "publisher": "HL7",
-    "description": "Post Acute Orders Bundle Profile Description"
+    "description": "This bundle includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation"
   },
   "PAO-task4": {
     "index": 3,
@@ -55,7 +55,7 @@
     "basename": "Task",
     "basepath": "http://hl7.org/fhir/R4/task.html",
     "status": "active",
-    "date": "Wed Jan 01 00:00:00 GMT 2020",
+    "date": "Sun Mar 29 00:00:00 GMT 2020",
     "publisher": "HL7",
     "description": "Post Acute Orders Task Profile"
   },
@@ -70,9 +70,9 @@
     "basename": "Subscription",
     "basepath": "http://hl7.org/fhir/R4/subscription.html",
     "status": "active",
-    "date": "Wed Jan 01 00:00:00 GMT 2020",
+    "date": "Sun Mar 29 00:00:00 GMT 2020",
     "publisher": "HL7",
-    "description": "Post Acute Orders Subscription Profile"
+    "description": "Post Acute Orders Subscription Profile\n\nThe subscription resource should accompany the initial message bundle to provide a mechanism of informing the ordering provider when there is a change in the order as indicated by a change in the Task resorurce.\n\nThe subscriber has the option of receiving a notifiction when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)"
   },
   "PAO-servicerequest4": {
     "index": 5,
@@ -87,7 +87,7 @@
     "status": "active",
     "date": "Sat Mar 28 00:00:00 GMT 2020",
     "publisher": "HL7",
-    "description": "Post Acute Orders ServiceRequest Profile"
+    "description": "Post Acute Orders ServiceRequest Profile\n\nThis resource is used to \"order\" non-DME (device) and non-medications.  \n\nFor this version of the guide, it is used primarily to order Home Health Services"
   },
   "PAO-devicerequest4": {
     "index": 6,
@@ -188,5 +188,20 @@
         "type": "used to define relevant reviews for an order (e.g. prior authorizations)"
       }
     ]
+  },
+  "PAO-coverage": {
+    "index": 12,
+    "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage",
+    "name": "PAOcoverage",
+    "path": "StructureDefinition-PAO-coverage.html",
+    "kind": "resource",
+    "type": "Coverage",
+    "base": "http://hl7.org/fhir/StructureDefinition/Coverage",
+    "basename": "Coverage",
+    "basepath": "http://hl7.org/fhir/R4/coverage.html",
+    "status": "active",
+    "date": "Sun Mar 29 00:00:00 GMT 2020",
+    "publisher": "HL7",
+    "description": "PAO Coverage profiles"
   }
 }

@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAO-servicerequest4",
 	"meta": {
-		"versionId": "7",
-		"lastUpdated": "2020-03-28T23:29:53.755+00:00",
-		"source": "#wgtNjEEm10jxj9xu"
+		"versionId": "11",
+		"lastUpdated": "2020-03-30T00:23:54.188+00:00",
+		"source": "#kefvK44gclAX8M7h"
 	},
 	"text": {
 		"status": "additional",
@@ -17,7 +17,7 @@
 	"status": "active",
 	"date": "2020-03-28",
 	"publisher": "HL7",
-	"description": "Post Acute Orders ServiceRequest Profile",
+	"description": "Post Acute Orders ServiceRequest Profile\n\nThis resource is used to \"order\" non-DME (device) and non-medications.  \n\nFor this version of the guide, it is used primarily to order Home Health Services",
 	"fhirVersion": "4.0.1",
 	"kind": "resource",
 	"abstract": false,
@@ -33,7 +33,7 @@
 			{
 				"id": "ServiceRequest.extension",
 				"path": "ServiceRequest.extension",
-				"mustSupport": true
+				"mustSupport": false
 			},
 			{
 				"id": "ServiceRequest.identifier",
@@ -43,8 +43,20 @@
 				"mustSupport": true
 			},
 			{
+				"id": "ServiceRequest.basedOn",
+				"path": "ServiceRequest.basedOn"
+			},
+			{
 				"id": "ServiceRequest.replaces",
 				"path": "ServiceRequest.replaces",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4"
+						]
+					}
+				],
 				"mustSupport": true
 			},
 			{
@@ -55,6 +67,7 @@
 			{
 				"id": "ServiceRequest.intent",
 				"path": "ServiceRequest.intent",
+				"fixedCode": "order",
 				"mustSupport": true
 			},
 			{

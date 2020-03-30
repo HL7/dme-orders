@@ -2,9 +2,9 @@
   "resourceType": "StructureDefinition",
   "id": "PAO-messagedefinition4",
   "meta": {
-    "versionId": "4",
-    "lastUpdated": "2020-03-28T18:46:58.044+00:00",
-    "source": "#fi9971bjKCRJj47k"
+    "versionId": "10",
+    "lastUpdated": "2020-03-29T21:16:00.663+00:00",
+    "source": "#t3AhkTBqsBLmOOPW"
   },
   "text": {
     "status": "additional",
@@ -15,7 +15,7 @@
   "name": "PAOmessagedefinition4",
   "title": "PAO MessageDefinition Profile",
   "status": "active",
-  "date": "2020-01-01T00:00:00+00:00",
+  "date": "2020-03-29T00:00:00+00:00",
   "publisher": "HL7",
   "contact": [
     {
@@ -838,6 +838,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -880,6 +881,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1220,6 +1222,7 @@
         "path": "MessageDefinition.event[x]",
         "short": "Event code  or link to the EventDefinition",
         "definition": "Event code or link to the EventDefinition.",
+        "requirements": "Same value as in messageheader event(x)",
         "min": 1,
         "max": "1",
         "base": {
@@ -1249,19 +1252,8 @@
         "isModifier": false,
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MessageEvent"
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
-              "valueBoolean": true
-            }
-          ],
-          "strength": "example",
-          "description": "One of the message events defined as part of this version of FHIR.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/message-events"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event"
         }
       },
       {
@@ -1281,6 +1273,7 @@
             "code": "code"
           }
         ],
+        "fixedCode": "consequence",
         "constraint": [
           {
             "key": "ele-1",
@@ -1295,15 +1288,8 @@
         "isModifier": false,
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MessageSignificanceCategory"
-            }
-          ],
           "strength": "required",
-          "description": "The impact of the content of a message.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/message-significance-category|4.0.1"
+          "valueSet": "http://hl7.org/fhir/ValueSet/message-significance-category"
         }
       },
       {
@@ -1499,6 +1485,7 @@
             "code": "code"
           }
         ],
+        "fixedCode": "Task",
         "constraint": [
           {
             "key": "ele-1",
@@ -1513,19 +1500,8 @@
         "isModifier": false,
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ResourceType"
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
-              "valueBoolean": true
-            }
-          ],
           "strength": "required",
-          "description": "One of the resource types defined as part of this version of FHIR.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/resource-types|4.0.1"
+          "valueSet": "http://hl7.org/fhir/ValueSet/resource-types"
         }
       },
       {
@@ -1633,7 +1609,7 @@
         "short": "always | on-error | never | on-success",
         "definition": "Declare at a message definition level whether a response is required or only upon error or success, or never.",
         "comment": "This enables the capability currently available through MSH-16 (Application Level acknowledgement) in HL7 Version 2 to declare at a message instance level whether a response is required or only upon error or success, or never.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "MessageDefinition.responseRequired",
@@ -1645,6 +1621,7 @@
             "code": "code"
           }
         ],
+        "fixedCode": "always",
         "example": [
           {
             "label": "General",
@@ -1661,18 +1638,12 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "messageheader-response-request"
-            }
-          ],
           "strength": "required",
-          "description": "HL7-defined table of codes which identify conditions under which acknowledgments are required to be returned in response to a message.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/messageheader-response-request|4.0.1"
+          "valueSet": "http://hl7.org/fhir/ValueSet/messageheader-response-request"
         },
         "mapping": [
           {
@@ -1980,16 +1951,40 @@
         "mustSupport": true
       },
       {
+        "id": "MessageDefinition.date",
+        "path": "MessageDefinition.date",
+        "mustSupport": true
+      },
+      {
+        "id": "MessageDefinition.publisher",
+        "path": "MessageDefinition.publisher",
+        "mustSupport": true
+      },
+      {
+        "id": "MessageDefinition.description",
+        "path": "MessageDefinition.description"
+      },
+      {
         "id": "MessageDefinition.event[x]",
         "path": "MessageDefinition.event[x]",
-        "mustSupport": true
+        "requirements": "Same value as in messageheader event(x)",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event"
+        }
       },
       {
         "id": "MessageDefinition.category",
         "path": "MessageDefinition.category",
         "min": 1,
         "max": "1",
-        "mustSupport": true
+        "fixedCode": "consequence",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/message-significance-category"
+        }
       },
       {
         "id": "MessageDefinition.focus",
@@ -2001,12 +1996,28 @@
       {
         "id": "MessageDefinition.focus.code",
         "path": "MessageDefinition.focus.code",
-        "mustSupport": true
+        "fixedCode": "Task",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/resource-types"
+        }
       },
       {
         "id": "MessageDefinition.focus.profile",
         "path": "MessageDefinition.focus.profile",
         "mustSupport": true
+      },
+      {
+        "id": "MessageDefinition.responseRequired",
+        "path": "MessageDefinition.responseRequired",
+        "min": 1,
+        "fixedCode": "always",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/messageheader-response-request"
+        }
       }
     ]
   }
