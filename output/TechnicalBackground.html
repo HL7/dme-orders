@@ -39,8 +39,8 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"2.3"}
-    h3,h4,h5,h6{--heading-prefix:"2.3"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.5"}
+    h3,h4,h5,h6{--heading-prefix:"2.5"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         
@@ -58,7 +58,7 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Post-Acute FHIR Based Orders</span><br/>0.0.9 - CI Build</p>
+          <p><span style="font-size:12pt;font-weight:bold">Post-Acute FHIR Based Orders</span><br/>0.1.0 - CI Build</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -111,7 +111,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Post-Acute FHIR Based Orders - Local Development build (v0.0.9). See the <a href="http://hl7.org/fhir/us/dme-orders/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Post-Acute FHIR Based Orders - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/dme-orders/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Technical Background</h2>
   
   
@@ -123,10 +123,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p><a href="Workflow.html">Previous Page - Workflow</a></p>
+<p><a href="MessageBundles.html">Previous Page - Message Bundles</a></p>
 
 <h1 id="systems">Systems</h1>
-<p>The PCDE implementation guide defines the responsibilities of the three types of systems involved in a Post-Acute Orders solution:</p>
+<p>The PAO implementation guide defines the responsibilities of the three types of systems involved in a Post-Acute Orders solution:</p>
 <ul>
   <li><strong>Ordering Provider systems</strong>  Systems that manage data on behalf of a payer who is a source for data to be transferred</li>
   <li><strong>Performing Provider / Supplier systems</strong>  Systems that manage data on behalf of a payer who is an intended recipient of transferred data.</li>
@@ -149,17 +149,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Base resource</li>
 </ul>
 
-<p>This implementation guide supports the R4 version of the FHIR standard. R4 is just recently published and the goal is to ensure the implementation guide is aligned with the current direction of the FHIR standard.
+<p>This implementation guide supports the R4 version of the FHIR standard. R4 is recently published and the goal is to ensure the implementation guide is aligned with the current direction of the FHIR standard.
 Because of this IGs focus on workflow issues between an ordering provider and the performing provide / supplier implementers should also familiarize themselves with the following FHRI resources and operations.</p>
+
+<p>Resources</p>
 <ul>
   <li>MessageHeader</li>
   <li>MessageDefinition</li>
   <li>Task</li>
   <li>Subscription</li>
+  <li>DeviceRequest</li>
+  <li>ServiceRequest</li>
+  <li>MedicationRequest</li>
+  <li>Medication</li>
+  <li>Provenance</li>
+  <li>Coverage</li>
+</ul>
+
+<p>Operations</p>
+<ul>
   <li>ProcessMessage</li>
 </ul>
 
-<p><a href="FHIRArtifacts.html">Next Page - FHIR Artifacts</a></p>
+<p><a href="FHIRArtifactsOverview.html">Next Page - FHIR Artifacts Overview</a></p>
 
 
 </div>
@@ -173,7 +185,7 @@ Because of this IGs focus on workflow issues between an ordering provider and th
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/orders">HL7</a>.  Package hl7.fhir.us.dme-orders#0.0.9 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2020 13:59+0000">2020-03-30</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/orders">HL7</a>.  Package hl7.fhir.us.dme-orders#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 2, 2020 22:29+0000">2020-04-02</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

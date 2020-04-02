@@ -18,7 +18,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Resource text for PAO relevant review extension</div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-relevant-reviews"];
-  fhir:StructureDefinition.version [ fhir:value "0.0.9"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.0"];
   fhir:StructureDefinition.name [ fhir:value "PAOrelevantreviews"];
   fhir:StructureDefinition.title [ fhir:value "PAO Relevant Reviews"];
   fhir:StructureDefinition.status [ fhir:value "active"];

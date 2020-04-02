@@ -1,7 +1,7 @@
-[Previous Page - Workflow](Workflow.html)
+[Previous Page - Message Bundles](MessageBundles.html)
 
 # Systems
-The PCDE implementation guide defines the responsibilities of the three types of systems involved in a Post-Acute Orders solution:
+The PAO implementation guide defines the responsibilities of the three types of systems involved in a Post-Acute Orders solution:
 * **Ordering Provider systems**  Systems that manage data on behalf of a payer who is a source for data to be transferred
 * **Performing Provider / Supplier systems**  Systems that manage data on behalf of a payer who is an intended recipient of transferred data.
 * **Intermediary Systems** Systems that communicate with both the Ordering Provider Systems and the Performing Provider / Suppler Systems and provide appropriate supplier determination (in some cases in conjunction with the patient and or payer), translation services and, where necessary, order detail routing and integration.
@@ -20,12 +20,22 @@ This implementation guide uses terminology, notations and design principles that
 * 	How to read resource & profile definitions
 * 	Base resource
 
-This implementation guide supports the R4 version of the FHIR standard. R4 is just recently published and the goal is to ensure the implementation guide is aligned with the current direction of the FHIR standard.
+This implementation guide supports the R4 version of the FHIR standard. R4 is recently published and the goal is to ensure the implementation guide is aligned with the current direction of the FHIR standard.
 Because of this IGs focus on workflow issues between an ordering provider and the performing provide / supplier implementers should also familiarize themselves with the following FHRI resources and operations.
+
+Resources
 * 	MessageHeader
 * 	MessageDefinition
 * 	Task
 * 	Subscription
+* 	DeviceRequest
+* 	ServiceRequest
+* 	MedicationRequest
+* 	Medication
+* 	Provenance
+* 	Coverage
+
+Operations
 * 	ProcessMessage
 
-[Next Page - FHIR Artifacts](FHIRArtifacts.html)
+[Next Page - FHIR Artifacts Overview](FHIRArtifactsOverview.html)

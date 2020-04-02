@@ -3,20 +3,20 @@
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide">resourceType</a>" : "ImplementationGuide",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.id">id</a>" : "hl7.fhir.us.dme-orders",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.meta">meta</a>" : {
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "50",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2020-03-30T13:58:56.297+00:00",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.source">source</a>" : "#rYcn6NHUZofqeVqO"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "101",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2020-04-02T22:28:11.886+00:00",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.source">source</a>" : "#CgaWD29kXAwrh5cA"
   },
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "additional",
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;div style=\&quot;box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;amp;quot;Segoe UI&amp;amp;quot;,Roboto,&amp;amp;quot;Helvetica Neue&amp;amp;quot;,Arial,&amp;amp;quot;Noto Sans&amp;amp;quot;,sans-serif,&amp;amp;quot;Apple Color Emoji&amp;amp;quot;,&amp;amp;quot;Segoe UI Emoji&amp;amp;quot;,&amp;amp;quot;Segoe UI Symbol&amp;amp;quot;,&amp;amp;quot;Noto Color Emoji&amp;amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\&quot;&gt;This is resource text&lt;/div&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
   },
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.url">url</a>" : "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders",
-  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.version">version</a>" : "0.0.9",
+  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.version">version</a>" : "0.1.0",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.name">name</a>" : "PostAcuteOrders4",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.title">title</a>" : "Post-Acute FHIR Based Orders",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">date</a>" : "2020-03-30T13:59:33+00:00",
+  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">date</a>" : "2020-04-02T22:29:03+00:00",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.publisher">publisher</a>" : "HL7",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.contact">contact</a>" : [
     {
@@ -29,7 +29,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.description">description</a>" : "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.9 (this version):** QA version for May ballot -- only updates are for additional/modified text \n* **0.0.8:** fixed all outstanding errors (except for error on MessageDefinition)\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* complex extensions defined but not added to ServiceRequest and DeviceRequest\n* Will add examples during ballot reconilliation\n* Will add specific terminologies and value sets for post-acute orders during ballot reconcilliation",
+  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.description">description</a>" : "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post-acute orders, along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for providers to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling providers to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.1.0a (this version):** Updated QA version to fix some build errors, add text and solicit input from reviewers\n* **0.0.9:** QA version for May ballot -- only updates are for additional/modified text \n* **0.0.8:** fixed all outstanding errors (except for error on MessageDefinition)\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Complex extensions are defined but not added to DeviceRequest, ServiceRequest and MedicationRequest\n* Will add examples during ballot reconciliation\n* Will add specific terminologies and value sets for post-acute orders during ballot reconcilliation",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.packageId">packageId</a>" : "hl7.fhir.us.dme-orders",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.license">license</a>" : "CC0-1.0",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.fhirVersion">fhirVersion</a>" : [
@@ -66,6 +66,32 @@
           {
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "value",
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "CI Build"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "path-liquid"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "value",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "template/liquid"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "path-liquid"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "value",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "input/liquid"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -118,6 +144,19 @@
           {
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "value",
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "input/ignoreWarnings.txt"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "path-history"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "value",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "http://hl7.org/fhir/us/dme-orders/history.html"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -281,25 +320,6 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-PAO-messagedefinition4.html"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
-          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/PAO-messagedefinition4",
-          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "PAOmessagedefinition4"
-        },
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "PAOmessagedefinition4",
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "Post Acute Orders MessageDefinition Profile",
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "StructureDefinition:resource"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-PAO-bundle4.html"
           }
         ],
@@ -422,7 +442,7 @@
           "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "PAO Message Event Value Set"
         },
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "PAO Message Event Value Set",
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "This is a value set for the PAO Message Event ",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "This is a value set for the PAO Message Event",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
@@ -538,6 +558,25 @@
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "PAOcoverage",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "PAO Coverage profiles",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "StructureDefinition:resource"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-PAO-message-definition4b.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/PAO-message-definition4b",
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "PAOMessageDefinition4b"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "PAOMessageDefinition4b",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "PAO MessageDefintion for use with the PAO MessageHeader for PAO orders",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       }
     ],
     "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page">page</a>" : {
@@ -561,18 +600,8 @@
               "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
             },
             {
-              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "TechnicalBackground.html",
-              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Technical Background",
-              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
-            },
-            {
-              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "FHIRArtifacts.html",
-              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "FHIR Artifacts",
-              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
-            },
-            {
-              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "Submission.html",
-              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Submission",
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "SubmissionofOrders.html",
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Submission of Orders",
               "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
             },
             {
@@ -581,8 +610,23 @@
               "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
             },
             {
-              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "TestPage.html",
-              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Test Page",
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "TechnicalBackground.html",
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Technical Background",
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "FHIRArtifactsOverview.html",
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "FHIR Artifacts Overview",
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "MustSupportandMissingData.html",
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Must Support and Missing Data",
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "MessagetoReviewersBalloters.html",
+              "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Message to Reviewers/Balloters",
               "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
             }
           ]

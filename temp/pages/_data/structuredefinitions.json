@@ -14,23 +14,8 @@
     "publisher": "HL7",
     "description": "Post Acute Orders MessageHeader Profile\n\nThis profiles is use to order, update, cancel and query the status of an order\n\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only."
   },
-  "PAO-messagedefinition4": {
-    "index": 1,
-    "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-messagedefinition4",
-    "name": "PAOmessagedefinition4",
-    "path": "StructureDefinition-PAO-messagedefinition4.html",
-    "kind": "resource",
-    "type": "MessageDefinition",
-    "base": "http://hl7.org/fhir/StructureDefinition/MessageDefinition",
-    "basename": "MessageDefinition",
-    "basepath": "http://hl7.org/fhir/R4/messagedefinition.html",
-    "status": "active",
-    "date": "Sun Mar 29 00:00:00 GMT 2020",
-    "publisher": "HL7",
-    "description": "Post Acute Orders MessageDefinition Profile"
-  },
   "PAO-bundle4": {
-    "index": 2,
+    "index": 1,
     "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-bundle4",
     "name": "PAObundle4",
     "path": "StructureDefinition-PAO-bundle4.html",
@@ -45,7 +30,7 @@
     "description": "This bundle includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation"
   },
   "PAO-task4": {
-    "index": 3,
+    "index": 2,
     "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-task4",
     "name": "PAOtask4",
     "path": "StructureDefinition-PAO-task4.html",
@@ -60,7 +45,7 @@
     "description": "Post Acute Orders Task Profile"
   },
   "PAO-subscription4": {
-    "index": 4,
+    "index": 3,
     "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4",
     "name": "PAOsubscription4",
     "path": "StructureDefinition-PAO-subscription4.html",
@@ -75,7 +60,7 @@
     "description": "Post Acute Orders Subscription Profile\n\nThe subscription resource should accompany the initial message bundle to provide a mechanism of informing the ordering provider when there is a change in the order as indicated by a change in the Task resorurce.\n\nThe subscriber has the option of receiving a notifiction when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)"
   },
   "PAO-servicerequest4": {
-    "index": 5,
+    "index": 4,
     "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-servicerequest4",
     "name": "PAOservicerequest4",
     "path": "StructureDefinition-PAO-servicerequest4.html",
@@ -90,7 +75,7 @@
     "description": "Post Acute Orders ServiceRequest Profile\n\nThis resource is used to \"order\" non-DME (device) and non-medications.  \n\nFor this version of the guide, it is used primarily to order Home Health Services"
   },
   "PAO-devicerequest4": {
-    "index": 6,
+    "index": 5,
     "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-devicerequest4",
     "name": "PAOdevicerequest4",
     "path": "StructureDefinition-PAO-devicerequest4.html",
@@ -105,7 +90,7 @@
     "description": "Post Acute Orders DeviceRequest Profile\n\nUse to order DME and assoicated supplies"
   },
   "PAO-provenance4b": {
-    "index": 7,
+    "index": 6,
     "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b",
     "name": "PAOprovenance4b",
     "path": "StructureDefinition-PAO-provenance4b.html",
@@ -120,7 +105,7 @@
     "description": "Provenance Profile"
   },
   "PAO-Order-Detail-Extension": {
-    "index": 8,
+    "index": 7,
     "url": "http://fhir.org/fhir/us/dme-orders/StructureDefinition/PAO-Order-Detail-Extension",
     "name": "PAOorderdetailextension",
     "path": "StructureDefinition-PAO-Order-Detail-Extension.html",
@@ -140,7 +125,7 @@
     ]
   },
   "PAO-medication-request": {
-    "index": 9,
+    "index": 8,
     "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-medication-request",
     "name": "PAOmedicationrequest",
     "path": "StructureDefinition-PAO-medication-request.html",
@@ -155,7 +140,7 @@
     "description": "PAO MedicationRequest profile based on us-core"
   },
   "PAO-Medication": {
-    "index": 10,
+    "index": 9,
     "url": "http://hl7.org/fhir/us/dme-orders/StructureDefintion/PAO-Medication",
     "name": "PAOMedication",
     "path": "StructureDefinition-PAO-Medication.html",
@@ -170,7 +155,7 @@
     "description": "PAO Medication profile from us-core"
   },
   "PAO-relevant-reviews": {
-    "index": 11,
+    "index": 10,
     "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-relevant-reviews",
     "name": "PAOrelevantreviews",
     "path": "StructureDefinition-PAO-relevant-reviews.html",
@@ -190,7 +175,7 @@
     ]
   },
   "PAO-coverage": {
-    "index": 12,
+    "index": 11,
     "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage",
     "name": "PAOcoverage",
     "path": "StructureDefinition-PAO-coverage.html",
@@ -203,5 +188,20 @@
     "date": "Sun Mar 29 00:00:00 GMT 2020",
     "publisher": "HL7",
     "description": "PAO Coverage profiles"
+  },
+  "PAO-message-definition4b": {
+    "index": 12,
+    "url": "http://hl7.org/fhir/us/dme-orders/PAO-message-definition4b",
+    "name": "PAOMessageDefinition4b",
+    "path": "StructureDefinition-PAO-message-definition4b.html",
+    "kind": "resource",
+    "type": "MessageDefinition",
+    "base": "http://hl7.org/fhir/StructureDefinition/MessageDefinition",
+    "basename": "MessageDefinition",
+    "basepath": "http://hl7.org/fhir/R4/messagedefinition.html",
+    "status": "active",
+    "date": "Thu Apr 02 00:00:00 GMT 2020",
+    "publisher": "HL7",
+    "description": "PAO MessageDefintion for use with the PAO MessageHeader for PAO orders"
   }
 }

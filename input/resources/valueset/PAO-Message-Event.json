@@ -2,9 +2,9 @@
 	"resourceType": "ValueSet",
 	"id": "PAO-Message-Event",
 	"meta": {
-		"versionId": "12",
-		"lastUpdated": "2020-03-28T23:31:11.850+00:00",
-		"source": "#cfXWuorFsl0NnCGK"
+		"versionId": "13",
+		"lastUpdated": "2020-04-01T23:16:08.757+00:00",
+		"source": "#XwPg9ehFt3P3sUnH"
 	},
 	"text": {
 		"status": "additional",
@@ -14,7 +14,7 @@
 	"name": "PAOMessageEvent",
 	"title": "PAO Message Event Value Set",
 	"status": "draft",
-	"description": "This is a value set for the PAO Message Event ",
+	"description": "This is a value set for the PAO Message Event",
 	"compose": {
 		"include": [
 			{

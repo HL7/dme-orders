@@ -1,0 +1,41 @@
+I"K
+
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#content-and-organization" id="markdown-toc-content-and-organization">Content and Organization</a></li>
+  <li><a href="#dependencies" id="markdown-toc-dependencies">Dependencies</a></li>
+</ul>
+
+</div>
+<p><a href="index.html">Previous Page - IG Home Page</a></p>
+
+<p>This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process. 
+Feedback is welcome and may be submitted as a Jira ticket indicating PAO Orders as the specification. 
+This implementation guide is dependent on other specifications. Please submit any comments you have on these base specifications as follows:</p>
+<ul>
+  <li>Feedback on the FHIR core specification should be submitted as a Jira ticket with “FHIR Core” as the specification.</li>
+  <li>Feedback on the US core profiles should be submitted as a Jira ticket with “US Core” as the specification.</li>
+</ul>
+
+<h1 id="content-and-organization">Content and Organization</h1>
+<p>The implementation guide is organized into the following sections:</p>
+<ul>
+  <li><strong>Background</strong> describes current environment and the intent of the implementation guide.  It also covers items that are: 1) in scope, 2) out of scope, 3) business requirements, and 4) clinical requirements</li>
+  <li><strong>Workflow</strong> defines the overall exchange of information between the ordering provider and the supplier.  Flows are defined both with and without an intermediary</li>
+  <li><strong>Technical Background</strong> describes the different specifications this implementation guide relies on and indicates what developers should read and understand prior to implementing this specification</li>
+  <li><strong>FHIR Artifacts Overview</strong> covers the type of FHIR artifacts that are included in this implementation guide</li>
+  <li>Submission * 	Message Bundles</li>
+  <li>Must Support and</li>
+  <li>Artifacts introduces and provides links to the FHIR R4 profiles, extension, code systems, value sets and other FHIR artifacts used in this implementation guide</li>
+</ul>
+
+<h1 id="dependencies">Dependencies</h1>
+<p>This implementation guide relies on the following other specifications:</p>
+<ul>
+  <li>FHIR R4 - The current official version of FHIR as of the time this implementation guide was published. See the background page for key pieces of this specification implementers should be familiar with.</li>
+  <li>US Core STU3 - The current offical version of US Core based on FHIR R4.</li>
+</ul>
+
+<p><a href="Background.html">Next Page - Background</a></p>
+
+:ET

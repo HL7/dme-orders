@@ -1,4 +1,4 @@
-[Previous Page - Submission](Submission.html)
+[Previous Page - Submission of Orders](SubmissionofOrders.html)
 
 ### The Post-Acute Order Message Bundle
 
@@ -7,8 +7,12 @@
 <p><strong>Each Bundle must have:</strong></p>
 
 <ol>
-  <li><em>MessageHeader</em></li>
-  <li><em>List of other resources</em></li>
+  <li><em>MessageHeader/MessageDefinition</em></li>
+  <li><em>Task</em></li>
+  <li><em>Subscription</em></li>
+  <li><em>DeviceRequest/ServiceRequest/MedicationRequest(Medication)</em></li>
+	<li><em>Included Resouces</em></li>
 </ol>
+<table><tr><td><img src="MessageBundleContentDrawing6.jpg" /></td></tr></table>
 
-[Next Page - Test Page](TestPage.html)
+[Next Page - Technical Background](TechnicalBackground.html)

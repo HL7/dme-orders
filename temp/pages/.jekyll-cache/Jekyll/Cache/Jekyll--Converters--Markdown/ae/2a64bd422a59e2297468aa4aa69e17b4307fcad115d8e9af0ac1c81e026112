@@ -1,0 +1,24 @@
+I"€
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#notes-to-balloters-and-reviewers" id="markdown-toc-notes-to-balloters-and-reviewers">Notes to balloters (and reviewers)</a></li>
+</ul>
+
+</div>
+<p><a href="MustSupportandMissingData.html">Previous Page - Must Support and Missing Data</a></p>
+
+<h1 id="notes-to-balloters-and-reviewers">Notes to balloters (and reviewers)</h1>
+
+<p>We are soliciting input on the exact methods we should use for communicating order updates and cancels</p>
+<ol>
+  <li>via a message bundle with the same content (in general) as the orginal message</li>
+  <li>via an update to the Task that includes an updated order resouce (what about any additional documentation requirements)</li>
+  <li>via some other method</li>
+</ol>
+
+<p>We are soliciting input on the scope of examples necessary to assist the implementator community</p>
+<ol>
+  <li></li>
+</ol>
+
+:ET

@@ -2,17 +2,18 @@
 	"resourceType": "ImplementationGuide",
 	"id": "post-acute-orders4",
 	"meta": {
-		"versionId": "50",
-		"lastUpdated": "2020-03-30T13:58:56.297+00:00",
-		"source": "#rYcn6NHUZofqeVqO"
+		"versionId": "101",
+		"lastUpdated": "2020-04-02T22:28:11.886+00:00",
+		"source": "#CgaWD29kXAwrh5cA"
 	},
 	"text": {
 		"status": "additional",
 		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text</div></div>"
 	},
 	"contained": [],
+	"extension": [],
 	"url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-orders4",
-	"version": "0.0.9",
+	"version": "0.1.0",
 	"name": "PostAcuteOrders4",
 	"title": "Post-Acute FHIR Based Orders",
 	"status": "draft",
@@ -28,7 +29,7 @@
 			]
 		}
 	],
-	"description": "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post acute orders along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for provider's to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling provider to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.0.9 (this version):** QA version for May ballot -- only updates are for additional/modified text \n* **0.0.8:** fixed all outstanding errors (except for error on MessageDefinition)\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* complex extensions defined but not added to ServiceRequest and DeviceRequest\n* Will add examples during ballot reconilliation\n* Will add specific terminologies and value sets for post-acute orders during ballot reconcilliation",
+	"description": "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post-acute orders, along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for providers to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling providers to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.1.0a (this version):** Updated QA version to fix some build errors, add text and solicit input from reviewers\n* **0.0.9:** QA version for May ballot -- only updates are for additional/modified text \n* **0.0.8:** fixed all outstanding errors (except for error on MessageDefinition)\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Complex extensions are defined but not added to DeviceRequest, ServiceRequest and MedicationRequest\n* Will add examples during ballot reconciliation\n* Will add specific terminologies and value sets for post-acute orders during ballot reconcilliation",
 	"packageId": "hl7.fhir.us.dme-orders",
 	"fhirVersion": [
 		"4.0.1"
@@ -52,15 +53,6 @@
 				"name": "PAOmessageheader",
 				"exampleBoolean": false,
 				"description": "Post Acute Orders MessageHeader Profile\n\nThis profiles is use to order, update, cancel and query the status of an order\n\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only."
-			},
-			{
-				"reference": {
-					"reference": "StructureDefinition/PAO-messagedefinition4",
-					"display": "PAOmessagedefinition4"
-				},
-				"name": "PAOmessagedefinition4",
-				"exampleBoolean": false,
-				"description": "Post Acute Orders MessageDefinition Profile"
 			},
 			{
 				"reference": {
@@ -123,7 +115,7 @@
 				},
 				"name": "PAO Message Event Value Set",
 				"exampleBoolean": false,
-				"description": "This is a value set for the PAO Message Event "
+				"description": "This is a value set for the PAO Message Event"
 			},
 			{
 				"reference": {
@@ -178,6 +170,15 @@
 				"name": "PAOcoverage",
 				"exampleBoolean": false,
 				"description": "PAO Coverage profiles"
+			},
+			{
+				"reference": {
+					"reference": "StructureDefinition/PAO-message-definition4b",
+					"display": "PAOMessageDefinition4b"
+				},
+				"name": "PAOMessageDefinition4b",
+				"exampleBoolean": false,
+				"description": "PAO MessageDefintion for use with the PAO MessageHeader for PAO orders"
 			}
 		],
 		"page": {
@@ -200,19 +201,9 @@
 							"nameUrl": "Workflow.html"
 						},
 						{
-							"title": "Technical Background",
+							"title": "Submission of Orders",
 							"generation": "markdown",
-							"nameUrl": "TechnicalBackground.html"
-						},
-						{
-							"title": "FHIR Artifacts",
-							"generation": "markdown",
-							"nameUrl": "FHIRArtifacts.html"
-						},
-						{
-							"title": "Submission",
-							"generation": "markdown",
-							"nameUrl": "Submission.html"
+							"nameUrl": "SubmissionofOrders.html"
 						},
 						{
 							"title": "Message Bundles",
@@ -220,9 +211,24 @@
 							"nameUrl": "MessageBundles.html"
 						},
 						{
-							"title": "Test Page",
+							"title": "Technical Background",
 							"generation": "markdown",
-							"nameUrl": "TestPage.html"
+							"nameUrl": "TechnicalBackground.html"
+						},
+						{
+							"title": "FHIR Artifacts Overview",
+							"generation": "markdown",
+							"nameUrl": "FHIRArtifactsOverview.html"
+						},
+						{
+							"title": "Must Support and Missing Data",
+							"generation": "markdown",
+							"nameUrl": "MustSupportandMissingData.html"
+						},
+						{
+							"title": "Message to Reviewers/Balloters",
+							"generation": "markdown",
+							"nameUrl": "MessagetoReviewersBalloters.html"
 						}
 					],
 					"nameUrl": "Post-AcuteOrdersHome.html"

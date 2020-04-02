@@ -10,10 +10,10 @@
 	"status" : "ci-build",
 	"current" : true
 	},{
-		"version" : "0.0.9", 
+		"version" : "0.1.0", 
 		"date" : "2020-04-02",	  
 		"desc" : "QA version for May 2020 Ballot",	  
 		"path" : "http://build.fhir.org/ig/HL7/dme-orders",	  
-		"status" : "Ci-build"
+		"status" : "ci-build"
 	   }]
 }

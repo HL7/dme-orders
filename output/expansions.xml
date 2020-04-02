@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="00b5a674-a192-4a49-a273-cd435d6836d3"/>
+  <id value="a321053b-4ad1-4eb0-905b-874e10d1547c"/>
   <meta>
-    <lastUpdated value="2020-03-30T13:59:33.853+00:00"/>
+    <lastUpdated value="2020-04-02T22:29:03.616+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -12,15 +12,15 @@
       <ValueSet>
         <id value="PAO-Message-Event"/>
         <meta>
-          <versionId value="12"/>
-          <lastUpdated value="2020-03-28T23:31:11.850+00:00"/>
-          <source value="#cfXWuorFsl0NnCGK"/>
+          <versionId value="13"/>
+          <lastUpdated value="2020-04-01T23:16:08.757+00:00"/>
+          <source value="#XwPg9ehFt3P3sUnH"/>
         </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 4 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event version 0.0.9</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px"/>Expansion based on http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event version 0.1.0
             <p>All codes from system 
               <a href="CodeSystem-PAO-Message-Event.html">
                 <code>http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event</code>
@@ -74,11 +74,11 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/dme-orders/ValueSet/PAO-Message-Event"/>
-        <version value="0.0.9"/>
+        <version value="0.1.0"/>
         <name value="PAOMessageEvent"/>
         <title value="PAO Message Event Value Set"/>
         <status value="draft"/>
-        <date value="2020-03-30T13:59:33+00:00"/>
+        <date value="2020-04-02T22:29:03+00:00"/>
         <publisher value="HL7"/>
         <contact>
           <name value="HL7 International - Orders and Observations"/>
@@ -87,10 +87,10 @@
             <value value="http://www.hl7.org/Special/committees/orders"/>
           </telecom>
         </contact>
-        <description value="This is a value set for the PAO Message Event "/>
+        <description value="This is a value set for the PAO Message Event"/>
         <expansion>
-          <identifier value="urn:uuid:d031f0b1-0ba9-471c-b008-56d909eda57f"/>
-          <timestamp value="2020-03-30T13:59:44+00:00"/>
+          <identifier value="urn:uuid:3bebf7ca-31c0-4066-b531-180d266872a1"/>
+          <timestamp value="2020-04-02T22:29:16+00:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>
@@ -98,7 +98,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event|0.0.9"/>
+            <valueUri value="http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event|0.1.0"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/dme-orders/CodeSystem/PAO-Message-Event"/>
