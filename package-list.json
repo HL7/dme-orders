@@ -9,4 +9,5 @@
 	"path" : "http://hl7.org/fhir/ig/HL7/dme-orders",
 	"status" : "ci-build",
 	"current" : true
-	}
+	}]
+}
