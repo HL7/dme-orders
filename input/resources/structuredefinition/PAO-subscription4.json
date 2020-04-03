@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAO-subscription4",
 	"meta": {
-		"versionId": "6",
-		"lastUpdated": "2020-03-29T23:21:35.965+00:00",
-		"source": "#XfwKf2yWkFWxT0NL"
+		"versionId": "7",
+		"lastUpdated": "2020-04-03T03:29:49.934+00:00",
+		"source": "#FOSyuL2rPCnTM3Sj"
 	},
 	"text": {
 		"status": "additional",
@@ -19,7 +19,6 @@
 	"date": "2020-03-29",
 	"publisher": "HL7",
 	"description": "Post Acute Orders Subscription Profile\n\nThe subscription resource should accompany the initial message bundle to provide a mechanism of informing the ordering provider when there is a change in the order as indicated by a change in the Task resorurce.\n\nThe subscriber has the option of receiving a notifiction when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)",
-	"purpose": "Post Acute Orders Subscription Profile Notes",
 	"fhirVersion": "4.0.1",
 	"kind": "resource",
 	"abstract": false,

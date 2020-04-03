@@ -3,15 +3,15 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="PAO-bundle4"/>
   <meta>
-    <versionId value="10"/>
-    <lastUpdated value="2020-03-29T18:28:15.768+00:00"/>
-    <source value="#P5ODquc6Wy1Dmns7"/>
+    <versionId value="11"/>
+    <lastUpdated value="2020-04-03T00:18:10.887+00:00"/>
+    <source value="#Sr0DomWFr5kNWb1d"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div><div style="box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">This is the bundle profile for the Post Acute Orders initial order request  </div></div></div>
   </text>
   <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-bundle4"/>
-  <version value="0.1.0"/>
+  <version value="0.1.1"/>
   <name value="PAObundle4"/>
   <title value="PAO Bundle Profile"/>
   <status value="active"/>
@@ -24,7 +24,7 @@
       <value value="http://www.hl7.org/Special/committees/orders"/>
     </telecom>
   </contact>
-  <description value="This bundle includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation"/>
+  <description value="PAO Bundle profile that includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation"/>
   <purpose value="Post Acute Orders Bundle Profile Purpose"/>
   <fhirVersion value="4.0.1"/>
   <mapping>

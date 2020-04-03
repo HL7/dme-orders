@@ -9,16 +9,16 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PAO-task4"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "6" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-29T22:13:29.107+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#EkKQDHND8o8XJZmz" ]
+     fhir:Meta.versionId [ fhir:value "8" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-04-03T03:30:45.226+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#BdIwr34BRFmdA7xG" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is resource text</div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-task4"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.0"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.1"];
   fhir:StructureDefinition.name [ fhir:value "PAOtask4"];
   fhir:StructureDefinition.title [ fhir:value "PAO Task Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
@@ -34,7 +34,6 @@
      ]
   ];
   fhir:StructureDefinition.description [ fhir:value "Post Acute Orders Task Profile"];
-  fhir:StructureDefinition.purpose [ fhir:value "Post Acute Orders Task Profile Purpose"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;

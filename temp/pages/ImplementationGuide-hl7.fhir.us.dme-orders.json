@@ -2,20 +2,20 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.us.dme-orders",
   "meta": {
-    "versionId": "101",
-    "lastUpdated": "2020-04-02T22:28:11.886+00:00",
-    "source": "#CgaWD29kXAwrh5cA"
+    "versionId": "117",
+    "lastUpdated": "2020-04-03T04:11:59.069+00:00",
+    "source": "#4YbJDucAEc8xXIGe"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text</div></div>"
   },
   "url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/hl7.fhir.us.dme-orders",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "PostAcuteOrders4",
   "title": "Post-Acute FHIR Based Orders",
   "status": "draft",
-  "date": "2020-04-02T22:29:03+00:00",
+  "date": "2020-04-03T04:12:54+00:00",
   "publisher": "HL7",
   "contact": [
     {
@@ -28,7 +28,7 @@
       ]
     }
   ],
-  "description": "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post-acute orders, along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for providers to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling providers to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.1.0a (this version):** Updated QA version to fix some build errors, add text and solicit input from reviewers\n* **0.0.9:** QA version for May ballot -- only updates are for additional/modified text \n* **0.0.8:** fixed all outstanding errors (except for error on MessageDefinition)\n* **0.0.7:** further updates that now include Code System, Value Set, US Core profile references in some PAO profiles\n* **0.0.6:** Further changes to address publisher errors (not pushed to build)\n* **0.0.5:** Update for tooling changes (not pushed to build)\n* **0.0.4:** Cleanup versions, add known issues, and correct title \n* **0.0.3:** Working build on build.fhir.org\n* **0.0.2:** Update to test build on build.fhir.org \n* **0.0.1:** Initial version published to the continuous build\n\n# Known issues and to-dos\n* Complex extensions are defined but not added to DeviceRequest, ServiceRequest and MedicationRequest\n* Will add examples during ballot reconciliation\n* Will add specific terminologies and value sets for post-acute orders during ballot reconcilliation",
+  "description": "# General\nThis is a FHIR R4 Implementation Guide to support the electronic exchange of post-acute orders, along with the exchange of supporting documentation between the ordering provider and the specific supplier.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for providers to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling providers to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.\n\n# Note to balloters \n**Please comment on the existing material and not on items that are know issues or to-dos (these will be addressed in the STU ballot version planned for the Septemeber Ballot Cycle)\nThere is a section of the IG (Requests to Balloters) that solicits feedback from balloters on items of interest to the authors -- please respond with your recommedations**\n\n# Feedback\nComments and suggestions are welcome on our Zulip stream...\nor send a note to rdieterle@enablecare.us\n\n# Change log\n* **0.1.1 (this version):** QA version for the May 2020 ballot cycle\n\n     Note: prior changes consolided into this Ballot for Comment version\n\n# Known issues and to-dos\n* Complex extensions are defined but not added to DeviceRequest, ServiceRequest and MedicationRequest\n* Will add examples during ballot reconciliation\n* Will add specific terminologies and value sets for post-acute orders during ballot reconcilliation",
   "packageId": "hl7.fhir.us.dme-orders",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -308,7 +308,7 @@
           "display": "PAOmessageheader"
         },
         "name": "PAOmessageheader",
-        "description": "Post Acute Orders MessageHeader Profile\n\nThis profiles is use to order, update, cancel and query the status of an order\n\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only.",
+        "description": "Post Acute Orders MessageHeader Profile\n\nThis profiles is used to order, update, cancel and query the status of an order\n\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only.",
         "exampleBoolean": false
       },
       {
@@ -327,7 +327,7 @@
           "display": "PAObundle4"
         },
         "name": "PAObundle4",
-        "description": "This bundle includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation",
+        "description": "PAO Bundle profile that includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation",
         "exampleBoolean": false
       },
       {
@@ -460,7 +460,7 @@
           "display": "PAOprovenance4b"
         },
         "name": "PAOprovenance4b",
-        "description": "Provenance Profile",
+        "description": "PAO Provenance Profile based on US Core",
         "exampleBoolean": false
       },
       {
@@ -479,7 +479,7 @@
           "display": "PAOorderdetailextension"
         },
         "name": "PAOorderdetailextension",
-        "description": "Order Detail",
+        "description": "Order Detail Extension \n\nWill be included in the PAO ServiceRequest profile",
         "exampleBoolean": false
       },
       {
@@ -517,7 +517,7 @@
           "display": "PAOMedication"
         },
         "name": "PAOMedication",
-        "description": "PAO Medication profile from us-core",
+        "description": "PAO Medication profile based on us-core",
         "exampleBoolean": false
       },
       {
@@ -555,7 +555,7 @@
           "display": "PAOcoverage"
         },
         "name": "PAOcoverage",
-        "description": "PAO Coverage profiles",
+        "description": "PAO Coverage profile",
         "exampleBoolean": false
       },
       {
@@ -624,8 +624,8 @@
               "generation": "markdown"
             },
             {
-              "nameUrl": "MessagetoReviewersBalloters.html",
-              "title": "Message to Reviewers/Balloters",
+              "nameUrl": "RequeststoBalloters.html",
+              "title": "Requests to Balloters",
               "generation": "markdown"
             }
           ]

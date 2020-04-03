@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAO-task4",
 	"meta": {
-		"versionId": "6",
-		"lastUpdated": "2020-03-29T22:13:29.107+00:00",
-		"source": "#EkKQDHND8o8XJZmz"
+		"versionId": "8",
+		"lastUpdated": "2020-04-03T03:30:45.226+00:00",
+		"source": "#BdIwr34BRFmdA7xG"
 	},
 	"text": {
 		"status": "additional",
@@ -19,7 +19,6 @@
 	"date": "2020-03-29",
 	"publisher": "HL7",
 	"description": "Post Acute Orders Task Profile",
-	"purpose": "Post Acute Orders Task Profile Purpose",
 	"fhirVersion": "4.0.1",
 	"kind": "resource",
 	"abstract": false,

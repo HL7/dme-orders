@@ -11,7 +11,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Resource text for PAO relevant review extension</div>"
   },
   "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-relevant-reviews",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "PAOrelevantreviews",
   "title": "PAO Relevant Reviews",
   "status": "active",

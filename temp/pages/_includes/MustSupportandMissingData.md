@@ -24,4 +24,4 @@ Receiving Systems are defined as DME and Service Supplier Systems and Intermedia
 Where this IG does not additionally constrain a US Core profile, the actors shall follow the US Core definition of Must Support and Missing Data
 
 
-[Next Page - Message to Reviewers/Balloters](MessagetoReviewersBalloters.html)
+[Next Page - Requests to Balloters](RequeststoBalloters.html)

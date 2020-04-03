@@ -36,7 +36,7 @@
                </td>
                <td>Post Acute Orders MessageHeader Profile
 
-This profiles is use to order, update, cancel and query the status of an order
+This profiles is used to order, update, cancel and query the status of an order
 
 It requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only.</td>
             </tr>
@@ -45,7 +45,7 @@ It requires the consistant use of identifiers to ensure that any actions targete
                   <a href="StructureDefinition-PAO-bundle4.html"
                      title="StructureDefinition/PAO-bundle4">PAObundle4</a>
                </td>
-               <td>This bundle includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation</td>
+               <td>PAO Bundle profile that includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -90,7 +90,7 @@ Use to order DME and assoicated supplies</td>
                   <a href="StructureDefinition-PAO-provenance4b.html"
                      title="StructureDefinition/PAO-provenance4b">PAOprovenance4b</a>
                </td>
-               <td>Provenance Profile</td>
+               <td>PAO Provenance Profile based on US Core</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -104,14 +104,14 @@ Use to order DME and assoicated supplies</td>
                   <a href="StructureDefinition-PAO-Medication.html"
                      title="StructureDefinition/PAO-Medication">PAOMedication</a>
                </td>
-               <td>PAO Medication profile from us-core</td>
+               <td>PAO Medication profile based on us-core</td>
             </tr>
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-PAO-coverage.html"
                      title="StructureDefinition/PAO-coverage">PAOcoverage</a>
                </td>
-               <td>PAO Coverage profiles</td>
+               <td>PAO Coverage profile</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -135,7 +135,9 @@ Use to order DME and assoicated supplies</td>
                   <a href="StructureDefinition-PAO-Order-Detail-Extension.html"
                      title="StructureDefinition/PAO-Order-Detail-Extension">PAOorderdetailextension</a>
                </td>
-               <td>Order Detail</td>
+               <td>Order Detail Extension 
+
+Will be included in the PAO ServiceRequest profile</td>
             </tr>
             <tr>
                <td style="column-width:30%">

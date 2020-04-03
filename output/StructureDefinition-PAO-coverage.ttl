@@ -9,16 +9,16 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PAO-coverage"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "4" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-03-29T21:39:06.701+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#i12oY9IOmD95gyfv" ]
+     fhir:Meta.versionId [ fhir:value "5" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-04-03T03:20:57.062+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#ev7HGp6u20t0Syhr" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Resource Text</div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.0"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.1"];
   fhir:StructureDefinition.name [ fhir:value "PAOcoverage"];
   fhir:StructureDefinition.title [ fhir:value "PAO Coverage"];
   fhir:StructureDefinition.status [ fhir:value "active"];
@@ -34,7 +34,7 @@
        fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/orders" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "PAO Coverage profiles"];
+  fhir:StructureDefinition.description [ fhir:value "PAO Coverage profile"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;

@@ -1,1 +1,1 @@
-This is narrative in the intro section
+This section will be expanded in the STU 1 version

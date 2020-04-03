@@ -10,7 +10,7 @@
 	"status" : "ci-build",
 	"current" : true
 	},{
-		"version" : "0.1.0", 
+		"version" : "0.1.1", 
 		"date" : "2020-04-02",
 		"fhirversion" : "4.0.1",	  
 		"desc" : "QA version for May 2020 Ballot",	  

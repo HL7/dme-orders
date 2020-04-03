@@ -6,13 +6,27 @@ The FHIR artifacts used by Post Acute Orders are organized, in this section, acc
 # Artifact Lists
 
 Post Acute Order specific Artifacts (do not have US Core R4 profiles)
-* 
+* Bundle
+* MessageHeader
+* MessageDefinition
+* Task
+* Subscription
+* DeviceRequest
+* ServiceRequest
+* Coverage
 
 US Core (3.0.0 - R4 based) profiles
-
+* MedicationRequest
+* Medication
+* Provenance
 
 US Core (3.0.0 - R4 based) profiles referenced by the above resources
-
+* Patient
+* Practitioner
+* PractitionerRole
+* Organization
+* Location
+* 
 
 Additional information about the use of these artifacts can be found in the main specification.
 The artifacts are of four types:

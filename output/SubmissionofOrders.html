@@ -58,7 +58,7 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Post-Acute FHIR Based Orders</span><br/>0.1.0 - CI Build</p>
+          <p><span style="font-size:12pt;font-weight:bold">Post-Acute FHIR Based Orders</span><br/>0.1.1 - CI Build</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -111,7 +111,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Post-Acute FHIR Based Orders - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/dme-orders/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Post-Acute FHIR Based Orders - Local Development build (v0.1.1). See the <a href="http://hl7.org/fhir/us/dme-orders/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Submission of Orders</h2>
   
   
@@ -126,33 +126,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h1 id="submission-of-orders">Submission of Orders</h1>
 <p>Pushing Unsolicited Orders to the Performing Provider, Supplier, or Intermediary</p>
-<p>When an event (e.g. creating an order that must be fulfilled by a third party) triggers a Post-Acute Order (PAO), the Sender creates a PAO Message Bundle and sends it to the recipients <code class="highlighter-rouge">$process-message</code> operation endpoint.</p>
 <ol>
- <li>For this guide, there is an expectation that a PAO response message will be returned from the Recipient or Intermediary to the Sender. Therefore, the $process-message input parameters async and response-url are used.</li>
-  <li>There is an expectation that the data submitted represents all the data required by the Recipient/Intermediary to establish an order.  There is not an expectation that the data to support medical necessity is complete. The PAO Recipient/Intermediary can optionally fetch additional information from the patients medical record using FHIR RESTful searches or using the mechanisms defined in the CDex IG.  
+  <li>When an event (e.g. creating an order that must be fulfilled by a third party) triggers a Post-Acute Order (PAO), the Sender creates a PAO Message Bundle and sends it to the recipients <code class="highlighter-rouge">$process-message</code> operation endpoint.</li>
+  <li>For this guide, there is an expectation that a PAO response message will be returned from the Recipient or Intermediary to the Sender. Therefore, the $process-message input parameters async and response-url are used.</li>
+  <li>There is an expectation that the data submitted represents all the data required by the Recipient/Intermediary to establish an order.  There is not an expectation that the data to support medical necessity is complete. The PAO Recipient/Intermediary can optionally fetch additional information from the patients medical record using FHIR RESTful searches or using the mechanisms defined in the CDex IG.</li>
   <li>When there is an Intermediary, once the PAO bundle is successfully received and processed, the Intermediary will distribute the order to the target Service Provider(s) or DME(s) to fulfill the order. The Intermediary <strong>MAY</strong> use FHIR messaging and the <code class="highlighter-rouge">$process-message</code> operation to do this or some other messaging protocol such as Direct or SFTP.  If the intended organization is specified in the Message Header, the intermediary <strong>SHOULD</strong> route the PAO to the intended recipient. Note that the PAO Intermediary <strong>MAY</strong> customize the content based on the end user (for example, sending only the part of an order to a supplier based on their fulfillment capability).</li>
-&lt;/ol&gt;
+</ol>
 
-Usage
+<p>Usage</p>
+
 <p>The $process-message operation is invoked by the Sender using the POST  syntax:</p>
-<p>POST [base]$process-message&lt;/code&gt;</p>
+
+<p>POST [base]$process-message</p>
+
 <p>The body of the operation is the PAO Message Bundle containing:</p>
 
-<ol>
-  <li>The <strong>MessageHeader</strong> which is the first resource in the bundle and contains the message event code - that identifies the nature of the order bundle (initial order, update, cancel).</li>
-  <li>The <strong>MessageDefinition</strong>  which is the second resource in the bundle and contains the message content definition.
-  <li>The <strong>Task</strong> which is the third resource in the bundle and defines the associated components of the order and its status.</li>
-  <li>The <strong>Subscription</strong> which is the fourth resource in the bundle and contains the information necessary to receive a notification (or a completed updated Order Bundle) when the Task changes status.</li>
-  <li>The <strong>DeviceRequest</strong>, <strong>ServiceRequest</strong> and/or a <strong>MedicationRequest</strong> defines the components of the order.</li>
-	<li>The other resources in the bundle depend on the nature of the required documentation needed to perfect the order and/or document medical necessity based on the service or device that is the basis for the order.</li>
-	<li>Note: all referenced resources <strong>SHALL</strong> be included in the bundle.</li>
-&lt;/ol&gt;
-	
-<p>We will create a Home Oxygen scenario Example Transaction&lt;/a&gt; as an example of using the <code class="highlighter-rouge">$process-message</code> operation to send/receive a POA Message Bundle.</p>
+<p>The <strong>MessageHeader</strong> which is the first resource in the bundle and contains the message event code - that identifies the nature of the order bundle (initial order, update, cancel).
+The <strong>MessageDefinition</strong> which is the second resource in the bundle and contains the message content definition.
+The <strong>Task</strong> which is the third resource in the bundle and defines the associated components of the order and its status.
+The <strong>Subscription</strong> which is the fourth resource in the bundle and contains the information necessary to receive a notification (or a completed updated Order Bundle) when the Task changes status.
+The <strong>DeviceRequest</strong>, <strong>ServiceRequest</strong> and/or a <strong>MedicationRequest</strong> defines the order.
+The other resources in the bundle depend on the nature of the required documentation needed to perfect the order and/or document medical necessity based on the service or device that is the basis for the order.
+Note: all referenced resources <strong>SHALL</strong> be included in the bundle.</p>
 
-[Next Page - Message Bundles](MessageBundles.html)
-  
-</li></ol></li></ol>
+<p>We will create a Home Oxygen scenario Example Transaction as an example of using the <code class="highlighter-rouge">$process-message</code> operation to send/receive a POA Message Bundle.</p>
+
+<p><a href="MessageBundles.html">Next Page - Message Bundles</a></p>
+
 
 </div>
         </div>  <!-- /inner-wrapper -->
@@ -165,7 +165,7 @@ Usage
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/orders">HL7</a>.  Package hl7.fhir.us.dme-orders#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 2, 2020 22:29+0000">2020-04-02</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/orders">HL7</a>.  Package hl7.fhir.us.dme-orders#0.1.1 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 3, 2020 04:12+0000">2020-04-03</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

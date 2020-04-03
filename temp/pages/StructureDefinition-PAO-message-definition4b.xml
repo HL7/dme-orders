@@ -3,15 +3,15 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="PAO-message-definition4b"/>
   <meta>
-    <versionId value="10"/>
-    <lastUpdated value="2020-04-02T11:08:33.432+00:00"/>
-    <source value="#Re6HtuemytGNCuVn"/>
+    <versionId value="11"/>
+    <lastUpdated value="2020-04-03T03:23:55.565+00:00"/>
+    <source value="#eDOylPl2cqjMcOTw"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This will be resource text</div>
   </text>
   <url value="http://hl7.org/fhir/us/dme-orders/PAO-message-definition4b"/>
-  <version value="0.1.0"/>
+  <version value="0.1.1"/>
   <name value="PAOMessageDefinition4b"/>
   <title value="PAO Message Defnintion 4b"/>
   <status value="active"/>

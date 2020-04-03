@@ -3,15 +3,15 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="PAO-task4"/>
   <meta>
-    <versionId value="6"/>
-    <lastUpdated value="2020-03-29T22:13:29.107+00:00"/>
-    <source value="#EkKQDHND8o8XJZmz"/>
+    <versionId value="8"/>
+    <lastUpdated value="2020-04-03T03:30:45.226+00:00"/>
+    <source value="#BdIwr34BRFmdA7xG"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This is resource text</div>
   </text>
   <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-task4"/>
-  <version value="0.1.0"/>
+  <version value="0.1.1"/>
   <name value="PAOtask4"/>
   <title value="PAO Task Profile"/>
   <status value="active"/>
@@ -25,7 +25,6 @@
     </telecom>
   </contact>
   <description value="Post Acute Orders Task Profile"/>
-  <purpose value="Post Acute Orders Task Profile Purpose"/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="workflow"/>

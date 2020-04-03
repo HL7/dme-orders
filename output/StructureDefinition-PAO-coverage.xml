@@ -3,15 +3,15 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="PAO-coverage"/>
   <meta>
-    <versionId value="4"/>
-    <lastUpdated value="2020-03-29T21:39:06.701+00:00"/>
-    <source value="#i12oY9IOmD95gyfv"/>
+    <versionId value="5"/>
+    <lastUpdated value="2020-04-03T03:20:57.062+00:00"/>
+    <source value="#ev7HGp6u20t0Syhr"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">Resource Text</div>
   </text>
   <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage"/>
-  <version value="0.1.0"/>
+  <version value="0.1.1"/>
   <name value="PAOcoverage"/>
   <title value="PAO Coverage"/>
   <status value="active"/>
@@ -25,7 +25,7 @@
       <value value="http://www.hl7.org/Special/committees/orders"/>
     </telecom>
   </contact>
-  <description value="PAO Coverage profiles"/>
+  <description value="PAO Coverage profile"/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="workflow"/>

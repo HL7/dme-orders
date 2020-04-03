@@ -2,16 +2,16 @@
   "resourceType": "StructureDefinition",
   "id": "PAO-coverage",
   "meta": {
-    "versionId": "4",
-    "lastUpdated": "2020-03-29T21:39:06.701+00:00",
-    "source": "#i12oY9IOmD95gyfv"
+    "versionId": "5",
+    "lastUpdated": "2020-04-03T03:20:57.062+00:00",
+    "source": "#ev7HGp6u20t0Syhr"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Resource Text</div>"
   },
   "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-coverage",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "PAOcoverage",
   "title": "PAO Coverage",
   "status": "active",
@@ -29,7 +29,7 @@
       ]
     }
   ],
-  "description": "PAO Coverage profiles",
+  "description": "PAO Coverage profile",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

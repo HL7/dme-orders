@@ -58,7 +58,7 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Post-Acute FHIR Based Orders</span><br/>0.1.0 - CI Build</p>
+          <p><span style="font-size:12pt;font-weight:bold">Post-Acute FHIR Based Orders</span><br/>0.1.1 - CI Build</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -111,7 +111,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Post-Acute FHIR Based Orders - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/dme-orders/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Post-Acute FHIR Based Orders - Local Development build (v0.1.1). See the <a href="http://hl7.org/fhir/us/dme-orders/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>IG Home Page</h2>
   
   
@@ -120,6 +120,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
   <li><a href="#general" id="markdown-toc-general">General</a></li>
+  <li><a href="#note-to-balloters" id="markdown-toc-note-to-balloters">Note to balloters</a></li>
   <li><a href="#feedback" id="markdown-toc-feedback">Feedback</a></li>
   <li><a href="#change-log" id="markdown-toc-change-log">Change log</a></li>
   <li><a href="#known-issues-and-to-dos" id="markdown-toc-known-issues-and-to-dos">Known issues and to-dos</a>    <ul>
@@ -140,22 +141,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>This implementation guide is the result of work sponsored by CMS’s Center for Program Integrity, whose goal is to advance the ability for providers to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling providers to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.</p>
 
+<h1 id="note-to-balloters">Note to balloters</h1>
+<p><strong>Please comment on the existing material and not on items that are know issues or to-dos (these will be addressed in the STU ballot version planned for the Septemeber Ballot Cycle)
+There is a section of the IG (Requests to Balloters) that solicits feedback from balloters on items of interest to the authors – please respond with your recommedations</strong></p>
+
 <h1 id="feedback">Feedback</h1>
 <p>Comments and suggestions are welcome on our Zulip stream…
 or send a note to rdieterle@enablecare.us</p>
 
 <h1 id="change-log">Change log</h1>
 <ul>
-  <li><strong>0.1.0a (this version):</strong> Updated QA version to fix some build errors, add text and solicit input from reviewers</li>
-  <li><strong>0.0.9:</strong> QA version for May ballot – only updates are for additional/modified text</li>
-  <li><strong>0.0.8:</strong> fixed all outstanding errors (except for error on MessageDefinition)</li>
-  <li><strong>0.0.7:</strong> further updates that now include Code System, Value Set, US Core profile references in some PAO profiles</li>
-  <li><strong>0.0.6:</strong> Further changes to address publisher errors (not pushed to build)</li>
-  <li><strong>0.0.5:</strong> Update for tooling changes (not pushed to build)</li>
-  <li><strong>0.0.4:</strong> Cleanup versions, add known issues, and correct title</li>
-  <li><strong>0.0.3:</strong> Working build on build.fhir.org</li>
-  <li><strong>0.0.2:</strong> Update to test build on build.fhir.org</li>
-  <li><strong>0.0.1:</strong> Initial version published to the continuous build</li>
+  <li>
+    <p><strong>0.1.1 (this version):</strong> QA version for the May 2020 ballot cycle</p>
+
+    <p>Note: prior changes consolided into this Ballot for Comment version</p>
+  </li>
 </ul>
 
 <h1 id="known-issues-and-to-dos">Known issues and to-dos</h1>
@@ -196,7 +196,7 @@ or send a note to rdieterle@enablecare.us</p>
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/orders">HL7</a>.  Package hl7.fhir.us.dme-orders#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 2, 2020 22:29+0000">2020-04-02</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/orders">HL7</a>.  Package hl7.fhir.us.dme-orders#0.1.1 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 3, 2020 04:12+0000">2020-04-03</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

@@ -1,0 +1,37 @@
+I"\
+
+<div class="markdown-toc">
+
+</div>
+<p><a href="FHIRArtifactsOverview.html">Previous Page - FHIR Artifacts Overview</a></p>
+
+<p><strong>Must Support and Missing Data</strong></p>
+
+<p>Systems claiming to conform to a profile SHALL support the elements in a profile as defined below: This guide adopts the following definitions of MustSupport for all direct transactions between the Sender and Recipient or Intermediary</p>
+
+<p><strong>All Sending Systems</strong></p>
+
+<p>Sending Systems are defined as: 1) Ordering Provider Systems and 2) Intermediary Systems when sending to DME and Service Supplier Systems using the PAO IG</p>
+<ul>
+  <li>As part of the PAO transaction bundle as specified by the Post-Acute Orders IG, the Sender SHALL be capable of including all elements defined in the PAO profiles that have a MustSupport flag.</li>
+  <li>SHALL populate all elements with a MustSupport flag if the information exists</li>
+  <li>In situations where information on a particular data element is not present, the Sender SHALL NOT include the data elements in the resource instance as part of a $process-message operation or a query response if the cardinality is 0..n</li>
+  <li>If the information does not exist and the cardinality of the element is &gt;= 1..*, the Sender SHALL send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or use the dataAbsentReason extension.</li>
+</ul>
+
+<p><strong>All Receiving Systems</strong></p>
+
+<p>Receiving Systems are defined as DME and Service Supplier Systems and Intermediary Systems (when receiving from the Ordering Provider Systems)</p>
+<ul>
+  <li>The Recipient/Intermediary SHALL be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words, Recipient/Intermediary Systems SHOULD be capable of processing the data elements (display, store, etc).</li>
+  <li>When receiving a PAO Order from the Sender, the Recipient/Intermediary SHALL interpret missing data elements within resource instances as data not present in the Senders systems.</li>
+  <li>PAO Order Recipient/Intermediary Systems SHALL be able to process resource instances containing data elements asserting missing information without generating an error or causing the application to fail.</li>
+</ul>
+
+<p><strong>Conformance to US Core Profile</strong></p>
+
+<p>Where this IG does not additionally constrain a US Core profile, the actors shall follow the US Core definition of Must Support and Missing Data</p>
+
+<p><a href="RequeststoBalloters.html">Next Page - Requests to Balloters</a></p>
+
+:ET

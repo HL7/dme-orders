@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAO-messageheader",
 	"meta": {
-		"versionId": "14",
-		"lastUpdated": "2020-03-29T19:12:59.656+00:00",
-		"source": "#zWvyYvKfZVceqWbh"
+		"versionId": "15",
+		"lastUpdated": "2020-04-03T03:24:48.210+00:00",
+		"source": "#UlLVJHCgZWM99LGD"
 	},
 	"text": {
 		"status": "additional",
@@ -18,8 +18,7 @@
 	"status": "active",
 	"date": "2020-03-22",
 	"publisher": "HL7",
-	"description": "Post Acute Orders MessageHeader Profile\n\nThis profiles is use to order, update, cancel and query the status of an order\n\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only.",
-	"purpose": "This is narrative in the purpose section",
+	"description": "Post Acute Orders MessageHeader Profile\n\nThis profiles is used to order, update, cancel and query the status of an order\n\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only.",
 	"fhirVersion": "4.0.1",
 	"kind": "resource",
 	"abstract": false,

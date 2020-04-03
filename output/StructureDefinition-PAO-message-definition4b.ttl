@@ -9,16 +9,16 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "PAO-message-definition4b"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "10" ];
-     fhir:Meta.lastUpdated [ fhir:value "2020-04-02T11:08:33.432+00:00"^^xsd:dateTime ];
-     fhir:Meta.source [ fhir:value "#Re6HtuemytGNCuVn" ]
+     fhir:Meta.versionId [ fhir:value "11" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-04-03T03:23:55.565+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#eDOylPl2cqjMcOTw" ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This will be resource text</div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/dme-orders/PAO-message-definition4b"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.0"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.1"];
   fhir:StructureDefinition.name [ fhir:value "PAOMessageDefinition4b"];
   fhir:StructureDefinition.title [ fhir:value "PAO Message Defnintion 4b"];
   fhir:StructureDefinition.status [ fhir:value "active"];

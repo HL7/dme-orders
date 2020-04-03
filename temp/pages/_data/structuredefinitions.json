@@ -12,7 +12,7 @@
     "status": "active",
     "date": "Sun Mar 22 00:00:00 GMT 2020",
     "publisher": "HL7",
-    "description": "Post Acute Orders MessageHeader Profile\n\nThis profiles is use to order, update, cancel and query the status of an order\n\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only."
+    "description": "Post Acute Orders MessageHeader Profile\n\nThis profiles is used to order, update, cancel and query the status of an order\n\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only."
   },
   "PAO-bundle4": {
     "index": 1,
@@ -27,7 +27,7 @@
     "status": "active",
     "date": "Wed Jan 01 00:00:00 GMT 2020",
     "publisher": "HL7",
-    "description": "This bundle includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation"
+    "description": "PAO Bundle profile that includes a MessageHeader, MessageDefinition, Task, Subscription, service/device/medication order(s) and supporting documentation"
   },
   "PAO-task4": {
     "index": 2,
@@ -102,7 +102,7 @@
     "status": "active",
     "date": "Sat Mar 28 00:00:00 GMT 2020",
     "publisher": "HL7",
-    "description": "Provenance Profile"
+    "description": "PAO Provenance Profile based on US Core"
   },
   "PAO-Order-Detail-Extension": {
     "index": 7,
@@ -117,7 +117,7 @@
     "status": "active",
     "date": "Sat Mar 28 00:00:00 GMT 2020",
     "publisher": "HL7",
-    "description": "Order Detail",
+    "description": "Order Detail Extension \n\nWill be included in the PAO ServiceRequest profile",
     "contexts": [
       {
         "type": "extension for order detail for the service request"
@@ -152,7 +152,7 @@
     "status": "active",
     "date": "Sat Mar 28 00:00:00 GMT 2020",
     "publisher": "HL7",
-    "description": "PAO Medication profile from us-core"
+    "description": "PAO Medication profile based on us-core"
   },
   "PAO-relevant-reviews": {
     "index": 10,
@@ -187,7 +187,7 @@
     "status": "active",
     "date": "Sun Mar 29 00:00:00 GMT 2020",
     "publisher": "HL7",
-    "description": "PAO Coverage profiles"
+    "description": "PAO Coverage profile"
   },
   "PAO-message-definition4b": {
     "index": 12,

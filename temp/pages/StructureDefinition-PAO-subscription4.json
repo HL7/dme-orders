@@ -2,16 +2,16 @@
   "resourceType": "StructureDefinition",
   "id": "PAO-subscription4",
   "meta": {
-    "versionId": "6",
-    "lastUpdated": "2020-03-29T23:21:35.965+00:00",
-    "source": "#XfwKf2yWkFWxT0NL"
+    "versionId": "7",
+    "lastUpdated": "2020-04-03T03:29:49.934+00:00",
+    "source": "#FOSyuL2rPCnTM3Sj"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">This is resource text</div></div>"
   },
   "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-subscription4",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "PAOsubscription4",
   "title": "PAO Subscription Profile",
   "status": "active",
@@ -29,7 +29,6 @@
     }
   ],
   "description": "Post Acute Orders Subscription Profile\n\nThe subscription resource should accompany the initial message bundle to provide a mechanism of informing the ordering provider when there is a change in the order as indicated by a change in the Task resorurce.\n\nThe subscriber has the option of receiving a notifiction when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)",
-  "purpose": "Post Acute Orders Subscription Profile Notes",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

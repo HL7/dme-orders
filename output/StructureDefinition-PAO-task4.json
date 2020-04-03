@@ -2,16 +2,16 @@
   "resourceType": "StructureDefinition",
   "id": "PAO-task4",
   "meta": {
-    "versionId": "6",
-    "lastUpdated": "2020-03-29T22:13:29.107+00:00",
-    "source": "#EkKQDHND8o8XJZmz"
+    "versionId": "8",
+    "lastUpdated": "2020-04-03T03:30:45.226+00:00",
+    "source": "#BdIwr34BRFmdA7xG"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is resource text</div>"
   },
   "url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-task4",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "PAOtask4",
   "title": "PAO Task Profile",
   "status": "active",
@@ -29,7 +29,6 @@
     }
   ],
   "description": "Post Acute Orders Task Profile",
-  "purpose": "Post Acute Orders Task Profile Purpose",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

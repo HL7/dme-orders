@@ -2,14 +2,15 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAO-message-definition4b",
 	"meta": {
-		"versionId": "10",
-		"lastUpdated": "2020-04-02T11:08:33.432+00:00",
-		"source": "#Re6HtuemytGNCuVn"
+		"versionId": "11",
+		"lastUpdated": "2020-04-03T03:23:55.565+00:00",
+		"source": "#eDOylPl2cqjMcOTw"
 	},
 	"text": {
 		"status": "additional",
 		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This will be resource text</div>"
 	},
+	"extension": [],
 	"url": "http://hl7.org/fhir/us/dme-orders/PAO-message-definition4b",
 	"version": "0.0.1",
 	"name": "PAOMessageDefinition4b",

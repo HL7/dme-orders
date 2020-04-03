@@ -1,0 +1,7 @@
+I"
+<p>Post Acute Orders MessageHeader Profile</p>
+
+<p>This profiles is used to order, update, cancel and query the status of an order</p>
+
+<p>It requires the consistant use of identifiers to ensure that any actions targeted at a prior order affect that order only.</p>
+:ET

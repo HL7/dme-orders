@@ -3,15 +3,15 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="PAO-provenance4b"/>
   <meta>
-    <versionId value="9"/>
-    <lastUpdated value="2020-03-29T14:59:57.766+00:00"/>
-    <source value="#ssBxAPMCbaZt7QlR"/>
+    <versionId value="10"/>
+    <lastUpdated value="2020-04-03T03:27:14.797+00:00"/>
+    <source value="#hKErNFayemqiw1vM"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="box-sizing: border-box; color: rgb(33, 37, 41); font-family: -apple-system,BlinkMacSystemFont,&amp;quot;Segoe UI&amp;quot;,Roboto,&amp;quot;Helvetica Neue&amp;quot;,Arial,&amp;quot;Noto Sans&amp;quot;,sans-serif,&amp;quot;Apple Color Emoji&amp;quot;,&amp;quot;Segoe UI Emoji&amp;quot;,&amp;quot;Segoe UI Symbol&amp;quot;,&amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">This is resource text</div></div>
   </text>
   <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAO-provenance4b"/>
-  <version value="0.1.0"/>
+  <version value="0.1.1"/>
   <name value="PAOprovenance4b"/>
   <title value="PAO Provenance Profile 4b"/>
   <status value="active"/>
@@ -24,7 +24,7 @@
       <value value="http://www.hl7.org/Special/committees/orders"/>
     </telecom>
   </contact>
-  <description value="Provenance Profile"/>
+  <description value="PAO Provenance Profile based on US Core"/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="workflow"/>
