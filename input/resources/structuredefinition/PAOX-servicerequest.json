@@ -1,0 +1,241 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAOX-servicerequest",
+	"meta": {
+		"versionId": "7",
+		"lastUpdated": "2020-07-29T03:01:18.983+00:00",
+		"source": "#ULBKmbcnGI8uedUu"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Overview</h2>\n    <p><strong>Name:</strong> PAOxServiceRequest</p>\n    <p><strong>Title:</strong> PAO ServiceRequest</p>\n    <p><strong>Status:</strong> Active</p>\n    <p><strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-servicerequest</p>\n    <p><strong>Publisher:</strong> HL7</p>\n\n<h2>Elements</h2>\n<table>\n    <thead>\n    <tr>\n        <th>Path</th>\n        <th>Slice</th>\n        <th>Min</th>\n        <th>Max</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>ServiceRequest</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    </tbody>\n</table>\n</div>"
+	},
+	"extension": [],
+	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-servicerequest",
+	"version": "0.0.1",
+	"name": "PAOxServiceRequest",
+	"title": "PAO ServiceRequest",
+	"status": "active",
+	"publisher": "HL7",
+	"description": "This resource is used to \"order\" services (e.g. non-DME (device) and non-medications).\n\nFor this version of the IG, it is used primarily to order Home Health Services.",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US"
+				}
+			]
+		}
+	],
+	"purpose": "Purpose",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "ServiceRequest",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "ServiceRequest",
+				"path": "ServiceRequest"
+			},
+			{
+				"id": "ServiceRequest.identifier",
+				"path": "ServiceRequest.identifier",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.replaces",
+				"path": "ServiceRequest.replaces",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-servicerequest"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.status",
+				"path": "ServiceRequest.status",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.intent",
+				"path": "ServiceRequest.intent",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.category",
+				"path": "ServiceRequest.category",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.priority",
+				"path": "ServiceRequest.priority",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.code",
+				"path": "ServiceRequest.code",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.orderDetail",
+				"path": "ServiceRequest.orderDetail",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.subject",
+				"path": "ServiceRequest.subject",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.encounter",
+				"path": "ServiceRequest.encounter",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.occurrence[x]",
+				"path": "ServiceRequest.occurrence[x]",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.asNeeded[x]",
+				"path": "ServiceRequest.asNeeded[x]",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.authoredOn",
+				"path": "ServiceRequest.authoredOn",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.requester",
+				"path": "ServiceRequest.requester",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.performer",
+				"path": "ServiceRequest.performer",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+						]
+					}
+				]
+			},
+			{
+				"id": "ServiceRequest.locationCode",
+				"path": "ServiceRequest.locationCode",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.locationReference",
+				"path": "ServiceRequest.locationReference",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+						]
+					}
+				],
+				"mustSupport": false
+			},
+			{
+				"id": "ServiceRequest.reasonCode",
+				"path": "ServiceRequest.reasonCode",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.reasonReference",
+				"path": "ServiceRequest.reasonReference",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.insurance",
+				"path": "ServiceRequest.insurance",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-coverage"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.supportingInfo",
+				"path": "ServiceRequest.supportingInfo",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.bodySite",
+				"path": "ServiceRequest.bodySite",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.note",
+				"path": "ServiceRequest.note",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.patientInstruction",
+				"path": "ServiceRequest.patientInstruction",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.relevantHistory",
+				"path": "ServiceRequest.relevantHistory",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-provenance"
+						]
+					}
+				],
+				"mustSupport": true
+			}
+		]
+	}
+}
