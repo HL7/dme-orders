@@ -1,9 +1,9 @@
 {
 	"id": "post-acute-order-exchange",
 	"meta": {
-		"versionId": "112",
-		"lastUpdated": "2020-07-30T13:48:52.606+00:00",
-		"source": "#Gz4GObEsSqd8fUfa"
+		"versionId": "120",
+		"lastUpdated": "2020-08-01T18:36:53.061+00:00",
+		"source": "#8sIgxUDYGxx8bZXI"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -11,7 +11,7 @@
 		"4.0.1"
 	],
 	"url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-order-exchange",
-	"version": "0.2.1b",
+	"version": "0.2.1c",
 	"name": "PostAcuteOrderExchange",
 	"title": "Post-Acute Orders (PAO)",
 	"publisher": "HL7",
@@ -231,6 +231,21 @@
 				},
 				"name": "PAO Order Detail Extension",
 				"description": "Order detail extension"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Practitioner/practitioner-1"
+				},
+				"name": "Practitioner-1"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Organization/saint-luke-w-endpoint",
+					"display": "Saint Luke's Hospital of Kansas City"
+				},
+				"name": "Saint Luke's Hospital of Kansas City"
 			}
 		],
 		"page": {
