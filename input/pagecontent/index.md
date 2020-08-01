@@ -1,27 +1,50 @@
-This specification uses the abbreviation PAO for Post-Acute Orders.
-Rendering provider in this specification means the individual or organization that is responsible for providing the services, devices, and/or medications specified in the order.
- This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process. 
-Feedback is welcome and may be submitted as a Jira ticket indicating PAO as the specification. 
-This implementation guide is dependent on other specifications. Please submit any comments you have on these base specifications as follows: 
-* 	Feedback on the FHIR core specification should be submitted as a Jira ticket with "FHIR Core" as the specification.
-* 	Feedback on the US core profiles should be submitted as a Jira ticket with "US Core" as the specification.
+### Overview
 
-# Content and Organization of this Implementation Guide
-The implementation guide is organized into the following sections:
-* 	**Home** this page – describes the overall organization of the Implementation Guide
-* 	**Background** describes current environment and the intent of the implementation guide.  It also covers items that are: 1) in scope, 2) out of scope, 3) business requirements, and 4) clinical requirements
-* 	**Workflow** defines the overall exchange of information between the ordering provider and the rendering provider.  Flows are defined both with and without an intermediary
-* 	**Submission of Orders** defines the order submission process using messaging
-* 	**Message Bundles** defines the content of the message bundles defined in this implementation guide.
-* 	**Technical Background** describes the different specifications this implementation guide relies on and indicates what developers should read and understand prior to implementing this specification
-* 	**FHIR Artifacts Overview** covers the type of FHIR artifacts that are included in this implementation guide
-* 	**Must Support and Missing Data** describes the required treatment of elements with a Must Support flag and how to handle Missing Data 
-* 	**Artifacts** The Artifacts section introduce and provides links to the FHIR R4 profiles, extension, code systems, value sets and other FHIR artifacts used in this implementation guide
+# General
+This is a FHIR R4 Implementation Guide to support the electronic exchange of post-acute orders, along with the exchange of supporting documentation between the ordering provider and the specific supplier.
+* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.
+* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.
 
-# Dependencies
-This implementation guide relies on the following other specifications:
-* 	**FHIR R4** - The current official version of FHIR as of the time this implementation guide was published. See the background page for key pieces of this specification implementers should be familiar with.
-* 	**US Core STU3** - The current official version of US Core based on FHIR R4.
+This implementation guide is the result of work sponsored by CMS's Center for Program Integrity, whose goal is to advance the ability for providers to supply services that are medically necessary and appropriate to Medicare Beneficiaries. By enabling providers to communicate orders and supporting documentation in real-time to suppliers, beneficiaries can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements.
+
+# Note to balloters 
+**Please comment on the existing material and not on items that are know issues or to-dos (these will be addressed in the STU ballot version planned for the Septemeber Ballot Cycle)
+There is a section of the IG (Requests to Balloters) that solicits feedback from balloters on items of interest to the authors -- please respond with your recommedations**
+
+# Feedback
+Comments and suggestions are welcome on our Zulip stream...
+or send a note to rdieterle@enablecare.us
+
+# Change log
+* **0.1.1 (this version):** QA version for the May 2020 ballot cycle
+
+     Note: prior changes consolided into this Ballot for Comment version
+
+# Known issues and to-dos
+* Complex extensions are defined but not added to DeviceRequest, ServiceRequest and MedicationRequest
+* Will add examples during ballot reconciliation
+* Will add specific terminologies and value sets for post-acute orders during ballot reconcilliation
 
 
-[Next Page - Background](background.html)
+
+### Authors
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HL7 International - Orders and Observations</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+[Next Page - Post-Acute Orders Home](Post-AcuteOrdersHome.html)
