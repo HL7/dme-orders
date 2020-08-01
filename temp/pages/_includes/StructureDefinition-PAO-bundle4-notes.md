@@ -1,1 +1,0 @@
-The notes section will be expanded in the STU version
