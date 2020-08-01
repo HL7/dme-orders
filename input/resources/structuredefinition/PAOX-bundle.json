@@ -1,0 +1,117 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAOX-bundle",
+	"meta": {
+		"versionId": "19",
+		"lastUpdated": "2020-07-29T03:08:39.707+00:00",
+		"source": "#CbvDgqVGgjlwMC59"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Overview</h2>\n    <p><strong>Name:</strong> PAOxBundle</p>\n    <p><strong>Title:</strong> PAOx Bundle Profile</p>\n    <p><strong>Status:</strong> Active</p>\n    <p><strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-bundle</p>\n    <p><strong>Publisher:</strong> HL7</p>\n\n<h2>Elements</h2>\n<table>\n    <thead>\n    <tr>\n        <th>Path</th>\n        <th>Slice</th>\n        <th>Min</th>\n        <th>Max</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>Bundle</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    <tr>\n        <td>Bundle.identifier</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    <tr>\n        <td>Bundle.type</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    <tr>\n        <td>Bundle.timestamp</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    <tr>\n        <td>Bundle.entry</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    </tbody>\n</table>\n</div>"
+	},
+	"extension": [],
+	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-bundle",
+	"version": "0.0.1",
+	"name": "PAOxBundle",
+	"title": "PAO Bundle",
+	"status": "active",
+	"publisher": "HL7",
+	"description": "PAO Bundle profile includes a MessageHeader, Task, Subscription, service/device/medication order(s) and supporting documentation",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US"
+				}
+			]
+		}
+	],
+	"purpose": "Purpose",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Bundle",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Bundle",
+				"path": "Bundle"
+			},
+			{
+				"id": "Bundle.identifier",
+				"path": "Bundle.identifier",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Bundle.identifier.id",
+				"path": "Bundle.identifier.id",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Bundle.identifier.value",
+				"path": "Bundle.identifier.value",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Bundle.type",
+				"path": "Bundle.type",
+				"fixedCode": "message",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/ValueSet/bundle-type"
+				}
+			},
+			{
+				"id": "Bundle.timestamp",
+				"path": "Bundle.timestamp",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Bundle.entry",
+				"path": "Bundle.entry",
+				"slicing": {
+					"description": "Must have one entry for the MessageHeader and May have entries for other resources in the bundle",
+					"rules": "open"
+				},
+				"min": 1,
+				"max": "*",
+				"mustSupport": true
+			},
+			{
+				"id": "Bundle.entry:MessageHeader",
+				"path": "Bundle.entry",
+				"sliceName": "MessageHeader",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Bundle.entry:MessageHeader.resource",
+				"path": "Bundle.entry.resource",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Resource",
+						"profile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-messageheader"
+						]
+					}
+				],
+				"mustSupport": true
+			}
+		]
+	}
+}
