@@ -1,0 +1,160 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAOX-messageheader",
+	"meta": {
+		"versionId": "26",
+		"lastUpdated": "2020-07-31T03:21:24.720+00:00",
+		"source": "#PU69Lchm0ohTkic1"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Overview</h2>\n    <p><strong>Name:</strong> PAOxMessageHeader</p>\n    <p><strong>Title:</strong> PAO MessageHeader</p>\n    <p><strong>Status:</strong> Active</p>\n    <p><strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-messageheader</p>\n    <p><strong>Publisher:</strong> HL7</p>\n\n<h2>Elements</h2>\n<table>\n    <thead>\n    <tr>\n        <th>Path</th>\n        <th>Slice</th>\n        <th>Min</th>\n        <th>Max</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>MessageHeader</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    <tr>\n        <td>MessageHeader.event[x]</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    <tr>\n        <td>MessageHeader.destination</td>\n        <td/>\n        <td>1</td>\n        <td/>\n    </tr>\n    <tr>\n        <td>MessageHeader.sender</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    <tr>\n        <td>MessageHeader.destination.endpoint</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    <tr>\n        <td>MessageHeader.destination.receiver</td>\n        <td/>\n        <td>1</td>\n        <td/>\n    </tr>\n    </tbody>\n</table>\n</div>"
+	},
+	"extension": [],
+	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-messageheader",
+	"version": "0.0.1",
+	"name": "PAOxMessageHeader",
+	"title": "PAO MessageHeader",
+	"status": "active",
+	"publisher": "HL7",
+	"description": "PAO MessageHeader Resource Profile\nThis profiles is used to order, update, cancel and query the status of an order\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affectonly that order.",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US"
+				}
+			]
+		}
+	],
+	"purpose": "Purpose",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "MessageHeader",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/MessageHeader",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "MessageHeader",
+				"path": "MessageHeader"
+			},
+			{
+				"id": "MessageHeader.event[x]",
+				"path": "MessageHeader.event[x]",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/us/dme-orders/ValueSet/PAOx-Message-Event"
+				}
+			},
+			{
+				"id": "MessageHeader.destination",
+				"path": "MessageHeader.destination",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "MessageHeader.destination.receiver",
+				"path": "MessageHeader.destination.receiver",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "MessageHeader.sender",
+				"path": "MessageHeader.sender",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "MessageHeader.enterer",
+				"path": "MessageHeader.enterer",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "MessageHeader.author",
+				"path": "MessageHeader.author",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "MessageHeader.source",
+				"path": "MessageHeader.source",
+				"mustSupport": true
+			},
+			{
+				"id": "MessageHeader.responsible",
+				"path": "MessageHeader.responsible",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "MessageHeader.response",
+				"path": "MessageHeader.response",
+				"mustSupport": true
+			},
+			{
+				"id": "MessageHeader.focus",
+				"path": "MessageHeader.focus",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-task",
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-subscription",
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicerequest",
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-medication-request",
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-servicerequest"
+						]
+					}
+				],
+				"mustSupport": true
+			}
+		]
+	}
+}

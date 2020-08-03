@@ -1,0 +1,104 @@
+{
+	"resourceType": "ServiceRequest",
+	"id": "PAO-sr1",
+	"meta": {
+		"versionId": "5",
+		"lastUpdated": "2020-08-02T23:13:17.646+00:00",
+		"source": "#hL0ux0YiaatUiqwT",
+		"profile": [
+			"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-servicerequest"
+		]
+	},
+	"identifier": [
+		{
+			"value": "56ae5855-9f20-41e4-a59d-000e36d9d85a"
+		}
+	],
+	"status": "completed",
+	"intent": "order",
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://snomed.info/sct",
+					"code": "108252007",
+					"display": "Laboratory procedure"
+				}
+			]
+		}
+	],
+	"priority": "stat",
+	"code": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "359962006"
+			}
+		]
+	},
+	"orderDetail": [
+		{
+			"coding": [
+				{
+					"system": "http://snomed.info/sct",
+					"code": "248153007",
+					"display": "Male"
+				},
+				{
+					"system": "http://snomed.info/sct",
+					"code": "13645005",
+					"display": "Chronic obstructive lung disease"
+				},
+				{
+					"system": "http://snomed.info/sct",
+					"code": "128975004",
+					"display": "Resting state"
+				},
+				{
+					"system": "http://snomed.info/sct",
+					"code": "336621006",
+					"display": "Oxygen concentrator"
+				},
+				{
+					"system": "http://snomed.info/sct",
+					"code": "336623009",
+					"display": "Oxygen nasal cannula"
+				},
+				{
+					"system": "http://snomed.info/sct",
+					"code": "721963009",
+					"display": "Order"
+				}
+			]
+		}
+	],
+	"subject": {
+		"reference": "Patient/example1",
+		"display": "Amy Shaw"
+	},
+	"encounter": {
+		"reference": "Encounter/example-1"
+	},
+	"occurrenceDateTime": "2013-05-08T09:33:27+07:00",
+	"authoredOn": "2020-04-05",
+	"requester": {
+		"reference": "Practitioner/practitioner-1",
+		"display": "Ronald Bone, MD"
+	},
+	"supportingInfo": [
+		{
+			"reference": "Observation/blood-glucose"
+		}
+	],
+	"bodySite": [
+		{
+			"text": "some body site text"
+		}
+	],
+	"note": [
+		{
+			"text": "It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)"
+		}
+	],
+	"patientInstruction": "Test patient instruction"
+}
