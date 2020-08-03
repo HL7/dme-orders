@@ -1,9 +1,9 @@
 {
 	"id": "post-acute-order-exchange",
 	"meta": {
-		"versionId": "120",
-		"lastUpdated": "2020-08-01T18:36:53.061+00:00",
-		"source": "#8sIgxUDYGxx8bZXI"
+		"versionId": "168",
+		"lastUpdated": "2020-08-03T01:39:50.612+00:00",
+		"source": "#Q38ZfVu9XNFata9F"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -11,7 +11,7 @@
 		"4.0.1"
 	],
 	"url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-order-exchange",
-	"version": "0.2.1c",
+	"version": "0.2.1d",
 	"name": "PostAcuteOrderExchange",
 	"title": "Post-Acute Orders (PAO)",
 	"publisher": "HL7",
@@ -233,19 +233,205 @@
 				"description": "Order detail extension"
 			},
 			{
+				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
 					"reference": "Practitioner/practitioner-1"
 				},
-				"name": "Practitioner-1"
+				"name": "Practitioner-1",
+				"description": "Practitioner 1 resource from US Core 4"
 			},
 			{
+				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
 					"reference": "Organization/saint-luke-w-endpoint",
 					"display": "Saint Luke's Hospital of Kansas City"
 				},
-				"name": "Saint Luke's Hospital of Kansas City"
+				"name": "Saint Luke's Hospital of Kansas City",
+				"description": "Organization resource from US Core 4"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Practitioner/practitioner-2"
+				},
+				"name": "Practitioner-2",
+				"description": "Practitioner 2 resource from US Core 4"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Bundle/uscore-mo3"
+				},
+				"name": "Bundle example",
+				"description": "Copy of US Core Bundle example"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Location/hl7east",
+					"display": "Health Level Seven International - Amherst"
+				},
+				"name": "Health Level Seven International - Amherst",
+				"description": "Copy of US Core Location example"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MedicationRequest/uscore-mo1"
+				},
+				"name": "MedicationRequest Example 1",
+				"description": "Copy of US Core MedicationRequest example"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Medication/uscore-med1"
+				},
+				"name": "Medication Example",
+				"description": "Copy of US Core Medication example"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Organization/example-organization-2",
+					"display": "Acme Clinic"
+				},
+				"name": "Acme Clinic",
+				"description": "Copy of US Core Organization example"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Encounter/example-1"
+				},
+				"name": "Encounter Example",
+				"description": "Copy of US Core Encounter example"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Patient/example1"
+				},
+				"name": "Patient Amy Shaw",
+				"description": "Copy of US Core patient"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MedicationRequest/uscore-mo2"
+				},
+				"name": "Medication Request 2",
+				"description": "Copy of US Core MedicationRequest 2"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Medication/uscore-med2"
+				},
+				"name": "Medication Example 2",
+				"description": "Copy of US Core Medication 2"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Encounter/Encounter-IP"
+				},
+				"name": "Encounter IP Example",
+				"description": "Inpatient Encounter Example based on the US Core Encounter 1036"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Practitioner/practitioner01"
+				},
+				"name": "Practitioner01 Example",
+				"description": "Practitioner01 from DEQM with profile set to US Core"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MedicationRequest/PAO-mo1"
+				},
+				"name": "PAO Medication Request",
+				"description": "PAO Medication Request based on mo1"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Subscription/PAO-Subscription"
+				},
+				"name": "PAO Subscription Example",
+				"description": "PAO Subscription Example"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MessageHeader/PAO-MessageHeader"
+				},
+				"name": "PAO MessageHeader Example",
+				"description": "PAO MessageHeader Example"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "ServiceRequest/PAO-sr1"
+				},
+				"name": "PAO ServiceRequest",
+				"description": "PAO ServiceRequest Example 1"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Observation/blood-glucose"
+				},
+				"name": "Observation Blood Glucose",
+				"description": "Observation Blood Glucose"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Provenance/example"
+				},
+				"name": "Provenance Example",
+				"description": "Provenance Example"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Coverage/example"
+				},
+				"name": "Coverage Example",
+				"description": "Coverage Example"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Bundle/Initial-Order"
+				},
+				"name": "Bundle Initial Order",
+				"description": "Bundle Initial Order"
 			}
 		],
 		"page": {

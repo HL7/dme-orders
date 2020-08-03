@@ -1,17 +1,17 @@
 {
 	"resourceType": "Practitioner",
-	"id": "practitioner-1",
+	"id": "practitioner01",
 	"meta": {
-		"versionId": "7",
-		"lastUpdated": "2020-08-01T23:09:14.506+00:00",
-		"source": "#HRpeBXwDQqWPoll4",
+		"versionId": "2",
+		"lastUpdated": "2020-08-02T13:26:49.306+00:00",
+		"source": "#q9kjGNJnglrmGbxY",
 		"profile": [
 			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
 		]
 	},
 	"text": {
 		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: practitioner-1</p><p><b>meta</b>: </p><p><b>identifier</b>: 9941339108, 25456</p><p><b>name</b>: Ronald Bone </p><p><b>address</b>: 1003 Healthcare Drive Amherst MA 01002 (HOME)</p></div>"
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: practitioner01</p><p><b>meta</b>: </p><p><b>identifier</b>: Provider number = 345678912 (OFFICIAL), Provider number = 082583 (SECONDARY)</p><p><b>name</b>: Ronald Bone </p><p><b>address</b>: 1003 Healthcare Drive Amherst MA 01002 (HOME)</p></div>"
 	},
 	"identifier": [
 		{
