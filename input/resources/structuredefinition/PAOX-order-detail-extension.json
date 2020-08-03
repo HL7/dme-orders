@@ -1,0 +1,103 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAOX-order-detail-extension",
+	"meta": {
+		"versionId": "25",
+		"lastUpdated": "2020-07-27T16:49:56.648+00:00",
+		"source": "#jH6xFxxyPEq0vfnH"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Overview</h2>\n    <p><strong>Name:</strong> PAOxOrderDetailExtension</p>\n    <p><strong>Title:</strong> PAO Order Detail Extension</p>\n    <p><strong>Status:</strong> Active</p>\n    <p><strong>URL:</strong> http://fhir.org/fhir/us/dme-orders/StructureDefinition/PAOX-order-detail-extension</p>\n    <p><strong>Publisher:</strong> HL7</p>\n\n<h2>Elements</h2>\n<table>\n    <thead>\n    <tr>\n        <th>Path</th>\n        <th>Slice</th>\n        <th>Min</th>\n        <th>Max</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>Extension</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    </tbody>\n</table>\n</div>"
+	},
+	"url": "http://fhir.org/fhir/us/dme-orders/StructureDefinition/PAOX-order-detail-extension",
+	"version": "0.0.1",
+	"name": "PAOxOrderDetailExtension",
+	"title": "PAO Order Detail Extension",
+	"status": "active",
+	"publisher": "HL7",
+	"description": "Order detail extension",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US"
+				}
+			]
+		}
+	],
+	"fhirVersion": "4.0.1",
+	"kind": "complex-type",
+	"abstract": false,
+	"context": [
+		{
+			"type": "extension",
+			"expression": "Extension for order details"
+		}
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension",
+				"path": "Extension"
+			},
+			{
+				"id": "Extension.extension",
+				"path": "Extension.extension",
+				"slicing": {
+					"description": "Each extension should include a quantity and an item",
+					"rules": "open"
+				},
+				"mustSupport": true
+			},
+			{
+				"id": "Extension.extension:Quantity",
+				"path": "Extension.extension",
+				"sliceName": "Quantity",
+				"min": 1,
+				"type": [
+					{
+						"code": "Extension"
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Extension.extension:Quantity.value[x]",
+				"path": "Extension.extension.value[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Quantity"
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Extension.extension:Item",
+				"path": "Extension.extension",
+				"sliceName": "Item",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Extension.extension:Item.value[x]",
+				"path": "Extension.extension.value[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"mustSupport": true
+			}
+		]
+	}
+}

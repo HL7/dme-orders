@@ -1,0 +1,60 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAOX-provenance",
+	"meta": {
+		"versionId": "9",
+		"lastUpdated": "2020-07-30T13:48:37.724+00:00",
+		"source": "#hKfd5KVIhf4bW09s"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Overview</h2>\n    <p><strong>Name:</strong> PAOXProvenance</p>\n    <p><strong>Title:</strong> PAOx Provenance Profile</p>\n    <p><strong>Status:</strong> Active</p>\n    <p><strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-provenance</p>\n    <p><strong>Publisher:</strong> HL7</p>\n\n<h2>Elements</h2>\n<table>\n    <thead>\n    <tr>\n        <th>Path</th>\n        <th>Slice</th>\n        <th>Min</th>\n        <th>Max</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>Provenance</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    </tbody>\n</table>\n</div>"
+	},
+	"extension": [],
+	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-provenance",
+	"version": "0.0.1",
+	"name": "PAOXProvenance",
+	"title": "PAO Provenance",
+	"status": "active",
+	"publisher": "HL7",
+	"description": "PAO Provenance Profile based on US Core",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US"
+				}
+			]
+		}
+	],
+	"purpose": "Purpose",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Provenance",
+				"path": "Provenance"
+			},
+			{
+				"id": "Provenance.target",
+				"path": "Provenance.target",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-medication-request",
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicerequest",
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-servicerequest"
+						]
+					}
+				]
+			}
+		]
+	}
+}
