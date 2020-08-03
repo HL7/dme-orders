@@ -6,7 +6,7 @@ The FHIR artifacts used by Post-acute Orders are organized, in this section, acc
 # Artifact Lists
 
 Post-acute Order specific Artifacts (do not have US Core R4 profiles)
-* [Bundle](http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-bundle)
+* [Bundle](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition/PAOX-bundle)
 * MessageHeader
 * MessageDefinition
 * Task
@@ -15,13 +15,13 @@ Post-acute Order specific Artifacts (do not have US Core R4 profiles)
 * ServiceRequest
 * Coverage
 
-US Core (3.0.0 - R4 based) profiles
-* MedicationRequest
+US Core (3.1.0 - R4 based) profiles
+* [MedicationRequest](https://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-medication-request.html)
 * Medication
 * Provenance
 
-US Core (3.0.0 - R4 based) profiles referenced by the above resources
-* Patient
+[US Core (3.1.0 - R4 based) profiles referenced by the above resources](https://build.fhir.org/ig/HL7/US-Core-R4/)
+* [Patient](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-us-core-patient.html)
 * Practitioner
 * PractitionerRole
 * Organization
