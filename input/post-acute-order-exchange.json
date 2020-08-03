@@ -1,9 +1,9 @@
 {
 	"id": "post-acute-order-exchange",
 	"meta": {
-		"versionId": "168",
-		"lastUpdated": "2020-08-03T01:39:50.612+00:00",
-		"source": "#Q38ZfVu9XNFata9F"
+		"versionId": "170",
+		"lastUpdated": "2020-08-03T02:53:39.896+00:00",
+		"source": "#5TBVQyVqY5DqmKya"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -124,7 +124,7 @@
 					"display": "PAOxDeviceRequest"
 				},
 				"name": "PAO DeviceRequest Profile",
-				"description": "PAO DeviceRequest Resource Profile",
+				"description": "Post Acute Orders DeviceRequest Profile Use to order DME and associated supplies",
 				"groupingId": "new-group1"
 			},
 			{

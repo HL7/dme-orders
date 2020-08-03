@@ -6,7 +6,7 @@ The FHIR artifacts used by Post-acute Orders are organized, in this section, acc
 # Artifact Lists
 
 Post-acute Order specific Artifacts (do not have US Core R4 profiles)
-* Bundle
+* [Bundle](http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-bundle)
 * MessageHeader
 * MessageDefinition
 * Task
