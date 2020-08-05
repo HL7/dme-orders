@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAOX-servicerequest",
 	"meta": {
-		"versionId": "7",
-		"lastUpdated": "2020-07-29T03:01:18.983+00:00",
-		"source": "#ULBKmbcnGI8uedUu"
+		"versionId": "8",
+		"lastUpdated": "2020-08-05T08:55:58.841+00:00",
+		"source": "#diH0rjjISxiz0yd5"
 	},
 	"text": {
 		"status": "additional",
@@ -67,6 +67,7 @@
 			{
 				"id": "ServiceRequest.intent",
 				"path": "ServiceRequest.intent",
+				"fixedCode": "order",
 				"mustSupport": true
 			},
 			{

@@ -2,13 +2,9 @@
 	"resourceType": "Encounter",
 	"id": "Encounter-IP",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2020-08-02T15:00:14.341+00:00",
-		"source": "#cdSyUFB1ymvMNN1a"
-	},
-	"text": {
-		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: 1036</p><p><b>status</b>: in-progress</p><p><b>class</b>: <span title=\"{http://terminology.hl7.org/CodeSystem/v3-ActCode IMP}\">inpatient encounter</span></p><p><b>subject</b>: <a>Generated Summary: id: example; Medical Record Number = 1032702 (USUAL); active; Amy V. Shaw , Amy V. Baxter ; ph: 555-555-5555(HOME); gender: female; birthDate: 1987-02-20</a></p></div>"
+		"versionId": "3",
+		"lastUpdated": "2020-08-04T03:58:05.689+00:00",
+		"source": "#cyhWUlSzHf4MhcJD"
 	},
 	"status": "in-progress",
 	"class": {

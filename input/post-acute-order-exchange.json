@@ -1,9 +1,9 @@
 {
 	"id": "post-acute-order-exchange",
 	"meta": {
-		"versionId": "173",
-		"lastUpdated": "2020-08-03T15:17:54.614+00:00",
-		"source": "#cggQLTKG39RCih4S"
+		"versionId": "210",
+		"lastUpdated": "2020-08-05T17:57:45.203+00:00",
+		"source": "#l3GA5eAJDBId27Pd"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -11,7 +11,7 @@
 		"4.0.1"
 	],
 	"url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-order-exchange",
-	"version": "0.2.1d",
+	"version": "0.2.1e",
 	"name": "PostAcuteOrderExchange",
 	"title": "Post-Acute Orders (PAO)",
 	"publisher": "HL7",
@@ -26,7 +26,7 @@
 			]
 		}
 	],
-	"description": "# General\nThis is a FHIR R4 Implementation Guide (IG) to support the electronic exchange of post-acute orders and referrals, along with the exchange of supporting documentation between the ordering provider and the specific rendering provider.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services.\n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is focused on enabling ordering providers to create, communicate and track orders and referrals in the post-acute setting. By enabling ordering providers to communicate supporting documentation in real-time to rendering providers, patients can receive appropriate treatment more rapidly and reduce the burden on rendering providers to comply with payer documentation requirements.\n\n# Change log\n* **0.2.0 :** Early version for the September 2020 ballot cycle (minor version 0.2.x) include successive inclusion of ballot for comment ticket resolutions\n* **0.3.0 :** QA version for the September 2020 ballot cycle\n \n  \n# Known issues and to-dos\n* Adding resolutions for all Jira trickets\n* Complex extensions are defined but not added to DeviceRequest, ServiceRequest and MedicationRequest\n* Working on adding both messaging and RESTful exchange using Task\n* Working on adding code systems and value sets where appropriate",
+	"description": "# General\nThis is a FHIR R4 Implementation Guide (IG) to support the electronic exchange of post-acute orders and referrals, along with the exchange of supporting documentation between the ordering provider and the specific rendering provider.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services. It is important to note that supporting DME also requires the support for medications associated with specific devices such as nebulizers and infusion pumps. It is the goal of future versions of this implementation guide to support orders for all post-acute services. \n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is focused on enabling ordering providers to create, communicate and track orders and referrals in the post-acute setting. By enabling ordering providers to communicate supporting documentation in real-time to rendering providers, patients can receive appropriate treatment more rapidly and reduce the burden on rendering providers to comply with payer documentation requirements.\n\n# Change log\n* **0.2.0 :** Early version for the September 2020 ballot cycle (minor version 0.2.x) include successive inclusion of ballot for comment ticket resolutions\n* **0.3.0 :** QA version for the September 2020 ballot cycle\n \n  \n# Known issues and to-dos\n* Working on adding both messaging and RESTful exchange using Task\n* Working on adding code systems and value sets where appropriate \n",
 	"jurisdiction": [
 		{
 			"coding": [
@@ -124,7 +124,7 @@
 					"display": "PAOxDeviceRequest"
 				},
 				"name": "PAO DeviceRequest Profile",
-				"description": "Post Acute Orders DeviceRequest Profile Use to order DME and associated supplies",
+				"description": "Post Acute Orders DeviceRequest Profile Use to order DME and associated supplies (supports identification of the device by using DeviceRequest.code as a CodableConcept, DeviceRequest.code as a as a Reference to the Device Resource, or as a reference to DeviceDefintion by using the optional extension.",
 				"groupingId": "new-group1"
 			},
 			{
@@ -428,10 +428,47 @@
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
-					"reference": "Bundle/Initial-Order"
+					"reference": "Task/example2"
 				},
-				"name": "Bundle Initial Order",
-				"description": "Bundle Initial Order"
+				"name": "Task example 2",
+				"description": "Task example 2"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "DeviceDefinition/example"
+				},
+				"name": "DeviceDefinition example",
+				"description": "DeviceDefinition example"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "DeviceRequest/insulinpump"
+				},
+				"name": "DeviceRequest insulin pump",
+				"description": "Device Request insulin pump"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Bundle/min-example"
+				},
+				"name": "Bundle minimum example",
+				"description": "Bundle minimum example"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-devicerequest-extension",
+					"display": "PAOxDeviceRequestExtension"
+				},
+				"name": "PAO Device Request Extension",
+				"description": "Extension to support DeviceDefinition"
 			}
 		],
 		"page": {
@@ -444,6 +481,12 @@
 					"extension": [],
 					"nameUrl": "background.html",
 					"title": "Background",
+					"generation": "markdown"
+				},
+				{
+					"extension": [],
+					"nameUrl": "security_and_privacy.html",
+					"title": "Security and Privacy",
 					"generation": "markdown"
 				},
 				{

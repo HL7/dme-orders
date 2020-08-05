@@ -2,16 +2,12 @@
 	"resourceType": "Organization",
 	"id": "example-organization-2",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2020-08-02T02:26:51.645+00:00",
-		"source": "#6cYfsW4nS8OUoOeL",
+		"versionId": "3",
+		"lastUpdated": "2020-08-04T04:26:40.912+00:00",
+		"source": "#p7ajR3hRNKFPEouN",
 		"profile": [
 			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
 		]
-	},
-	"text": {
-		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: example-organization-2</p><p><b>meta</b>: </p><p><b>identifier</b>: 1407071236, 121111111</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: Acme Clinic</p><p><b>telecom</b>: ph: (+1) 734-677-7777, customer-service@acme-clinic.org</p><p><b>address</b>: 3300 Washtenaw Avenue, Suite 227 Amherst MA 01002 USA </p></div>"
 	},
 	"identifier": [
 		{

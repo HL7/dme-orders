@@ -2,9 +2,9 @@
 	"resourceType": "ServiceRequest",
 	"id": "PAO-sr1",
 	"meta": {
-		"versionId": "5",
-		"lastUpdated": "2020-08-02T23:13:17.646+00:00",
-		"source": "#hL0ux0YiaatUiqwT",
+		"versionId": "6",
+		"lastUpdated": "2020-08-04T11:50:58.209+00:00",
+		"source": "#hWNhDv06ZcuqhJi2",
 		"profile": [
 			"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-servicerequest"
 		]
@@ -14,7 +14,7 @@
 			"value": "56ae5855-9f20-41e4-a59d-000e36d9d85a"
 		}
 	],
-	"status": "completed",
+	"status": "active",
 	"intent": "order",
 	"category": [
 		{

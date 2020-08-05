@@ -2,16 +2,16 @@
 	"resourceType": "Patient",
 	"id": "example1",
 	"meta": {
-		"versionId": "3",
-		"lastUpdated": "2020-08-02T14:26:12.148+00:00",
-		"source": "#ZQJz5AichrxsOK5K",
+		"versionId": "4",
+		"lastUpdated": "2020-08-04T04:17:49.442+00:00",
+		"source": "#i5okusPN2ZxPvsCJ",
 		"profile": [
 			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
 		]
 	},
 	"text": {
 		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: example</p><p><b>meta</b>: </p><p><b>identifier</b>: Medical Record Number = 1032702 (USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: Amy V. Shaw , Amy V. Baxter </p><p><b>telecom</b>: ph: 555-555-5555(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1987-02-20</p><p><b>address</b>: </p><ul><li>49 Meadow St Mounds OK 74047 US </li><li>183 Mountain View St Mounds OK 74048 US </li></ul></div>"
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Amy V. <b>SHAW </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>1032702</td></tr><tr><td>Address</td><td><span>49 Meadow St </span><br/><span>Mounds </span><span>OK </span><span>US </span></td></tr><tr><td>Date of birth</td><td><span>20 February 1987</span></td></tr></tbody></table></div>"
 	},
 	"extension": [
 		{

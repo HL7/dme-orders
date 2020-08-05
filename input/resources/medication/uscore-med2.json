@@ -2,16 +2,16 @@
 	"resourceType": "Medication",
 	"id": "uscore-med2",
 	"meta": {
-		"versionId": "3",
-		"lastUpdated": "2020-08-02T03:16:00.610+00:00",
-		"source": "#4wT0eMIhhch69BIl",
+		"versionId": "4",
+		"lastUpdated": "2020-08-04T04:17:21.128+00:00",
+		"source": "#hSSsoSpcZNpbzP4K",
 		"profile": [
 			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
 		]
 	},
 	"text": {
 		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: uscore-med2</p><p><b>meta</b>: </p><p><b>code</b>: <span title=\"Codes: {http://www.nlm.nih.gov/research/umls/rxnorm 582620}\">Nizatidine 15 MG/ML Oral Solution [Axid]</span></p></div>"
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Nizatidine 15 MG/ML Oral Solution [Axid]</div></div>"
 	},
 	"code": {
 		"coding": [

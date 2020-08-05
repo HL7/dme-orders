@@ -2,16 +2,16 @@
 	"resourceType": "Medication",
 	"id": "uscore-med1",
 	"meta": {
-		"versionId": "6",
-		"lastUpdated": "2020-08-02T23:26:14.356+00:00",
-		"source": "#4B5UyzlCV2k6AV5A",
+		"versionId": "7",
+		"lastUpdated": "2020-08-04T04:17:15.582+00:00",
+		"source": "#T6MCiTx3nF9trTOc",
 		"profile": [
 			"http://hl7.org/fhir/us/dme-orders/StructureDefintion/PAOX-Medication"
 		]
 	},
 	"text": {
 		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: uscore-med1</p><p><b>meta</b>: </p><p><b>code</b>: <span title=\"Codes: {http://www.nlm.nih.gov/research/umls/rxnorm 206765}\">lisinopril oral 10 mg</span></p></div>"
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">lisinopril oral 10 mg</div></div>"
 	},
 	"code": {
 		"coding": [

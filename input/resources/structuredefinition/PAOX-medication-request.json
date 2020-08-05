@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAOX-medication-request",
 	"meta": {
-		"versionId": "19",
-		"lastUpdated": "2020-07-30T13:56:34.236+00:00",
-		"source": "#jGcml5HWhH6pogcZ"
+		"versionId": "22",
+		"lastUpdated": "2020-08-05T09:00:05.179+00:00",
+		"source": "#sXuRVC6VdCCrF4MH"
 	},
 	"text": {
 		"status": "additional",
@@ -44,9 +44,29 @@
 				"mustSupport": true
 			},
 			{
+				"id": "MedicationRequest.intent",
+				"path": "MedicationRequest.intent",
+				"fixedCode": "order"
+			},
+			{
 				"id": "MedicationRequest.category",
 				"path": "MedicationRequest.category",
 				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.medication[x]",
+				"path": "MedicationRequest.medication[x]",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/dme-orders/StructureDefintion/PAOX-Medication"
+						]
+					},
+					{
+						"code": "CodeableConcept"
+					}
+				]
 			},
 			{
 				"id": "MedicationRequest.subject",

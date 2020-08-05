@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAOX-devicerequest",
 	"meta": {
-		"versionId": "6",
-		"lastUpdated": "2020-07-29T03:05:18.174+00:00",
-		"source": "#cNgvX1r991EpCJDS"
+		"versionId": "11",
+		"lastUpdated": "2020-08-05T08:54:51.335+00:00",
+		"source": "#N4biXmaYkrvs8CKo"
 	},
 	"text": {
 		"status": "additional",
@@ -42,8 +42,21 @@
 				"path": "DeviceRequest"
 			},
 			{
-				"id": "DeviceRequest.code[x]",
-				"path": "DeviceRequest.code[x]",
+				"id": "DeviceRequest.intent",
+				"path": "DeviceRequest.intent",
+				"fixedCode": "order"
+			},
+			{
+				"id": "DeviceRequest.encounter",
+				"path": "DeviceRequest.encounter",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+						]
+					}
+				],
 				"mustSupport": true
 			}
 		]

@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAOX-task",
 	"meta": {
-		"versionId": "7",
-		"lastUpdated": "2020-07-29T02:28:53.341+00:00",
-		"source": "#c2UufYjcTjgHp4xf"
+		"versionId": "8",
+		"lastUpdated": "2020-08-05T08:19:15.989+00:00",
+		"source": "#Qz81vmHR4LOP3Y1G"
 	},
 	"text": {
 		"status": "additional",
@@ -102,7 +102,6 @@
 			{
 				"id": "Task.focus",
 				"path": "Task.focus",
-				"min": 1,
 				"type": [
 					{
 						"code": "Reference",
@@ -113,7 +112,7 @@
 						]
 					}
 				],
-				"mustSupport": true
+				"mustSupport": false
 			},
 			{
 				"id": "Task.for",
