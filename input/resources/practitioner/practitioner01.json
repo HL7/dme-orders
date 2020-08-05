@@ -1,0 +1,70 @@
+{
+	"resourceType": "Practitioner",
+	"id": "practitioner01",
+	"meta": {
+		"versionId": "4",
+		"lastUpdated": "2020-08-04T04:26:26.047+00:00",
+		"source": "#Phy1dBVbHwbpD1rz",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+		]
+	},
+	"identifier": [
+		{
+			"use": "official",
+			"type": {
+				"coding": [
+					{
+						"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+						"code": "PRN",
+						"display": "Provider number"
+					}
+				]
+			},
+			"system": "http://hl7.org/fhir/sid/us-npi",
+			"value": "345678912",
+			"assigner": {
+				"display": "www.cms.gov"
+			}
+		},
+		{
+			"use": "secondary",
+			"type": {
+				"coding": [
+					{
+						"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+						"code": "PRN",
+						"display": "Provider number"
+					}
+				]
+			},
+			"system": "urn:oid:2.16.840.1.113883.4.336",
+			"value": "082583",
+			"assigner": {
+				"display": "www.cms.gov"
+			}
+		}
+	],
+	"name": [
+		{
+			"family": "Bone",
+			"given": [
+				"Ronald"
+			],
+			"prefix": [
+				"Dr"
+			]
+		}
+	],
+	"address": [
+		{
+			"use": "home",
+			"line": [
+				"1003 Healthcare Drive"
+			],
+			"city": "Amherst",
+			"state": "MA",
+			"postalCode": "01002"
+		}
+	]
+}
