@@ -1,0 +1,86 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "PAOX-subscription",
+	"meta": {
+		"versionId": "5",
+		"lastUpdated": "2020-07-30T15:18:15.203+00:00",
+		"source": "#kQTq4szy8PDT4hb3"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Overview</h2>\n    <p><strong>Name:</strong> PAOxSubscription</p>\n    <p><strong>Title:</strong> PAO Subscription</p>\n    <p><strong>Status:</strong> Active</p>\n    <p><strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-subscription</p>\n    <p><strong>Publisher:</strong> HL7</p>\n\n<h2>Elements</h2>\n<table>\n    <thead>\n    <tr>\n        <th>Path</th>\n        <th>Slice</th>\n        <th>Min</th>\n        <th>Max</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>Subscription</td>\n        <td/>\n        <td/>\n        <td/>\n    </tr>\n    </tbody>\n</table>\n</div>"
+	},
+	"extension": [],
+	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-subscription",
+	"version": "0.0.1",
+	"name": "PAOxSubscription",
+	"title": "PAO Subscription",
+	"status": "active",
+	"publisher": "HL7",
+	"description": "PAO Subscription Resource Profile\nThe subscription resource should accompany the initial message bundle to provide a mechanism of informing the ordering provider when there is a change in the order as indicated by a change in the Task resorurce.\nThe subscriber has the option of receiving a notifiction when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US"
+				}
+			]
+		}
+	],
+	"purpose": "Purpose",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Subscription",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Subscription",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Subscription",
+				"path": "Subscription"
+			},
+			{
+				"id": "Subscription.status",
+				"path": "Subscription.status",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.reason",
+				"path": "Subscription.reason",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.criteria",
+				"path": "Subscription.criteria",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel",
+				"path": "Subscription.channel",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel.type",
+				"path": "Subscription.channel.type",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel.endpoint",
+				"path": "Subscription.channel.endpoint",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel.payload",
+				"path": "Subscription.channel.payload",
+				"mustSupport": true
+			},
+			{
+				"id": "Subscription.channel.header",
+				"path": "Subscription.channel.header",
+				"mustSupport": true
+			}
+		]
+	}
+}

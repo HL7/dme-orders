@@ -1,0 +1,53 @@
+{
+	"resourceType": "Practitioner",
+	"id": "practitioner-2",
+	"meta": {
+		"versionId": "5",
+		"lastUpdated": "2020-08-05T20:35:54.634+00:00",
+		"source": "#R7DxigwgyUxbhkNM",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+		]
+	},
+	"identifier": [
+		{
+			"system": "http://hl7.org/fhir/sid/us-npi",
+			"value": "1245319599"
+		}
+	],
+	"name": [
+		{
+			"family": "Kathy",
+			"given": [
+				"Fielding"
+			],
+			"prefix": [
+				"Dr"
+			]
+		}
+	],
+	"telecom": [
+		{
+			"extension": [
+				{
+					"url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
+					"valueBoolean": true
+				}
+			],
+			"system": "email",
+			"value": "Kathy.Fielding@direct.ExampleMedicalPractice.net",
+			"use": "work"
+		}
+	],
+	"address": [
+		{
+			"use": "work",
+			"line": [
+				"1080 FIRST COLONIAL RD"
+			],
+			"city": "Virginia Beach",
+			"state": "VA",
+			"postalCode": "21454-2406"
+		}
+	]
+}
