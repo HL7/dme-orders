@@ -1,0 +1,26 @@
+{
+	"resourceType": "Medication",
+	"id": "uscore-med1",
+	"meta": {
+		"versionId": "7",
+		"lastUpdated": "2020-08-04T04:17:15.582+00:00",
+		"source": "#T6MCiTx3nF9trTOc",
+		"profile": [
+			"http://hl7.org/fhir/us/dme-orders/StructureDefintion/PAOX-Medication"
+		]
+	},
+	"text": {
+		"status": "generated",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">lisinopril oral 10 mg</div></div>"
+	},
+	"code": {
+		"coding": [
+			{
+				"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+				"code": "206765",
+				"display": "Prinivil 10 MG Oral Tablet"
+			}
+		],
+		"text": "lisinopril oral 10 mg"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"resourceType": "ValueSet",
+	"id": "PAOX-Task-Code",
+	"meta": {
+		"versionId": "3",
+		"lastUpdated": "2020-07-27T02:12:56.409+00:00",
+		"source": "#lGjTQT9nQLTvMyMD"
+	},
+	"url": "http://hl7.org/fhir/us/dme-orders/ValueSet/PAOX-Task-Code",
+	"version": "0.0.1",
+	"name": "PAOxTaskCode",
+	"title": "PAO Task Code Value Set",
+	"status": "draft",
+	"description": "This the task.code value set -- uses same code systems as the base resource but restricts the codes and makes it extensible.",
+	"compose": {
+		"include": [
+			{
+				"system": "http://hl7.org/fhir/CodeSystem/task-code"
+			}
+		]
+	}
+}
