@@ -2,21 +2,17 @@
 	"resourceType": "Organization",
 	"id": "example-organization-2",
 	"meta": {
-		"versionId": "3",
-		"lastUpdated": "2020-08-04T04:26:40.912+00:00",
-		"source": "#p7ajR3hRNKFPEouN",
+		"versionId": "5",
+		"lastUpdated": "2020-08-05T20:24:38.142+00:00",
+		"source": "#2duEuuMvuNkfacmS",
 		"profile": [
 			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
 		]
 	},
 	"identifier": [
 		{
-			"system": "http://hl7.org.fhir/sid/us-npi",
+			"system": "http://hl7.org/fhir/sid/us-npi",
 			"value": "1407071236"
-		},
-		{
-			"system": "http://example.org/fhir/sid/us-tin",
-			"value": "121111111"
 		}
 	],
 	"active": true,

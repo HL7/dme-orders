@@ -2,25 +2,17 @@
 	"resourceType": "Organization",
 	"id": "saint-luke-w-endpoint",
 	"meta": {
-		"versionId": "7",
-		"lastUpdated": "2020-08-02T12:49:50.406+00:00",
-		"source": "#A8LhtcbkrkpEmeGL",
+		"versionId": "9",
+		"lastUpdated": "2020-08-05T20:29:37.902+00:00",
+		"source": "#HyyNvN2OPqCBam36",
 		"profile": [
 			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
 		]
 	},
-	"text": {
-		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <h1>Organization</h1>\n            <div>\n                <p>ID: 393872</p>\n                <p>Name: Saint Luke's Hospital of Kansas City </p>\n                <p>NPI: 1063494177</p>\n                <p>Phone:(816)932-2000</p>\n                <p>Address:4401 Wornall Rd,, MO, 64111</p>\n            </div>\n        </div>"
-	},
 	"identifier": [
 		{
-			"system": "http://example.org/fhir/sid/us-npi",
+			"system": "http://hl7.org/fhir/sid/us-npi",
 			"value": "1063494177"
-		},
-		{
-			"system": "http://example.org/fhir/us/argo/sid/us-ein",
-			"value": "00-0000000"
 		}
 	],
 	"active": true,

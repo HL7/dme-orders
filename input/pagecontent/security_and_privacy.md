@@ -1,4 +1,4 @@
-[Previous Page - Background](background.html)
+[Previous Page - Glossary](glossary.html)
 
 # Security and Privacy
 

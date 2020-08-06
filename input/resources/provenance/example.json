@@ -2,16 +2,12 @@
 	"resourceType": "Provenance",
 	"id": "example",
 	"meta": {
-		"versionId": "6",
-		"lastUpdated": "2020-08-03T01:24:05.818+00:00",
-		"source": "#PJZ9mtEjTYkg3oR8",
+		"versionId": "7",
+		"lastUpdated": "2020-08-05T21:51:05.005+00:00",
+		"source": "#hMolm45pLlokKYEw",
 		"profile": [
 			"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-provenance"
 		]
-	},
-	"text": {
-		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">procedure record authored on 27-June 2015 by Harold Hippocrates, MD Content extracted from Referral received 26-June</div>"
 	},
 	"target": [
 		{

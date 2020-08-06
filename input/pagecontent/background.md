@@ -52,4 +52,4 @@ This IG has been constructed in a manner that allows testing of conformance to:
 Note: Other standards are available or in process to communicate referral information between providers such as the [Bidirectional Services eReferrals (BSeR)](http://hl7.org/fhir/us/bser/2019May/BSeRMessagingWorkflow.html) that are patterned after the 360x referral process. The PAO IG is focused on a simple method to exchange and track post-acute orders and the supporting documentation. PAO supports both a messaging and RESTful method for exchanging and tracking post-acute care orders including orders for services not covered by BSeR such as DME.  In the future, we will harmonize the statuses defined in this guide with the state machine work in BSeR.
 
 
-[Next Page - Security and Privacy](security_and_privacy.html)
+[Next Page - Actors](actors.html)

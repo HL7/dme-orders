@@ -1,9 +1,9 @@
 {
 	"id": "post-acute-order-exchange",
 	"meta": {
-		"versionId": "210",
-		"lastUpdated": "2020-08-05T17:57:45.203+00:00",
-		"source": "#l3GA5eAJDBId27Pd"
+		"versionId": "223",
+		"lastUpdated": "2020-08-06T02:25:36.596+00:00",
+		"source": "#E7akTTAqsWaSJAld"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -11,7 +11,7 @@
 		"4.0.1"
 	],
 	"url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-order-exchange",
-	"version": "0.2.1e",
+	"version": "0.2.1f",
 	"name": "PostAcuteOrderExchange",
 	"title": "Post-Acute Orders (PAO)",
 	"publisher": "HL7",
@@ -264,15 +264,6 @@
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
-					"reference": "Bundle/uscore-mo3"
-				},
-				"name": "Bundle example",
-				"description": "Copy of US Core Bundle example"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
 					"reference": "Location/hl7east",
 					"display": "Health Level Seven International - Amherst"
 				},
@@ -453,15 +444,6 @@
 			},
 			{
 				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "Bundle/min-example"
-				},
-				"name": "Bundle minimum example",
-				"description": "Bundle minimum example"
-			},
-			{
-				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "StructureDefinition/PAOX-devicerequest-extension",
@@ -481,7 +463,21 @@
 					"extension": [],
 					"nameUrl": "background.html",
 					"title": "Background",
-					"generation": "markdown"
+					"generation": "markdown",
+					"page": [
+						{
+							"extension": [],
+							"nameUrl": "actors.html",
+							"title": "Actors",
+							"generation": "markdown"
+						},
+						{
+							"extension": [],
+							"nameUrl": "glossary.html",
+							"title": "Glossary",
+							"generation": "markdown"
+						}
+					]
 				},
 				{
 					"extension": [],
