@@ -7,9 +7,9 @@ The implementation guide is organized into the following sections:
 * 	**Index** this page – describes the overall organization of the Implementation Guide.
 * 	**[Background](http://build.fhir.org/ig/HL7/dme-orders/background.html)** describes current environment and the intent of the implementation guide.  It also covers items that are: 1) in scope, 2) out of scope, 3) business requirements, and 4) clinical requirements.
 * 	**[Security and Privacy](http://build.fhir.org/ig/HL7/dme-orders/security_and_privacy.html)**  – describes the security and privacy guidelines for use of this implementation guide.
-* 	**[Workflow](http://build.fhir.org/ig/HL7/dme-orders/workflow.html)** defines the overall exchange of information between the ordering provider and the rendering provider.  Flows are defined both with and without an intermediary.
-* 	**[Submission of Orders](http://build.fhir.org/ig/HL7/dme-orders/submission_of_orders.html)** defines the order submission process using messaging.
-* 	**[Message Bundles](http://build.fhir.org/ig/HL7/dme-orders/message_bundles.html)** defines the content of the message bundles defined in this implementation guide.
+* 	**[RESTful FHIR exchanges](http://build.fhir.org/ig/HL7/dme-orders/restful_exchanges.html)**  – describes the RESTful method of exchanging orders, updates and status.
+* 	**[FHIR Messaging exchanges](http://build.fhir.org/ig/HL7/dme-orders/restful_exchanges.html)**  – describes the use of FHIR messaging to exchanging orders, updates and status.
+* 	**[Mixed Intermediary exchanges](http://build.fhir.org/ig/HL7/dme-orders/restful_exchanges.html)**  – describes the use of both RESTful FHIR and FHIR messaging exchanges with an Intermediary.
 * 	**[Technical Background](http://build.fhir.org/ig/HL7/dme-orders/technical_background.html)** describes the different specifications this implementation guide relies on and indicates what developers should read and understand prior to implementing this specification.
 * 	**[FHIR Artifacts Overview](http://build.fhir.org/ig/HL7/dme-orders/fhir_artifacts_overview.html)** covers the type of FHIR artifacts that are included in this implementation guide.
 * 	**[Must Support and Missing Data](http://build.fhir.org/ig/HL7/dme-orders/must_support_and_missing_data.html)** describes the required treatment of elements with a Must Support flag and how to handle Missing Data .
@@ -21,7 +21,7 @@ This implementation guide relies on the following other specifications:
 * 	**[US Core STU 3.1.0](http://build.fhir.org/ig/HL7/US-Core-R4/)** - The current official version of US Core based on [FHIR R4](http://hl7.org/fhir//). 
 
 # Credits
-This work was sponsored by the Centers for Medicare and Medicaid Services (CMS) as part of a contract with ScopeInfotech to support the EMDI Project
+This work was sponsored by the Centers for Medicare and Medicaid Services (CMS) as part of a contract with ScopeInfotech to support the EMDI Project.
 This IG was developed under the auspices of the [Orders and Observations](http://www.hl7.org/Special/committees/orders/leadership.cfm) work group. Current work group co-chairs are:
 
 * 	**Hans Juitendijk** – Cerner Corportation

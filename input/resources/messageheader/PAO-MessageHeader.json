@@ -2,9 +2,9 @@
 	"resourceType": "MessageHeader",
 	"id": "PAO-MessageHeader",
 	"meta": {
-		"versionId": "5",
-		"lastUpdated": "2020-08-02T21:48:58.639+00:00",
-		"source": "#J9WEhiLZhTbsgdmY",
+		"versionId": "6",
+		"lastUpdated": "2020-08-06T11:32:56.296+00:00",
+		"source": "#zRgaNGaNUiS7T61p",
 		"profile": [
 			"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-messageheader"
 		]
@@ -48,7 +48,7 @@
 	},
 	"focus": [
 		{
-			"reference": "MedicationRequest/uscore-mo1",
+			"reference": "Task/example2",
 			"display": "Inpatient Encounter"
 		}
 	]

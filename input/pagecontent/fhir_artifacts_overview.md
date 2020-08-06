@@ -8,19 +8,19 @@ The FHIR artifacts used by Post-acute Orders are organized, in this section, bas
 
 **Post-acute Order specific Artifacts that do not have [US Core R4](http://build.fhir.org/ig/HL7/US-Core-R4/) profiles**
 
-* [Bundle](http://http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-bundle.html)
-* [MessageHeader](http://http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-messageheader.html)
-* [Task](http://http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-task.html)
-* [Subscription](http://http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-subscription.html)
-* [DeviceRequest](http://http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-devicerequest.html)
-* [ServiceRequest](http://http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-servicerequest.html)
-* [Coverage](http://http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-coverage.html)
+* [Bundle](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-bundle.html)
+* [MessageHeader](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-messageheader.html)
+* [Task](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-task.html)
+* [Subscription](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-subscription.html)
+* [DeviceRequest](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-devicerequest.html)
+* [ServiceRequest](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-servicerequest.html)
+* [Coverage](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-coverage.html)
 
 **Post-Acure Order specific Artifacts based on [US Core V3.1.0](http://) profiles**
 
-* [MedicationRequest](http://http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-medicationrequest.html)
-* [Medication](http://http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-Medication.html)
-* [Provenance](http://http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-provenance.html)
+* [MedicationRequest](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-medicationrequest.html)
+* [Medication](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-Medication.html)
+* [Provenance](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-provenance.html)
 
 **[US Core V3.1.0](http://build.fhir.org/ig/HL7/US-Core-R4) profiles referenced by the above resources**
 
@@ -35,7 +35,7 @@ Additional information about the use of these artifacts can be found in the rele
 **The artifacts are of four types**:
 
 * 	**[Profiles](http://www.hl7.org/fhir/profiling.html)** that constrain FHIR resources to reflect PAO requirements.
-* 	**[Extensions](http://https://www.hl7.org/fhir/extensibility.html)** that define additional data elements that can be conveyed as part of a resource.
+* 	**[Extensions](http://www.hl7.org/fhir/extensibility.html)** that define additional data elements that can be conveyed as part of a resource.
 * 	**[Code Systems](http://www.hl7.org/fhir/terminologies-systems.html)** that define PAO-specific terminologies to be used in one or more of the profiles.
 * 	**[Value Sets](http://www.hl7.org/fhir/terminologies-valuesets.html)** that define the specific subsets of both PAO-defined and other code systems that can be (or are recommended to be) used within one or more profile elements.
 * 	**[Operations](http:///www.hl7.org/fhir/operations.html)** that define the PAO-specific constraints on the [$processMessage](http://www.hl7.org/fhir/operation-messageheader-process-message.html) operation

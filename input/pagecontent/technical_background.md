@@ -1,13 +1,13 @@
-[Previous Page - Message Bundles](message_bundles.html)
+[Previous Page - Mixed intermediary exchange model](mixed_intermediary_exchange_model.html)
 
 # Systems
 The PAO implementation guide defines the responsibilities of the three types of systems involved in a Post-Acute Orders solution:
-* **Ordering Provider Systems:**  Systems that manage data on behalf of an ordering provider who is a source for data to be transferred
-* **Rendering Provider Systems:**  Systems that manage data on behalf of a rendering provider who is the intended recipient of transferred data.
-* **Intermediary Systems:** Systems that communicate with both the Ordering Provider Systems and the Rendering Provider Systems and provide appropriate rendering provider selection (in some cases in conjunction with the patient and or payer), translation services and, where necessary, order detail routing and integration.
+* **Ordering Provider Systems:**  Systems that manage data on behalf of an Ordering Provider who is a source for data to be transferred.
+* **Rendering Provider Systems:**  Systems that manage data on behalf of a Rendering Provider who is the intended recipient of transferred data.
+* **Intermediary Systems:** Systems that communicate with both the Ordering Provider Systems and the Rendering Provider Systems and provide appropriate Rendering Provider selection (in some cases in conjunction with the patient and or payer), translation services and, where necessary, order detail routing and integration.
 
 # Underlying technologies
-This guide is based on the [HL7 FHIR](http://http://www.hl7.org/implement/standards/product_brief.cfm?product_id=491) standard. Implementers of this specification therefore need to understand some basic information about these specifications.
+This guide is based on the [HL7 FHIR](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=491) standard. Implementers of this specification therefore need to understand some basic information about these specifications.
 
 **FHIR**
 
@@ -21,7 +21,7 @@ This implementation guide uses terminology, notations and design principles that
 * 	[How to read [resource](http://www.hl7.org/fhir/resourcelist.html) & [profile](http://www.hl7.org/fhir/profiling.html) definitions
 * 	[Base resource](http://www.hl7.org/fhir/STU3/resource.html)
 
-This implementation guide supports the [R4 version](http://http://hl7.org/fhir/) of the FHIR standard. R4 is recently published and the goal is to ensure the implementation guide is aligned with the current direction of the FHIR standard.
-Because this IG focuses on workflow issues between an ordering provider and the rendering provider, implementers should also familiarize themselves with the following FHIR resources and operations listed on the [FHIR Artifacts Overview](http://http://build.fhir.org/ig/HL7/dme-orders/fhir_artifacts_overview.html) page.
+This implementation guide supports the [R4 version](http://hl7.org/fhir/) of the FHIR standard. R4 is recently published and the goal is to ensure the implementation guide is aligned with the current direction of the FHIR standard.
+Because this IG focuses on workflow issues between an Ordering Provider and the Rendering Provider, implementers should also familiarize themselves with the FHIR resources and operations listed on the [FHIR Artifacts Overview](http://build.fhir.org/ig/HL7/dme-orders/fhir_artifacts_overview.html) page.
 
 [Next Page - FHIR Artifacts Overview](fhir_artifacts_overview.html)

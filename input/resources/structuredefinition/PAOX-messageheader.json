@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "PAOX-messageheader",
 	"meta": {
-		"versionId": "26",
-		"lastUpdated": "2020-07-31T03:21:24.720+00:00",
-		"source": "#PU69Lchm0ohTkic1"
+		"versionId": "28",
+		"lastUpdated": "2020-08-06T10:39:25.319+00:00",
+		"source": "#1sK4dPn5ExsmXbZM"
 	},
 	"text": {
 		"status": "additional",
@@ -12,7 +12,7 @@
 	},
 	"extension": [],
 	"url": "http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-messageheader",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"name": "PAOxMessageHeader",
 	"title": "PAO MessageHeader",
 	"status": "active",
@@ -145,11 +145,10 @@
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-task",
-							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-subscription",
 							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicerequest",
 							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-medication-request",
-							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-servicerequest"
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-servicerequest",
+							"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-task"
 						]
 					}
 				],

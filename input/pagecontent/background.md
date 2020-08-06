@@ -16,7 +16,7 @@ The goal is to provide for electronic ordering of Post-Acute DME and Home Health
 4.	Extension to exchange Prior-Authorization, Appropriate Use, Medical Review information  for DeviceRequest, ServiceRequest and MedicationRequest.
 5. 	Extension for orderable item details for ServiceRequest.
 6.	RESTful and Messaging based exchanges between the ordering and performing providers.
-7.	Exchange for supporting documentation to support the specific order or provide the rendering provider with information necessary to meet payer requirements.
+7.	Exchange of documentation to support the specific order or provide the rendering provider with information necessary to meet payer requirements.
 
 **Out-of-Scope**
 1.	Responses from the patient 
@@ -24,7 +24,7 @@ The goal is to provide for electronic ordering of Post-Acute DME and Home Health
 3.	Services other than DME (including medications) and  Home Health Services
 4.	Cost considerations
 5.	Partial fulfillment: status is included, but the details (which may require a conversation between the ordering and rendering provider) are out of scope
-6.	Documentation requests – if the performing provider needs additional documentation from the ordering provider that is not included in the exchanges defined in this IG, the authors suggest the use of the [Da Vinci Clinical Data Exchange (CDex) IG](http://build.fhir.org/ig/HL7/davinci-ecdx/index.html) which support clinical data exchange between provider as well as between a provider and a payer.
+6.	Documentation requests: The performing provider may need additional documentation from the ordering provider that is not included in the exchanges defined in this IG. The authors suggest the use of the [Da Vinci Clinical Data Exchange (CDex) IG](http://build.fhir.org/ig/HL7/davinci-ecdx/index.html), which supports clinical data exchange between two providers as well as between a provider and a payer.
 7.	This IG does not require the use of a digital signature for this version, but the optional use of provenance to support digital signatures in scope
 
 **Business Requirements**
