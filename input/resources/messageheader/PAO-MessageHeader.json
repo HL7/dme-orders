@@ -1,0 +1,55 @@
+{
+	"resourceType": "MessageHeader",
+	"id": "PAO-MessageHeader",
+	"meta": {
+		"versionId": "5",
+		"lastUpdated": "2020-08-02T21:48:58.639+00:00",
+		"source": "#J9WEhiLZhTbsgdmY",
+		"profile": [
+			"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-messageheader"
+		]
+	},
+	"eventCoding": {
+		"system": "http://hl7.org/fhir/us/dme-orders/CodeSystem/PAOX-Message-Event",
+		"code": "InitialOrder",
+		"display": "Initial Order"
+	},
+	"destination": [
+		{
+			"name": "Acme Message Gateway",
+			"endpoint": "https://example.org/Endpoints/P123",
+			"receiver": {
+				"reference": "Organization/saint-luke-w-endpoint",
+				"display": "Saint Luke W Destination"
+			}
+		}
+	],
+	"sender": {
+		"reference": "Organization/saint-luke-w-endpoint",
+		"display": "Saint Luke W Endpoint"
+	},
+	"author": {
+		"reference": "Practitioner/practitioner-1",
+		"display": "Ronald Bone"
+	},
+	"source": {
+		"name": "Acme Central Patient Registry",
+		"software": "FooBar Patient Manager",
+		"version": "3.1.45.AABB",
+		"contact": {
+			"system": "phone",
+			"value": "+1 (555) 123 4567"
+		},
+		"endpoint": "https://example.org/Endpoints/P456"
+	},
+	"responsible": {
+		"reference": "Organization/saint-luke-w-endpoint",
+		"display": "Saint Luke W Endpoint"
+	},
+	"focus": [
+		{
+			"reference": "MedicationRequest/uscore-mo1",
+			"display": "Inpatient Encounter"
+		}
+	]
+}
