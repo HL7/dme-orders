@@ -1,0 +1,93 @@
+{
+	"resourceType": "DeviceRequest",
+	"id": "insulinpump",
+	"meta": {
+		"versionId": "5",
+		"lastUpdated": "2020-08-09T22:34:37.025+00:00",
+		"source": "#LPqBxzLkw18ILZok",
+		"profile": [
+			"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicerequest"
+		]
+	},
+	"identifier": [
+		{
+			"value": "ip_request1.1"
+		}
+	],
+	"instantiatesCanonical": [
+		"http://motivemi.com/artifacts/PlanDefinition/low-suicide-risk-order-set"
+	],
+	"basedOn": [
+		{
+			"display": "Homecare - DM follow-up"
+		}
+	],
+	"priorRequest": [
+		{
+			"display": "CGM ambulatory"
+		}
+	],
+	"groupIdentifier": {
+		"value": "ip_request1"
+	},
+	"status": "active",
+	"intent": "order",
+	"priority": "routine",
+	"codeCodeableConcept": {
+		"coding": [
+			{
+				"system": "http://www.ama-assn.org/go/cpt",
+				"code": "E0784"
+			}
+		],
+		"text": "External ambulatory enfusion pump for insulin"
+	},
+	"subject": {
+		"reference": "Patient/example1"
+	},
+	"encounter": {
+		"display": "Ambulatory"
+	},
+	"occurrenceDateTime": "2013-05-08T09:33:27+07:00",
+	"authoredOn": "2013-05-08T09:33:27+07:00",
+	"requester": {
+		"reference": "Practitioner/practitioner-1",
+		"display": "Dr.Ronald Bone"
+	},
+	"performerType": {
+		"coding": [
+			{
+				"display": "Qualified nurse"
+			}
+		],
+		"text": "Nurse"
+	},
+	"performer": {
+		"display": "Nurse Rossignol"
+	},
+	"reasonCode": [
+		{
+			"text": "gastroparesis"
+		}
+	],
+	"reasonReference": [
+		{
+			"display": "Gastroparesis"
+		}
+	],
+	"supportingInfo": [
+		{
+			"display": "Previous results"
+		}
+	],
+	"note": [
+		{
+			"text": "this is the right device brand and model"
+		}
+	],
+	"relevantHistory": [
+		{
+			"display": "Request for unspecified device"
+		}
+	]
+}

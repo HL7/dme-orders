@@ -1,0 +1,43 @@
+{
+	"resourceType": "Location",
+	"id": "stmichael",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2020-08-09T04:03:57.874+00:00",
+		"source": "#xKY3lUN3BC4PISq4",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+		]
+	},
+	"identifier": [
+		{
+			"system": "http://www.acme.org/location",
+			"value": "29"
+		}
+	],
+	"status": "active",
+	"name": "St Michael Medical Center",
+	"description": "Overland Park Location",
+	"telecom": [
+		{
+			"system": "phone",
+			"value": "(+1) 913-666-7777"
+		}
+	],
+	"address": {
+		"line": [
+			"6666 135th Street"
+		],
+		"city": "Overland Park",
+		"state": "KS",
+		"postalCode": "66223",
+		"country": "USA"
+	},
+	"position": {
+		"longitude": -94.653759,
+		"latitude": 38.884082
+	},
+	"managingOrganization": {
+		"display": "St Michael Health System"
+	}
+}

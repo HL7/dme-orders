@@ -1,0 +1,9 @@
+[Previous Page - Background](background.html)
+
+# Actor Roles
+This Implementation Guide defines and uses a set of actor roles as follows:
+1. **Ordering Provider** – is responsible for originating the post-acute order, providing supporting documentation and sending the order to the Rendering Provider or an Intermediary
+2. **Rendering Provider** – is responsible for fulfilling the order, which may be supplying a device (e.g. DME supplier) or performing a health care service (e.g. Home Health Service)
+3. **Intermediary** – acts as the Rendering Provider in the exchange by receiving the order and providing any required updates to the status of the order.  In addition, the Intermediary is responsible for communicating the order to the Rendering Provider using the exchange methods in this IG or any other method required to communicate the order and status.
+
+[Next Page - Glossary](glossary.html)
