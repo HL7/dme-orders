@@ -1,48 +1,42 @@
 {
 	"resourceType": "MedicationRequest",
-	"id": "PAO-mo1",
+	"id": "Everolimus",
 	"meta": {
-		"versionId": "11",
-		"lastUpdated": "2020-08-04T04:17:28.114+00:00",
-		"source": "#HZyzahXzQ44i2Bns",
+		"versionId": "1",
+		"lastUpdated": "2020-08-09T21:54:42.920+00:00",
+		"source": "#4mV4EXppBHotLAxd",
 		"profile": [
 			"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-medication-request"
 		]
 	},
-	"identifier": [
-		{
-			"system": "http://hospital.smarthealthit.org",
-			"value": "MYID12347"
-		}
-	],
 	"status": "active",
 	"intent": "order",
 	"medicationCodeableConcept": {
 		"coding": [
 			{
 				"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-				"code": "582620",
-				"display": "Nizatidine 15 MG/ML Oral Solution [Axid]"
+				"code": "977426",
+				"display": "everolimus 0.25 MG"
 			}
 		],
-		"text": "Nizatidine 15 MG/ML Oral Solution [Axid]"
+		"text": "everolimus 0.25 MG"
 	},
 	"subject": {
 		"reference": "Patient/example1",
 		"display": "Amy Shaw"
 	},
-	"authoredOn": "2008-04-05",
+	"authoredOn": "2020-08-05",
 	"requester": {
 		"reference": "Practitioner/practitioner-1",
 		"display": "Ronald Bone, MD"
 	},
 	"dosageInstruction": [
 		{
-			"text": "10 mL bid",
+			"text": "0.75 bid",
 			"timing": {
 				"repeat": {
 					"boundsPeriod": {
-						"start": "2008-04-05"
+						"start": "2020-08-06"
 					}
 				}
 			}
@@ -51,8 +45,8 @@
 	"dispenseRequest": {
 		"numberOfRepeatsAllowed": 1,
 		"quantity": {
-			"value": 480,
-			"unit": "mL",
+			"value": 50,
+			"unit": "MG",
 			"system": "http://unitsofmeasure.org",
 			"code": "mL"
 		},

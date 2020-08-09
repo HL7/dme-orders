@@ -2,9 +2,9 @@
 	"resourceType": "DeviceRequest",
 	"id": "insulinpump",
 	"meta": {
-		"versionId": "4",
-		"lastUpdated": "2020-08-05T21:50:55.629+00:00",
-		"source": "#QmrXjugmRa0TfIQv",
+		"versionId": "5",
+		"lastUpdated": "2020-08-09T22:34:37.025+00:00",
+		"source": "#LPqBxzLkw18ILZok",
 		"profile": [
 			"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicerequest"
 		]
@@ -36,17 +36,17 @@
 	"codeCodeableConcept": {
 		"coding": [
 			{
-				"system": "http://loinc.org",
-				"code": "43148-6"
+				"system": "http://www.ama-assn.org/go/cpt",
+				"code": "E0784"
 			}
 		],
-		"text": "Insulin delivery device panel"
+		"text": "External ambulatory enfusion pump for insulin"
 	},
 	"subject": {
 		"reference": "Patient/example1"
 	},
 	"encounter": {
-		"display": "Encounter 1"
+		"display": "Ambulatory"
 	},
 	"occurrenceDateTime": "2013-05-08T09:33:27+07:00",
 	"authoredOn": "2013-05-08T09:33:27+07:00",

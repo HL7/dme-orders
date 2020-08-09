@@ -1,10 +1,10 @@
 {
 	"resourceType": "MessageHeader",
-	"id": "PAO-MessageHeader",
+	"id": "Discharge-Order",
 	"meta": {
-		"versionId": "6",
-		"lastUpdated": "2020-08-06T11:32:56.296+00:00",
-		"source": "#zRgaNGaNUiS7T61p",
+		"versionId": "2",
+		"lastUpdated": "2020-08-09T21:21:05.769+00:00",
+		"source": "#k7gZkWDhTxQLzeHm",
 		"profile": [
 			"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-messageheader"
 		]
@@ -19,14 +19,14 @@
 			"name": "Acme Message Gateway",
 			"endpoint": "https://example.org/Endpoints/P123",
 			"receiver": {
-				"reference": "Organization/saint-luke-w-endpoint",
-				"display": "Saint Luke W Destination"
+				"reference": "Organization/Inpatient",
+				"display": "St. Michael's Hospital"
 			}
 		}
 	],
 	"sender": {
-		"reference": "Organization/saint-luke-w-endpoint",
-		"display": "Saint Luke W Endpoint"
+		"reference": "Organization/Inpatient",
+		"display": "St. Michael's Hospital"
 	},
 	"author": {
 		"reference": "Practitioner/practitioner-1",
@@ -43,12 +43,12 @@
 		"endpoint": "https://example.org/Endpoints/P456"
 	},
 	"responsible": {
-		"reference": "Organization/saint-luke-w-endpoint",
-		"display": "Saint Luke W Endpoint"
+		"reference": "Organization/Inpatient",
+		"display": "St. Michael's Hospital"
 	},
 	"focus": [
 		{
-			"reference": "Task/example2",
+			"reference": "Task/Home-Health",
 			"display": "Inpatient Encounter"
 		}
 	]

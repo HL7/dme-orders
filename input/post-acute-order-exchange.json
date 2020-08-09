@@ -1,9 +1,9 @@
 {
 	"id": "post-acute-order-exchange",
 	"meta": {
-		"versionId": "247",
-		"lastUpdated": "2020-08-06T12:00:36.060+00:00",
-		"source": "#TB6JCEA2u3VE5OYr"
+		"versionId": "313",
+		"lastUpdated": "2020-08-09T23:37:48.188+00:00",
+		"source": "#NZPu0watjNVgfGbc"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -13,7 +13,7 @@
 	"url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-order-exchange",
 	"version": "0.2.2",
 	"name": "PostAcuteOrderExchange",
-	"title": "Post-Acute Orders (PAO)",
+	"title": "Post-Acute Orders (PAO) (DME-Orders)",
 	"publisher": "HL7",
 	"contact": [
 		{
@@ -58,6 +58,30 @@
 			{
 				"id": "new-group3",
 				"name": "Other Profiles"
+			},
+			{
+				"id": "new-group4",
+				"name": "Extensions"
+			},
+			{
+				"id": "new-group5",
+				"name": "Code Systems"
+			},
+			{
+				"id": "new-group6",
+				"name": "Value Sets"
+			},
+			{
+				"id": "new-group7",
+				"name": "Examples of US Core Referenced Resources"
+			},
+			{
+				"id": "new-group8",
+				"name": "Examples of PAO Exchange and Supporting Resources"
+			},
+			{
+				"id": "new-group9",
+				"name": "Examples of PAO Order Resources"
 			}
 		],
 		"resource": [
@@ -186,41 +210,12 @@
 				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "CodeSystem/PAOX-Message-Event",
-					"display": "PAO Message Event Code System"
+					"reference": "StructureDefinition/PAOX-devicerequest-extension",
+					"display": "PAOxDeviceRequestExtension"
 				},
-				"name": "PAO Message Event Code System",
-				"description": "Tbis code system is for the message event"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "ValueSet/PAOx-Message-Event",
-					"display": "PAO Message Event"
-				},
-				"name": "PAO Message Event",
-				"description": "Message Event value set"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "ValueSet/PAOX-Task-Code",
-					"display": "PAO Task Code Value Set"
-				},
-				"name": "PAO Task Code Value Set",
-				"description": "This the task.code value set -- uses same code systems as the base resource but restricts the codes and makes it extensible."
-			},
-			{
-				"extension": [],
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "StructureDefinition/PAOX-relevant-reviews-extension",
-					"display": "PAOxRelevantReviewsExtension"
-				},
-				"name": "PAO Relevant Reviews Extension",
-				"description": "Extension to define relevant review (such as prior-authorization)"
+				"name": "PAO Device Request Extension",
+				"description": "DeviceRequest extension to support DeviceDefinition",
+				"groupingId": "new-group4"
 			},
 			{
 				"extension": [],
@@ -230,82 +225,52 @@
 					"display": "PAOxOrderDetailExtension"
 				},
 				"name": "PAO Order Detail Extension",
-				"description": "Order detail extension"
+				"description": "ServiceRequest extension to support detailed orders",
+				"groupingId": "new-group4"
 			},
 			{
 				"extension": [],
-				"exampleBoolean": true,
+				"exampleBoolean": false,
 				"reference": {
-					"reference": "Practitioner/practitioner-1"
+					"reference": "StructureDefinition/PAOX-relevant-reviews-extension",
+					"display": "PAOxRelevantReviewsExtension"
 				},
-				"name": "Practitioner-1",
-				"description": "Practitioner 1 resource from US Core 4"
+				"name": "PAO Relevant Reviews Extension",
+				"description": "Extension to define relevant reviews (e.g. prior-authorization)",
+				"groupingId": "new-group4"
 			},
 			{
 				"extension": [],
-				"exampleBoolean": true,
+				"exampleBoolean": false,
 				"reference": {
-					"reference": "Organization/saint-luke-w-endpoint",
-					"display": "Saint Luke's Hospital of Kansas City"
+					"reference": "CodeSystem/PAOX-Message-Event",
+					"display": "PAO Message Event Code System"
 				},
-				"name": "Saint Luke's Hospital of Kansas City",
-				"description": "Organization resource from US Core 4"
+				"name": "PAO Message Event Code System",
+				"description": "Code system for the PAO message event",
+				"groupingId": "new-group5"
 			},
 			{
 				"extension": [],
-				"exampleBoolean": true,
+				"exampleBoolean": false,
 				"reference": {
-					"reference": "Practitioner/practitioner-2"
+					"reference": "ValueSet/PAOx-Message-Event",
+					"display": "PAO Message Event"
 				},
-				"name": "Practitioner-2",
-				"description": "Practitioner 2 resource from US Core 4"
+				"name": "PAO Message Event",
+				"description": "PAO Message.event value set",
+				"groupingId": "new-group6"
 			},
 			{
 				"extension": [],
-				"exampleBoolean": true,
+				"exampleBoolean": false,
 				"reference": {
-					"reference": "Location/hl7east",
-					"display": "Health Level Seven International - Amherst"
+					"reference": "ValueSet/PAOX-Task-Code",
+					"display": "PAO Task Code Value Set"
 				},
-				"name": "Health Level Seven International - Amherst",
-				"description": "Copy of US Core Location example"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "MedicationRequest/uscore-mo1"
-				},
-				"name": "MedicationRequest Example 1",
-				"description": "Copy of US Core MedicationRequest example"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "Medication/uscore-med1"
-				},
-				"name": "Medication Example",
-				"description": "Copy of US Core Medication example"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "Organization/example-organization-2",
-					"display": "Acme Clinic"
-				},
-				"name": "Acme Clinic",
-				"description": "Copy of US Core Organization example"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "Encounter/example-1"
-				},
-				"name": "Encounter Example",
-				"description": "Copy of US Core Encounter example"
+				"name": "PAO Task Code Value Set",
+				"description": "PAO Task.code value set -- uses same code system as the base resource but restricts the codes and makes it extensible.",
+				"groupingId": "new-group6"
 			},
 			{
 				"extension": [],
@@ -314,79 +279,71 @@
 					"reference": "Patient/example1"
 				},
 				"name": "Patient Amy Shaw",
-				"description": "Copy of US Core patient"
+				"description": "Patient resource conformant to US Core",
+				"groupingId": "new-group7"
 			},
 			{
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
-					"reference": "MedicationRequest/uscore-mo2"
+					"reference": "Practitioner/practitioner-1"
 				},
-				"name": "Medication Request 2",
-				"description": "Copy of US Core MedicationRequest 2"
+				"name": "Practitioner",
+				"description": "Practitioner resource conformant to US Core",
+				"groupingId": "new-group7"
 			},
 			{
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
-					"reference": "Medication/uscore-med2"
+					"reference": "Location/stmichael",
+					"display": "St Michael Medical Center"
 				},
-				"name": "Medication Example 2",
-				"description": "Copy of US Core Medication 2"
+				"name": "St Michael Medical Center",
+				"description": "Location resource for St. Michael Medical Center conformant to US Core",
+				"groupingId": "new-group7"
 			},
 			{
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
-					"reference": "Encounter/Encounter-IP"
+					"reference": "Organization/Ambulatory",
+					"display": "St Michael Multi-Speciality Clinic"
 				},
-				"name": "Encounter IP Example",
-				"description": "Inpatient Encounter Example based on the US Core Encounter 1036"
+				"name": "St Michael Multi-Speciality Clinic",
+				"description": "Organization resource -- Ambulatory Clinic -- St. Michael Multi-Specialty Clinic",
+				"groupingId": "new-group7"
 			},
 			{
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
-					"reference": "Practitioner/practitioner01"
+					"reference": "Organization/Inpatient",
+					"display": "St. Michael's Hospital"
 				},
-				"name": "Practitioner01 Example",
-				"description": "Practitioner01 from DEQM with profile set to US Core"
+				"name": "St. Michael's Hospital",
+				"description": "Organization resource -- Inpatient -- St. Michael's Hospital (part of St. Michael's Medical Center)",
+				"groupingId": "new-group7"
 			},
 			{
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
-					"reference": "MedicationRequest/PAO-mo1"
+					"reference": "Encounter/example-1"
 				},
-				"name": "PAO Medication Request",
-				"description": "PAO Medication Request based on mo1"
+				"name": "Encounter Ambulatory",
+				"description": "Encounter resource ambulatory conformant to US Core",
+				"groupingId": "new-group7"
 			},
 			{
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
-					"reference": "Subscription/PAO-Subscription"
+					"reference": "Encounter/Inpatient"
 				},
-				"name": "PAO Subscription Example",
-				"description": "PAO Subscription Example"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "MessageHeader/PAO-MessageHeader"
-				},
-				"name": "PAO MessageHeader Example",
-				"description": "PAO MessageHeader Example"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "ServiceRequest/PAO-sr1"
-				},
-				"name": "PAO ServiceRequest",
-				"description": "PAO ServiceRequest Example 1"
+				"name": "Encounter Inpatient",
+				"description": "Encounter resource for inpatient conformant to US Core",
+				"groupingId": "new-group7"
 			},
 			{
 				"extension": [],
@@ -395,16 +352,48 @@
 					"reference": "Observation/blood-glucose"
 				},
 				"name": "Observation Blood Glucose",
-				"description": "Observation Blood Glucose"
+				"description": "Observation Blood Glucose",
+				"groupingId": "new-group7"
 			},
 			{
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
-					"reference": "Provenance/example"
+					"reference": "Observation/o2-sat"
 				},
-				"name": "Provenance Example",
-				"description": "Provenance Example"
+				"name": "Observation O2 Sat",
+				"description": "Observation Arterial O2 Saturation by Pulse Oximetry",
+				"groupingId": "new-group7"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MessageHeader/Discharge-Order"
+				},
+				"name": "MessageHeader Discharge Order",
+				"description": "MessageHeader resource Discharge Order",
+				"groupingId": "new-group8"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Task/Home-Health"
+				},
+				"name": "Task Home Health",
+				"description": "Task resource for Home Health Order (ServiceRequest)",
+				"groupingId": "new-group8"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Subscription/Home-Health-Task"
+				},
+				"name": "Subscription Home Health Task",
+				"description": "Subscription resource to the Home Health Task",
+				"groupingId": "new-group8"
 			},
 			{
 				"extension": [],
@@ -412,26 +401,9 @@
 				"reference": {
 					"reference": "Coverage/example"
 				},
-				"name": "Coverage Example",
-				"description": "Coverage Example"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "Task/example2"
-				},
-				"name": "Task example 2",
-				"description": "Task example 2"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "DeviceDefinition/example"
-				},
-				"name": "DeviceDefinition example",
-				"description": "DeviceDefinition example"
+				"name": "Coverage",
+				"description": "PAO Coverage",
+				"groupingId": "new-group8"
 			},
 			{
 				"extension": [],
@@ -440,17 +412,98 @@
 					"reference": "DeviceRequest/insulinpump"
 				},
 				"name": "DeviceRequest insulin pump",
-				"description": "Device Request insulin pump"
+				"description": "Device Request insulin pump",
+				"groupingId": "new-group9"
 			},
 			{
 				"extension": [],
-				"exampleBoolean": false,
+				"exampleBoolean": true,
 				"reference": {
-					"reference": "StructureDefinition/PAOX-devicerequest-extension",
-					"display": "PAOxDeviceRequestExtension"
+					"reference": "DeviceDefinition/portableO2"
 				},
-				"name": "PAO Device Request Extension",
-				"description": "Extension to support DeviceDefinition"
+				"name": "DeviceDefinition Portable Home O2 Generator",
+				"description": "DeviceDefinition resource for a Portable Home O2 Generator",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MedicationRequest/Insulin"
+				},
+				"name": "MedicationRequest Human Insulin",
+				"description": "MedicationRequest resource for Human Insulin",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Medication/Insulin"
+				},
+				"name": "Medication Human Insulin",
+				"description": "Medication resource for Human Insulin",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Provenance/Insulin-Order"
+				},
+				"name": "Provenance Insulin Order",
+				"description": "Provenance resource for Insulin Order (MedicationRequest)",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MedicationRequest/Everolimus"
+				},
+				"name": "MedicationRequest Everolimus",
+				"description": "MedicationRequest resource for Everolimus",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Medication/Everolimus"
+				},
+				"name": "Medication Everolimus",
+				"description": "Medication resource for Everolimus",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Provenance/Everolimus-Order"
+				},
+				"name": "Provenance Everolimus Order",
+				"description": "Provenance resource for Everolimus Order (MedicationRequest)",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "ServiceRequest/HomeHealth"
+				},
+				"name": "ServiceRequest Home Health",
+				"description": "ServiceRequest for Home Health physical therapy and speech/hearing therapy",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Provenance/Home-Health-Order"
+				},
+				"name": "Provenance Home Health Order",
+				"description": "Provenance resource for Home Health Order (ServiceRequest)",
+				"groupingId": "new-group9"
 			}
 		],
 		"page": {

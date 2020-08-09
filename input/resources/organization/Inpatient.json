@@ -1,10 +1,10 @@
 {
 	"resourceType": "Organization",
-	"id": "saint-luke-w-endpoint",
+	"id": "Inpatient",
 	"meta": {
-		"versionId": "9",
-		"lastUpdated": "2020-08-05T20:29:37.902+00:00",
-		"source": "#HyyNvN2OPqCBam36",
+		"versionId": "1",
+		"lastUpdated": "2020-08-09T15:08:18.345+00:00",
+		"source": "#6srEiUjeenLPVop9",
 		"profile": [
 			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
 		]
@@ -16,7 +16,7 @@
 		}
 	],
 	"active": true,
-	"name": "Saint Luke's Hospital of Kansas City",
+	"name": "St. Michael's Hospital",
 	"telecom": [
 		{
 			"system": "phone",
@@ -25,19 +25,19 @@
 		},
 		{
 			"system": "other",
-			"value": "http://www.saintlukeshealthsystem.org/locations/saint-lukes-hospital-kansas-city",
+			"value": "http://www.stmichaelmedicalcenter.org",
 			"use": "work"
 		}
 	],
 	"address": [
 		{
-			"text": "3300 Washtenaw Avenue, Suite 227 Amherst MA 01002",
+			"text": "6666 135th St, Overland Park, KS 66223",
 			"line": [
-				"4401 Wornall Rd,"
+				"6666 135th Street,"
 			],
-			"city": "Amherst",
-			"state": "MA",
-			"postalCode": "64111"
+			"city": "Overland Park",
+			"state": "KS",
+			"postalCode": "66223"
 		}
 	]
 }

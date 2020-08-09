@@ -1,10 +1,10 @@
 {
 	"resourceType": "MedicationRequest",
-	"id": "uscore-mo1",
+	"id": "Insulin",
 	"meta": {
-		"versionId": "10",
-		"lastUpdated": "2020-08-04T04:17:33.467+00:00",
-		"source": "#IxqDi1GAfder3K79",
+		"versionId": "1",
+		"lastUpdated": "2020-08-09T21:54:34.412+00:00",
+		"source": "#xYSKFGO1PsQKUqFS",
 		"profile": [
 			"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-medication-request"
 		]
@@ -15,37 +15,37 @@
 		"coding": [
 			{
 				"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-				"code": "582620",
-				"display": "Nizatidine 15 MG/ML Oral Solution [Axid]"
+				"code": "311036",
+				"display": "Humulin R 100 UNT/ML Injectable Solution"
 			}
 		],
-		"text": "Nizatidine 15 MG/ML Oral Solution [Axid]"
+		"text": "Humulin R 100 UNT/ML Injectable Solution"
 	},
 	"subject": {
 		"reference": "Patient/example1",
 		"display": "Amy Shaw"
 	},
-	"authoredOn": "2008-04-05",
+	"authoredOn": "2020-08-05",
 	"requester": {
 		"reference": "Practitioner/practitioner-1",
 		"display": "Ronald Bone, MD"
 	},
 	"dosageInstruction": [
 		{
-			"text": "10 mL bid",
+			"text": "0.5 ML tid",
 			"timing": {
 				"repeat": {
 					"boundsPeriod": {
-						"start": "2008-04-05"
+						"start": "2020-08-06"
 					}
 				}
 			}
 		}
 	],
 	"dispenseRequest": {
-		"numberOfRepeatsAllowed": 1,
+		"numberOfRepeatsAllowed": 3,
 		"quantity": {
-			"value": 480,
+			"value": 50,
 			"unit": "mL",
 			"system": "http://unitsofmeasure.org",
 			"code": "mL"
