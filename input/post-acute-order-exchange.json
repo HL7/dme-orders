@@ -1,0 +1,620 @@
+{
+	"id": "post-acute-order-exchange",
+	"meta": {
+		"versionId": "338",
+		"lastUpdated": "2020-08-10T03:45:02.835+00:00",
+		"source": "#G1WToBa1DRXbeqG8"
+	},
+	"resourceType": "ImplementationGuide",
+	"status": "draft",
+	"fhirVersion": [
+		"4.0.1"
+	],
+	"url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-order-exchange",
+	"version": "0.3.0",
+	"name": "PostAcuteOrderExchange",
+	"title": "Post-Acute Orders (PAO) (DME-Orders)",
+	"publisher": "HL7",
+	"contact": [
+		{
+			"name": "HL7 International - Orders and Observations",
+			"telecom": [
+				{
+					"system": "url",
+					"value": "http://www.hl7.org/Special/committees/orders"
+				}
+			]
+		}
+	],
+	"description": "# General\nThis is a FHIR R4 Implementation Guide (IG) to support the electronic exchange of post-acute orders and referrals, along with the exchange of supporting documentation between the ordering provider and the specific rendering provider.\n* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services. It is important to note that supporting DME also requires the support for medications associated with specific devices such as nebulizers and infusion pumps. It is the goal of future versions of this implementation guide to support orders for all post-acute services. \n* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.\n\nThis implementation guide is focused on enabling ordering providers to create, communicate and track orders and referrals in the post-acute setting. By enabling ordering providers to communicate supporting documentation in real-time to rendering providers, patients can receive appropriate treatment more rapidly and reduce the burden on rendering providers to comply with payer documentation requirements.\n\n# Change log\n* **0.2.* :**QA versions for the September 2020 ballot cycle (minor version 0.2.x) include QA feedback\n* **0.3.0 :** Final version for the September 2020 ballot cycle\n \n  \n# Known issues and to-dos\n* Example of message bundle for message based ordering\n",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US"
+				}
+			]
+		}
+	],
+	"packageId": "hl7.fhir.us.dme-orders",
+	"dependsOn": [
+		{
+			"uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+			"packageId": "hl7.fhir.us.core",
+			"version": "3.1.0"
+		}
+	],
+	"definition": {
+		"grouping": [
+			{
+				"id": "new-group1",
+				"name": "Order Profiles (including supporting resources)"
+			},
+			{
+				"id": "new-group2",
+				"name": "Exchange and Status Profiles"
+			},
+			{
+				"id": "new-group3",
+				"name": "Other Profiles"
+			},
+			{
+				"id": "new-group4",
+				"name": "Extensions"
+			},
+			{
+				"id": "new-group5",
+				"name": "Code Systems"
+			},
+			{
+				"id": "new-group6",
+				"name": "Value Sets"
+			},
+			{
+				"id": "new-group7",
+				"name": "Examples of US Core Referenced Resources"
+			},
+			{
+				"id": "new-group8",
+				"name": "Examples of PAO Exchange and Supporting Resources"
+			},
+			{
+				"id": "new-group9",
+				"name": "Examples of PAO Order Resources"
+			}
+		],
+		"resource": [
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-coverage",
+					"display": "PAOx Coverage Profile"
+				},
+				"name": "PAO Coverage Profile",
+				"description": "PAO Coverage Resource Profile",
+				"groupingId": "new-group3"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-bundle",
+					"display": "PAOx_Bundle"
+				},
+				"name": "PAO Bundle Profile",
+				"description": "PAO Bundle profile includes a MessageHeader, Task, Subscription, service/device/medication order(s) and supporting documentation",
+				"groupingId": "new-group2"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-medication-request",
+					"display": "PAOx_MedicationRequest"
+				},
+				"name": "PAO MedicationRequest Profile",
+				"description": "PAO MedicationRequest Profile",
+				"groupingId": "new-group1"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-Medication",
+					"display": "PAOx Medication Profile"
+				},
+				"name": "PAO Medication Profile",
+				"description": "PAO Medication Profile based on US Core",
+				"groupingId": "new-group1"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-provenance",
+					"display": "PAOXProvenance"
+				},
+				"name": "PAO Provenance Profile",
+				"description": "PAO Provenance Profile based on US Core",
+				"groupingId": "new-group3"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-devicerequest",
+					"display": "PAOxDeviceRequest"
+				},
+				"name": "PAO DeviceRequest Profile",
+				"description": "Post Acute Orders DeviceRequest Profile\n\nUsed to order DME and associated supplies (supports identification of the device by using DeviceRequest.code as a CodableConcept, DeviceRequest.code as a Reference to the Device Resource, or as a reference to DeviceDefintion by using the optional extension).",
+				"groupingId": "new-group1"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-devicedefinition",
+					"display": "PAOxDeviceDefinition"
+				},
+				"name": "PAO DeviceDefinition Profile",
+				"description": "PAO DeviceDefinition Resource Profile",
+				"groupingId": "new-group1"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-messageheader",
+					"display": "PAOxMessageHeader"
+				},
+				"name": "PAO MessageHeader Profile",
+				"description": "PAO MessageHeader Resource Profile\n\nThis profile is used to order, update, cancel and query the status of an order.  \nIt requires the consistent use of identifiers to ensure that any actions targeted at a prior order affect only that order.",
+				"groupingId": "new-group2"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-servicerequest",
+					"display": "PAOxServiceRequest"
+				},
+				"name": "PAO ServiceRequest Profile",
+				"description": "This resource is used to \"order\" services (e.g. non-DME (device) and non-medications).\n\nFor this version of the IG, it is used primarily to order Home Health Services.",
+				"groupingId": "new-group1"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-subscription",
+					"display": "PAOxSubscription"
+				},
+				"name": "PAO Subscription Profile",
+				"description": "PAO Subscription Resource Profile\n\nThe subscription resource should be used request an alert when there is a change in the order as indicated by a change in the Task resource.  \nThe subscriber has the option of receiving a notification when a change occurs or receiving the updated task and any relevant order resources (device, service, medication).",
+				"groupingId": "new-group2"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-task",
+					"display": "PAOxTask"
+				},
+				"name": "PAO Task Profile",
+				"description": "PAO Task Resource Profile",
+				"groupingId": "new-group2"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-devicerequest-extension",
+					"display": "PAOxDeviceRequestExtension"
+				},
+				"name": "PAO Device Request Extension",
+				"description": "DeviceRequest extension to support DeviceDefinition",
+				"groupingId": "new-group4"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-order-detail-extension",
+					"display": "PAOxOrderDetailExtension"
+				},
+				"name": "PAO Order Detail Extension",
+				"description": "ServiceRequest extension to support detailed orders",
+				"groupingId": "new-group4"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/PAOX-relevant-reviews-extension",
+					"display": "PAOxRelevantReviewsExtension"
+				},
+				"name": "PAO Relevant Reviews Extension",
+				"description": "Extension to define relevant reviews (e.g. prior-authorization)",
+				"groupingId": "new-group4"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "CodeSystem/PAOX-Message-Event",
+					"display": "PAO Message Event Code System"
+				},
+				"name": "PAO Message Event Code System",
+				"description": "Code system for the PAO message event",
+				"groupingId": "new-group5"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "ValueSet/PAOx-Message-Event",
+					"display": "PAO Message Event"
+				},
+				"name": "PAO Message Event",
+				"description": "PAO Message.event value set",
+				"groupingId": "new-group6"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "ValueSet/PAOX-Task-Code",
+					"display": "PAO Task Code Value Set"
+				},
+				"name": "PAO Task Code Value Set",
+				"description": "PAO Task.code value set -- uses the same code system as the base resource but restricts the codes and makes the value set extensible.",
+				"groupingId": "new-group6"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Patient/example1"
+				},
+				"name": "Patient Amy Shaw",
+				"description": "Patient resource conformant to US Core",
+				"groupingId": "new-group7"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Practitioner/practitioner-1"
+				},
+				"name": "Practitioner",
+				"description": "Practitioner resource conformant to US Core",
+				"groupingId": "new-group7"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Location/stmichael",
+					"display": "St Michael Medical Center"
+				},
+				"name": "St Michael Medical Center",
+				"description": "Location resource for St. Michael Medical Center conformant to US Core",
+				"groupingId": "new-group7"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Organization/Ambulatory",
+					"display": "St Michael Multi-Speciality Clinic"
+				},
+				"name": "St Michael Multi-Speciality Clinic",
+				"description": "Organization resource -- Ambulatory Clinic -- St. Michael Multi-Specialty Clinic",
+				"groupingId": "new-group7"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Organization/Inpatient",
+					"display": "St. Michael's Hospital"
+				},
+				"name": "St. Michael's Hospital",
+				"description": "Organization resource -- Inpatient -- St. Michael's Hospital (part of St. Michael's Medical Center)",
+				"groupingId": "new-group7"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Encounter/example-1"
+				},
+				"name": "Encounter Ambulatory",
+				"description": "Encounter resource ambulatory conformant to US Core",
+				"groupingId": "new-group7"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Encounter/Inpatient"
+				},
+				"name": "Encounter Inpatient",
+				"description": "Encounter resource for inpatient conformant to US Core",
+				"groupingId": "new-group7"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Observation/blood-glucose"
+				},
+				"name": "Observation Blood Glucose",
+				"description": "Observation Blood Glucose",
+				"groupingId": "new-group7"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Observation/o2-sat"
+				},
+				"name": "Observation O2 Sat",
+				"description": "Observation Arterial O2 Saturation by Pulse Oximetry",
+				"groupingId": "new-group7"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MessageHeader/Discharge-Order"
+				},
+				"name": "MessageHeader Discharge Order",
+				"description": "MessageHeader resource Discharge Order",
+				"groupingId": "new-group8"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MessageHeader/Discharge-Order2"
+				},
+				"name": "MessageHeader for Medication Request",
+				"description": "MessageHeader resource for MedicationRequest",
+				"groupingId": "new-group8"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Task/Home-Health"
+				},
+				"name": "Task Home Health",
+				"description": "Task resource for Home Health Order (ServiceRequest)",
+				"groupingId": "new-group8"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Task/MedicationRequest"
+				},
+				"name": "Task Medication Request",
+				"description": "Task resource for MedicationRequest",
+				"groupingId": "new-group8"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Subscription/Home-Health-Task"
+				},
+				"name": "Subscription Home Health Task",
+				"description": "Subscription resource to the Home Health Task",
+				"groupingId": "new-group8"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Coverage/example"
+				},
+				"name": "Coverage",
+				"description": "PAO Coverage",
+				"groupingId": "new-group8"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "DeviceRequest/insulinpump"
+				},
+				"name": "DeviceRequest insulin pump",
+				"description": "Device Request insulin pump",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "DeviceRequest/HomeO2"
+				},
+				"name": "DeviceRequest Home O2",
+				"description": "DeviceRequest resource for Home O2 Portable Oxygen Generator",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "DeviceDefinition/portableO2"
+				},
+				"name": "DeviceDefinition Portable Home O2 Generator",
+				"description": "DeviceDefinition resource for a Portable Home O2 Generator",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MedicationRequest/Insulin"
+				},
+				"name": "MedicationRequest Human Insulin",
+				"description": "MedicationRequest resource for Human Insulin",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Medication/Insulin"
+				},
+				"name": "Medication Human Insulin",
+				"description": "Medication resource for Human Insulin",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Provenance/Insulin-Order"
+				},
+				"name": "Provenance Insulin Order",
+				"description": "Provenance resource for Insulin Order (MedicationRequest)",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MedicationRequest/Everolimus"
+				},
+				"name": "MedicationRequest Everolimus",
+				"description": "MedicationRequest resource for Everolimus",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Medication/Everolimus"
+				},
+				"name": "Medication Everolimus",
+				"description": "Medication resource for Everolimus",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Provenance/Everolimus-Order"
+				},
+				"name": "Provenance Everolimus Order",
+				"description": "Provenance resource for Everolimus Order (MedicationRequest)",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "ServiceRequest/HomeHealth"
+				},
+				"name": "ServiceRequest Home Health",
+				"description": "ServiceRequest for Home Health physical therapy and speech/hearing therapy",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Provenance/Home-Health-Order"
+				},
+				"name": "Provenance Home Health Order",
+				"description": "Provenance resource for Home Health Order (ServiceRequest)",
+				"groupingId": "new-group9"
+			}
+		],
+		"page": {
+			"extension": [],
+			"nameUrl": "index.html",
+			"title": "Index",
+			"generation": "markdown",
+			"page": [
+				{
+					"extension": [],
+					"nameUrl": "background.html",
+					"title": "Background",
+					"generation": "markdown",
+					"page": [
+						{
+							"extension": [],
+							"nameUrl": "actors.html",
+							"title": "Actors",
+							"generation": "markdown"
+						},
+						{
+							"extension": [],
+							"nameUrl": "glossary.html",
+							"title": "Glossary",
+							"generation": "markdown"
+						}
+					]
+				},
+				{
+					"extension": [],
+					"nameUrl": "security_and_privacy.html",
+					"title": "Security and Privacy",
+					"generation": "markdown"
+				},
+				{
+					"extension": [],
+					"nameUrl": "restful_fhir_exchanges.html",
+					"title": "RESTful FHIR exchanges",
+					"generation": "markdown"
+				},
+				{
+					"extension": [],
+					"nameUrl": "fhir_messaging_exchanges.html",
+					"title": "FHIR Messaging exchanges",
+					"generation": "markdown"
+				},
+				{
+					"extension": [],
+					"nameUrl": "mixed_intermediary_exchange_model.html",
+					"title": "Mixed intermediary exchange model",
+					"generation": "markdown"
+				},
+				{
+					"extension": [],
+					"nameUrl": "technical_background.html",
+					"title": "Technical Background",
+					"generation": "markdown"
+				},
+				{
+					"extension": [],
+					"nameUrl": "fhir_artifacts_overview.html",
+					"title": "FHIR Artifacts Overview",
+					"generation": "markdown"
+				},
+				{
+					"extension": [],
+					"nameUrl": "must_support_and_missing_data.html",
+					"title": "Must Support and Missing Data",
+					"generation": "markdown"
+				}
+			]
+		},
+		"parameter": [
+			{
+				"code": "copyrightyear",
+				"value": "2020+"
+			},
+			{
+				"code": "releaselabel",
+				"value": "CI Build"
+			}
+		]
+	}
+}

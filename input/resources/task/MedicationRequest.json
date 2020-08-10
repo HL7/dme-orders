@@ -1,0 +1,43 @@
+{
+	"resourceType": "Task",
+	"id": "MedicationRequest",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2020-08-10T00:55:45.575+00:00",
+		"source": "#ZtTjxbltLOUEIVH2",
+		"profile": [
+			"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-task"
+		]
+	},
+	"identifier": [
+		{
+			"value": "56ae5855-9f20-41e4-a59d-000e36d9d85a"
+		}
+	],
+	"basedOn": [
+		{
+			"reference": "ServiceRequest/HomeHealth"
+		}
+	],
+	"status": "requested",
+	"intent": "order",
+	"code": {
+		"coding": [
+			{
+				"system": "http://hl7.org/fhir/CodeSystem/task-code",
+				"code": "fulfill"
+			}
+		]
+	},
+	"description": "Order Immunosuppressive",
+	"focus": {
+		"reference": "MedicationRequest/Everolimus"
+	},
+	"for": {
+		"reference": "Patient/example1"
+	},
+	"authoredOn": "2020-07-30T20:07:15-06:00",
+	"requester": {
+		"reference": "Organization/Inpatient"
+	}
+}

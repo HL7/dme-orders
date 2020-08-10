@@ -1,0 +1,36 @@
+{
+	"resourceType": "ValueSet",
+	"id": "PAOx-Message-Event",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-07-27T02:08:55.729+00:00",
+		"source": "#D2SGoJKzmIxWcX34"
+	},
+	"url": "http://hl7.org/fhir/us/dme-orders/ValueSet/PAOx-Message-Event",
+	"version": "0.0.1",
+	"name": "PAOxMessageEvent",
+	"title": "PAO Message Event",
+	"status": "draft",
+	"description": "Message Envent value set",
+	"compose": {
+		"include": [
+			{
+				"system": "http://hl7.org/fhir/us/dme-orders/CodeSystem/PAOX-Message-Event",
+				"concept": [
+					{
+						"code": "InitialOrder"
+					},
+					{
+						"code": "OrderUpdate"
+					},
+					{
+						"code": "OrderCancel"
+					},
+					{
+						"code": "OrderStatus"
+					}
+				]
+			}
+		]
+	}
+}
