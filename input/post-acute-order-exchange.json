@@ -1,9 +1,9 @@
 {
 	"id": "post-acute-order-exchange",
 	"meta": {
-		"versionId": "313",
-		"lastUpdated": "2020-08-09T23:37:48.188+00:00",
-		"source": "#NZPu0watjNVgfGbc"
+		"versionId": "338",
+		"lastUpdated": "2020-08-10T03:45:02.835+00:00",
+		"source": "#G1WToBa1DRXbeqG8"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -11,7 +11,7 @@
 		"4.0.1"
 	],
 	"url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-order-exchange",
-	"version": "0.2.2",
+	"version": "0.3.0",
 	"name": "PostAcuteOrderExchange",
 	"title": "Post-Acute Orders (PAO) (DME-Orders)",
 	"publisher": "HL7",
@@ -148,7 +148,7 @@
 					"display": "PAOxDeviceRequest"
 				},
 				"name": "PAO DeviceRequest Profile",
-				"description": "Post Acute Orders DeviceRequest Profile Use to order DME and associated supplies (supports identification of the device by using DeviceRequest.code as a CodableConcept, DeviceRequest.code as a as a Reference to the Device Resource, or as a reference to DeviceDefintion by using the optional extension.",
+				"description": "Post Acute Orders DeviceRequest Profile\n\nUsed to order DME and associated supplies (supports identification of the device by using DeviceRequest.code as a CodableConcept, DeviceRequest.code as a Reference to the Device Resource, or as a reference to DeviceDefintion by using the optional extension).",
 				"groupingId": "new-group1"
 			},
 			{
@@ -170,7 +170,7 @@
 					"display": "PAOxMessageHeader"
 				},
 				"name": "PAO MessageHeader Profile",
-				"description": "PAO MessageHeader Resource Profile\nThis profiles is used to order, update, cancel and query the status of an order\nIt requires the consistant use of identifiers to ensure that any actions targeted at a prior order affectonly that order.",
+				"description": "PAO MessageHeader Resource Profile\n\nThis profile is used to order, update, cancel and query the status of an order.  \nIt requires the consistent use of identifiers to ensure that any actions targeted at a prior order affect only that order.",
 				"groupingId": "new-group2"
 			},
 			{
@@ -192,7 +192,7 @@
 					"display": "PAOxSubscription"
 				},
 				"name": "PAO Subscription Profile",
-				"description": "PAO Subscription Resource Profile\nThe subscription resource should accompany the initial message bundle to provide a mechanism of informing the ordering provider\nwhen there is a change in the order as indicated by a change in the Task resource.\nThe subscriber has the option of receiving a notification when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)",
+				"description": "PAO Subscription Resource Profile\n\nThe subscription resource should be used request an alert when there is a change in the order as indicated by a change in the Task resource.  \nThe subscriber has the option of receiving a notification when a change occurs or receiving the updated task and any relevant order resources (device, service, medication).",
 				"groupingId": "new-group2"
 			},
 			{
@@ -269,7 +269,7 @@
 					"display": "PAO Task Code Value Set"
 				},
 				"name": "PAO Task Code Value Set",
-				"description": "PAO Task.code value set -- uses same code system as the base resource but restricts the codes and makes it extensible.",
+				"description": "PAO Task.code value set -- uses the same code system as the base resource but restricts the codes and makes the value set extensible.",
 				"groupingId": "new-group6"
 			},
 			{
@@ -379,10 +379,30 @@
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
+					"reference": "MessageHeader/Discharge-Order2"
+				},
+				"name": "MessageHeader for Medication Request",
+				"description": "MessageHeader resource for MedicationRequest",
+				"groupingId": "new-group8"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
 					"reference": "Task/Home-Health"
 				},
 				"name": "Task Home Health",
 				"description": "Task resource for Home Health Order (ServiceRequest)",
+				"groupingId": "new-group8"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Task/MedicationRequest"
+				},
+				"name": "Task Medication Request",
+				"description": "Task resource for MedicationRequest",
 				"groupingId": "new-group8"
 			},
 			{
@@ -413,6 +433,16 @@
 				},
 				"name": "DeviceRequest insulin pump",
 				"description": "Device Request insulin pump",
+				"groupingId": "new-group9"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "DeviceRequest/HomeO2"
+				},
+				"name": "DeviceRequest Home O2",
+				"description": "DeviceRequest resource for Home O2 Portable Oxygen Generator",
 				"groupingId": "new-group9"
 			},
 			{

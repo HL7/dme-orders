@@ -16,7 +16,7 @@
 			"fhirversion": "4.0.1"
 		},
 		{
-			"version": "0.2.2",
+			"version": "0.3.0",
 			"date": "2020-08-09",
 			"sequence": "STU 1, R1",
 			"desc": "QA version for September 2020 Ballot",

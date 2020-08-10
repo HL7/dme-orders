@@ -2,9 +2,9 @@
 
 # Systems
 The PAO implementation guide defines the responsibilities of the three types of systems involved in a Post-Acute Orders solution:
-* **Ordering Provider Systems:**  Systems that manage data on behalf of an Ordering Provider who is a source for data to be transferred.
-* **Rendering Provider Systems:**  Systems that manage data on behalf of a Rendering Provider who is the intended recipient of transferred data.
-* **Intermediary Systems:** Systems that communicate with both the Ordering Provider Systems and the Rendering Provider Systems and provide appropriate Rendering Provider selection (in some cases in conjunction with the patient and or payer), translation services and, where necessary, order detail routing and integration.
+* **Ordering Provider Systems:**  Systems that manage data on behalf of an Ordering Provider, who is a source for data to be transferred.
+* **Rendering Provider Systems:**  Systems that manage data on behalf of a Rendering Provider, who is the intended recipient of transferred data.
+* **Intermediary Systems:** Systems that communicate with both the Ordering Provider Systems and the Rendering Provider Systems. Intermediary Systems may provide appropriate Rendering Provider selection (e.g. based patient and or payer criteria), translation services, and order detail routing/integration.
 
 # Underlying technologies
 This guide is based on the [HL7 FHIR](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=491) standard. Implementers of this specification therefore need to understand some basic information about these specifications.

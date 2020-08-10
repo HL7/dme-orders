@@ -16,13 +16,13 @@ The FHIR artifacts used by Post-acute Orders are organized, in this section, bas
 * [ServiceRequest](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-servicerequest.html)
 * [Coverage](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-coverage.html)
 
-**Post-Acure Order specific Artifacts based on [US Core V3.1.0](http://) profiles**
+**Post-Acure Order specific Artifacts based on [US Core R4](http://build.fhir.org/ig/HL7/US-Core-R4) profiles**
 
-* [MedicationRequest](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-medicationrequest.html)
+* [MedicationRequest](https://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-medication-request.html)
 * [Medication](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-Medication.html)
 * [Provenance](http://build.fhir.org/ig/HL7/dme-orders/StructureDefinition-PAOX-provenance.html)
 
-**[US Core V3.1.0](http://build.fhir.org/ig/HL7/US-Core-R4) profiles referenced by the above resources**
+**[US Core R4](http://build.fhir.org/ig/HL7/US-Core-R4) profiles referenced by the above resources**
 
 * [Patient](http://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-us-core-patient.html)
 * [Practitioner](http://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-us-core-practitioner.html)

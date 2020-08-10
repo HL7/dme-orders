@@ -1,0 +1,80 @@
+{
+	"resourceType": "DeviceRequest",
+	"id": "HomeO2",
+	"meta": {
+		"versionId": "3",
+		"lastUpdated": "2020-08-10T02:58:37.162+00:00",
+		"source": "#sfsM8Lq8cuRHM4E5",
+		"profile": [
+			"http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicerequest"
+		]
+	},
+	"identifier": [
+		{
+			"value": "ip_request2"
+		}
+	],
+	"basedOn": [
+		{
+			"display": "Homecare - DM follow-up"
+		}
+	],
+	"priorRequest": [
+		{
+			"display": "CGM ambulatory"
+		}
+	],
+	"groupIdentifier": {
+		"value": "ip_request1"
+	},
+	"status": "active",
+	"intent": "order",
+	"priority": "routine",
+	"codeCodeableConcept": {
+		"coding": [
+			{
+				"system": "http://www.ama-assn.org/go/cpt",
+				"code": "E1392"
+			}
+		],
+		"text": "Portable Oxygen Concentrator, Rental"
+	},
+	"subject": {
+		"reference": "Patient/example1"
+	},
+	"encounter": {
+		"display": "Ambulatory"
+	},
+	"occurrenceDateTime": "2020-08-05T09:33:27+07:00",
+	"authoredOn": "2020-08-05T09:33:27+07:00",
+	"requester": {
+		"reference": "Practitioner/practitioner-1",
+		"display": "Dr.Ronald Bone"
+	},
+	"reasonCode": [
+		{
+			"text": "COPD"
+		}
+	],
+	"reasonReference": [
+		{
+			"display": "COPD"
+		}
+	],
+	"supportingInfo": [
+		{
+			"reference": "Observation/o2-sat",
+			"display": "Previous results"
+		}
+	],
+	"note": [
+		{
+			"text": "patient is mobile -- needs portable O2 concentrator"
+		}
+	],
+	"relevantHistory": [
+		{
+			"display": "Request for specific device"
+		}
+	]
+}
