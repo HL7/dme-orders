@@ -11,15 +11,17 @@
 			"version": "0.1.1",
 			"date": "2020-04-02",
 			"desc": "QA version for May 2020 Ballot",
-			"path": "http://build.fhir.org/ig/HL7/dme-orders",
+			"path": "http://hl7.org/fhir/us/dme-orders",
 			"status": "ballot",
 			"fhirversion": "4.0.1"
 		},
 		{
 			"version": "0.2.2",
+			"date": "2020-08-09",
+			"sequence": "STU 1, R1",
 			"desc": "QA version for September 2020 Ballot",
-			"path": "http://build.fhir.org/ig/HL7/dme-orders",
-			"fhirversion": "4.01",
+			"path": "http://hl7.org/fhir/us/dme-orders",
+			"fhirversion": "4.0.1",
 			"status": "ci-build"
 		}
 	],
