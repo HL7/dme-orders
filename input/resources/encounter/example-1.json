@@ -2,9 +2,9 @@
 	"resourceType": "Encounter",
 	"id": "example-1",
 	"meta": {
-		"versionId": "14",
-		"lastUpdated": "2020-08-09T03:18:53.984+00:00",
-		"source": "#hPGsQslBJmg1VPHR",
+		"versionId": "18",
+		"lastUpdated": "2020-08-16T19:50:48.861+00:00",
+		"source": "#fDGSDt5KCiv5XJau",
 		"profile": [
 			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
 		]

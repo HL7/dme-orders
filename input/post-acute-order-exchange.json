@@ -1,9 +1,9 @@
 {
 	"id": "post-acute-order-exchange",
 	"meta": {
-		"versionId": "338",
-		"lastUpdated": "2020-08-10T03:45:02.835+00:00",
-		"source": "#G1WToBa1DRXbeqG8"
+		"versionId": "339",
+		"lastUpdated": "2020-08-16T19:43:51.254+00:00",
+		"source": "#rWVpLd8YctXYgp81"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -11,7 +11,7 @@
 		"4.0.1"
 	],
 	"url": "http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-order-exchange",
-	"version": "0.3.0",
+	"version": "0.2.2",
 	"name": "PostAcuteOrderExchange",
 	"title": "Post-Acute Orders (PAO) (DME-Orders)",
 	"publisher": "HL7",
