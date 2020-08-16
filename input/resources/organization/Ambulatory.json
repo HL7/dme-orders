@@ -1,0 +1,52 @@
+{
+	"resourceType": "Organization",
+	"id": "Ambulatory",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-08-09T14:59:03.303+00:00",
+		"source": "#rV4yU4ZCYLvVDKAb",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+		]
+	},
+	"identifier": [
+		{
+			"system": "http://hl7.org/fhir/sid/us-npi",
+			"value": "1407071236"
+		}
+	],
+	"active": true,
+	"type": [
+		{
+			"coding": [
+				{
+					"system": "http://terminology.hl7.org/CodeSystem/organization-type",
+					"code": "prov",
+					"display": "Healthcare Provider"
+				}
+			]
+		}
+	],
+	"name": "St Michael Multi-Specialty Clinic",
+	"telecom": [
+		{
+			"system": "phone",
+			"value": "(+1) 913-666-7777"
+		},
+		{
+			"system": "email",
+			"value": "customer-service@St-Michael-Multi-specialty-clinic.org"
+		}
+	],
+	"address": [
+		{
+			"line": [
+				"6666 135th St, Suite 227"
+			],
+			"city": "Overland Park",
+			"state": "KS",
+			"postalCode": "66223",
+			"country": "USA"
+		}
+	]
+}
