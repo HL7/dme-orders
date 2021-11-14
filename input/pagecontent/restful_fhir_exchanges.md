@@ -1,10 +1,8 @@
-[Previous Page - Security and Privacy](security_and_privacy.html)
-
 # FHIR RESTful communication pattern 
 
 **Assumptions (without an Intermediary)**
 
-1. The Supplier has restful query capabilities.
+1. The Supplier has RESTful query capabilities.
 2. The Supplier can manage subscriptions on a specific Task resource.
 3. The Supplier can authenticate to and is authorized to query the EHR.
 
@@ -38,5 +36,3 @@ The flow diagram has three parts.
 
 
 <table><tr><td><img src="PAORESTINT.jpg" /></td></tr></table>
-
-[Next Page - FHIR Messaging exchanges](fhir_messaging_exchanges.html)

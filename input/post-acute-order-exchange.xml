@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide
+    xmlns="http://hl7.org/fhir">
+    <id value="post-acute-order-exchange"/>
+    <meta>
+        <versionId value="356"/>
+        <lastUpdated value="2021-09-14T19:49:08.744+00:00"/>
+        <source value="#BeJixuBWtcDDUccU"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-order-exchange"/>
+    <version value="0.2.2"/>
+    <name value="PostAcuteOrderExchange"/>
+    <title value="Post-Acute Orders (PAO) (DME-Orders)"/>
+    <status value="draft"/>
+    <publisher value="HL7"/>
+    <contact>
+        <name value="HL7 International - Orders and Observations"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/orders"/>
+        </telecom>
+    </contact>
+    <description value="# General&#xA;This is a FHIR R4 Implementation Guide (IG) to support the electronic exchange of post-acute orders and referrals, along with the exchange of supporting documentation between the ordering provider and the specific rendering provider.&#xA;* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services. It is important to note that supporting DME also requires the support for medications associated with specific devices such as nebulizers and infusion pumps. It is the goal of future versions of this implementation guide to support orders for all post-acute services. &#xA;* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.&#xA;&#xA;This implementation guide is focused on enabling ordering providers to create, communicate and track orders and referrals in the post-acute setting. By enabling ordering providers to communicate supporting documentation in real-time to rendering providers, patients can receive appropriate treatment more rapidly and reduce the burden on rendering providers to comply with payer documentation requirements.&#xA;&#xA;# Change log&#xA;* **0.2.* :**QA versions for the September 2020 ballot cycle (minor version 0.2.x) include QA feedback&#xA;* **0.3.0 :** Final version for the September 2020 ballot cycle&#xA; &#xA;  &#xA;# Known issues and to-dos&#xA;* Example of message bundle for message based ordering&#xA;"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <packageId value="hl7.fhir.us.dme-orders"/>
+    <fhirVersion value="4.0.1"/>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+        <packageId value="hl7.fhir.us.core"/>
+        <version value="3.1.0"/>
+    </dependsOn>
+    <definition>
+        <grouping id="new-group1">
+            <name value="Order Profiles (including supporting resources)"/>
+        </grouping>
+        <grouping id="new-group2">
+            <name value="Exchange and Status Profiles"/>
+        </grouping>
+        <grouping id="new-group3">
+            <name value="Other Profiles"/>
+        </grouping>
+        <grouping id="new-group4">
+            <name value="Extensions"/>
+        </grouping>
+        <grouping id="new-group5">
+            <name value="Code Systems"/>
+        </grouping>
+        <grouping id="new-group6">
+            <name value="Value Sets"/>
+        </grouping>
+        <grouping id="new-group7">
+            <name value="Examples of US Core Referenced Resources"/>
+        </grouping>
+        <grouping id="new-group8">
+            <name value="Examples of PAO Exchange and Supporting Resources"/>
+        </grouping>
+        <grouping id="new-group9">
+            <name value="Examples of PAO Order Resources"/>
+        </grouping>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-coverage"/>
+                <display value="PAOx Coverage Profile"/>
+            </reference>
+            <name value="PAO Coverage Profile"/>
+            <description value="PAO Coverage Resource Profile"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group3"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-bundle"/>
+                <display value="PAOx_Bundle"/>
+            </reference>
+            <name value="PAO Bundle Profile"/>
+            <description value="PAO Bundle profile includes a MessageHeader, Task, Subscription, service/device/medication order(s) and supporting documentation"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-medication-request"/>
+                <display value="PAOx_MedicationRequest"/>
+            </reference>
+            <name value="PAO MedicationRequest Profile"/>
+            <description value="PAO MedicationRequest Profile"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-Medication"/>
+                <display value="PAOx Medication Profile"/>
+            </reference>
+            <name value="PAO Medication Profile"/>
+            <description value="PAO Medication Profile based on US Core"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-provenance"/>
+                <display value="PAOXProvenance"/>
+            </reference>
+            <name value="PAO Provenance Profile"/>
+            <description value="PAO Provenance Profile based on US Core"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group3"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-devicerequest"/>
+                <display value="PAOxDeviceRequest"/>
+            </reference>
+            <name value="PAO DeviceRequest Profile"/>
+            <description value="Post Acute Orders DeviceRequest Profile&#xA;&#xA;Used to order DME and associated supplies (supports identification of the device by using DeviceRequest.code as a CodableConcept, DeviceRequest.code as a Reference to the Device Resource, or as a reference to DeviceDefintion by using the optional extension)."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-devicedefinition"/>
+                <display value="PAOxDeviceDefinition"/>
+            </reference>
+            <name value="PAO DeviceDefinition Profile"/>
+            <description value="PAO DeviceDefinition Resource Profile"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-messageheader"/>
+                <display value="PAOxMessageHeader"/>
+            </reference>
+            <name value="PAO MessageHeader Profile"/>
+            <description value="PAO MessageHeader Resource Profile&#xA;&#xA;This profile is used to order, update, cancel and query the status of an order.  &#xA;It requires the consistent use of identifiers to ensure that any actions targeted at a prior order affect only that order."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-servicerequest"/>
+                <display value="PAOxServiceRequest"/>
+            </reference>
+            <name value="PAO ServiceRequest Profile"/>
+            <description value="This resource is used to &quot;order&quot; services (e.g. non-DME (device) and non-medications).&#xA;&#xA;For this version of the IG, it is used primarily to order Home Health Services."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-subscription"/>
+                <display value="PAOxSubscription"/>
+            </reference>
+            <name value="PAO Subscription Profile"/>
+            <description value="PAO Subscription Resource Profile&#xA;&#xA;The subscription resource should be used request an alert when there is a change in the order as indicated by a change in the Task resource.  &#xA;The subscriber has the option of receiving a notification when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-task"/>
+                <display value="PAOxTask"/>
+            </reference>
+            <name value="PAO Task Profile"/>
+            <description value="PAO Task Resource Profile"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-devicerequest-extension"/>
+                <display value="PAOxDeviceRequestExtension"/>
+            </reference>
+            <name value="PAO Device Request Extension"/>
+            <description value="DeviceRequest extension to support DeviceDefinition"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group4"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-order-detail-extension"/>
+                <display value="PAOxOrderDetailExtension"/>
+            </reference>
+            <name value="PAO Order Detail Extension"/>
+            <description value="ServiceRequest extension to support detailed orders"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group4"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PAOX-relevant-reviews-extension"/>
+                <display value="PAOxRelevantReviewsExtension"/>
+            </reference>
+            <name value="PAO Relevant Reviews Extension"/>
+            <description value="Extension to define relevant reviews (e.g. prior-authorization)"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group4"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CodeSystem/PAOX-Message-Event"/>
+                <display value="PAO Message Event Code System"/>
+            </reference>
+            <name value="PAO Message Event Code System"/>
+            <description value="Code system for the PAO message event"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group5"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/PAOx-Message-Event"/>
+                <display value="PAO Message Event"/>
+            </reference>
+            <name value="PAO Message Event"/>
+            <description value="PAO Message.event value set"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group6"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/PAOX-Task-Code"/>
+                <display value="PAO Task Code Value Set"/>
+            </reference>
+            <name value="PAO Task Code Value Set"/>
+            <description value="PAO Task.code value set -- uses the same code system as the base resource but restricts the codes and makes the value set extensible."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group6"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Patient/example1"/></reference>
+            <name value="Patient Amy Shaw"/>
+            <description value="Patient resource conformant to US Core"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group7"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Practitioner/practitioner-1"/></reference>
+            <name value="Practitioner"/>
+            <description value="Practitioner resource conformant to US Core"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group7"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Location/stmichael"/>
+                <display value="St Michael Medical Center"/>
+            </reference>
+            <name value="St Michael Medical Center"/>
+            <description value="Location resource for St. Michael Medical Center conformant to US Core"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group7"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/Ambulatory"/>
+                <display value="St Michael Multi-Speciality Clinic"/>
+            </reference>
+            <name value="St Michael Multi-Speciality Clinic"/>
+            <description value="Organization resource -- Ambulatory Clinic -- St. Michael Multi-Specialty Clinic"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group7"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/Inpatient"/>
+                <display value="St. Michael's Hospital"/>
+            </reference>
+            <name value="St. Michael's Hospital"/>
+            <description value="Organization resource -- Inpatient -- St. Michael's Hospital (part of St. Michael's Medical Center)"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group7"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Encounter/example-1"/></reference>
+            <name value="Encounter Ambulatory"/>
+            <description value="Encounter resource ambulatory conformant to US Core"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group7"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Encounter/Inpatient"/></reference>
+            <name value="Encounter Inpatient"/>
+            <description value="Encounter resource for inpatient conformant to US Core"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group7"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/blood-glucose"/></reference>
+            <name value="Observation Blood Glucose"/>
+            <description value="Observation Blood Glucose"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group7"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/o2-sat"/></reference>
+            <name value="Observation O2 Sat"/>
+            <description value="Observation Arterial O2 Saturation by Pulse Oximetry"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group7"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="MessageHeader/Discharge-Order"/></reference>
+            <name value="MessageHeader Discharge Order"/>
+            <description value="MessageHeader resource Discharge Order"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group8"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="MessageHeader/Discharge-Order2"/></reference>
+            <name value="MessageHeader for Medication Request"/>
+            <description value="MessageHeader resource for MedicationRequest"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group8"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Task/Home-Health"/></reference>
+            <name value="Task Home Health"/>
+            <description value="Task resource for Home Health Order (ServiceRequest)"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group8"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Task/MedicationRequest"/></reference>
+            <name value="Task Medication Request"/>
+            <description value="Task resource for MedicationRequest"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group8"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Subscription/Home-Health-Task"/></reference>
+            <name value="Subscription Home Health Task"/>
+            <description value="Subscription resource to the Home Health Task"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group8"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Coverage/example"/></reference>
+            <name value="Coverage"/>
+            <description value="PAO Coverage"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group8"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="DeviceRequest/insulinpump"/></reference>
+            <name value="DeviceRequest insulin pump"/>
+            <description value="Device Request insulin pump"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group9"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="DeviceRequest/HomeO2"/></reference>
+            <name value="DeviceRequest Home O2"/>
+            <description value="DeviceRequest resource for Home O2 Portable Oxygen Generator"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group9"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="DeviceDefinition/portableO2"/></reference>
+            <name value="DeviceDefinition Portable Home O2 Generator"/>
+            <description value="DeviceDefinition resource for a Portable Home O2 Generator"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group9"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="MedicationRequest/Insulin"/></reference>
+            <name value="MedicationRequest Human Insulin"/>
+            <description value="MedicationRequest resource for Human Insulin"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group9"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Medication/Insulin"/></reference>
+            <name value="Medication Human Insulin"/>
+            <description value="Medication resource for Human Insulin"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group9"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Provenance/Insulin-Order"/></reference>
+            <name value="Provenance Insulin Order"/>
+            <description value="Provenance resource for Insulin Order (MedicationRequest)"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group9"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="MedicationRequest/Everolimus"/></reference>
+            <name value="MedicationRequest Everolimus"/>
+            <description value="MedicationRequest resource for Everolimus"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group9"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Medication/Everolimus"/></reference>
+            <name value="Medication Everolimus"/>
+            <description value="Medication resource for Everolimus"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group9"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Provenance/Everolimus-Order"/></reference>
+            <name value="Provenance Everolimus Order"/>
+            <description value="Provenance resource for Everolimus Order (MedicationRequest)"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group9"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ServiceRequest/HomeHealth"/></reference>
+            <name value="ServiceRequest Home Health"/>
+            <description value="ServiceRequest for Home Health physical therapy and speech/hearing therapy"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group9"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Provenance/Home-Health-Order"/></reference>
+            <name value="Provenance Home Health Order"/>
+            <description value="Provenance resource for Home Health Order (ServiceRequest)"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group9"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/NPITest"/>
+                <display value="NPI Test organization"/>
+            </reference>
+            <name value="NPI Test organization"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Location/NPItest"/>
+                <display value="St Michael Medical Center"/>
+            </reference>
+            <name value="St Michael Medical Center"/>
+            <description value="Overland Park Location"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
+        </resource>
+        <page>
+            <nameUrl value="index.html"/>
+            <title value="Index"/>
+            <generation value="markdown"/>
+            <page>
+                <nameUrl value="background.html"/>
+                <title value="Background"/>
+                <generation value="markdown"/>
+                <page>
+                    <nameUrl value="actors.html"/>
+                    <title value="Actors"/>
+                    <generation value="markdown"/>
+                </page>
+                <page>
+                    <nameUrl value="glossary.html"/>
+                    <title value="Glossary"/>
+                    <generation value="markdown"/>
+                </page>
+            </page>
+            <page>
+                <nameUrl value="security_and_privacy.html"/>
+                <title value="Security and Privacy"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="restful_fhir_exchanges.html"/>
+                <title value="RESTful FHIR exchanges"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="fhir_messaging_exchanges.html"/>
+                <title value="FHIR Messaging exchanges"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="mixed_intermediary_exchange_model.html"/>
+                <title value="Mixed intermediary exchange model"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="technical_background.html"/>
+                <title value="Technical Background"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="fhir_artifacts_overview.html"/>
+                <title value="FHIR Artifacts Overview"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="must_support_and_missing_data.html"/>
+                <title value="Must Support and Missing Data"/>
+                <generation value="markdown"/>
+            </page>
+        </page>
+        <parameter>
+            <code value="copyrightyear"/>
+            <value value="2020+"/>
+        </parameter>
+        <parameter>
+            <code value="releaselabel"/>
+            <value value="CI Build"/>
+        </parameter>
+    </definition>
+</ImplementationGuide>

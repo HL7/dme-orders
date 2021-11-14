@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-devicedefinition"/>
+    <meta>
+        <versionId value="6"/>
+        <lastUpdated value="2020-07-26T03:20:38.922+00:00"/>
+        <source value="#mIggQ6M3FvGh5ued"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <h2>Overview</h2>
+            <p>
+                <strong>Name:</strong> PAOxDeviceDefinition
+            </p>
+            <p>
+                <strong>Title:</strong> PAO DeviceDefinition 
+            </p>
+            <p>
+                <strong>Status:</strong> Active
+            </p>
+            <p>
+                <strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicedefinition
+            </p>
+            <p>
+                <strong>Publisher:</strong> HL7
+            </p>
+            <h2>Elements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Path</th>
+                        <th>Slice</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DeviceDefinition</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicedefinition"/>
+    <version value="0.0.1"/>
+    <name value="PAOxDeviceDefinition"/>
+    <title value="PAO DeviceDefinition"/>
+    <status value="active"/>
+    <publisher value="HL7"/>
+    <description value="PAO DeviceDefinition Resource Profile"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <purpose value="Purpose"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="DeviceDefinition"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DeviceDefinition"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="DeviceDefinition">
+            <path value="DeviceDefinition"/>
+        </element>
+    </differential>
+</StructureDefinition>

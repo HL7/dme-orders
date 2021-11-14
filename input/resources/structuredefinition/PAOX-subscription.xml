@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-subscription"/>
+    <meta>
+        <versionId value="5"/>
+        <lastUpdated value="2020-07-30T15:18:15.203+00:00"/>
+        <source value="#kQTq4szy8PDT4hb3"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <h2>Overview</h2>
+            <p>
+                <strong>Name:</strong> PAOxSubscription
+            </p>
+            <p>
+                <strong>Title:</strong> PAO Subscription
+            </p>
+            <p>
+                <strong>Status:</strong> Active
+            </p>
+            <p>
+                <strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-subscription
+            </p>
+            <p>
+                <strong>Publisher:</strong> HL7
+            </p>
+            <h2>Elements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Path</th>
+                        <th>Slice</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Subscription</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-subscription"/>
+    <version value="0.0.1"/>
+    <name value="PAOxSubscription"/>
+    <title value="PAO Subscription"/>
+    <status value="active"/>
+    <publisher value="HL7"/>
+    <description value="PAO Subscription Resource Profile&#xA;The subscription resource should accompany the initial message bundle to provide a mechanism of informing the ordering provider when there is a change in the order as indicated by a change in the Task resorurce.&#xA;The subscriber has the option of receiving a notifiction when a change occurs or receiving the updated task and any relevant order resources (device, service, medication)"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <purpose value="Purpose"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Subscription"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Subscription"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Subscription">
+            <path value="Subscription"/>
+        </element>
+        <element id="Subscription.status">
+            <path value="Subscription.status"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Subscription.reason">
+            <path value="Subscription.reason"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Subscription.criteria">
+            <path value="Subscription.criteria"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Subscription.channel">
+            <path value="Subscription.channel"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Subscription.channel.type">
+            <path value="Subscription.channel.type"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Subscription.channel.endpoint">
+            <path value="Subscription.channel.endpoint"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Subscription.channel.payload">
+            <path value="Subscription.channel.payload"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Subscription.channel.header">
+            <path value="Subscription.channel.header"/>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

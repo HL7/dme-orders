@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization
+    xmlns="http://hl7.org/fhir">
+    <id value="NPITest"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2021-04-13T09:50:35.821+00:00"/>
+        <source value="#L07GWo7k58SFdlqt"/>
+    </meta>
+    <identifier>
+        <system value="http://hl7.org/fhir/sid/us-npi"/>
+        <value value="1407071236"/>
+    </identifier>
+    <identifier>
+        <system value="http://hl7.org/fhir/sid/us-npi"/>
+        <value value="1578003984"/>
+    </identifier>
+    <identifier>
+        <system value="http://hl7.org/fhir/sid/us-npi"/>
+        <value value="1245576024"/>
+    </identifier>
+    <active value="true"/>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+            <code value="prov"/>
+            <display value="Healthcare Provider"/>
+        </coding>
+    </type>
+    <name value="St Michael Multi-Specialty Clinic"/>
+    <telecom>
+        <system value="phone"/>
+        <value value="(+1) 913-666-7777"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="customer-service@St-Michael-Multi-specialty-clinic.org"/>
+    </telecom>
+    <address>
+        <line value="6666 135th St, Suite 227"/>
+        <city value="Overland Park"/>
+        <state value="KS"/>
+        <postalCode value="66223"/>
+        <country value="USA"/>
+    </address>
+</Organization>

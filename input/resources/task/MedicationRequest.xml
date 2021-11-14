@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Task
+    xmlns="http://hl7.org/fhir">
+    <id value="MedicationRequest"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2020-08-10T00:55:45.575+00:00"/>
+        <source value="#ZtTjxbltLOUEIVH2"/>
+        <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-task"/>
+    </meta>
+    <identifier>
+        <value value="56ae5855-9f20-41e4-a59d-000e36d9d85a"/>
+    </identifier>
+    <basedOn>
+        <reference value="ServiceRequest/HomeHealth"/>
+    </basedOn>
+    <status value="requested"/>
+    <intent value="order"/>
+    <code>
+        <coding>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="fulfill"/>
+        </coding>
+    </code>
+    <description value="Order Immunosuppressive"/>
+    <focus>
+        <reference value="MedicationRequest/Everolimus"/>
+    </focus>
+    <for>
+        <reference value="Patient/example1"/>
+    </for>
+    <authoredOn value="2020-07-30T20:07:15-06:00"/>
+    <requester>
+        <reference value="Organization/Inpatient"/>
+    </requester>
+</Task>

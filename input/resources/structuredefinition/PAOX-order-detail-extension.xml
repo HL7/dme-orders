@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-order-detail-extension"/>
+    <meta>
+        <versionId value="25"/>
+        <lastUpdated value="2020-07-27T16:49:56.648+00:00"/>
+        <source value="#jH6xFxxyPEq0vfnH"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <h2>Overview</h2>
+            <p>
+                <strong>Name:</strong> PAOxOrderDetailExtension
+            </p>
+            <p>
+                <strong>Title:</strong> PAO Order Detail Extension
+            </p>
+            <p>
+                <strong>Status:</strong> Active
+            </p>
+            <p>
+                <strong>URL:</strong> http://fhir.org/fhir/us/dme-orders/StructureDefinition/PAOX-order-detail-extension
+            </p>
+            <p>
+                <strong>Publisher:</strong> HL7
+            </p>
+            <h2>Elements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Path</th>
+                        <th>Slice</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Extension</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <url value="http://fhir.org/fhir/us/dme-orders/StructureDefinition/PAOX-order-detail-extension"/>
+    <version value="0.0.1"/>
+    <name value="PAOxOrderDetailExtension"/>
+    <title value="PAO Order Detail Extension"/>
+    <status value="active"/>
+    <publisher value="HL7"/>
+    <description value="Order detail extension"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="complex-type"/>
+    <abstract value="false"/>
+    <context>
+        <type value="extension"/>
+        <expression value="Extension for order details"/>
+    </context>
+    <type value="Extension"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Extension">
+            <path value="Extension"/>
+        </element>
+        <element id="Extension.extension">
+            <path value="Extension.extension"/>
+            <slicing>
+                <description value="Each extension should include a quantity and an item"/>
+                <rules value="open"/>
+            </slicing>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Extension.extension:Quantity">
+            <path value="Extension.extension"/>
+            <sliceName value="Quantity"/>
+            <min value="1"/>
+            <type>
+                <code value="Extension"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Extension.extension:Quantity.value[x]">
+            <path value="Extension.extension.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Quantity"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Extension.extension:Item">
+            <path value="Extension.extension"/>
+            <sliceName value="Item"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Extension.extension:Item.value[x]">
+            <path value="Extension.extension.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

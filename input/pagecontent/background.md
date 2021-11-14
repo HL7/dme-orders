@@ -1,5 +1,3 @@
-[Previous Page - Index](index.html)
-
 # Current environment
 There is currently no commonly accepted method of defining and exchanging post-acute orders between ordering providers and the providers of the ordered services or devices (rendering providers).  This guide defines a framework for ordering any type of post-acute services and provides for the inclusion of appropriate documentation to support 1) the medical necessity of the orders, 2) refining the order based on clinical information, and 3) communicating specific reviews or approvals to support appropriate billing.  This exchange:
 1.	Speeds the ordering process and delivers needed care sooner.
@@ -7,7 +5,7 @@ There is currently no commonly accepted method of defining and exchanging post-a
 3.	Supports exchange of required documentation.
 4.	Supports exchange of information related to order review/approval (e.g. Prior Authorization, Appropriate Use, Order and Documentation Review). However, the use of this IG is primarily to communicate the specific post-acute service order and is not dependent on any review/approval process.
 
-The goal is to provide for electronic ordering of Post-Acute DME and Home Health Services with the electronic exchange of supporting documentation in this version of the IG.  It is the goal of future versions of this implementation guide to support orders for all post-acute services.
+The goal is to provide for electronic ordering of Post-Acute DME and Home Health Services with the electronic exchange of supporting documentation in this version of the IG.  The goal of future versions of this implementation guide to support orders for all post-acute services.
 
 **In Scope**
 1.	Durable Medical Equipment (DME) and associated supplies using DeviceRequest.
@@ -21,11 +19,12 @@ The goal is to provide for electronic ordering of Post-Acute DME and Home Health
 **Out-of-Scope**
 1.	Responses from the patient.
 2.	Patient directed care.
-3.	Services other than DME (including medications) and  Home Health Services.
-4.	Cost considerations.
-5.	Partial fulfillment: status is included, but the details (which may require a conversation between the ordering and rendering provider) are out of scope.
-6.	Documentation requests: The performing provider may need additional documentation from the ordering provider that is not included in the exchanges defined in this IG. The authors suggest the use of the [Da Vinci Clinical Data Exchange (CDex) IG](http://build.fhir.org/ig/HL7/davinci-ecdx/index.html), which supports clinical data exchange between two providers as well as between a provider and a payer.
-7.	This IG does not require the use of a digital signature for this version, but the optional use of provenance to support digital signatures in scope.
+3.	Services other than DME and Home Health Services.
+4.	Medications that are not assoicated with DME.
+5.	Cost considerations.
+6.	Partial fulfillment: status is included, but the details (which may require a conversation between the ordering and rendering provider) are out of scope.
+7.	Documentation requests: The performing provider may need additional documentation from the ordering provider that is not included in the exchanges defined in this IG. The authors suggest the use of the [Da Vinci Clinical Data Exchange (CDex) IG](http://build.fhir.org/ig/HL7/davinci-ecdx/index.html), which supports clinical data exchange between two providers as well as between a provider and a payer.
+8.	This IG does not require the use of a digital signature for this version, but the optional use of provenance to support digital signatures in scope.
 
 **Business Requirements**
 
@@ -49,7 +48,4 @@ This IG has been constructed in a manner that allows testing of conformance to:
 2.  the underlying FHIR standards for the associated release (e.g. [FHIR R4](http://hl7.org/fhir/)), and 
 3. [US Core R4](http://build.fhir.org/ig/HL7/US-Core-R4/) profiles as applicable.
 
-Note: Other standards are available or in process to communicate referral information between providers such as the [Bidirectional Services eReferrals (BSeR)](http://hl7.org/fhir/us/bser/2019May/BSeRMessagingWorkflow.html) that are patterned after the 360x referral process. The PAO IG is focused on a simple method to exchange and track post-acute orders and the supporting documentation. PAO supports both a messaging and RESTful method for exchanging and tracking post-acute care orders including orders for services not covered by BSeR such as DME.  In the future, we will harmonize the statuses defined in this guide with the state machine work in BSeR.
-
-
-[Next Page - Actors](actors.html)
+Note: Other standards are available or in process to communicate referral information between providers such as the [Bidirectional Services eReferrals (BSeR)](http://hl7.org/fhir/us/bser/2019May/BSeRMessagingWorkflow.html) that are patterned after the 360x referral process. The PAO IG is focused on a simple method to exchange and track post-acute orders and the supporting documentation. PAO supports both a messaging and RESTful method for exchanging and tracking post-acute care orders including orders for services not covered by BSeR, such as DME.  In the future, we will harmonize the statuses defined in this guide with the state machine work in BSeR.

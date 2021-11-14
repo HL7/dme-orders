@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-messageheader"/>
+    <meta>
+        <versionId value="29"/>
+        <lastUpdated value="2021-08-16T19:22:23.423+00:00"/>
+        <source value="#mSYh0hBMwvYL0FFj"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <h2>Overview</h2>
+            <p>
+                <strong>Name:</strong> PAOxMessageHeader
+            </p>
+            <p>
+                <strong>Title:</strong> PAO MessageHeader
+            </p>
+            <p>
+                <strong>Status:</strong> Active
+            </p>
+            <p>
+                <strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-messageheader
+            </p>
+            <p>
+                <strong>Publisher:</strong> HL7
+            </p>
+            <h2>Elements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Path</th>
+                        <th>Slice</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MessageHeader</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>MessageHeader.event[x]</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>MessageHeader.destination</td>
+                        <td/>
+                        <td>1</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>MessageHeader.sender</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>MessageHeader.destination.endpoint</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>MessageHeader.destination.receiver</td>
+                        <td/>
+                        <td>1</td>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-messageheader"/>
+    <version value="0.0.2"/>
+    <name value="PAOxMessageHeader"/>
+    <title value="PAO MessageHeader"/>
+    <status value="active"/>
+    <publisher value="HL7"/>
+    <description value="PAO MessageHeader Resource Profile&#xA;This profile is used to order, update, cancel and query the status of an order.&#xA;It requires the consistent use of identifiers to ensure that any actions targeted at a prior order affect only that order."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <purpose value="Purpose"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="MessageHeader"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MessageHeader"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="MessageHeader">
+            <path value="MessageHeader"/>
+        </element>
+        <element id="MessageHeader.event[x]">
+            <path value="MessageHeader.event[x]"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/us/dme-orders/ValueSet/PAOx-Message-Event"/>
+            </binding>
+        </element>
+        <element id="MessageHeader.destination">
+            <path value="MessageHeader.destination"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageHeader.destination.receiver">
+            <path value="MessageHeader.destination.receiver"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageHeader.sender">
+            <path value="MessageHeader.sender"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageHeader.enterer">
+            <path value="MessageHeader.enterer"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageHeader.author">
+            <path value="MessageHeader.author"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageHeader.source">
+            <path value="MessageHeader.source"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageHeader.responsible">
+            <path value="MessageHeader.responsible"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageHeader.response">
+            <path value="MessageHeader.response"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageHeader.focus">
+            <path value="MessageHeader.focus"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicerequest"/>
+                <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-medication-request"/>
+                <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-servicerequest"/>
+                <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-task"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

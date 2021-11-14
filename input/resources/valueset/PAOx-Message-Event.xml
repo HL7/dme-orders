@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOx-Message-Event"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2020-07-27T02:08:55.729+00:00"/>
+        <source value="#D2SGoJKzmIxWcX34"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/dme-orders/ValueSet/PAOx-Message-Event"/>
+    <version value="0.0.1"/>
+    <name value="PAOxMessageEvent"/>
+    <title value="PAO Message Event"/>
+    <status value="draft"/>
+    <description value="Message Envent value set"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/us/dme-orders/CodeSystem/PAOX-Message-Event"/>
+            <concept>
+                <code value="InitialOrder"/>
+            </concept>
+            <concept>
+                <code value="OrderUpdate"/>
+            </concept>
+            <concept>
+                <code value="OrderCancel"/>
+            </concept>
+            <concept>
+                <code value="OrderStatus"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Location
+    xmlns="http://hl7.org/fhir">
+    <id value="NPItest"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-04-13T09:59:02.779+00:00"/>
+        <source value="#qf6ffGJH3C6hDZXq"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
+    </meta>
+    <identifier>
+        <system value="http://www.acme.org/location"/>
+        <value value="29"/>
+    </identifier>
+    <identifier>
+        <system value="http://hl7.org/fhir/sid/us-npi"/>
+        <value value="1407071236"/>
+    </identifier>
+    <status value="active"/>
+    <name value="St Michael Medical Center"/>
+    <description value="Overland Park Location"/>
+    <telecom>
+        <system value="phone"/>
+        <value value="(+1) 913-666-7777"/>
+    </telecom>
+    <address>
+        <line value="6666 135th Street"/>
+        <city value="Overland Park"/>
+        <state value="KS"/>
+        <postalCode value="66223"/>
+        <country value="USA"/>
+    </address>
+    <position>
+        <longitude value="-94.653759"/>
+        <latitude value="38.884082"/>
+    </position>
+    <managingOrganization>
+        <display value="St Michael Health System"/>
+    </managingOrganization>
+</Location>
