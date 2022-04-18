@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Provenance
+    xmlns="http://hl7.org/fhir">
+    <id value="Home-Health-Order"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2020-08-09T22:15:38.163+00:00"/>
+        <source value="#1epkyPWpes9hMxx2"/>
+        <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-provenance"/>
+    </meta>
+    <target>
+        <reference value="ServiceRequest/HomeHealth"/>
+    </target>
+    <recorded value="2015-08-27T08:39:24+10:00"/>
+    <reason>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+            <code value="TREAT"/>
+            <display value="treatment"/>
+        </coding>
+    </reason>
+    <activity>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"/>
+            <code value="AU"/>
+            <display value="authenticated"/>
+        </coding>
+    </activity>
+    <agent>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/contractsignertypecodes"/>
+                <code value="VERF"/>
+            </coding>
+        </type>
+        <who>
+            <identifier>
+                <system value="urn:ietf:rfc:3986"/>
+                <value value="mailto://hhd@ssa.gov"/>
+            </identifier>
+        </who>
+    </agent>
+    <signature>
+        <type>
+            <system value="urn:iso-astm:E1762-95:2013"/>
+            <code value="1.2.840.10065.1.12.1.5"/>
+            <display value="Verification Signature"/>
+        </type>
+        <when value="2020-08-04T08:39:24+10:00"/>
+        <who>
+            <reference value="Practitioner/practitioner-1"/>
+        </who>
+        <targetFormat value="application/fhir+xml"/>
+        <sigFormat value="application/signature+xml"/>
+        <data value="Li4u"/>
+    </signature>
+</Provenance>

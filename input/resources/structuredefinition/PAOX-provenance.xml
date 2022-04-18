@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-provenance"/>
+    <meta>
+        <versionId value="9"/>
+        <lastUpdated value="2020-07-30T13:48:37.724+00:00"/>
+        <source value="#hKfd5KVIhf4bW09s"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <h2>Overview</h2>
+            <p>
+                <strong>Name:</strong> PAOXProvenance
+            </p>
+            <p>
+                <strong>Title:</strong> PAOx Provenance Profile
+            </p>
+            <p>
+                <strong>Status:</strong> Active
+            </p>
+            <p>
+                <strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-provenance
+            </p>
+            <p>
+                <strong>Publisher:</strong> HL7
+            </p>
+            <h2>Elements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Path</th>
+                        <th>Slice</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Provenance</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-provenance"/>
+    <version value="0.0.1"/>
+    <name value="PAOXProvenance"/>
+    <title value="PAO Provenance"/>
+    <status value="active"/>
+    <publisher value="HL7"/>
+    <description value="PAO Provenance Profile based on US Core"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <purpose value="Purpose"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Provenance"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Provenance">
+            <path value="Provenance"/>
+        </element>
+        <element id="Provenance.target">
+            <path value="Provenance.target"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-medication-request"/>
+                <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicerequest"/>
+                <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-servicerequest"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

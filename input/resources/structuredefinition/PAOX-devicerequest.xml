@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-devicerequest"/>
+    <meta>
+        <versionId value="11"/>
+        <lastUpdated value="2020-08-05T08:54:51.335+00:00"/>
+        <source value="#N4biXmaYkrvs8CKo"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <h2>Overview</h2>
+            <p>
+                <strong>Name:</strong> PAOxDeviceRequest
+            </p>
+            <p>
+                <strong>Title:</strong> PAO Device Request Profile
+            </p>
+            <p>
+                <strong>Status:</strong> Active
+            </p>
+            <p>
+                <strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicerequest
+            </p>
+            <p>
+                <strong>Publisher:</strong> HL7
+            </p>
+            <h2>Elements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Path</th>
+                        <th>Slice</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DeviceRequest</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicerequest"/>
+    <version value="0.0.1"/>
+    <name value="PAOxDeviceRequest"/>
+    <title value="PAO Device Request"/>
+    <status value="active"/>
+    <publisher value="HL7"/>
+    <description value="PAO DeviceRequest Resource Profile"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <purpose value="Purpose"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="DeviceRequest"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DeviceRequest"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="DeviceRequest">
+            <path value="DeviceRequest"/>
+        </element>
+        <element id="DeviceRequest.intent">
+            <path value="DeviceRequest.intent"/>
+            <fixedCode value="order"/>
+        </element>
+        <element id="DeviceRequest.encounter">
+            <path value="DeviceRequest.encounter"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

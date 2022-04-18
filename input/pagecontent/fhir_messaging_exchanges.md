@@ -1,12 +1,10 @@
-[Previous Page - RESTful FHIR exchanges](restful_fhir_exchanges.html)
-
 # FHIR Messaging communication pattern
 
 **Assumptions (without an Intermediary)**
 
 1.	There is no RESTful access to the information in the EHR, or, all the information needs to be present in a single unit.
 2.	Any additional information needed by the supplier may be available via RESTful queries from the EHR.
-3.	The MessageDefinition resource for each message is available as a static artefact to be used as a reference, but it is not present in the message itself.
+3.	The MessageDefinition resource for each message is available as a static artifact to be used as a reference, but it is not present in the message itself.
 4.	The structure of each message is as follows:
 
 			a.	A Bundle where the MessageHeader resource is the first entry.
@@ -32,7 +30,7 @@ Note that any messages from the Rendering Provider to the Ordering Provider coul
 1.	There is no RESTful access to the information in the Ordering Provider System, or, all the information needs to be present in a single unit.
 2.	Any additional information needed by the Rendering Provider needs to be exchanged via order update messages, since one of the main purposes of the Intermediary is to proxy the access between the Ordering Provider and the Rendering Provider.
 3.	MessageHeader.response is not used for the order update messages.
-4.	The MessageDefinition resource for each message is available as a static artefact to be used as a reference, but it is not present in the message itself.
+4.	The MessageDefinition resource for each message is available as a static artifact to be used as a reference, but it is not present in the message itself.
 5.	The structure of each message is as follows:
 
 			a.	A Bundle where the MessageHeader resource is the first entry.
@@ -51,5 +49,3 @@ Note that any messages from the Rendering Provider to the Ordering Provider coul
 3. The third part shows order updates by the Ordering Provider (e.g. order change or cancel).
 
 <table><tr><td><img src="PAOMsgInt.jpg" /></td></tr></table>
-
-[Next Page - Mixed intermediary exchange model](mixed_intermediary_exchange_model.html)

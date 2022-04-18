@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-relevant-reviews-extension"/>
+    <meta>
+        <versionId value="8"/>
+        <lastUpdated value="2020-07-27T16:39:08.147+00:00"/>
+        <source value="#olVzLbnJSZo4nRQG"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <h2>Overview</h2>
+            <p>
+                <strong>Name:</strong> PAOxRelevantReviewsExtension
+            </p>
+            <p>
+                <strong>Status:</strong> Active
+            </p>
+            <p>
+                <strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-relevant-reviews-extension
+            </p>
+            <h2>Elements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Path</th>
+                        <th>Slice</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Extension</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-relevant-reviews-extension"/>
+    <version value="0.0.1"/>
+    <name value="PAOxRelevantReviewsExtension"/>
+    <title value="PAO Relevant Reviews Extension"/>
+    <status value="active"/>
+    <publisher value="HL7"/>
+    <description value="Extension to define relevant review (such as prior-authorization)"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+        </coding>
+    </jurisdiction>
+    <purpose value="Purpose"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="complex-type"/>
+    <abstract value="false"/>
+    <context>
+        <type value="extension"/>
+        <expression value="Extension for relevant reviews"/>
+    </context>
+    <type value="Extension"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Extension">
+            <path value="Extension"/>
+        </element>
+        <element id="Extension.extension">
+            <path value="Extension.extension"/>
+            <slicing>
+                <description value="One entry is required for review type and result: Issuing Organization is optional"/>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Extension.extension:ReviewType">
+            <path value="Extension.extension"/>
+            <sliceName value="ReviewType"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Extension.extension:ReviewType.value[x]">
+            <path value="Extension.extension.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Extension.extension:IssuingOrganization">
+            <path value="Extension.extension"/>
+            <sliceName value="IssuingOrganization"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Extension.extension:IssuingOrganization.value[x]">
+            <path value="Extension.extension.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Extension.extension:Result">
+            <path value="Extension.extension"/>
+            <sliceName value="Result"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Extension.extension:Result.value[x]">
+            <path value="Extension.extension.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="string"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

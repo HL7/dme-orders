@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Coverage
+    xmlns="http://hl7.org/fhir">
+    <id value="example"/>
+    <meta>
+        <versionId value="8"/>
+        <lastUpdated value="2020-08-09T23:27:39.427+00:00"/>
+        <source value="#QPwVk0hKzW9hvHtn"/>
+        <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-coverage"/>
+    </meta>
+    <identifier>
+        <system value="http://benefitsinc.com/certificate"/>
+        <value value="12345"/>
+    </identifier>
+    <status value="active"/>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="EHCPOL"/>
+            <display value="extended healthcare"/>
+        </coding>
+    </type>
+    <subscriber>
+        <reference value="Patient/example1"/>
+    </subscriber>
+    <beneficiary>
+        <reference value="Patient/example1"/>
+    </beneficiary>
+    <dependent value="0"/>
+    <relationship>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/subscriber-relationship"/>
+            <code value="self"/>
+        </coding>
+    </relationship>
+    <period>
+        <start value="2011-05-23"/>
+        <end value="2012-05-23"/>
+    </period>
+    <payor>
+        <reference value="Organization/Inpatient"/>
+    </payor>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="group"/>
+            </coding>
+        </type>
+        <value value="CB135"/>
+        <name value="Corporate Baker's Inc. Local #35"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="subgroup"/>
+            </coding>
+        </type>
+        <value value="123"/>
+        <name value="Trainee Part-time Benefits"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="plan"/>
+            </coding>
+        </type>
+        <value value="B37FC"/>
+        <name value="Full Coverage: Medical, Dental, Pharmacy, Vision, EHC"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="subplan"/>
+            </coding>
+        </type>
+        <value value="P7"/>
+        <name value="Includes afterlife benefits"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="class"/>
+            </coding>
+        </type>
+        <value value="SILVER"/>
+        <name value="Silver: Family Plan spouse only"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="subclass"/>
+            </coding>
+        </type>
+        <value value="Tier2"/>
+        <name value="Low deductable, max $20 copay"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="sequence"/>
+            </coding>
+        </type>
+        <value value="9"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="rxid"/>
+            </coding>
+        </type>
+        <value value="MDF12345"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="rxbin"/>
+            </coding>
+        </type>
+        <value value="987654"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="rxgroup"/>
+            </coding>
+        </type>
+        <value value="M35PT"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="rxpcn"/>
+            </coding>
+        </type>
+        <value value="234516"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="sequence"/>
+            </coding>
+        </type>
+        <value value="9"/>
+    </class>
+</Coverage>

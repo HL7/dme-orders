@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Medication
+    xmlns="http://hl7.org/fhir">
+    <id value="Everolimus"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2020-08-09T21:05:15.935+00:00"/>
+        <source value="#QPVwleBHz9uaDRK4"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <div class="hapiHeaderText">everolimus 0.25 MG</div>
+        </div>
+    </text>
+    <code>
+        <coding>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="977426"/>
+            <display value="everolimus 0.25 MG"/>
+        </coding>
+        <text value="everolimus 0.25 MG"/>
+    </code>
+</Medication>

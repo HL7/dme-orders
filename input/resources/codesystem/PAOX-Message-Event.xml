@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-Message-Event"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2020-07-29T02:36:28.894+00:00"/>
+        <source value="#y7xwTB402GOU24M3"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/dme-orders/CodeSystem/PAOX-Message-Event"/>
+    <version value="0.0.1"/>
+    <name value="PAOxMessageEvent"/>
+    <title value="PAO Message Event Code System"/>
+    <status value="draft"/>
+    <publisher value="HL7"/>
+    <description value="Tbis code system is for the message event "/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <content value="complete"/>
+    <concept>
+        <code value="InitialOrder"/>
+        <display value="Initial Order"/>
+        <definition value="Initial Order for Post-Acute services"/>
+    </concept>
+    <concept>
+        <code value="OrderUpdate"/>
+        <display value="Order Update"/>
+        <definition value="urn:iso:std:iso:3166"/>
+    </concept>
+    <concept>
+        <code value="OrderCancel"/>
+        <display value="Order Cancel"/>
+        <definition value="Cancel an order (may be declined if done)"/>
+    </concept>
+    <concept>
+        <code value="OrderStatus"/>
+        <display value="Order Status"/>
+        <definition value="Order Status"/>
+    </concept>
+</CodeSystem>

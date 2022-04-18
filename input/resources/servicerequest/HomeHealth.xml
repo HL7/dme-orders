@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceRequest
+    xmlns="http://hl7.org/fhir">
+    <id value="HomeHealth"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2020-08-09T18:54:52.762+00:00"/>
+        <source value="#sD6N012O4CFWcg2d"/>
+        <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-servicerequest"/>
+    </meta>
+    <identifier>
+        <value value="56ae5855-9f20-41e4-a59d-000e36d9d85a"/>
+    </identifier>
+    <status value="active"/>
+    <intent value="order"/>
+    <priority value="routine"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="417153003"/>
+            <display value="Referral for home nurse visit"/>
+        </coding>
+    </code>
+    <orderDetail>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="416790000"/>
+            <display value="Referral for home physical therapy"/>
+        </coding>
+        <coding>
+            <system value="http://www.ama-assn.org/go/cpt"/>
+            <code value="97039"/>
+            <display value="Physical therapy treatment"/>
+        </coding>
+        <coding>
+            <system value="http://www.ama-assn.org/go/cpt"/>
+            <code value="92507"/>
+            <display value="Speech/hearing therapy"/>
+        </coding>
+    </orderDetail>
+    <subject>
+        <reference value="Patient/example1"/>
+        <display value="Amy Shaw"/>
+    </subject>
+    <encounter>
+        <reference value="Encounter/Inpatient"/>
+    </encounter>
+    <occurrenceDateTime value="2020-05-08T09:33:27+07:00"/>
+    <authoredOn value="2020-04-05"/>
+    <requester>
+        <reference value="Practitioner/practitioner-1"/>
+        <display value="Ronald Bone, MD"/>
+    </requester>
+    <note>
+        <text value="It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)"/>
+    </note>
+    <patientInstruction value="Test patient instruction"/>
+</ServiceRequest>

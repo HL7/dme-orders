@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-bundle"/>
+    <meta>
+        <versionId value="19"/>
+        <lastUpdated value="2020-07-29T03:08:39.707+00:00"/>
+        <source value="#CbvDgqVGgjlwMC59"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <h2>Overview</h2>
+            <p>
+                <strong>Name:</strong> PAOxBundle
+            </p>
+            <p>
+                <strong>Title:</strong> PAOx Bundle Profile
+            </p>
+            <p>
+                <strong>Status:</strong> Active
+            </p>
+            <p>
+                <strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-bundle
+            </p>
+            <p>
+                <strong>Publisher:</strong> HL7
+            </p>
+            <h2>Elements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Path</th>
+                        <th>Slice</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bundle</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Bundle.identifier</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Bundle.type</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Bundle.timestamp</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Bundle.entry</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-bundle"/>
+    <version value="0.0.1"/>
+    <name value="PAOxBundle"/>
+    <title value="PAO Bundle"/>
+    <status value="active"/>
+    <publisher value="HL7"/>
+    <description value="PAO Bundle profile includes a MessageHeader, Task, Subscription, service/device/medication order(s) and supporting documentation"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <purpose value="Purpose"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Bundle"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Bundle">
+            <path value="Bundle"/>
+        </element>
+        <element id="Bundle.identifier">
+            <path value="Bundle.identifier"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.identifier.id">
+            <path value="Bundle.identifier.id"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.identifier.value">
+            <path value="Bundle.identifier.value"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.type">
+            <path value="Bundle.type"/>
+            <fixedCode value="message"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/bundle-type"/>
+            </binding>
+        </element>
+        <element id="Bundle.timestamp">
+            <path value="Bundle.timestamp"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry">
+            <path value="Bundle.entry"/>
+            <slicing>
+                <description value="Must have one entry for the MessageHeader and May have entries for other resources in the bundle"/>
+                <rules value="open"/>
+            </slicing>
+            <min value="1"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:MessageHeader">
+            <path value="Bundle.entry"/>
+            <sliceName value="MessageHeader"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:MessageHeader.resource">
+            <path value="Bundle.entry.resource"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Resource"/>
+                <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-messageheader"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

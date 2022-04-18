@@ -1,5 +1,3 @@
-[Previous Page - FHIR Artifacts Overview](fhir_artifacts_overview.html)
-
 # Must Support and Missing Data
 
 Systems claiming to conform to a profile SHALL support the elements in a profile as defined below: This guide adopts the following definitions of MustSupport for all direct transactions between the Sender and Recipient or Intermediary

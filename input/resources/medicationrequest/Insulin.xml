@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationRequest
+    xmlns="http://hl7.org/fhir">
+    <id value="Insulin"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2020-08-09T21:54:34.412+00:00"/>
+        <source value="#xYSKFGO1PsQKUqFS"/>
+        <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-medication-request"/>
+    </meta>
+    <status value="active"/>
+    <intent value="order"/>
+    <medicationCodeableConcept>
+        <coding>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="311036"/>
+            <display value="Humulin R 100 UNT/ML Injectable Solution"/>
+        </coding>
+        <text value="Humulin R 100 UNT/ML Injectable Solution"/>
+    </medicationCodeableConcept>
+    <subject>
+        <reference value="Patient/example1"/>
+        <display value="Amy Shaw"/>
+    </subject>
+    <authoredOn value="2020-08-05"/>
+    <requester>
+        <reference value="Practitioner/practitioner-1"/>
+        <display value="Ronald Bone, MD"/>
+    </requester>
+    <dosageInstruction>
+        <text value="0.5 ML tid"/>
+        <timing>
+            <repeat>
+                <boundsPeriod>
+                    <start value="2020-08-06"/>
+                </boundsPeriod>
+            </repeat>
+        </timing>
+    </dosageInstruction>
+    <dispenseRequest>
+        <numberOfRepeatsAllowed value="3"/>
+        <quantity>
+            <value value="50"/>
+            <unit value="mL"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mL"/>
+        </quantity>
+        <expectedSupplyDuration>
+            <value value="30"/>
+            <unit value="days"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="d"/>
+        </expectedSupplyDuration>
+    </dispenseRequest>
+</MedicationRequest>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Subscription
+    xmlns="http://hl7.org/fhir">
+    <id value="Home-Health-Task"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2020-08-09T22:57:36.519+00:00"/>
+        <source value="#cCgSRKabdg05LTDG"/>
+        <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-subscription"/>
+    </meta>
+    <status value="active"/>
+    <reason value="supscription to the task associated with the order"/>
+    <criteria value="Task?_profile=http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-subscription"/>
+    <channel>
+        <type value="rest-hook"/>
+        <endpoint value="https://biliwatch.com/customers/mount-auburn-miu/on-result"/>
+        <header value="Authorization: Bearer secret-token-abc-123"/>
+    </channel>
+</Subscription>
