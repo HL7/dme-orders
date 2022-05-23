@@ -47,3 +47,4 @@ If you are interested in participating in the Post-Acute orders project: informa
 
 # Change log
 * **0.2.2a* :**updates from 11/14/2021
+* **0.2.2b* :**updates from 5/23/2022
