@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation
+    xmlns="http://hl7.org/fhir">
+    <id value="blood-glucose"/>
+    <meta>
+        <versionId value="4"/>
+        <lastUpdated value="2020-08-04T04:03:31.384+00:00"/>
+        <source value="#1RohcPULu2QLZJdK"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+        </coding>
+        <text value="Laboratory"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="2339-0"/>
+            <display value="Glucose Bld-mCnc"/>
+        </coding>
+        <text value="Glucose Bld-mCnc"/>
+    </code>
+    <subject>
+        <reference value="Patient/example1"/>
+        <display value="Amy Shaw"/>
+    </subject>
+    <effectiveDateTime value="2005-07-05"/>
+    <valueQuantity>
+        <value value="76"/>
+        <unit value="mg/dL"/>
+        <system value="http://unitsofmeasure.org"/>
+    </valueQuantity>
+    <referenceRange>
+        <low>
+            <value value="40"/>
+            <unit value="mg/dL"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg/dL"/>
+        </low>
+        <high>
+            <value value="109"/>
+            <unit value="mg/dL"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg/dL"/>
+        </high>
+        <appliesTo>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+                <code value="normal"/>
+                <display value="Normal Range"/>
+            </coding>
+            <text value="Normal Range"/>
+        </appliesTo>
+    </referenceRange>
+</Observation>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageHeader
+    xmlns="http://hl7.org/fhir">
+    <id value="Discharge-Order2"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2020-08-10T01:09:53.645+00:00"/>
+        <source value="#qHy3mLZcBMrmvshn"/>
+        <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-messageheader"/>
+    </meta>
+    <eventCoding>
+        <system value="http://hl7.org/fhir/us/dme-orders/CodeSystem/PAOX-Message-Event"/>
+        <code value="InitialOrder"/>
+        <display value="Initial Order"/>
+    </eventCoding>
+    <destination>
+        <name value="Acme Message Gateway"/>
+        <endpoint value="https://example.org/Endpoints/P123"/>
+        <receiver>
+            <reference value="Organization/Inpatient"/>
+            <display value="St. Michael's Hospital"/>
+        </receiver>
+    </destination>
+    <sender>
+        <reference value="Organization/Inpatient"/>
+        <display value="St. Michael's Hospital"/>
+    </sender>
+    <author>
+        <reference value="Practitioner/practitioner-1"/>
+        <display value="Ronald Bone"/>
+    </author>
+    <source>
+        <name value="Acme Central Patient Registry"/>
+        <software value="FooBar Patient Manager"/>
+        <version value="3.1.45.AABB"/>
+        <contact>
+            <system value="phone"/>
+            <value value="+1 (555) 123 4567"/>
+        </contact>
+        <endpoint value="https://example.org/Endpoints/P456"/>
+    </source>
+    <responsible>
+        <reference value="Organization/Inpatient"/>
+        <display value="St. Michael's Hospital"/>
+    </responsible>
+    <focus>
+        <reference value="Task/MedicationRequest"/>
+        <display value="Inpatient Encounter"/>
+    </focus>
+</MessageHeader>

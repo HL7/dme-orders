@@ -1,5 +1,3 @@
-[Previous Page - FHIR Messaging exchanges](fhir_messaging_exchanges.html)
-
 # Mixed communication pattern
 
 One of the purposes of an Intermediary can be to transition between different communication patterns, although this assumes a detailed understanding of the content, and requires the Intermediary to manage resources locally. 
@@ -12,5 +10,3 @@ This example shows using the RESTful pattern for the Ordering Provider, and mess
 
 
 <table><tr><td><img src="PAOMixedInt.jpg" /></td></tr></table>
-
-[Next Page - Technical Background](technical_background.html)

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-Medication"/>
+    <meta>
+        <versionId value="28"/>
+        <lastUpdated value="2020-07-29T03:08:17.340+00:00"/>
+        <source value="#PXrXqNUwqTdsY5YN"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <h2>Overview</h2>
+            <p>
+                <strong>Name:</strong> PAOxMedication
+            </p>
+            <p>
+                <strong>Title:</strong> PAOx Medication Profile
+            </p>
+            <p>
+                <strong>Status:</strong> Active
+            </p>
+            <p>
+                <strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefintion/PAOX-Medication
+            </p>
+            <p>
+                <strong>Publisher:</strong> HL7
+            </p>
+            <h2>Elements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Path</th>
+                        <th>Slice</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Medication</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Medication.identifier</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/dme-orders/StructureDefintion/PAOX-Medication"/>
+    <version value="0.0.1"/>
+    <name value="PAOxMedication"/>
+    <title value="PAO Medication"/>
+    <status value="active"/>
+    <publisher value="HL7"/>
+    <description value="PAO Medication Profile based on US Core"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <purpose value="Purpose"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Medication"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Medication">
+            <path value="Medication"/>
+        </element>
+        <element id="Medication.identifier">
+            <path value="Medication.identifier"/>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

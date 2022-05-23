@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Medication
+    xmlns="http://hl7.org/fhir">
+    <id value="Insulin"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2020-08-09T20:59:47.492+00:00"/>
+        <source value="#GcsQmjM6mSkuNigA"/>
+        <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefintion/PAOX-Medication"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <div class="hapiHeaderText">Human Insulin 100 Unt/ml</div>
+        </div>
+    </text>
+    <code>
+        <coding>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="311036"/>
+            <display value="Humulin R 100 UNT/ML Injectable Solution"/>
+        </coding>
+        <text value="Human Insulin 100 Unt/ml"/>
+    </code>
+</Medication>

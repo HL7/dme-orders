@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-Task-Code"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2020-07-27T02:12:56.409+00:00"/>
+        <source value="#lGjTQT9nQLTvMyMD"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/dme-orders/ValueSet/PAOX-Task-Code"/>
+    <version value="0.0.1"/>
+    <name value="PAOxTaskCode"/>
+    <title value="PAO Task Code Value Set"/>
+    <status value="draft"/>
+    <description value="This the task.code value set -- uses same code systems as the base resource but restricts the codes and makes it extensible."/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+        </include>
+    </compose>
+</ValueSet>

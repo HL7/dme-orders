@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-medication-request"/>
+    <meta>
+        <versionId value="22"/>
+        <lastUpdated value="2020-08-05T09:00:05.179+00:00"/>
+        <source value="#sXuRVC6VdCCrF4MH"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <h2>Overview</h2>
+            <p>
+                <strong>Name:</strong> PAOx_MedicationRequest
+            </p>
+            <p>
+                <strong>Title:</strong> PAOx MedicationRequest Profile
+            </p>
+            <p>
+                <strong>Status:</strong> Active
+            </p>
+            <p>
+                <strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-medication-request
+            </p>
+            <h2>Elements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Path</th>
+                        <th>Slice</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MedicationRequest</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>MedicationRequest.identifier</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>MedicationRequest.substitution.allowed[x]</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-medication-request"/>
+    <name value="PAOx_MedicationRequest"/>
+    <title value="PAO MedicationRequest"/>
+    <status value="active"/>
+    <description value="PAO MedicationRequest Profile "/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <purpose value="Purpose"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="MedicationRequest"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="MedicationRequest">
+            <path value="MedicationRequest"/>
+        </element>
+        <element id="MedicationRequest.identifier">
+            <path value="MedicationRequest.identifier"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.intent">
+            <path value="MedicationRequest.intent"/>
+            <fixedCode value="order"/>
+        </element>
+        <element id="MedicationRequest.category">
+            <path value="MedicationRequest.category"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.medication[x]">
+            <path value="MedicationRequest.medication[x]"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefintion/PAOX-Medication"/>
+            </type>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        <element id="MedicationRequest.subject">
+            <path value="MedicationRequest.subject"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.supportingInformation">
+            <path value="MedicationRequest.supportingInformation"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.authoredOn">
+            <path value="MedicationRequest.authoredOn"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.requester">
+            <path value="MedicationRequest.requester"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.insurance">
+            <path value="MedicationRequest.insurance"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-coverage"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest">
+            <path value="MedicationRequest.dispenseRequest"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.substitution.allowed[x]">
+            <path value="MedicationRequest.substitution.allowed[x]"/>
+            <binding>
+                <strength value="example"/>
+                <valueSet value="http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode"/>
+            </binding>
+        </element>
+    </differential>
+</StructureDefinition>

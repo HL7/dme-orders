@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceRequest
+    xmlns="http://hl7.org/fhir">
+    <id value="HomeO2"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2020-08-10T02:58:37.162+00:00"/>
+        <source value="#sfsM8Lq8cuRHM4E5"/>
+        <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicerequest"/>
+    </meta>
+    <identifier>
+        <value value="ip_request2"/>
+    </identifier>
+    <basedOn>
+        <display value="Homecare - DM follow-up"/>
+    </basedOn>
+    <priorRequest>
+        <display value="CGM ambulatory"/>
+    </priorRequest>
+    <groupIdentifier>
+        <value value="ip_request1"/>
+    </groupIdentifier>
+    <status value="active"/>
+    <intent value="order"/>
+    <priority value="routine"/>
+    <codeCodeableConcept>
+        <coding>
+            <system value="http://www.ama-assn.org/go/cpt"/>
+            <code value="E1392"/>
+        </coding>
+        <text value="Portable Oxygen Concentrator, Rental"/>
+    </codeCodeableConcept>
+    <subject>
+        <reference value="Patient/example1"/>
+    </subject>
+    <encounter>
+        <display value="Ambulatory"/>
+    </encounter>
+    <occurrenceDateTime value="2020-08-05T09:33:27+07:00"/>
+    <authoredOn value="2020-08-05T09:33:27+07:00"/>
+    <requester>
+        <reference value="Practitioner/practitioner-1"/>
+        <display value="Dr.Ronald Bone"/>
+    </requester>
+    <reasonCode>
+        <text value="COPD"/>
+    </reasonCode>
+    <reasonReference>
+        <display value="COPD"/>
+    </reasonReference>
+    <supportingInfo>
+        <reference value="Observation/o2-sat"/>
+        <display value="Previous results"/>
+    </supportingInfo>
+    <note>
+        <text value="patient is mobile -- needs portable O2 concentrator"/>
+    </note>
+    <relevantHistory>
+        <display value="Request for specific device"/>
+    </relevantHistory>
+</DeviceRequest>

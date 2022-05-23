@@ -4,14 +4,14 @@ Rendering provider in this specification means the individual or organization th
 
 # Content and Organization of this Implementation Guide
 The implementation guide is organized into the following sections:
-* 	[Index ](http://build.fhir.org/ig/HL7/dme-orders/index.html)describes the overall organization of the Implementation Guide.
+* 	[Index ](http://build.fhir.org/ig/HL7/dme-orders/index.html)describes the overall organization of the implementation guide.
 * 	[Background](http://build.fhir.org/ig/HL7/dme-orders/background.html) describes current environment and the intent of the implementation guide.  It also covers items that are: 1) in scope, 2) out of scope, 3) business requirements, and 4) clinical requirements.
 * 	[Security and Privacy](http://build.fhir.org/ig/HL7/dme-orders/security_and_privacy.html) describes the security and privacy guidelines for use of this implementation guide.
 * 	[RESTful FHIR exchanges](http://build.fhir.org/ig/HL7/dme-orders/restful_fhir_exchanges.html)  describes the RESTful method of exchanging orders, updates and status.
 * 	[FHIR Messaging exchanges](http://build.fhir.org/ig/HL7/dme-orders/fhir_messaging_exchanges.html) describes the use of FHIR messaging to exchanging orders, updates and status.
 * 	[Mixed Intermediary exchanges](http://build.fhir.org/ig/HL7/dme-orders/mixed_intermediary_exchange_model.html)  describes the use of both RESTful FHIR and FHIR messaging exchanges with an Intermediary.
 * 	[Technical Background](http://build.fhir.org/ig/HL7/dme-orders/technical_background.html) describes the different specifications this implementation guide relies on and indicates what developers should read and understand prior to implementing this specification.
-* 	[FHIR Artifacts Overview](http://build.fhir.org/ig/HL7/dme-orders/fhir_artifacts_overview.html covers the type of FHIR artifacts that are included in this implementation guide.
+* 	[FHIR Artifacts Overview](http://build.fhir.org/ig/HL7/dme-orders/fhir_artifacts_overview.html) covers the type of FHIR artifacts that are included in this implementation guide.
 * 	[Must Support and Missing Data](http://build.fhir.org/ig/HL7/dme-orders/must_support_and_missing_data.html) describes the required treatment of elements with a Must Support flag and how to handle Missing Data.
 * 	[Artifact Summary](http://build.fhir.org/ig/HL7/dme-orders/artifacts.html) introduces and provides links to the FHIR R4 profiles, extensions, code systems, value sets, and other FHIR artifacts used in this implementation guide.
 
@@ -21,7 +21,7 @@ This implementation guide relies on the following other specifications:
 * 	[US Core STU 3.1.0](http://build.fhir.org/ig/HL7/US-Core-R4/) - The current official version of US Core based on [FHIR R4](http://hl7.org/fhir//). 
 
 # Credits
-This work was sponsored by the Centers for Medicare and Medicaid Services (CMS) as part of a contract with ScopeInfotech to support the EMDI Project.
+This work was sponsored by the Centers for Medicare and Medicaid Services (CMS) as part of a contract with Scope Infotech Inc. to support the EMDI Project.
 This IG was developed under the auspices of the [Orders and Observations](http://www.hl7.org/Special/committees/orders/leadership.cfm) work group. Current work group co-chairs are:
 
 * 	**Hans Buitendijk** – Cerner Corportation
@@ -31,19 +31,20 @@ This IG was developed under the auspices of the [Orders and Observations](http:/
 * 	**John David Nolal, MD** – Children’s Mercy Hospitals and Clinics
 * 	**David Burgess** – Laboratory Corporation of Americal
 * 	**Robert Hausam, MD** – Hausem Consulting, LLC
-	
-The EMDI Project coordination is managed by:
 
-* 	**Pallavi Talekar** – ScopeInfotech
-* 	**Nandini Ganguly** – ScopeInfoTech
-* 	**Briana Barnes** – ScopeInfotech
-* 	**Ray Wilkerson** – ScopeInfotech
+The Electronic Medical Documentation Interoperability (EMDI) project coordination is managed by:
+
+* 	**Pallavi Talekar** – Scope Infotech Inc.
+* 	**Nandini Ganguly** – Scope InfoTech Inc.
+* 	**Briana Barnes** – Scope Infotech Inc.
+* 	**Ray Wilkerson** – Scope Infotech INnc.
 
 Development of this IG was performed by **Robert Dieterle** – EnableCare, LLC
 
-Special thanks to the numerous EMDI members who have participated on conference calls and reviews over the last two years and those who participated in the previous ballot of this IG, as well as those who are participating in this one!
+Special thanks to the numerous EMDI participants who have contributed to conference calls, provided feedback over the last two years, and those who participated in the previous ballot of this IG, as well as those who are participating in this one!
 
-If you are interested in participating in the Post-Acute orders project: information about our calls, minutes of past discussions, and other information can be found here on our HL7 Confluence page.
+If you are interested in participating in the Post-Acute orders project: information about our calls, minutes of past discussions, and other information can be found [here](https://confluence.hl7.org/pages/viewpage.action?pageId=44499186) on our HL7 Confluence page.
 
-
-[Next Page - Background](background.html)
+# Change log
+* **0.2.2a* :**updates from 11/14/2021
+* **0.2.2b* :**updates from 5/23/2022

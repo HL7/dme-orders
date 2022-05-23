@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="portableO2"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2020-08-09T22:57:45.943+00:00"/>
+        <source value="#xzSh98W6iHgYw9sg"/>
+        <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicedefinition"/>
+    </meta>
+    <note>
+        <text value="It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)"/>
+    </note>
+</DeviceDefinition>

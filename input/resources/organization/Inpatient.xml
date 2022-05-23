@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization
+    xmlns="http://hl7.org/fhir">
+    <id value="Inpatient"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2020-08-09T15:08:18.345+00:00"/>
+        <source value="#6srEiUjeenLPVop9"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+    </meta>
+    <identifier>
+        <system value="http://hl7.org/fhir/sid/us-npi"/>
+        <value value="1063494177"/>
+    </identifier>
+    <active value="true"/>
+    <name value="St. Michael's Hospital"/>
+    <telecom>
+        <system value="phone"/>
+        <value value="(816)932-2000"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="other"/>
+        <value value="http://www.stmichaelmedicalcenter.org"/>
+        <use value="work"/>
+    </telecom>
+    <address>
+        <text value="6666 135th St, Overland Park, KS 66223"/>
+        <line value="6666 135th Street,"/>
+        <city value="Overland Park"/>
+        <state value="KS"/>
+        <postalCode value="66223"/>
+    </address>
+</Organization>

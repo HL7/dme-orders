@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="PAOX-coverage"/>
+    <meta>
+        <versionId value="37"/>
+        <lastUpdated value="2020-07-29T03:09:22.137+00:00"/>
+        <source value="#H3LVA9dZQ1AlM8Ja"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <h2>Overview</h2>
+            <p>
+                <strong>Name:</strong> PAOx_Coverage
+            </p>
+            <p>
+                <strong>Title:</strong> PAO Coverage Profile
+            </p>
+            <p>
+                <strong>Status:</strong> Active
+            </p>
+            <p>
+                <strong>URL:</strong> http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-coverage
+            </p>
+            <p>
+                <strong>Publisher:</strong> HL7
+            </p>
+            <h2>Elements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Path</th>
+                        <th>Slice</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Coverage</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Coverage.identifier</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Coverage.status</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Coverage.subscriberId</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Coverage.beneficiary</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Coverage.payor</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Coverage.class</td>
+                        <td/>
+                        <td/>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-coverage"/>
+    <version value="0.0.1"/>
+    <name value="PAOx_Coverage"/>
+    <title value="PAO Coverage"/>
+    <status value="active"/>
+    <publisher value="HL7"/>
+    <description value="PAO Coverage Resource Profile"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <purpose value="Purpose"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Coverage"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Coverage"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Coverage">
+            <path value="Coverage"/>
+        </element>
+        <element id="Coverage.identifier">
+            <path value="Coverage.identifier"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Coverage.status">
+            <path value="Coverage.status"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Coverage.subscriberId">
+            <path value="Coverage.subscriberId"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Coverage.beneficiary">
+            <path value="Coverage.beneficiary"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Coverage.payor">
+            <path value="Coverage.payor"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Coverage.class">
+            <path value="Coverage.class"/>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>
