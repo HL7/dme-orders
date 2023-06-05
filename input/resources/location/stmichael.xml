@@ -4,8 +4,7 @@
     <id value="stmichael"/>
     <meta>
         <versionId value="1"/>
-        <lastUpdated value="2020-08-09T04:03:57.874+00:00"/>
-        <source value="#xKY3lUN3BC4PISq4"/>
+        <lastUpdated value="2020-08-09T08:03:57.874Z"/>
         <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
     </meta>
     <identifier>

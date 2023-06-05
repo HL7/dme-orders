@@ -4,8 +4,7 @@
     <id value="practitioner-1"/>
     <meta>
         <versionId value="16"/>
-        <lastUpdated value="2020-12-18T21:15:54.331+00:00"/>
-        <source value="#MTH5QKf2nitQp5Dz"/>
+        <lastUpdated value="2020-12-19T02:15:54.331Z"/>
     </meta>
     <identifier>
         <system value="http://hl7.org.fhir/sid/us-npi"/>

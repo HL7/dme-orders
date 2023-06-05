@@ -4,8 +4,7 @@
     <id value="PAOx-Message-Event"/>
     <meta>
         <versionId value="2"/>
-        <lastUpdated value="2020-07-27T02:08:55.729+00:00"/>
-        <source value="#D2SGoJKzmIxWcX34"/>
+        <lastUpdated value="2020-07-27T06:08:55.729Z"/>
     </meta>
     <url value="http://hl7.org/fhir/us/dme-orders/ValueSet/PAOx-Message-Event"/>
     <version value="0.0.1"/>

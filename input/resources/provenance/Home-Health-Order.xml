@@ -4,8 +4,7 @@
     <id value="Home-Health-Order"/>
     <meta>
         <versionId value="2"/>
-        <lastUpdated value="2020-08-09T22:15:38.163+00:00"/>
-        <source value="#1epkyPWpes9hMxx2"/>
+        <lastUpdated value="2020-08-10T02:15:38.163Z"/>
         <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-provenance"/>
     </meta>
     <target>

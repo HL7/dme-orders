@@ -4,8 +4,7 @@
     <id value="NPItest"/>
     <meta>
         <versionId value="1"/>
-        <lastUpdated value="2021-04-13T09:59:02.779+00:00"/>
-        <source value="#qf6ffGJH3C6hDZXq"/>
+        <lastUpdated value="2021-04-13T13:59:02.779Z"/>
         <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
     </meta>
     <identifier>

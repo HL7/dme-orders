@@ -4,8 +4,7 @@
     <id value="PAOX-devicerequest-extension"/>
     <meta>
         <versionId value="2"/>
-        <lastUpdated value="2020-08-05T08:39:04.190+00:00"/>
-        <source value="#988hLgsRDIWBv0Qc"/>
+        <lastUpdated value="2020-08-05T12:39:04.190Z"/>
     </meta>
     <url value="http://fhir.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicerequest-extension"/>
     <version value="0.0.1"/>

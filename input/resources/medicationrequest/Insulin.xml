@@ -4,8 +4,7 @@
     <id value="Insulin"/>
     <meta>
         <versionId value="1"/>
-        <lastUpdated value="2020-08-09T21:54:34.412+00:00"/>
-        <source value="#xYSKFGO1PsQKUqFS"/>
+        <lastUpdated value="2020-08-10T01:54:34.412Z"/>
         <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-medication-request"/>
     </meta>
     <status value="active"/>

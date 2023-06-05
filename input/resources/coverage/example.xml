@@ -4,8 +4,7 @@
     <id value="example"/>
     <meta>
         <versionId value="8"/>
-        <lastUpdated value="2020-08-09T23:27:39.427+00:00"/>
-        <source value="#QPwVk0hKzW9hvHtn"/>
+        <lastUpdated value="2020-08-10T03:27:39.427Z"/>
         <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-coverage"/>
     </meta>
     <identifier>

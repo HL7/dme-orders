@@ -4,8 +4,7 @@
     <id value="Discharge-Order"/>
     <meta>
         <versionId value="4"/>
-        <lastUpdated value="2020-08-10T01:02:32.131+00:00"/>
-        <source value="#C58gS0pceUyGi98I"/>
+        <lastUpdated value="2020-08-10T05:02:32.131Z"/>
         <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-messageheader"/>
     </meta>
     <eventCoding>
