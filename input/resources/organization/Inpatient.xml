@@ -4,9 +4,7 @@
     <id value="Inpatient"/>
     <meta>
         <versionId value="1"/>
-        <lastUpdated value="2020-08-09T15:08:18.345+00:00"/>
-        <source value="#6srEiUjeenLPVop9"/>
-        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+        <lastUpdated value="2020-08-09T19:08:18.345Z"/>
     </meta>
     <identifier>
         <system value="http://hl7.org/fhir/sid/us-npi"/>

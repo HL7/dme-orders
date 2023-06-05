@@ -4,8 +4,7 @@
     <id value="blood-glucose"/>
     <meta>
         <versionId value="4"/>
-        <lastUpdated value="2020-08-04T04:03:31.384+00:00"/>
-        <source value="#1RohcPULu2QLZJdK"/>
+        <lastUpdated value="2020-08-04T08:03:31.384Z"/>
         <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"/>
     </meta>
     <status value="final"/>

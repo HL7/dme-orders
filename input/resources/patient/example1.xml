@@ -4,8 +4,7 @@
     <id value="example1"/>
     <meta>
         <versionId value="4"/>
-        <lastUpdated value="2020-08-04T04:17:49.442+00:00"/>
-        <source value="#i5okusPN2ZxPvsCJ"/>
+        <lastUpdated value="2020-08-04T08:17:49.442Z"/>
         <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
     </meta>
     <text>

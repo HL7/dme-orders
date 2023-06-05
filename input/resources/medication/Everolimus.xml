@@ -4,8 +4,7 @@
     <id value="Everolimus"/>
     <meta>
         <versionId value="2"/>
-        <lastUpdated value="2020-08-09T21:05:15.935+00:00"/>
-        <source value="#QPVwleBHz9uaDRK4"/>
+        <lastUpdated value="2020-08-10T01:05:15.935Z"/>
         <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"/>
     </meta>
     <text>

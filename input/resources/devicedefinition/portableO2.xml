@@ -4,8 +4,7 @@
     <id value="portableO2"/>
     <meta>
         <versionId value="1"/>
-        <lastUpdated value="2020-08-09T22:57:45.943+00:00"/>
-        <source value="#xzSh98W6iHgYw9sg"/>
+        <lastUpdated value="2020-08-10T02:57:45.943Z"/>
         <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-devicedefinition"/>
     </meta>
     <note>

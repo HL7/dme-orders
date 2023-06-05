@@ -4,8 +4,7 @@
     <id value="MedicationRequest"/>
     <meta>
         <versionId value="1"/>
-        <lastUpdated value="2020-08-10T00:55:45.575+00:00"/>
-        <source value="#ZtTjxbltLOUEIVH2"/>
+        <lastUpdated value="2020-08-10T04:55:45.575Z"/>
         <profile value="http://hl7.org/fhir/us/dme-orders/StructureDefinition/PAOX-task"/>
     </meta>
     <identifier>

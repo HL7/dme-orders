@@ -4,8 +4,7 @@
     <id value="o2-sat"/>
     <meta>
         <versionId value="2"/>
-        <lastUpdated value="2020-08-09T14:05:32.947+00:00"/>
-        <source value="#h2A7OCUzArKGATrt"/>
+        <lastUpdated value="2020-08-09T18:05:32.947Z"/>
         <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"/>
     </meta>
     <status value="final"/>

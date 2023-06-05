@@ -4,9 +4,7 @@
     <id value="Ambulatory"/>
     <meta>
         <versionId value="2"/>
-        <lastUpdated value="2020-08-09T14:59:03.303+00:00"/>
-        <source value="#rV4yU4ZCYLvVDKAb"/>
-        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+        <lastUpdated value="2020-08-09T18:59:03.303Z"/>
     </meta>
     <identifier>
         <system value="http://hl7.org/fhir/sid/us-npi"/>
