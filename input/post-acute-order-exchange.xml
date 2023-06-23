@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="post-acute-order-exchange"/>
     <meta>
-        <versionId value="384"/>
-        <lastUpdated value="2023-06-23T03:54:22.498Z"/>
+        <versionId value="386"/>
+        <lastUpdated value="2023-06-23T04:18:07.214Z"/>
     </meta>
     <url value="http://hl7.org/fhir/us/dme-orders/ImplementationGuide/post-acute-order-exchange"/>
     <version value="0.2.2"/>
@@ -20,7 +20,7 @@
             <value value="http://www.hl7.org/Special/committees/orders"/>
         </telecom>
     </contact>
-    <description value="# General&#xA;This is a FHIR R4 Implementation Guide (IG) to support the electronic exchange of post-acute orders and referrals, along with the exchange of supporting documentation between the ordering provider and the specific rendering provider.&#xA;* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services. It is important to note that supporting DME also requires the support for medications associated with specific devices such as nebulizers and infusion pumps. It is the goal of future versions of this implementation guide to support orders for all post-acute services. &#xA;* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.&#xA;&#xA;This implementation guide is focused on enabling ordering providers to create, communicate and track orders and referrals in the post-acute setting. By enabling ordering providers to communicate supporting documentation in real-time to rendering providers, patients can receive appropriate treatment more rapidly and reduce the burden on rendering providers to comply with payer documentation requirements.&#xA;&#xA;# Change log&#xA;* **0.2.2a* :**updates from 11/14/2021&#xA;* **0.2.2b* :**updates from 5/23/2022&#xA;* **0.2.2c* :**updates from 6/19/2023&#xA;* **0.2.2d* :**updates from 6/22/2023"/>
+    <description value="# General&#xA;This is a FHIR R4 Implementation Guide (IG) to support the electronic exchange of post-acute orders and referrals, along with the exchange of supporting documentation between the ordering provider and the specific rendering provider.&#xA;* The initial version of the implementation guide (IG) will focus on orders and documentation for Durable Medical Equipment (DME) and Home Health Services. It is important to note that supporting DME also requires the support for medications associated with specific devices such as nebulizers and infusion pumps. It is the goal of future versions of this implementation guide to support orders for all post-acute services. &#xA;* This specification is currently undergoing connectathon testing. It is expected to evolve, possibly significantly, as part of that process.&#xA;&#xA;This implementation guide is focused on enabling ordering providers to create, communicate and track orders and referrals in the post-acute setting. By enabling ordering providers to communicate supporting documentation in real-time to rendering providers, patients can receive appropriate treatment more rapidly and reduce the burden on rendering providers to comply with payer documentation requirements.&#xA;&#xA;# Change log&#xA;* **0.2.2a* :**updates from 11/14/2021&#xA;* **0.2.2b* :**updates from 5/23/2022&#xA;* **0.2.2c* :**updates from 6/19/2023&#xA;* **0.2.2d* :**updates from 6/22/2023&#xA;&#xA;&#xA;End of home page"/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
