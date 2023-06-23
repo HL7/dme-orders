@@ -1,6 +1,12 @@
-This specification uses the abbreviation PAO for Post-Acute Orders.
+This specification is designed as a foundational IG for the exchange of FHIR Orders outside of the acute care setting. It provides specific methods for the exchange of orders and their accompanying documenation between the ordering and renering provider.  It also defines workflow that accomodates the role of an intermediary that may perfect the order and decide, based on a number of factors (e.g., insurance coverage, availability, capability, preferences) the appropriate rendering provider to excute the order.
 
-Rendering provider in this specification means the individual or organization that is responsible for providing the services, devices, and/or medications specified in the order.
+The actors in this specification include:
+1) Ordering Provider -- creates the order for a service, device, medication, referral
+2) Rendering Provider -- performs the service, provides the item(s) or medications indicated in the order, and the
+3) Intermediary -- responsible for directing the FHIR orders between the Ordering and Rendering providers.
+
+To accomodate both synchronous workflows and asynchronous workflows, this implemenation guide supports RESTful exchanges based on the exchange of the FHIR Task resource and exchanges based on FHIR messaging.  These exchange methods can be used in any combination between the actors.
+
 
 # Content and Organization of this Implementation Guide
 The implementation guide is organized into the following sections:
@@ -18,7 +24,7 @@ The implementation guide is organized into the following sections:
 # Dependencies
 This implementation guide relies on the following other specifications:
 * 	[FHIR R 4.0.1](http://hl7.org/fhir/) - The current official version of FHIR as of the time this implementation guide was published. See the background page for key pieces of this specification implementers should be familiar with.
-* 	[US Core STU 3.1.0](http://build.fhir.org/ig/HL7/US-Core-R4/) - The current official version of US Core based on [FHIR R4](http://hl7.org/fhir//). 
+* 	[US Core STU 3.1.1](http://build.fhir.org/ig/HL7/US-Core-R4/) - The current official version of US Core based on [FHIR R4](http://hl7.org/fhir//). 
 
 # Credits
 This work was sponsored by the Centers for Medicare and Medicaid Services (CMS) as part of a contract with Scope Infotech Inc. to support the EMDI Project.
@@ -37,11 +43,16 @@ The Electronic Medical Documentation Interoperability (EMDI) project coordinatio
 * 	**Pallavi Talekar** – Scope Infotech Inc.
 * 	**Nandini Ganguly** – Scope InfoTech Inc.
 * 	**Briana Barnes** – Scope Infotech Inc.
+* 	**Kishan Patel** - Scope Infotech Inc.
 * 	**Ray Wilkerson** – Scope Infotech INnc.
 
 Development of this IG was performed by **Robert Dieterle** – EnableCare, LLC
 
 Special thanks to the numerous EMDI participants who have contributed to conference calls, provided feedback over the last two years, and those who participated in the previous ballot of this IG, as well as those who are participating in this one!
+
+In particular, ordering workflow diagrams were provided, in part, by:
+
+* **Vassil Peytchev** - Epic 
 
 If you are interested in participating in the Post-Acute orders project: information about our calls, minutes of past discussions, and other information can be found [here](https://confluence.hl7.org/pages/viewpage.action?pageId=44499186) on our HL7 Confluence page.
 
