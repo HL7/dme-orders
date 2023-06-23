@@ -1,4 +1,4 @@
-# FHIR RESTful communication pattern 
+# FHIR RESTful Communication Pattern 
 
 **Assumptions (without an Intermediary)**
 
