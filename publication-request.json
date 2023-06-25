@@ -4,6 +4,6 @@
 	"path": "http://build.fhir.org/ig/HL7/dme-orders",
 	"status": "draft",
 	"desc": "Continuous Integration Build (latest in version control)",
-	"title": "FHIR Orders IG",
-	"introduction": "The FHIR Orders (FOA) specification is an Implementation Guide of the FHIR Specification that provides guidance on creating a message bundle to communicate post-acute orders from the ordering provider to the performing entity.  This communication may be via an intermediary. The goal is to advance the ability for providers to supply services that are medically necessary and appropriate to patients. By enabling providers to communicate orders and supporting documentation in real-time to suppliers, patients can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements."
+	"title": "FHIR Orders Exchange (FOE) / Post-Acute Orders (PAO) / (DME-Orders)",
+	"introduction": "The FHIR Orders Exchange (FOE) specification is an Implementation Guide of the FHIR Specification that provides guidance on communicating FHIR orders from the ordering provider to the rendering provider.  This communication may be via an intermediary. The goal is to advance the ability for providers to supply services that are medically necessary and appropriate to patients. By enabling providers to communicate orders and supporting documentation in real-time to suppliers, patients can receive appropriate treatment more rapidly and reduce the burden on providers and suppliers to comply with documentation requirements."
 }
