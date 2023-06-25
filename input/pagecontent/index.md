@@ -1,9 +1,9 @@
 This specification is designed as a foundational IG for the exchange of FHIR Orders outside of the acute care setting. It provides specific methods for the exchange of orders and their accompanying documenation between the ordering and renering provider.  It also defines workflow that accomodates the role of an intermediary that may perfect the order and decide, based on a number of factors (e.g., insurance coverage, availability, capability, preferences) the appropriate rendering provider to excute the order.
 
 The actors in this specification include:
-1) Ordering Provider -- creates the order for a service, device, medication, referral
-2) Rendering Provider -- performs the service, provides the item(s) or medications indicated in the order, and the
-3) Intermediary -- responsible for directing the FHIR orders between the Ordering and Rendering providers.
+* 1) Ordering Provider -- creates the order for a service, device, medication, referral
+* 2) Rendering Provider -- performs the service, provides the item(s) or medications indicated in the order, and the
+* 3) Intermediary -- responsible for directing the FHIR orders between the Ordering and Rendering providers.
 
 To accomodate both synchronous workflows and asynchronous workflows, this implemenation guide supports RESTful exchanges based on the exchange of the FHIR Task resource and exchanges based on FHIR messaging.  These exchange methods can be used in any combination between the actors.
 
@@ -59,3 +59,8 @@ If you are interested in participating in the Post-Acute orders project: informa
 # Change log
 * **0.2.2a* :**updates from 11/14/2021
 * **0.2.2b* :**updates from 5/23/2022
+* **0.2.2c* :**updates from 6/19/2023
+* **0.2.2d* :**updates from 6/22/2023
+* **0.2.2.e* :**updates from 6/25/2023 
+
+End of home page
